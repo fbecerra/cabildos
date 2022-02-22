@@ -2,6 +2,26 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   let cabildos = data[0];
   console.log(cabildos);
 
+  function getUniqueElements(df, thisVariable) {
+
+    let thisList = df.map(o => o[thisVariable]);
+
+    // uniq() found here https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
+    function uniq(a) {
+        return a.sort().filter(function(item, pos, ary) {
+            return !pos || item != ary[pos - 1];
+        });
+    }
+
+    let uniqueList = uniq(thisList);
+
+    return uniqueList;
+  }
+
+  let allCabildos = getUniqueElements(cabildos.children, 'name');
+  let allComisiones = getUniqueElements(cabildos.children.map(d => d.children).flat(), 'name');
+  let allTemas = getUniqueElements(cabildos.children.map(d => d.children.map(c => c.children).flat()).flat(), 'name');
+
   let color = d3.scaleLinear()
     .domain([0, 5])
     .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
