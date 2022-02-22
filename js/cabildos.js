@@ -45,10 +45,15 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   let allComisiones = getUniqueElements(cabildos.children.map(d => d.children).flat(), 'name');
   let allTemas = getUniqueElements(cabildos.children.map(d => d.children.map(c => c.children).flat()).flat(), 'name');
 
+  // function updateOptions() {
+  //
+  // }
+
   let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildos], ['Todos', ...allCabildos]);
   state.cabildo = selectCabildo.node().value;
   selectCabildo.on("change", (event, d) => {
     state.cabildo = event.target.value;
+    // updateOptions();
     hideCircles();
   });
 
@@ -56,13 +61,15 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   state.comision = selectComision.node().value;
   selectComision.on("change", (event, d) => {
     state.comision = event.target.value;
+    // updateOptions();
     hideCircles();
   });
 
-  let selectTema = addOptions("select-tema", ['Todos', ...allTemas], ['Todas', ...allTemas]);
+  let selectTema = addOptions("select-tema", ['Todos', ...allTemas], ['Todos', ...allTemas]);
   state.tema = selectTema.node().value;
   selectTema.on("change", (event, d) => {
     state.tema = event.target.value;
+    // updateOptions();
     hideCircles();
   });
 
