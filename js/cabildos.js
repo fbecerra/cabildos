@@ -133,6 +133,10 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     label.transition()
       .duration(transitionTime)
       .attr("opacity", calculateOpacity);
+
+    groupLabels.transition()
+      .duration(transitionTime)
+      .attr("opacity", calculateOpacity);
   }
 
 
