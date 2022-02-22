@@ -1,0 +1,90 @@
+{
+  "name": "cabildos",
+  "children": [
+    {
+      "name": "Plataforma CC",
+      "children": [
+        {
+          "name": "Educación",
+          "id": "4p",
+          "comision": 4,
+          "porcentaje": 42.3,
+          "nCabildos": 492
+        },
+        {
+          "name": "Instituciones, organización del Estado y régimen político",
+          "id": "1a",
+          "comision": 1,
+          "porcentaje": 15.3,
+          "nCabildos": 492
+        },
+        {
+          "name": "Salud",
+          "id": "4o",
+          "comision": 4,
+          "porcentaje": 12.2,
+          "nCabildos": 492
+        }
+      ]
+    },
+    {
+      "name": "Mesa Unidad Social",
+      "children": [
+        {
+          "name": "Educación",
+          "id": "4p",
+          "comision": 4,
+          "porcentaje": 11.6,
+          "nCabildos": 492
+        },
+        {
+          "name": "Salud",
+          "id": "4o",
+          "comision": 4,
+          "porcentaje": 11.6,
+          "nCabildos": 492
+        },
+        {
+          "name": "Pensiones",
+          "id": "4n",
+          "comision": 4,
+          "porcentaje": 11.5,
+          "nCabildos": 492
+        },
+        {
+          "name": "Empleo-Trabajo",
+          "id": "4k",
+          "comision": 4,
+          "porcentaje": 8.2,
+          "nCabildos": 492
+        }
+      ]
+    },
+    {
+      "name": "El Chile que queremos",
+      "children": [
+        {
+          "name": "Pensiones",
+          "id": "4n",
+          "comision": 4,
+          "porcentaje": 33.9,
+          "nCabildos": 492
+        },
+        {
+          "name": "Salud",
+          "id": "4o",
+          "comision": 4,
+          "porcentaje": 22.2,
+          "nCabildos": 492
+        },
+        {
+          "name": "Educación",
+          "id": "4p",
+          "comision": 4,
+          "porcentaje": 15.1,
+          "nCabildos": 492
+        }
+      ]
+    }
+  ]
+}
