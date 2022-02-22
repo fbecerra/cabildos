@@ -42,7 +42,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("fill", d => d.children ? "white" : color(d.data.comision))
       .attr("pointer-events", d => !d.children ? "none" : null)
       .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
-      .on("mouseout", function() { d3.select(this).attr("stroke", null); })
+      .on("mouseout", function() { d3.select(this).attr("stroke", "lightgrey"); })
       .on("click", (event, d) => focus !== d && (zoom(event, d), event.stopPropagation()));
 
     const startAngle = -Math.PI / 4;
