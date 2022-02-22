@@ -48,59 +48,67 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   // let allTemas = getUniqueElements(cabildos.children.map(d => d.children.map(c => c.children).flat()).flat(), 'name');
 
   function updateOptions() {
-    let filteredCabildos, filteredComisiones, filteredTemas;
 
-    if (state.cabildo === 'Todos') {
-      filteredCabildos = cabildos.children;
-    } else {
-      filteredCabildos = cabildos.children.filter(d => d.name === state.cabildo);
-    }
+    let filteredCabildos = cabildos.children.filter(d => {
+      let thisLevel = (d.name === state.cabildo || state.cabildo === 'Todos');
+      let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.name === state.comision)
+                        .reduce((a,b) => a || b, false);
+      let lowerLowerLevel = d.children.map(c => c.children.flat()).flat()
+                             .map(e => state.tema === 'Todos' || e.name === state.tema)
+                             .reduce((a,b) => a || b, false);
+      return (thisLevel && lowerLevel && lowerLowerLevel);
+    })
 
-    if (state.comision === 'Todas') {
-      filteredComisiones = filteredCabildos.map(d => d.children).flat();
-    } else {
-      filteredComisiones = filteredCabildos.map(d => d.children.filter(e => e.name === state.comision)).flat();
-    }
+    let filteredComisiones = filteredCabildos.map(d => {
+      return d.children.filter(e => {
+        let thisLevel = e.name === state.comision || state.comision === 'Todas';
+        let lowerLevel = e.children.map(c => state.tema === 'Todos' || c.name === state.tema).reduce((a,b) => a || b, false);
+        return (thisLevel && lowerLevel);
+      }).flat()
+    }).flat()
 
-    if (state.tema === 'Todos') {
-      filteredTemas = filteredCabildos.map(d => d.children.filter(e => e.name === state.comision || state.comision === 'Todas').map(c => c.children).flat()).flat();
-    } else {
-      filteredTemas = filteredCabildos.map(d => d.children.filter(e => e.name === state.comision || state.comision === 'Todas').map(c => c.children.filter(e => e.name === state.tema || state.tema === 'Todos')).flat()).flat();
-    }
+    let filteredTemas = filteredCabildos.map(d => d.children.filter(e => e.name === state.comision || state.comision === 'Todas').map(c => c.children.filter(e => e.name === state.tema || state.tema === 'Todos')).flat()).flat();
 
     allCabildos = getUniqueElements(filteredCabildos, 'name');
     allComisiones = getUniqueElements(filteredComisiones, 'name');
     allTemas = getUniqueElements(filteredTemas, 'name');
 
-    if (state.cabildo === 'Todos') {
-      let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildos], ['Todos', ...allCabildos]);
+
+    let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildos], ['Todos', ...allCabildos]);
+    if (state.cabildo !== 'Todos') {
+      selectCabildo.node().value = state.cabildo;
+    } else {
       state.cabildo = selectCabildo.node().value;
-      selectCabildo.on("change", (event, d) => {
-        state.cabildo = event.target.value;
-        updateOptions();
-        hideCircles();
-      });
     }
+    selectCabildo.on("change", (event, d) => {
+      state.cabildo = event.target.value;
+      updateOptions();
+      hideCircles();
+    });
 
-    if (state.comision === 'Todas') {
-      let selectComision = addOptions("select-comision", ['Todas', ...allComisiones], ['Todas', ...allComisiones]);
+    let selectComision = addOptions("select-comision", ['Todas', ...allComisiones], ['Todas', ...allComisiones]);
+    if (state.comision !== 'Todos') {
+      selectComision.node().value = state.comision;
+    } else {
       state.comision = selectComision.node().value;
-      selectComision.on("change", (event, d) => {
-        state.comision = event.target.value;
-        updateOptions();
-        hideCircles();
-      });
     }
+    selectComision.on("change", (event, d) => {
+      state.comision = event.target.value;
+      updateOptions();
+      hideCircles();
+    });
 
-    if (state.tema === 'Todos') {
-      let selectTema = addOptions("select-tema", ['Todos', ...allTemas], ['Todos', ...allTemas]);
+    let selectTema = addOptions("select-tema", ['Todos', ...allTemas], ['Todos', ...allTemas]);
+    if (state.tema !== 'Todos') {
+      selectTema.node().value = state.tema;
+    } else {
       state.tema = selectTema.node().value;
-      selectTema.on("change", (event, d) => {
-        state.tema = event.target.value;
-        updateOptions();
-        hideCircles();
-      });
     }
+    selectTema.on("change", (event, d) => {
+      state.tema = event.target.value;
+      updateOptions();
+      hideCircles();
+    });
   }
 
   updateOptions();
@@ -110,13 +118,17 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       if (d.depth === 1) {
         console.log(d)
         let thisLevel = (d.data.name === state.cabildo || state.cabildo === 'Todos');
-        let lowerLevel = d.children.map(c => state.comision === 'Todas' ? true : c.data.name === state.comision).reduce((a,b) => a || b, false);
-        let lowerLowerLevel = d.children.map(c => c.children.flat()).flat().map(e => state.tema === 'Todos' ? true : e.data.name === state.tema).reduce((a,b) => a || b, false);
+        let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.data.name === state.comision)
+                          .reduce((a,b) => a || b, false);
+        let lowerLowerLevel = d.children.map(c => c.children.flat()).flat()
+                               .map(e => state.tema === 'Todos' || e.data.name === state.tema)
+                               .reduce((a,b) => a || b, false);
         return (thisLevel && lowerLevel && lowerLowerLevel) ? 1 : 0;
       } else if (d.depth === 2) {
         let thisLevel = (d.data.name === state.comision || state.comision === 'Todas');
         let upperLevel = (d.parent.data.name === state.cabildo || state.cabildo === 'Todos');
-        let lowerLevel = d.children.map(c => state.tema === 'Todos' ? true : c.data.name === state.tema).reduce((a,b) => a || b, false);
+        let lowerLevel = d.children.map(c => state.tema === 'Todos' || c.data.name === state.tema)
+                          .reduce((a,b) => a || b, false);
         return (thisLevel && upperLevel && lowerLevel) ? 1 : 0;
       } else if (d.depth === 3) {
         let thisLevel = (d.data.name === state.tema || state.tema === 'Todos')
