@@ -1,3 +1,10 @@
+state = {
+  cabildo: null,
+  comision: null,
+  tema: null,
+}
+const transitionTime = 500;
+
 Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   let cabildos = data[0];
   console.log(cabildos);
@@ -18,9 +25,75 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     return uniqueList;
   }
 
+  function addOptions(id, values, attrs) {
+    var element = d3.select("#"+id);
+    var options = element.selectAll("option").data(values);
+
+    options.enter().append("option")
+      .attr("value", (d,i) => attrs[i])
+      .html(d => d);
+
+    options.attr("value", (d,i) => attrs[i])
+      .html(d => d);
+
+    options.exit().remove();
+
+    return element;
+  }
+
   let allCabildos = getUniqueElements(cabildos.children, 'name');
   let allComisiones = getUniqueElements(cabildos.children.map(d => d.children).flat(), 'name');
   let allTemas = getUniqueElements(cabildos.children.map(d => d.children.map(c => c.children).flat()).flat(), 'name');
+
+  let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildos], ['Todos', ...allCabildos]);
+  state.cabildo = selectCabildo.node().value;
+  selectCabildo.on("change", (event, d) => {
+    state.cabildo = event.target.value;
+    hideCircles();
+  });
+
+  let selectComision = addOptions("select-comision", ['Todas', ...allComisiones], ['Todas', ...allComisiones]);
+  state.comision = selectComision.node().value;
+  selectComision.on("change", (event, d) => {
+    state.comision = event.target.value;
+    hideCircles();
+  });
+
+  let selectTema = addOptions("select-tema", ['Todos', ...allTemas], ['Todas', ...allTemas]);
+  state.tema = selectTema.node().value;
+  selectTema.on("change", (event, d) => {
+    state.tema = event.target.value;
+    hideCircles();
+  });
+
+  function hideCircles() {
+    let calculateOpacity = d => {
+      if (d.depth === 1) {
+        // console.log(d)
+        return (d.data.name === state.cabildo || state.cabildo === 'Todos') ? 1 : 0;
+      } else if (d.depth === 2) {
+        // console.log(d, d.parent)
+        let thisLevel = (d.data.name === state.comision || state.comision === 'Todas');
+        let upperLevel = (d.parent.data.name === state.cabildo || state.cabildo === 'Todos')
+        return (thisLevel && upperLevel) ? 1 : 0;
+      } else if (d.depth === 3) {
+        let thisLevel = (d.data.name === state.tema || state.tema === 'Todos')
+        let upperLevel = (d.parent.data.name === state.comision || state.comision === 'Todas');
+        let upperUpperLevel = (d.parent.parent.data.name === state.cabildo || state.cabildo === 'Todos');
+        console.log(state, d, thisLevel, upperLevel, upperUpperLevel)
+        return (thisLevel && upperLevel && upperUpperLevel) ? 1 : 0;
+      }
+    }
+
+    node.transition()
+      .duration(transitionTime)
+      .attr("opacity", calculateOpacity);
+
+    label.transition()
+      .duration(transitionTime)
+      .attr("opacity", calculateOpacity);
+  }
+
 
   let color = d3.scaleLinear()
     .domain([0, 5])
