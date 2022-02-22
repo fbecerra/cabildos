@@ -108,11 +108,16 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   function hideCircles() {
     let calculateOpacity = d => {
       if (d.depth === 1) {
-        return (d.data.name === state.cabildo || state.cabildo === 'Todos') ? 1 : 0;
+        console.log(d)
+        let thisLevel = (d.data.name === state.cabildo || state.cabildo === 'Todos');
+        let lowerLevel = d.children.map(c => state.comision === 'Todas' ? true : c.data.name === state.comision).reduce((a,b) => a || b, false);
+        let lowerLowerLevel = d.children.map(c => c.children.flat()).flat().map(e => state.tema === 'Todos' ? true : e.data.name === state.tema).reduce((a,b) => a || b, false);
+        return (thisLevel && lowerLevel && lowerLowerLevel) ? 1 : 0;
       } else if (d.depth === 2) {
         let thisLevel = (d.data.name === state.comision || state.comision === 'Todas');
-        let upperLevel = (d.parent.data.name === state.cabildo || state.cabildo === 'Todos')
-        return (thisLevel && upperLevel) ? 1 : 0;
+        let upperLevel = (d.parent.data.name === state.cabildo || state.cabildo === 'Todos');
+        let lowerLevel = d.children.map(c => state.tema === 'Todos' ? true : c.data.name === state.tema).reduce((a,b) => a || b, false);
+        return (thisLevel && upperLevel && lowerLevel) ? 1 : 0;
       } else if (d.depth === 3) {
         let thisLevel = (d.data.name === state.tema || state.tema === 'Todos')
         let upperLevel = (d.parent.data.name === state.comision || state.comision === 'Todas');
