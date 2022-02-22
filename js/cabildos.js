@@ -108,10 +108,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   function hideCircles() {
     let calculateOpacity = d => {
       if (d.depth === 1) {
-        // console.log(d)
         return (d.data.name === state.cabildo || state.cabildo === 'Todos') ? 1 : 0;
       } else if (d.depth === 2) {
-        // console.log(d, d.parent)
         let thisLevel = (d.data.name === state.comision || state.comision === 'Todas');
         let upperLevel = (d.parent.data.name === state.cabildo || state.cabildo === 'Todos')
         return (thisLevel && upperLevel) ? 1 : 0;
@@ -119,7 +117,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         let thisLevel = (d.data.name === state.tema || state.tema === 'Todos')
         let upperLevel = (d.parent.data.name === state.comision || state.comision === 'Todas');
         let upperUpperLevel = (d.parent.parent.data.name === state.cabildo || state.cabildo === 'Todos');
-        // console.log(state, d, thisLevel, upperLevel, upperUpperLevel)
         return (thisLevel && upperLevel && upperUpperLevel) ? 1 : 0;
       }
     }
