@@ -1,7 +1,7 @@
 state = {
-  cabildo: null,
-  comision: null,
-  tema: null,
+  cabildo: 'Todos',
+  comision: 'Todas',
+  tema: 'Todos',
 }
 const transitionTime = 500;
 
@@ -41,37 +41,69 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     return element;
   }
 
-  let allCabildos = getUniqueElements(cabildos.children, 'name');
-  let allComisiones = getUniqueElements(cabildos.children.map(d => d.children).flat(), 'name');
-  let allTemas = getUniqueElements(cabildos.children.map(d => d.children.map(c => c.children).flat()).flat(), 'name');
+  let allCabildos, allComisiones, allTemas;
 
-  // function updateOptions() {
-  //
-  // }
+  // let allCabildos = getUniqueElements(cabildos.children, 'name');
+  // let allComisiones = getUniqueElements(cabildos.children.map(d => d.children).flat(), 'name');
+  // let allTemas = getUniqueElements(cabildos.children.map(d => d.children.map(c => c.children).flat()).flat(), 'name');
 
-  let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildos], ['Todos', ...allCabildos]);
-  state.cabildo = selectCabildo.node().value;
-  selectCabildo.on("change", (event, d) => {
-    state.cabildo = event.target.value;
-    // updateOptions();
-    hideCircles();
-  });
+  function updateOptions() {
+    let filteredCabildos, filteredComisiones, filteredTemas;
 
-  let selectComision = addOptions("select-comision", ['Todas', ...allComisiones], ['Todas', ...allComisiones]);
-  state.comision = selectComision.node().value;
-  selectComision.on("change", (event, d) => {
-    state.comision = event.target.value;
-    // updateOptions();
-    hideCircles();
-  });
+    if (state.cabildo === 'Todos') {
+      filteredCabildos = cabildos.children;
+    } else {
+      filteredCabildos = cabildos.children.filter(d => d.name === state.cabildo);
+    }
 
-  let selectTema = addOptions("select-tema", ['Todos', ...allTemas], ['Todos', ...allTemas]);
-  state.tema = selectTema.node().value;
-  selectTema.on("change", (event, d) => {
-    state.tema = event.target.value;
-    // updateOptions();
-    hideCircles();
-  });
+    if (state.comision === 'Todas') {
+      filteredComisiones = filteredCabildos.map(d => d.children).flat();
+    } else {
+      filteredComisiones = filteredCabildos.map(d => d.children.filter(e => e.name === state.comision)).flat();
+    }
+
+    if (state.tema === 'Todos') {
+      filteredTemas = filteredCabildos.map(d => d.children.filter(e => e.name === state.comision || state.comision === 'Todas').map(c => c.children).flat()).flat();
+    } else {
+      filteredTemas = filteredCabildos.map(d => d.children.filter(e => e.name === state.comision || state.comision === 'Todas').map(c => c.children.filter(e => e.name === state.tema || state.tema === 'Todos')).flat()).flat();
+    }
+
+    allCabildos = getUniqueElements(filteredCabildos, 'name');
+    allComisiones = getUniqueElements(filteredComisiones, 'name');
+    allTemas = getUniqueElements(filteredTemas, 'name');
+
+    if (state.cabildo === 'Todos') {
+      let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildos], ['Todos', ...allCabildos]);
+      state.cabildo = selectCabildo.node().value;
+      selectCabildo.on("change", (event, d) => {
+        state.cabildo = event.target.value;
+        updateOptions();
+        hideCircles();
+      });
+    }
+
+    if (state.comision === 'Todas') {
+      let selectComision = addOptions("select-comision", ['Todas', ...allComisiones], ['Todas', ...allComisiones]);
+      state.comision = selectComision.node().value;
+      selectComision.on("change", (event, d) => {
+        state.comision = event.target.value;
+        updateOptions();
+        hideCircles();
+      });
+    }
+
+    if (state.tema === 'Todos') {
+      let selectTema = addOptions("select-tema", ['Todos', ...allTemas], ['Todos', ...allTemas]);
+      state.tema = selectTema.node().value;
+      selectTema.on("change", (event, d) => {
+        state.tema = event.target.value;
+        updateOptions();
+        hideCircles();
+      });
+    }
+  }
+
+  updateOptions();
 
   function hideCircles() {
     let calculateOpacity = d => {
@@ -87,7 +119,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         let thisLevel = (d.data.name === state.tema || state.tema === 'Todos')
         let upperLevel = (d.parent.data.name === state.comision || state.comision === 'Todas');
         let upperUpperLevel = (d.parent.parent.data.name === state.cabildo || state.cabildo === 'Todos');
-        console.log(state, d, thisLevel, upperLevel, upperUpperLevel)
+        // console.log(state, d, thisLevel, upperLevel, upperUpperLevel)
         return (thisLevel && upperLevel && upperUpperLevel) ? 1 : 0;
       }
     }
