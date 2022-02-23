@@ -702,14 +702,164 @@
       "name": "Ahora Nos Toca Participar (ANTP)",
       "children": [
         {
+          "name": "Comision 1",
+          "id": "c1",
+          "children": [
+            {
+              "name": "Sistema electoral",
+              "id": "1e",
+              "comision": 1,
+              "porcentaje": 2.2
+            },
+            {
+              "name": "Plurinacional",
+              "id": "1c",
+              "comision": 1,
+              "porcentaje": 2.2
+            }
+          ]
+        },
+        {
+          "name": "Comision 2",
+          "id": "c2",
+          "children": [
+            {
+              "name": "Democracia directa",
+              "id": "2f",
+              "comision": 2,
+              "porcentaje": 24.1
+            },
+            {
+              "name": "Principios",
+              "id": "2b",
+              "comision": 2,
+              "porcentaje": 6.6
+            }
+          ]
+        },
+        {
+          "name": "Comision 3",
+          "id": "c3",
+          "children": [
+            {
+              "name": "Autonomia afrodescendiente",
+              "id": "3m",
+              "comision": 3,
+              "porcentaje": 1.5
+            },
+            {
+              "name": "Ruralidad",
+              "id": "3j",
+              "comision": 3,
+              "porcentaje": 1.5
+            },
+            {
+              "name": "Chilenos exterior",
+              "id": "3k",
+              "comision": 3,
+              "porcentaje": 0.7
+            },
+            {
+              "name": "Estructura estado",
+              "id": "3a",
+              "comision": 3,
+              "porcentaje": 0.7
+            }
+          ]
+        },
+        {
           "name": "Comision 4",
           "id": "c4",
           "children": [
             {
-              "name": "Pensiones",
+              "name": "Niñez y juventud",
+              "id": "4h",
+              "comision": 4,
+              "porcentaje": 12.4
+            },
+            {
+              "name": "Personas discapacidad",
+              "id": "4g",
+              "comision": 4,
+              "porcentaje": 8.0
+            },
+            {
+              "name": "Migrantes",
+              "id": "4u",
+              "comision": 4,
+              "porcentaje": 7.3
+            },
+            {
+              "name": "Privadas libertad",
+              "id": "4r",
+              "comision": 4,
+              "porcentaje": 7.3
+            },
+            {
+              "name": "Disidencias",
+              "id": "4t",
+              "comision": 4,
+              "porcentaje": 5.8
+            },
+            {
+              "name": "Derechos individuales",
+              "id": "4i",
+              "comision": 4,
+              "porcentaje": 5.8
+            },
+            {
+              "name": "Personas mayores",
+              "id": "4ñ",
+              "comision": 4,
+              "porcentaje": 5.1
+            },
+            {
+              "name": "Trabajo domestico",
+              "id": "4l",
+              "comision": 4,
+              "porcentaje": 2.9
+            },
+            {
+              "name": "Libertad opinion",
+              "id": "4d1",
+              "comision": 4,
+              "porcentaje": 1.5
+            },
+            {
+              "name": "Educacion",
+              "id": "4p",
+              "comision": 4,
+              "porcentaje": 1.5
+            },
+            {
+              "name": "Reinsercion",
+              "id": "4f",
+              "comision": 4,
+              "porcentaje": 0.7
+            },
+            {
+              "name": "Vivienda",
+              "id": "4j",
+              "comision": 4,
+              "porcentaje": 0.7
+            },
+            {
+              "name": "Seguridad social",
               "id": "4n",
               "comision": 4,
-              "porcentaje": 33.9
+              "porcentaje": 0.7
+            }
+          ]
+        },
+        {
+          "name": "Comision 7",
+          "id": "c7",
+          "children": [
+            {
+              "name": "Democratizacion",
+              "id": "7e",
+              "comision": 7,
+              "porcentaje": 0.7
             }
           ]
         }
