@@ -649,6 +649,18 @@
       "name": "El Chile que Queremos (CQQ)",
       "children": [
         {
+          "name": "Comision 1",
+          "id": "c1",
+          "children": [
+            {
+              "name": "Cambios politicos",
+              "id": "1n",
+              "comision": 1,
+              "porcentaje": 6.3
+            }
+          ]
+        },
+        {
           "name": "Comision 4",
           "id": "c4",
           "children": [
@@ -656,22 +668,31 @@
               "name": "Pensiones",
               "id": "4n",
               "comision": 4,
-              "porcentaje": 33.9,
-              "nCabildos": 492
+              "porcentaje": 33.9
             },
             {
               "name": "Salud",
               "id": "4o",
               "comision": 4,
-              "porcentaje": 22.2,
-              "nCabildos": 492
+              "porcentaje": 22.2
             },
             {
               "name": "Educación",
               "id": "4p",
               "comision": 4,
-              "porcentaje": 15.1,
-              "nCabildos": 492
+              "porcentaje": 15.2
+            },
+            {
+              "name": "Condiciones laborales",
+              "id": "4k",
+              "comision": 4,
+              "porcentaje": 12.2
+            },
+            {
+              "name": "Vivienda",
+              "id": "4j",
+              "comision": 4,
+              "porcentaje": 10.2
             }
           ]
         }
