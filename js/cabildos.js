@@ -146,9 +146,9 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .duration(transitionTime)
       .attr("opacity", calculateOpacity);
 
-    groupLabels.transition()
-      .duration(transitionTime)
-      .attr("opacity", calculateOpacity);
+    // groupLabels.transition()
+    //   .duration(transitionTime)
+    //   .attr("opacity", calculateOpacity);
   }
 
 
@@ -189,7 +189,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     .join("circle")
       .attr('stroke', d => d.children ? 'lightgrey' : color(d.data.comision))
       .attr('stroke-width', 1.0)
-      .attr("fill", d => d.children ? "white" : color(d.data.comision))
+      .attr("fill", d => d.children ? "#E9ECEF" : color(d.data.comision))
       .attr("pointer-events", d => !d.children ? "none" : null)
       .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
       .on("mouseout", function() { d3.select(this).attr("stroke", "lightgrey"); })
@@ -207,29 +207,29 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 					return startAngle + (total * step);
 				});
 
-  	const groupLabels = svg
-  			.selectAll(".group")
-				.data(root.descendants().slice(1).filter(function(d) { return d.children; })).enter()
-			.append("g")
-				.attr("class", "group")
-					.attr("transform", function(d) { return `translate(${d.x},${d.y})`; });
-
-    groupLabels
-  		.append("path")
-  			.attr("class", "group-arc")
-  			.attr("id", function(d,i) { return `arc${i}`; })
-  			.attr("d", labelArc);
-
-  	groupLabels
-  		.append("text")
-  			.attr("class", "group-label")
-        .attr("font-size", charSize)
-        .attr("fill", "lightgrey")
-  			.attr("x", 0)
-  			.attr("dy", charSize * 1.5)
-  		.append("textPath")
-  			.attr("xlink:href", function(d,i){ return `#arc${i}`;})
-  			.text(function(d) { return d.data.name ;});
+  	// const groupLabels = svg
+  	// 		.selectAll(".group")
+		// 		.data(root.descendants().slice(1).filter(function(d) { return d.children; })).enter()
+		// 	.append("g")
+		// 		.attr("class", "group")
+		// 			.attr("transform", function(d) { return `translate(${d.x},${d.y})`; });
+    //
+    // groupLabels
+  	// 	.append("path")
+  	// 		.attr("class", "group-arc")
+  	// 		.attr("id", function(d,i) { return `arc${i}`; })
+  	// 		.attr("d", labelArc);
+    //
+  	// groupLabels
+  	// 	.append("text")
+  	// 		.attr("class", "group-label")
+    //     .attr("font-size", charSize)
+    //     .attr("fill", "lightgrey")
+  	// 		.attr("x", 0)
+  	// 		.attr("dy", charSize * 1.5)
+  	// 	.append("textPath")
+  	// 		.attr("xlink:href", function(d,i){ return `#arc${i}`;})
+  	// 		.text(function(d) { return d.data.name ;});
 
   const label = svg.append("g")
       .style("font", "10px sans-serif")
@@ -240,7 +240,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     .join("text")
       .style("fill-opacity", 1)
       .style("display", "inline")
-      .text(d => d.data.name);
+      .text(d => d.data.name.slice(0, 10));
 
   zoomTo([root.x, root.y, root.r * 2]);
 
@@ -251,12 +251,14 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     labelArc.innerRadius(d => d.r * k)
 			.outerRadius(d => d.r * k);
-    groupLabels.selectAll(".group-arc")
-  			.attr("d", labelArc)
-    groupLabels.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
-    label.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
+    // groupLabels.selectAll(".group-arc")
+  	// 		.attr("d", labelArc)
+    // groupLabels.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
+    label.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k}) rotate(-90)`);
     node.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
     node.attr("r", d => d.r * k);
+
+    svg.attr("transform", "rotate(90)")
   }
 
   function zoom(event, d) {
