@@ -291,14 +291,182 @@
       "name": "TQH Chile a Escala",
       "children": [
         {
+          "name": "Comision 1",
+          "id": "c1",
+          "children": [
+            {
+              "name": "Instituciones",
+              "id": "1a",
+              "comision": 1,
+              "porcentaje": 15.3
+            },
+            {
+              "name": "Buen gobierno",
+              "id": "1d",
+              "comision": 1,
+              "porcentaje": 1.3
+            },
+            {
+              "name": "Materias de ley",
+              "id": "1b",
+              "comision": 1,
+              "porcentaje": 1.1
+            },
+            {
+              "name": "Sistema electoral",
+              "id": "1e",
+              "comision": 1,
+              "porcentaje": 0.2
+            }
+          ]
+        },
+        {
+          "name": "Comision 2",
+          "id": "c2",
+          "children": [
+            {
+              "name": "Principios",
+              "id": "2b",
+              "comision": 2,
+              "porcentaje": 2.1
+            },
+            {
+              "name": "Mecanismos",
+              "id": "2f",
+              "comision": 2,
+              "porcentaje": 1.5
+            },
+            {
+              "name": "Nacionalidad",
+              "id": "2c",
+              "comision": 2,
+              "porcentaje": 1.1
+            }
+          ]
+        },
+        {
+          "name": "Comision 3",
+          "id": "c3",
+          "children": [
+            {
+              "name": "Estructura",
+              "id": "3a",
+              "comision": 3,
+              "porcentaje": 1.8
+            },
+            {
+              "name": "Igualdad",
+              "id": "3f",
+              "comision": 3,
+              "porcentaje": 0.1
+            },
+            {
+              "name": "Autonomias",
+              "id": "3e",
+              "comision": 3,
+              "porcentaje": 0.1
+            }
+          ]
+        },
+        {
           "name": "Comision 4",
           "id": "c4",
           "children": [
             {
+              "name": "Educación",
+              "id": "4p",
+              "comision": 4,
+              "porcentaje": 42.3
+            },
+            {
+              "name": "Salud",
+              "id": "4o",
+              "comision": 4,
+              "porcentaje": 12.2
+            },
+            {
               "name": "Pensiones",
               "id": "4n",
               "comision": 4,
-              "porcentaje": 33.9
+              "porcentaje": 7.6
+            },
+            {
+              "name": "Niñez y juventud",
+              "id": "4h",
+              "comision": 4,
+              "porcentaje": 1.7
+            },
+            {
+              "name": "Vivienda",
+              "id": "4j",
+              "comision": 4,
+              "porcentaje": 1.0
+            },
+            {
+              "name": "Trabajo",
+              "id": "4k",
+              "comision": 4,
+              "porcentaje": 0.7
+            },
+            {
+              "name": "Seguridad",
+              "id": "4c1",
+              "comision": 4,
+              "porcentaje": 0.6
+            },
+            {
+              "name": "Personas mayores",
+              "id": "4ñ",
+              "comision": 4,
+              "porcentaje": 0.4
+            },
+            {
+              "name": "Mujeres",
+              "id": "4q",
+              "comision": 4,
+              "porcentaje": 0.2
+            }
+          ]
+        },
+        {
+          "name": "Comision 5",
+          "id": "c5",
+          "children": [
+            {
+              "name": "Desarrollo sostenible",
+              "id": "5f",
+              "comision": 5,
+              "porcentaje": 2.5
+            },
+            {
+              "name": "Medioambiente",
+              "id": "5a",
+              "comision": 5,
+              "porcentaje": 1.5
+            }
+          ]
+        },
+        {
+          "name": "Comision 6",
+          "id": "c6",
+          "children": [
+            {
+              "name": "Poder judicial",
+              "id": "6a",
+              "comision": 6,
+              "porcentaje": 4.0
+            }
+          ]
+        },
+        {
+          "name": "Comision 7",
+          "id": "c7",
+          "children": [
+            {
+              "name": "Democratizacion",
+              "id": "7e",
+              "comision": 7,
+              "porcentaje": 0.7
             }
           ]
         }
