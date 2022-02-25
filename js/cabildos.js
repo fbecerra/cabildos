@@ -193,7 +193,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     .join("circle")
       .attr('stroke', d => d.depth === 1 ? 'lightgrey' : color(d.data.comision))
       .attr('stroke-width', 1.0)
-      .attr("fill", d => d.children ? "white" : color(d.data.comision))
+      .attr("fill", d => d.children ? "white" : cabildos.comisiones[d.data.comision].color)
       .attr("pointer-events", d => !d.children ? "none" : null)
       .attr("cx", d => d.y)
       .attr("cy", d => d.x)

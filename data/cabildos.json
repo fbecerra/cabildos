@@ -1,5 +1,28 @@
 {
   "name": "cabildos",
+  "comisiones": {
+    "c1": {
+      "color": "#DCA755"
+    },
+    "c2": {
+      "color": "#C23125"
+    },
+    "c3": {
+      "color": "#678DC6"
+    },
+    "c4": {
+      "color": "#9B1560"
+    },
+    "c5": {
+      "color": "#60AA58"
+    },
+    "c6": {
+      "color": "#D86437"
+    },
+    "c7": {
+      "color": "#F1DD5D"
+    }
+  },
   "children": [
     {
       "name": "Plataforma CC",
@@ -11,61 +34,307 @@
             {
               "name": "Educación",
               "id": "4p",
-              "comision": 4,
-              "porcentaje": 42.3
+              "comision": "c4",
+              "porcentaje": 42.3,
+              "wordCloud": [
+                {
+                  "ngram": "educación",
+                  "frecuencia":	51
+                },
+                {
+                  "ngram": "derecho",
+                  "frecuencia":	15
+                },
+                {
+                  "ngram": "desarrollo",
+                  "frecuencia":	14
+                },
+                {
+                  "ngram": "estado",
+                  "frecuencia":	11
+                },
+                {
+                  "ngram": "modelo",
+                  "frecuencia":	11
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia":	10
+                },
+                {
+                  "ngram": "recursos",
+                  "frecuencia":	9
+                },
+                {
+                  "ngram": "plazo",
+                  "frecuencia":	9
+                },
+                {
+                  "ngram": "acceso",
+                  "frecuencia":	9
+                },
+                {
+                  "ngram": "condiciones",
+                  "frecuencia":	8
+                },
+                {
+                  "ngram": "estudiantes",
+                  "frecuencia":	8
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuencia":	7
+                },
+                {
+                  "ngram": "currículum",
+                  "frecuencia":	7
+                },
+                {
+                  "ngram": "formación",
+                  "frecuencia":	7
+                },
+                {
+                  "ngram": "manera",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "sociedad",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "cambios",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "necesidad",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "equidad",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "comunidad",
+                  "frecuencia":	5
+                }
+              ]
             },
             {
               "name": "Salud",
               "id": "4o",
-              "comision": 4,
-              "porcentaje": 12.2
+              "comision": "c4",
+              "porcentaje": 12.2,
+              "wordCloud": [
+                {
+                  "ngram": "salud",
+                  "frecuencia":	27
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia":	21
+                },
+                {
+                  "ngram": "acceso",
+                  "frecuencia":	13
+                },
+                {
+                  "ngram": "modelo",
+                  "frecuencia":	11
+                },
+                {
+                  "ngram": "derecho",
+                  "frecuencia":	9
+                },
+                {
+                  "ngram": "atención",
+                  "frecuencia":	7
+                },
+                {
+                  "ngram": "personas",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "estado",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "falta",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "políticas",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "capacidad",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "calidad",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "recursos",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "necesidad",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "principios",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "discusión",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "desarrollo",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "prevención",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "público",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "enfermedades",
+                  "frecuencia":	2
+                }
+              ]
             },
             {
               "name": "Niñez y Juventud",
               "id": "4h",
-              "comision": 4,
-              "porcentaje": 7.5
+              "comision": "c4",
+              "porcentaje": 7.5,
+              "wordCloud": [
+                {
+                  "ngram": "derecho",
+                  "frecuencia":	14
+                },
+                {
+                  "ngram": "niño",
+                  "frecuencia":	7
+                },
+                {
+                  "ngram": "jóvenes",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "importancia",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "niños",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "gobierno",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "educación",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "derechos",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "deberes",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "salud",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "calidad",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "rol",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "respeto",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "espacio",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "estado",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "falta",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "problema",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "prioridad",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "preocupación",
+                  "frecuencia":	2
+                }
+              ]
             },
             {
               "name": "Seguridad Social y sistema de pensiones",
               "id": "4n",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 7.0
             },
             {
               "name": "Derecho a la vivienda, a la ciudad, a la tierra y al territorio",
               "id": "4j",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 6.5
             },
             {
               "name": "Derechos de las personas con discapacidad",
               "id": "4g",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 6.5
             },
             {
               "name": "Derecho humano al agua y saneamiento; y otros derechos humanos ambientales",
               "id": "4o1",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 5.5
             },
             {
               "name": "Derechos de las mujeres",
               "id": "4q",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 5.5
             },
             {
               "name": "Derecho a la verdad, la justicia, la reparación integral de las víctimas, sus familiares y a la sociedad en su conjunto, respecto de los delitos cometidos por agentes del Estado y que constituyen vioaciones a los Derechos Humanos",
               "id": "4b",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 5.0
             },
             {
               "name": "Derecho al trabajo y su protección",
               "id": "4k",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 5.0
             }
           ]
@@ -77,25 +346,190 @@
             {
               "name": "Instituciones, organización del Estado y régimen político",
               "id": "1a",
-              "comision": 1,
-              "porcentaje": 15.3
+              "comision": "c1",
+              "porcentaje": 15.3,
+              "wordCloud" : [
+                {
+                  "ngram": "sistema",
+                  "frecuencia":	15
+                },
+                {
+                  "ngram": "congreso",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "estado",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "poder",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "plebiscito",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "participación",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "democracia",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "fortalecimiento",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "espacio",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "derecho",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "formas",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "mecanismos",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "cabildos",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "institucionalidad",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "atribución",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "presidencialismo",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "revisión",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "cámara",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "movilización",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "sueldos",
+                  "frecuencia":	2
+                }
+              ]
             },
             {
               "name": "Estado Plurinacional y libre determinación de los pueblos",
               "id": "1c",
-              "comision": 1,
-              "porcentaje": 9.5
+              "comision": "c1",
+              "porcentaje": 9.5,
+              "wordCloud":
+              [
+                {
+                  "ngram": "estado",
+                  "frecuencia":	11
+                },
+                {
+                  "ngram": "reconocimiento",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "plurinacionalidad",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "territorio",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "democracia",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "derechos",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "equilibrio",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "autodeterminación",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "nación",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "acuerdo",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "respeto",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "proceso",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "población",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "soluciones",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "cultura",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "desarrollo",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "determinación",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "representantes",
+                  "frecuencia":	2
+                }
+              ]
             },
             {
               "name": "Seguridad pública, defensa nacional y rol de las Fuerzas Armadas en el régimen democrático contemporáneo",
               "id": "1f",
-              "comision": 1,
+              "comision": "c1",
               "porcentaje": 6.0
             },
             {
               "name": "Buen gobierno, probidad y transparencia pública",
               "id": "1d",
-              "comision": 1,
+              "comision": "c1",
               "porcentaje": 5.0
             }
           ]
@@ -107,8 +541,90 @@
             {
               "name": "Rol del Estado en conocimientos, culturas, ciencia, tecnología, comunicaciones, artes, patrimonio y humanidades",
               "id": "7b",
-              "comision": 7,
-              "porcentaje": 14.5
+              "comision": "c7",
+              "porcentaje": 14.5,
+              "wordCloud": [
+                {
+                  "ngram": "cultura",
+                  "frecuencia":	29
+                },
+                {
+                  "ngram": "desarrollo",
+                  "frecuencia":	8
+                },
+                {
+                  "ngram": "fomento",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "valor",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "derecho",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "espacios",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "acceso",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "patrimonio",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "culturas",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "estado",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "protección",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "necesidad",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "artes",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "riqueza",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "reflexión",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "modelo",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "lengua",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "pib",
+                  "frecuencia":	2
+                }
+              ]
             }
           ]
         },
@@ -119,13 +635,95 @@
             {
               "name": "Principios",
               "id": "2b",
-              "comision": 2,
-              "porcentaje": 13.0
+              "comision": "c2",
+              "porcentaje": 13.0,
+              "wordCloud": [
+                {
+                  "ngram": "estado",
+                  "frecuencia":	24
+                },
+                {
+                  "ngram": "participación",
+                  "frecuencia":	14
+                },
+                {
+                  "ngram": "transparencia",
+                  "frecuencia":	11
+                },
+                {
+                  "ngram": "derecho",
+                  "frecuencia":	10
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia":	10
+                },
+                {
+                  "ngram": "seguridad",
+                  "frecuencia":	8
+                },
+                {
+                  "ngram": "igualdad",
+                  "frecuencia":	8
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuencia":	8
+                },
+                {
+                  "ngram": "poder",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "comunidad",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "tecnología",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "derechos",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "administración",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "creación",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "libertad",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "protección",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "sociedad",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "agua",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "paz",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "comunicación",
+                  "frecuencia":	4
+                }
+              ]
             },
             {
               "name": "Mecanismos de democracia directa y participativa; referéndums aprobatorios y revocatorios de mandato y de ley; iniciativa popular de ley, y democracia digital",
               "id": "2f",
-              "comision": 2,
+              "comision": "c2",
               "porcentaje": 6.5
             }
           ]
@@ -137,25 +735,107 @@
             {
               "name": "Desarrollo Sostenible, Buen vivir",
               "id": "5f",
-              "comision": 5,
-              "porcentaje": 12.5
+              "comision": "c5",
+              "porcentaje": 12.5,
+              "wordCloud": [
+                {
+                  "ngram": "estado",
+                  "frecuancia":	13
+                },
+                {
+                  "ngram": "modelo",
+                  "frecuancia":	12
+                },
+                {
+                  "ngram": "economía",
+                  "frecuancia":	8
+                },
+                {
+                  "ngram": "principio",
+                  "frecuancia":	7
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuancia":	7
+                },
+                {
+                  "ngram": "cambio",
+                  "frecuancia":	6
+                },
+                {
+                  "ngram": "recursos",
+                  "frecuancia":	6
+                },
+                {
+                  "ngram": "uso",
+                  "frecuancia":	5
+                },
+                {
+                  "ngram": "sociedad",
+                  "frecuancia":	5
+                },
+                {
+                  "ngram": "educación",
+                  "frecuancia":	5
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuancia":	5
+                },
+                {
+                  "ngram": "derechos",
+                  "frecuancia":	9
+                },
+                {
+                  "ngram": "medio",
+                  "frecuancia":	4
+                },
+                {
+                  "ngram": "desarrollo",
+                  "frecuancia":	4
+                },
+                {
+                  "ngram": "participación",
+                  "frecuancia":	4
+                },
+                {
+                  "ngram": "parte",
+                  "frecuancia":	4
+                },
+                {
+                  "ngram": "valor",
+                  "frecuancia":	4
+                },
+                {
+                  "ngram": "entorno",
+                  "frecuancia":	3
+                },
+                {
+                  "ngram": "agua",
+                  "frecuancia":	3
+                },
+                {
+                  "ngram": "falta",
+                  "frecuancia":	3
+                }
+              ]
             },
             {
               "name": "Derecho constitucional al agua y estatuto constitucional del agua",
               "id": "5d",
-              "comision": 5,
+              "comision": "c5",
               "porcentaje": 6.5
             },
             {
               "name": "Medioambiente, biodiversidad, principios de la bioética y bienes naturales comunes",
               "id": "5a",
-              "comision": 5,
+              "comision": "c5",
               "porcentaje": 6.0
             },
             {
               "name": "Derechos de la naturaleza y la vida no humana",
               "id": "5b",
-              "comision": 5,
+              "comision": "c5",
               "porcentaje": 6.0
             }
           ]
@@ -167,8 +847,90 @@
             {
               "name": "Estructura organizacional y descentralizada del Estado",
               "id": "3a",
-              "comision": 7,
-              "porcentaje": 9.0
+              "comision": "c7",
+              "porcentaje": 9.0,
+              "wordCloud": [
+                {
+                  "ngram": "estado",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "forma",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "poder",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "descentralización",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "autoridades",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "oportunidades",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "participación",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "personas",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "redistribución",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "mecanismos",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "autonomía",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "territorios",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "poderes",
+                  "frecuencia":	1
+                },
+                {
+                  "ngram": "soluciones",
+                  "frecuencia":	1
+                },
+                {
+                  "ngram": "perspectiva",
+                  "frecuencia":	1
+                },
+                {
+                  "ngram": "soporte",
+                  "frecuencia":	1
+                },
+                {
+                  "ngram": "territorio",
+                  "frecuencia":	1
+                },
+                {
+                  "ngram": "problemas",
+                  "frecuencia":	1
+                },
+                {
+                  "ngram": "uso",
+                  "frecuencia":	1
+                },
+                {
+                  "ngram": "normas",
+                  "frecuencia":	1
+                }
+              ]
             }
           ]
         }
@@ -184,25 +946,107 @@
             {
               "name": "Comisión 4 sobre Derechos Fundamentales.",
               "id": "4",
-              "comision": 4,
-              "porcentaje": 32.4
+              "comision": "c4",
+              "porcentaje": 32.4,
+              "wordCloud": [
+                {
+                  "ngram": "derecho",
+                  "frecuencia": 23
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuencia": 7
+                },
+                {
+                  "ngram": "persona",
+                  "frecuencia": 7
+                },
+                {
+                  "ngram": "deber",
+                  "frecuencia": 6
+                },
+                {
+                  "ngram": "protección",
+                  "frecuencia": 4
+                },
+                {
+                  "ngram": "sociedad",
+                  "frecuencia": 3
+                },
+                {
+                  "ngram": "educación",
+                  "frecuencia": 3
+                },
+                {
+                  "ngram": "propuesta",
+                  "frecuencia": 3
+                },
+                {
+                  "ngram": "igualdad",
+                  "frecuencia": 3
+                },
+                {
+                  "ngram": "convivencia",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "paz",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "edad",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "ley",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "norma",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "sección",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "necesidad",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "mecanismo",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "democracia",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "autoridad",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "asignatura",
+                  "frecuencia": 2
+                }
+              ]
             },
             {
               "name": "Educación",
               "id": "4p",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 7.4
             },
             {
               "name": "Niñez y juventud",
               "id": "4h",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 1.5
             },
             {
               "name": "Derecho al trabajo y su protección",
               "id": "4k",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 1.5
             }
           ]
@@ -214,13 +1058,95 @@
             {
               "name": "Estructura organizacional y descentralización del estado",
               "id": "3a",
-              "comision": 3,
-              "porcentaje": 30.9
+              "comision": "c3",
+              "porcentaje": 30.9,
+              "wordCloud": [
+                {
+                  "ngram": "estado",
+                  "frecuencia": 9
+                },
+                {
+                  "ngram": "región",
+                  "frecuencia": 6
+                },
+                {
+                  "ngram": "decisión",
+                  "frecuencia": 6
+                },
+                {
+                  "ngram": "ciudadanía",
+                  "frecuencia": 6
+                },
+                {
+                  "ngram": "desarrollo",
+                  "frecuencia": 5
+                },
+                {
+                  "ngram": "autonomía",
+                  "frecuencia": 4
+                },
+                {
+                  "ngram": "principio",
+                  "frecuencia": 4
+                },
+                {
+                  "ngram": "persona",
+                  "frecuencia": 4
+                },
+                {
+                  "ngram": "ley",
+                  "frecuencia": 3
+                },
+                {
+                  "ngram": "recurso",
+                  "frecuencia": 3
+                },
+                {
+                  "ngram": "institución",
+                  "frecuencia": 3
+                },
+                {
+                  "ngram": "autoridad",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "creación",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "propuesta",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "provincia",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "reconocimiento",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "descentralización",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "equidad",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "mérito",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "aspecto",
+                  "frecuencia": 2
+                }
+              ]
             },
             {
               "name": "Integración de las personas chilenas residentes en el extranjero",
               "id": "3l",
-              "comision": 3,
+              "comision": "c3",
               "porcentaje": 1.5
             }
           ]
@@ -232,13 +1158,13 @@
             {
               "name": "Estado Plurinacional",
               "id": "1c",
-              "comision": 1,
+              "comision": "c1",
               "porcentaje": 2.9
             },
             {
               "name": "Buen gobierno",
               "id": "1d",
-              "comision": 1,
+              "comision": "c1",
               "porcentaje": 1.5
             }
           ]
@@ -250,13 +1176,13 @@
             {
               "name": "Principios",
               "id": "2b",
-              "comision": 2,
+              "comision": "c2",
               "porcentaje": 1.5
             },
             {
               "name": "Integracion",
               "id": "2e",
-              "comision": 2,
+              "comision": "c2",
               "porcentaje": 1.5
             }
           ]
@@ -268,7 +1194,7 @@
             {
               "name": "Proteccion",
               "id": "5m",
-              "comision": 5,
+              "comision": "c5",
               "porcentaje": 14.7
             }
           ]
@@ -280,7 +1206,7 @@
             {
               "name": "Rol Estado",
               "id": "7b",
-              "comision": 3,
+              "comision": "c3",
               "porcentaje": 2.9
             }
           ]
@@ -297,25 +1223,107 @@
             {
               "name": "Instituciones",
               "id": "1a",
-              "comision": 1,
-              "porcentaje": 15.3
+              "comision": "c1",
+              "porcentaje": 15.3,
+              "wordCloud": [
+                {
+                  "ngram": "cambio",
+                  "frecuencia": 72
+                },
+                {
+                  "ngram": "tema",
+                  "frecuencia": 66
+                },
+                {
+                  "ngram": "político",
+                  "frecuencia": 47
+                },
+                {
+                  "ngram": "política",
+                  "frecuencia": 39
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia": 36
+                },
+                {
+                  "ngram": "país",
+                  "frecuencia": 33
+                },
+                {
+                  "ngram": "base",
+                  "frecuencia": 30
+                },
+                {
+                  "ngram": "cosa",
+                  "frecuencia": 27
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuencia": 26
+                },
+                {
+                  "ngram": "estado",
+                  "frecuencia": 19
+                },
+                {
+                  "ngram": "cabeza",
+                  "frecuencia": 18
+                },
+                {
+                  "ngram": "gente",
+                  "frecuencia": 17
+                },
+                {
+                  "ngram": "educación",
+                  "frecuencia": 17
+                },
+                {
+                  "ngram": "ley",
+                  "frecuencia": 16
+                },
+                {
+                  "ngram": "importante",
+                  "frecuencia": 16
+                },
+                {
+                  "ngram": "persona",
+                  "frecuencia": 14
+                },
+                {
+                  "ngram": "clase",
+                  "frecuencia": 13
+                },
+                {
+                  "ngram": "problema",
+                  "frecuencia": 12
+                },
+                {
+                  "ngram": "necesario",
+                  "frecuencia": 11
+                },
+                {
+                  "ngram": "forma",
+                  "frecuencia": 11
+                }
+              ]
             },
             {
               "name": "Buen gobierno",
               "id": "1d",
-              "comision": 1,
+              "comision": "c1",
               "porcentaje": 1.3
             },
             {
               "name": "Materias de ley",
               "id": "1b",
-              "comision": 1,
+              "comision": "c1",
               "porcentaje": 1.1
             },
             {
               "name": "Sistema electoral",
               "id": "1e",
-              "comision": 1,
+              "comision": "c1",
               "porcentaje": 0.2
             }
           ]
@@ -327,19 +1335,19 @@
             {
               "name": "Principios",
               "id": "2b",
-              "comision": 2,
+              "comision": "c2",
               "porcentaje": 2.1
             },
             {
               "name": "Mecanismos",
               "id": "2f",
-              "comision": 2,
+              "comision": "c2",
               "porcentaje": 1.5
             },
             {
               "name": "Nacionalidad",
               "id": "2c",
-              "comision": 2,
+              "comision": "c2",
               "porcentaje": 1.1
             }
           ]
@@ -351,19 +1359,19 @@
             {
               "name": "Estructura",
               "id": "3a",
-              "comision": 3,
+              "comision": "c3",
               "porcentaje": 1.8
             },
             {
               "name": "Igualdad",
               "id": "3f",
-              "comision": 3,
+              "comision": "c3",
               "porcentaje": 0.1
             },
             {
               "name": "Autonomias",
               "id": "3e",
-              "comision": 3,
+              "comision": "c3",
               "porcentaje": 0.1
             }
           ]
@@ -375,55 +1383,301 @@
             {
               "name": "Educación",
               "id": "4p",
-              "comision": 4,
-              "porcentaje": 42.3
+              "comision": "c4",
+              "porcentaje": 42.3,
+              "wordCloud": [
+                {
+                  "ngram": "educación",
+                  "frecuencia": 427
+                },
+                {
+                  "ngram": "base",
+                  "frecuencia": 263
+                },
+                {
+                  "ngram": "tema",
+                  "frecuencia": 106
+                },
+                {
+                  "ngram": "persona",
+                  "frecuencia": 105
+                },
+                {
+                  "ngram": "cambio",
+                  "frecuencia": 72
+                },
+                {
+                  "ngram": "niño",
+                  "frecuencia": 68
+                },
+                {
+                  "ngram": "país",
+                  "frecuencia": 68
+                },
+                {
+                  "ngram": "importante",
+                  "frecuencia": 64
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia": 53
+                },
+                {
+                  "ngram": "sociedad",
+                  "frecuencia": 47
+                },
+                {
+                  "ngram": "futuro",
+                  "frecuencia": 44
+                },
+                {
+                  "ngram": "cosa",
+                  "frecuencia": 42
+                },
+                {
+                  "ngram": "forma",
+                  "frecuencia": 38
+                },
+                {
+                  "ngram": "valor",
+                  "frecuencia": 37
+                },
+                {
+                  "ngram": "herramienta",
+                  "frecuencia": 35
+                },
+                {
+                  "ngram": "hijo",
+                  "frecuencia": 29
+                },
+                {
+                  "ngram": "vida",
+                  "frecuencia": 28
+                },
+                {
+                  "ngram": "pilar",
+                  "frecuencia": 28
+                },
+                {
+                  "ngram": "gente",
+                  "frecuencia": 27
+                },
+                {
+                  "ngram": "oportunidad",
+                  "frecuencia": 27
+                }
+              ]
             },
             {
               "name": "Salud",
               "id": "4o",
-              "comision": 4,
-              "porcentaje": 12.2
+              "comision": "c4",
+              "porcentaje": 12.2,
+              "wordCloud": [
+                {
+                  "ngram": "salud",
+                  "frecuencia": 89
+                },
+                {
+                  "ngram": "tema",
+                  "frecuencia": 42
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia": 34
+                },
+                {
+                  "ngram": "atención",
+                  "frecuencia": 29
+                },
+                {
+                  "ngram": "importante",
+                  "frecuencia": 26
+                },
+                {
+                  "ngram": "persona",
+                  "frecuencia": 25
+                },
+                {
+                  "ngram": "voto",
+                  "frecuencia": 23
+                },
+                {
+                  "ngram": "hora",
+                  "frecuencia": 23
+                },
+                {
+                  "ngram": "gente",
+                  "frecuencia": 18
+                },
+                {
+                  "ngram": "derecho",
+                  "frecuencia": 14
+                },
+                {
+                  "ngram": "dinero",
+                  "frecuencia": 14
+                },
+                {
+                  "ngram": "cosa",
+                  "frecuencia": 13
+                },
+                {
+                  "ngram": "vida",
+                  "frecuencia": 13
+                },
+                {
+                  "ngram": "año",
+                  "frecuencia": 13
+                },
+                {
+                  "ngram": "necesario",
+                  "frecuencia": 12
+                },
+                {
+                  "ngram": "plata",
+                  "frecuencia": 11
+                },
+                {
+                  "ngram": "país",
+                  "frecuencia": 11
+                },
+                {
+                  "ngram": "primordial",
+                  "frecuencia": 10
+                },
+                {
+                  "ngram": "hospital",
+                  "frecuencia": 10
+                },
+                {
+                  "ngram": "malo",
+                  "frecuencia": 10
+                }
+              ]
             },
             {
               "name": "Pensiones",
               "id": "4n",
-              "comision": 4,
-              "porcentaje": 7.6
+              "comision": "c4",
+              "porcentaje": 7.6,
+              "wordCloud": [
+                {
+                  "ngram": "tema",
+                  "frecuencia": 42
+                },
+                {
+                  "ngram": "pensión",
+                  "frecuencia": 34
+                },
+                {
+                  "ngram": "persona",
+                  "frecuencia": 22
+                },
+                {
+                  "ngram": "afp",
+                  "frecuencia": 14
+                },
+                {
+                  "ngram": "vida",
+                  "frecuencia": 14
+                },
+                {
+                  "ngram": "bajo",
+                  "frecuencia": 13
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia": 11
+                },
+                {
+                  "ngram": "edad",
+                  "frecuencia": 10
+                },
+                {
+                  "ngram": "gente",
+                  "frecuencia": 9
+                },
+                {
+                  "ngram": "año",
+                  "frecuencia": 8
+                },
+                {
+                  "ngram": "voto",
+                  "frecuencia": 8
+                },
+                {
+                  "ngram": "plata",
+                  "frecuencia": 8
+                },
+                {
+                  "ngram": "vejez",
+                  "frecuencia": 8
+                },
+                {
+                  "ngram": "cambio",
+                  "frecuencia": 7
+                },
+                {
+                  "ngram": "adulto",
+                  "frecuencia": 7
+                },
+                {
+                  "ngram": "dinero",
+                  "frecuencia": 7
+                },
+                {
+                  "ngram": "abuelo",
+                  "frecuencia": 7
+                },
+                {
+                  "ngram": "importante",
+                  "frecuencia": 7
+                },
+                {
+                  "ngram": "urgente",
+                  "frecuencia": 6
+                },
+                {
+                  "ngram": "fundamental",
+                  "frecuencia": 6
+                }
+              ]
             },
             {
               "name": "Niñez y juventud",
               "id": "4h",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 1.7
             },
             {
               "name": "Vivienda",
               "id": "4j",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 1.0
             },
             {
               "name": "Trabajo",
               "id": "4k",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 0.7
             },
             {
               "name": "Seguridad",
               "id": "4c1",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 0.6
             },
             {
               "name": "Personas mayores",
               "id": "4ñ",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 0.4
             },
             {
               "name": "Mujeres",
               "id": "4q",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 0.2
             }
           ]
@@ -435,13 +1689,13 @@
             {
               "name": "Desarrollo sostenible",
               "id": "5f",
-              "comision": 5,
+              "comision": "c5",
               "porcentaje": 2.5
             },
             {
               "name": "Medioambiente",
               "id": "5a",
-              "comision": 5,
+              "comision": "c5",
               "porcentaje": 1.5
             }
           ]
@@ -453,7 +1707,7 @@
             {
               "name": "Poder judicial",
               "id": "6a",
-              "comision": 6,
+              "comision": "c6",
               "porcentaje": 4.0
             }
           ]
@@ -465,7 +1719,7 @@
             {
               "name": "Democratizacion",
               "id": "7e",
-              "comision": 7,
+              "comision": "c7",
               "porcentaje": 0.7
             }
           ]
@@ -482,19 +1736,19 @@
             {
               "name": "Poder legislativo",
               "id": "1beg",
-              "comision": 1,
+              "comision": "c1",
               "porcentaje": 4.6
             },
             {
               "name": "Pueblos Originarios",
               "id": "1c",
-              "comision": 1,
+              "comision": "c1",
               "porcentaje": 2.3
             },
             {
               "name": "Seguridad publica",
               "id": "1f",
-              "comision": 1,
+              "comision": "c1",
               "porcentaje": 1.9
             }
           ]
@@ -506,13 +1760,13 @@
             {
               "name": "Participacion",
               "id": "2d",
-              "comision": 2,
+              "comision": "c2",
               "porcentaje": 3.3
             },
             {
               "name": "Migracion",
               "id": "2c",
-              "comision": 2,
+              "comision": "c2",
               "porcentaje": 0.3
             }
           ]
@@ -524,13 +1778,13 @@
             {
               "name": "Tributacion",
               "id": "3f",
-              "comision": 3,
+              "comision": "c3",
               "porcentaje": 4.0
             },
             {
               "name": "Poder local",
               "id": "3acd",
-              "comision": 3,
+              "comision": "c3",
               "porcentaje": 2.2
             }
           ]
@@ -542,61 +1796,61 @@
             {
               "name": "Educación",
               "id": "4p",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 11.6
             },
             {
               "name": "Salud",
               "id": "4o",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 11.6
             },
             {
               "name": "Pensiones",
               "id": "4n",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 11.5
             },
             {
               "name": "Empleo-Trabajo",
               "id": "4k",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 8.2
             },
             {
               "name": "Justicia y derechos",
               "id": "4a",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 6.2
             },
             {
               "name": "Vivienda",
               "id": "4j",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 3.8
             },
             {
               "name": "Proteccion social",
               "id": "4gh",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 3.0
             },
             {
               "name": "Transporte",
               "id": "4j",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 2.9
             },
             {
               "name": "Igualdad de genero",
               "id": "4eqt",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 1.4
             },
             {
               "name": "Medios comunicacion",
               "id": "4",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 0.7
             }
           ]
@@ -608,13 +1862,13 @@
             {
               "name": "Medioambiente",
               "id": "5bcdfijm",
-              "comision": 5,
+              "comision": "c5",
               "porcentaje": 7.7
             },
             {
               "name": "Cambios al modelo",
               "id": "5dfm",
-              "comision": 5,
+              "comision": "c5",
               "porcentaje": 5.2
             }
           ]
@@ -626,7 +1880,7 @@
             {
               "name": "Justicia",
               "id": "6abf",
-              "comision": 6,
+              "comision": "c6",
               "porcentaje": 3.1
             }
           ]
@@ -638,7 +1892,7 @@
             {
               "name": "Arte cultura",
               "id": "7abc",
-              "comision": 7,
+              "comision": "c7",
               "porcentaje": 0.9
             }
           ]
@@ -655,7 +1909,7 @@
             {
               "name": "Cambios politicos",
               "id": "1n",
-              "comision": 1,
+              "comision": "c1",
               "porcentaje": 6.3
             }
           ]
@@ -667,31 +1921,31 @@
             {
               "name": "Pensiones",
               "id": "4n",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 33.9
             },
             {
               "name": "Salud",
               "id": "4o",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 22.2
             },
             {
               "name": "Educación",
               "id": "4p",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 15.2
             },
             {
               "name": "Condiciones laborales",
               "id": "4k",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 12.2
             },
             {
               "name": "Vivienda",
               "id": "4j",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 10.2
             }
           ]
@@ -700,6 +1954,196 @@
     },
     {
       "name": "Ahora Nos Toca Participar (ANTP)",
+      "wordClouds": [
+        [
+          {
+            "ngram": "educación ciudadana",
+            "frecuencia": 4
+          },
+          {
+            "ngram": "derechos humanos",
+            "frecuencia": 4
+          },
+          {
+            "ngram": "nivel nacional",
+            "frecuencia": 3
+          },
+          {
+            "ngram": "organizaciones de personas",
+            "frecuencia": 3
+          },
+          {
+            "ngram": "reconocimiento visibilización",
+            "frecuencia": 3
+          },
+          {
+            "ngram": "derecho social",
+            "frecuencia": 3
+          },
+          {
+            "ngram": "estado de derechos",
+            "frecuencia": 3
+          },
+          {
+            "ngram": "información ciudadana",
+            "frecuencia": 3
+          },
+          {
+            "ngram": "derechos fundamentales",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "cultura participativa",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "años de residencia",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "espacios educacionales",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "sector salud",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "derechos sociales",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "servicio nacional",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "sexual integral",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "tener voz",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "educación sexual",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "educación sexual integral",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "sociedad civil",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "reparación histórica",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "accesibilidad universal",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "perspectiva de género",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "institucionalidad autónoma",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "representación política",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "nuevo sistema",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "sexo registral",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "sistema de salud",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "entorno protector",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "poder vinculante",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "servicio comunitario",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "reinserción social",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "derecho a voto",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "tipo de discriminación",
+            "frecuencia": 2
+          }
+        ],
+        [
+          {
+            "ngram": "personas intersexuales",
+            "frecuencia": 9
+          },
+          {
+            "ngram": "privadas de libertad",
+            "frecuencia": 8
+          },
+          {
+            "ngram": "tribal afrodescendiente",
+            "frecuencia": 7
+          },
+          {
+            "ngram": "migrantes y refugiadas",
+            "frecuencia": 6
+          },
+          {
+            "ngram": "personas migrantes",
+            "frecuencia": 6
+          },
+          {
+            "ngram": "personas mayores",
+            "frecuencia": 6
+          },
+          {
+            "ngram": "personas con discapacidad",
+            "frecuencia": 4
+          },
+          {
+            "ngram": "situación de discapacidad",
+            "frecuencia": 4
+          },
+          {
+            "ngram": "niños y adolescentes",
+            "frecuencia": 3
+          },
+          {
+            "ngram": "comunidades rurales",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "niñas y adolescentes",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "sectores rurales",
+            "frecuencia": 2
+          }
+        ]
+      ],
       "children": [
         {
           "name": "Comision 1",
@@ -708,13 +2152,13 @@
             {
               "name": "Sistema electoral",
               "id": "1e",
-              "comision": 1,
+              "comision": "c1",
               "porcentaje": 2.2
             },
             {
               "name": "Plurinacional",
               "id": "1c",
-              "comision": 1,
+              "comision": "c1",
               "porcentaje": 2.2
             }
           ]
@@ -726,13 +2170,13 @@
             {
               "name": "Democracia directa",
               "id": "2f",
-              "comision": 2,
+              "comision": "c2",
               "porcentaje": 24.1
             },
             {
               "name": "Principios",
               "id": "2b",
-              "comision": 2,
+              "comision": "c2",
               "porcentaje": 6.6
             }
           ]
@@ -744,25 +2188,25 @@
             {
               "name": "Autonomia afrodescendiente",
               "id": "3m",
-              "comision": 3,
+              "comision": "c3",
               "porcentaje": 1.5
             },
             {
               "name": "Ruralidad",
               "id": "3j",
-              "comision": 3,
+              "comision": "c3",
               "porcentaje": 1.5
             },
             {
               "name": "Chilenos exterior",
               "id": "3k",
-              "comision": 3,
+              "comision": "c3",
               "porcentaje": 0.7
             },
             {
               "name": "Estructura estado",
               "id": "3a",
-              "comision": 3,
+              "comision": "c3",
               "porcentaje": 0.7
             }
           ]
@@ -774,79 +2218,79 @@
             {
               "name": "Niñez y juventud",
               "id": "4h",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 12.4
             },
             {
               "name": "Personas discapacidad",
               "id": "4g",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 8.0
             },
             {
               "name": "Migrantes",
               "id": "4u",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 7.3
             },
             {
               "name": "Privadas libertad",
               "id": "4r",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 7.3
             },
             {
               "name": "Disidencias",
               "id": "4t",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 5.8
             },
             {
               "name": "Derechos individuales",
               "id": "4i",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 5.8
             },
             {
               "name": "Personas mayores",
               "id": "4ñ",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 5.1
             },
             {
               "name": "Trabajo domestico",
               "id": "4l",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 2.9
             },
             {
               "name": "Libertad opinion",
               "id": "4d1",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 1.5
             },
             {
               "name": "Educacion",
               "id": "4p",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 1.5
             },
             {
               "name": "Reinsercion",
               "id": "4f",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 0.7
             },
             {
               "name": "Vivienda",
               "id": "4j",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 0.7
             },
             {
               "name": "Seguridad social",
               "id": "4n",
-              "comision": 4,
+              "comision": "c4",
               "porcentaje": 0.7
             }
           ]
@@ -858,7 +2302,7 @@
             {
               "name": "Democratizacion",
               "id": "7e",
-              "comision": 7,
+              "comision": "c7",
               "porcentaje": 0.7
             }
           ]
