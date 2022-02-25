@@ -178,7 +178,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("viewBox", [0, 0, width, height])
       .attr("width", svgWidth)
       .attr("height", height)
-      .attr("style", "max-width: 100%; height: auto; height: intrinsic;")
+      .attr("style", "max-width: 100%; height: auto; height: intrinsic; position: relative; z-index: -1;")
       .attr("font-family", "sans-serif")
       .attr("font-size", 10)
       .attr("text-anchor", "middle")
@@ -200,18 +200,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("r", d => d.r)
       // .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
       // .on("mouseout", function() { d3.select(this).attr("stroke", "lightgrey"); })
-
-    // const startAngle = -Math.PI / 4;
-  	// let labelArc = d3.arc();
-    //
-		// labelArc.innerRadius(function(d) { return (d.r); })
-		// 		.outerRadius(function(d) { return (d.r); })
-		// 		.startAngle(startAngle)
-		// 		.endAngle(function(d) {
-		// 			const total = d.data.name.length;
-		// 			const step = charSize / d.r;
-		// 			return startAngle + (total * step);
-		// 		});
 
   const label = svg.append("g")
       .style("font", "10px sans-serif")
