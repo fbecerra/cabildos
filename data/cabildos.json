@@ -1224,7 +1224,89 @@
               "name": "Instituciones",
               "id": "1a",
               "comision": "c1",
-              "porcentaje": 15.3
+              "porcentaje": 15.3,
+              "wordCloud": [
+                {
+                  "ngram": "cambio",
+                  "frecuencia": 72
+                },
+                {
+                  "ngram": "tema",
+                  "frecuencia": 66
+                },
+                {
+                  "ngram": "político",
+                  "frecuencia": 47
+                },
+                {
+                  "ngram": "política",
+                  "frecuencia": 39
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia": 36
+                },
+                {
+                  "ngram": "país",
+                  "frecuencia": 33
+                },
+                {
+                  "ngram": "base",
+                  "frecuencia": 30
+                },
+                {
+                  "ngram": "cosa",
+                  "frecuencia": 27
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuencia": 26
+                },
+                {
+                  "ngram": "estado",
+                  "frecuencia": 19
+                },
+                {
+                  "ngram": "cabeza",
+                  "frecuencia": 18
+                },
+                {
+                  "ngram": "gente",
+                  "frecuencia": 17
+                },
+                {
+                  "ngram": "educación",
+                  "frecuencia": 17
+                },
+                {
+                  "ngram": "ley",
+                  "frecuencia": 16
+                },
+                {
+                  "ngram": "importante",
+                  "frecuencia": 16
+                },
+                {
+                  "ngram": "persona",
+                  "frecuencia": 14
+                },
+                {
+                  "ngram": "clase",
+                  "frecuencia": 13
+                },
+                {
+                  "ngram": "problema",
+                  "frecuencia": 12
+                },
+                {
+                  "ngram": "necesario",
+                  "frecuencia": 11
+                },
+                {
+                  "ngram": "forma",
+                  "frecuencia": 11
+                }
+              ]
             },
             {
               "name": "Buen gobierno",
@@ -1302,19 +1384,265 @@
               "name": "Educación",
               "id": "4p",
               "comision": "c4",
-              "porcentaje": 42.3
+              "porcentaje": 42.3,
+              "wordCloud": [
+                {
+                  "ngram": "educación",
+                  "frecuencia": 427
+                },
+                {
+                  "ngram": "base",
+                  "frecuencia": 263
+                },
+                {
+                  "ngram": "tema",
+                  "frecuencia": 106
+                },
+                {
+                  "ngram": "persona",
+                  "frecuencia": 105
+                },
+                {
+                  "ngram": "cambio",
+                  "frecuencia": 72
+                },
+                {
+                  "ngram": "niño",
+                  "frecuencia": 68
+                },
+                {
+                  "ngram": "país",
+                  "frecuencia": 68
+                },
+                {
+                  "ngram": "importante",
+                  "frecuencia": 64
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia": 53
+                },
+                {
+                  "ngram": "sociedad",
+                  "frecuencia": 47
+                },
+                {
+                  "ngram": "futuro",
+                  "frecuencia": 44
+                },
+                {
+                  "ngram": "cosa",
+                  "frecuencia": 42
+                },
+                {
+                  "ngram": "forma",
+                  "frecuencia": 38
+                },
+                {
+                  "ngram": "valor",
+                  "frecuencia": 37
+                },
+                {
+                  "ngram": "herramienta",
+                  "frecuencia": 35
+                },
+                {
+                  "ngram": "hijo",
+                  "frecuencia": 29
+                },
+                {
+                  "ngram": "vida",
+                  "frecuencia": 28
+                },
+                {
+                  "ngram": "pilar",
+                  "frecuencia": 28
+                },
+                {
+                  "ngram": "gente",
+                  "frecuencia": 27
+                },
+                {
+                  "ngram": "oportunidad",
+                  "frecuencia": 27
+                }
+              ]
             },
             {
               "name": "Salud",
               "id": "4o",
               "comision": "c4",
-              "porcentaje": 12.2
+              "porcentaje": 12.2,
+              "wordCloud": [
+                {
+                  "ngram": "salud",
+                  "frecuencia": 89
+                },
+                {
+                  "ngram": "tema",
+                  "frecuencia": 42
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia": 34
+                },
+                {
+                  "ngram": "atención",
+                  "frecuencia": 29
+                },
+                {
+                  "ngram": "importante",
+                  "frecuencia": 26
+                },
+                {
+                  "ngram": "persona",
+                  "frecuencia": 25
+                },
+                {
+                  "ngram": "voto",
+                  "frecuencia": 23
+                },
+                {
+                  "ngram": "hora",
+                  "frecuencia": 23
+                },
+                {
+                  "ngram": "gente",
+                  "frecuencia": 18
+                },
+                {
+                  "ngram": "derecho",
+                  "frecuencia": 14
+                },
+                {
+                  "ngram": "dinero",
+                  "frecuencia": 14
+                },
+                {
+                  "ngram": "cosa",
+                  "frecuencia": 13
+                },
+                {
+                  "ngram": "vida",
+                  "frecuencia": 13
+                },
+                {
+                  "ngram": "año",
+                  "frecuencia": 13
+                },
+                {
+                  "ngram": "necesario",
+                  "frecuencia": 12
+                },
+                {
+                  "ngram": "plata",
+                  "frecuencia": 11
+                },
+                {
+                  "ngram": "país",
+                  "frecuencia": 11
+                },
+                {
+                  "ngram": "primordial",
+                  "frecuencia": 10
+                },
+                {
+                  "ngram": "hospital",
+                  "frecuencia": 10
+                },
+                {
+                  "ngram": "malo",
+                  "frecuencia": 10
+                }
+              ]
             },
             {
               "name": "Pensiones",
               "id": "4n",
               "comision": "c4",
-              "porcentaje": 7.6
+              "porcentaje": 7.6,
+              "wordCloud": [
+                {
+                  "ngram": "tema",
+                  "frecuencia": 42
+                },
+                {
+                  "ngram": "pensión",
+                  "frecuencia": 34
+                },
+                {
+                  "ngram": "persona",
+                  "frecuencia": 22
+                },
+                {
+                  "ngram": "afp",
+                  "frecuencia": 14
+                },
+                {
+                  "ngram": "vida",
+                  "frecuencia": 14
+                },
+                {
+                  "ngram": "bajo",
+                  "frecuencia": 13
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia": 11
+                },
+                {
+                  "ngram": "edad",
+                  "frecuencia": 10
+                },
+                {
+                  "ngram": "gente",
+                  "frecuencia": 9
+                },
+                {
+                  "ngram": "año",
+                  "frecuencia": 8
+                },
+                {
+                  "ngram": "voto",
+                  "frecuencia": 8
+                },
+                {
+                  "ngram": "plata",
+                  "frecuencia": 8
+                },
+                {
+                  "ngram": "vejez",
+                  "frecuencia": 8
+                },
+                {
+                  "ngram": "cambio",
+                  "frecuencia": 7
+                },
+                {
+                  "ngram": "adulto",
+                  "frecuencia": 7
+                },
+                {
+                  "ngram": "dinero",
+                  "frecuencia": 7
+                },
+                {
+                  "ngram": "abuelo",
+                  "frecuencia": 7
+                },
+                {
+                  "ngram": "importante",
+                  "frecuencia": 7
+                },
+                {
+                  "ngram": "urgente",
+                  "frecuencia": 6
+                },
+                {
+                  "ngram": "fundamental",
+                  "frecuencia": 6
+                }
+              ]
             },
             {
               "name": "Niñez y juventud",
