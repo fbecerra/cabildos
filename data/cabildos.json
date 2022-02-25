@@ -12,7 +12,89 @@
               "name": "Educación",
               "id": "4p",
               "comision": 4,
-              "porcentaje": 42.3
+              "porcentaje": 42.3,
+              "wordCloud": [
+                {
+                  "ngram": "educación",
+                  "frecuencia":	51
+                },
+                {
+                  "ngram": "derecho",
+                  "frecuencia":	15
+                },
+                {
+                  "ngram": "desarrollo",
+                  "frecuencia":	14
+                },
+                {
+                  "ngram": "estado",
+                  "frecuencia":	11
+                },
+                {
+                  "ngram": "modelo",
+                  "frecuencia":	11
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia":	10
+                },
+                {
+                  "ngram": "recursos",
+                  "frecuencia":	9
+                },
+                {
+                  "ngram": "plazo",
+                  "frecuencia":	9
+                },
+                {
+                  "ngram": "acceso",
+                  "frecuencia":	9
+                },
+                {
+                  "ngram": "condiciones",
+                  "frecuencia":	8
+                },
+                {
+                  "ngram": "estudiantes",
+                  "frecuencia":	8
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuencia":	7
+                },
+                {
+                  "ngram": "currículum",
+                  "frecuencia":	7
+                },
+                {
+                  "ngram": "formación",
+                  "frecuencia":	7
+                },
+                {
+                  "ngram": "manera",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "sociedad",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "cambios",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "necesidad",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "equidad",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "comunidad",
+                  "frecuencia":	5
+                }
+              ]
             },
             {
               "name": "Salud",
