@@ -1059,7 +1059,89 @@
               "name": "Estructura organizacional y descentralización del estado",
               "id": "3a",
               "comision": "c3",
-              "porcentaje": 30.9
+              "porcentaje": 30.9,
+              "wordCloud": [
+                {
+                  "ngram": "estado",
+                  "frecuencia": 9
+                },
+                {
+                  "ngram": "región",
+                  "frecuencia": 6
+                },
+                {
+                  "ngram": "decisión",
+                  "frecuencia": 6
+                },
+                {
+                  "ngram": "ciudadanía",
+                  "frecuencia": 6
+                },
+                {
+                  "ngram": "desarrollo",
+                  "frecuencia": 5
+                },
+                {
+                  "ngram": "autonomía",
+                  "frecuencia": 4
+                },
+                {
+                  "ngram": "principio",
+                  "frecuencia": 4
+                },
+                {
+                  "ngram": "persona",
+                  "frecuencia": 4
+                },
+                {
+                  "ngram": "ley",
+                  "frecuencia": 3
+                },
+                {
+                  "ngram": "recurso",
+                  "frecuencia": 3
+                },
+                {
+                  "ngram": "institución",
+                  "frecuencia": 3
+                },
+                {
+                  "ngram": "autoridad",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "creación",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "propuesta",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "provincia",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "reconocimiento",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "descentralización",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "equidad",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "mérito",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "aspecto",
+                  "frecuencia": 2
+                }
+              ]
             },
             {
               "name": "Integración de las personas chilenas residentes en el extranjero",
