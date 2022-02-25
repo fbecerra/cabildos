@@ -1954,6 +1954,196 @@
     },
     {
       "name": "Ahora Nos Toca Participar (ANTP)",
+      "wordClouds": [
+        [
+          {
+            "ngram": "educación ciudadana",
+            "frecuencia": 4
+          },
+          {
+            "ngram": "derechos humanos",
+            "frecuencia": 4
+          },
+          {
+            "ngram": "nivel nacional",
+            "frecuencia": 3
+          },
+          {
+            "ngram": "organizaciones de personas",
+            "frecuencia": 3
+          },
+          {
+            "ngram": "reconocimiento visibilización",
+            "frecuencia": 3
+          },
+          {
+            "ngram": "derecho social",
+            "frecuencia": 3
+          },
+          {
+            "ngram": "estado de derechos",
+            "frecuencia": 3
+          },
+          {
+            "ngram": "información ciudadana",
+            "frecuencia": 3
+          },
+          {
+            "ngram": "derechos fundamentales",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "cultura participativa",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "años de residencia",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "espacios educacionales",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "sector salud",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "derechos sociales",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "servicio nacional",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "sexual integral",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "tener voz",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "educación sexual",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "educación sexual integral",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "sociedad civil",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "reparación histórica",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "accesibilidad universal",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "perspectiva de género",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "institucionalidad autónoma",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "representación política",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "nuevo sistema",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "sexo registral",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "sistema de salud",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "entorno protector",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "poder vinculante",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "servicio comunitario",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "reinserción social",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "derecho a voto",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "tipo de discriminación",
+            "frecuencia": 2
+          }
+        ],
+        [
+          {
+            "ngram": "personas intersexuales",
+            "frecuencia": 9
+          },
+          {
+            "ngram": "privadas de libertad",
+            "frecuencia": 8
+          },
+          {
+            "ngram": "tribal afrodescendiente",
+            "frecuencia": 7
+          },
+          {
+            "ngram": "migrantes y refugiadas",
+            "frecuencia": 6
+          },
+          {
+            "ngram": "personas migrantes",
+            "frecuencia": 6
+          },
+          {
+            "ngram": "personas mayores",
+            "frecuencia": 6
+          },
+          {
+            "ngram": "personas con discapacidad",
+            "frecuencia": 4
+          },
+          {
+            "ngram": "situación de discapacidad",
+            "frecuencia": 4
+          },
+          {
+            "ngram": "niños y adolescentes",
+            "frecuencia": 3
+          },
+          {
+            "ngram": "comunidades rurales",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "niñas y adolescentes",
+            "frecuencia": 2
+          },
+          {
+            "ngram": "sectores rurales",
+            "frecuencia": 2
+          }
+        ]
+      ],
       "children": [
         {
           "name": "Comision 1",
