@@ -211,7 +211,89 @@
               "name": "Niñez y Juventud",
               "id": "4h",
               "comision": "c4",
-              "porcentaje": 7.5
+              "porcentaje": 7.5,
+              "wordCloud": [
+                {
+                  "ngram": "derecho",
+                  "frecuencia":	14
+                },
+                {
+                  "ngram": "niño",
+                  "frecuencia":	7
+                },
+                {
+                  "ngram": "jóvenes",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "importancia",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "niños",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "gobierno",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "educación",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "derechos",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "deberes",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "salud",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "calidad",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "rol",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "respeto",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "espacio",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "estado",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "falta",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "problema",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "prioridad",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "preocupación",
+                  "frecuencia":	2
+                }
+              ]
             },
             {
               "name": "Seguridad Social y sistema de pensiones",
