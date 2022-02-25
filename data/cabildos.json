@@ -183,7 +183,89 @@
               "name": "Instituciones, organización del Estado y régimen político",
               "id": "1a",
               "comision": "c1",
-              "porcentaje": 15.3
+              "porcentaje": 15.3,
+              "wordCloud" : [
+                {
+                  "ngram": "sistema",
+                  "frecuencia":	15
+                },
+                {
+                  "ngram": "congreso",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "estado",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "poder",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "plebiscito",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "participación",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "democracia",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "fortalecimiento",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "espacio",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "derecho",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "formas",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "mecanismos",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "cabildos",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "institucionalidad",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "atribución",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "presidencialismo",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "revisión",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "cámara",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "movilización",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "sueldos",
+                  "frecuencia":	2
+                }
+              ]
             },
             {
               "name": "Estado Plurinacional y libre determinación de los pueblos",
