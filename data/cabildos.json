@@ -123,7 +123,89 @@
               "name": "Salud",
               "id": "4o",
               "comision": "c4",
-              "porcentaje": 12.2
+              "porcentaje": 12.2,
+              "wordCloud": [
+                {
+                  "ngram": "salud",
+                  "frecuencia":	27
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia":	21
+                },
+                {
+                  "ngram": "acceso",
+                  "frecuencia":	13
+                },
+                {
+                  "ngram": "modelo",
+                  "frecuencia":	11
+                },
+                {
+                  "ngram": "derecho",
+                  "frecuencia":	9
+                },
+                {
+                  "ngram": "atención",
+                  "frecuencia":	7
+                },
+                {
+                  "ngram": "personas",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "estado",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "falta",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "políticas",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "capacidad",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "calidad",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "recursos",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "necesidad",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "principios",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "discusión",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "desarrollo",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "prevención",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "público",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "enfermedades",
+                  "frecuencia":	2
+                }
+              ]
             },
             {
               "name": "Niñez y Juventud",
