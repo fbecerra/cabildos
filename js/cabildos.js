@@ -157,7 +157,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   let format = d3.format(",d");
 
-  const height = 700,
+  const height = 600,
         width = height;
   const charSize = 2;
 
@@ -172,7 +172,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   console.log(root)
   let focus = root;
   let view;
-  const svgWidth = 3/4 * width;
+  const svgWidth = 1.2 * width;
 
   const svg = d3.select("#cabildos").append("svg")
       .attr("viewBox", [0, 0, width, height])
@@ -182,7 +182,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("font-family", "sans-serif")
       .attr("font-size", 10)
       .attr("text-anchor", "middle")
-      .attr("transform", `rotate(90) scale(1.6)`);
+      .attr("transform", `scale(1.4)`);
 
   const offset = (height - svgWidth) / 2;
 
@@ -195,8 +195,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr('stroke-width', 1.0)
       .attr("fill", d => d.children ? "white" : color(d.data.comision))
       .attr("pointer-events", d => !d.children ? "none" : null)
-      .attr("cx", d => d.x)
-      .attr("cy", d => d.y)
+      .attr("cx", d => d.y)
+      .attr("cy", d => d.x)
       .attr("r", d => d.r)
       // .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
       // .on("mouseout", function() { d3.select(this).attr("stroke", "lightgrey"); })
@@ -222,11 +222,11 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     .selectAll("text")
     .data(root.descendants().slice(1).filter(function(d) { return !d.children; }))
     .join("text")
-      .attr("x", d => d.x)
-      .attr("y", d => d.y)
+      .attr("x", d => d.y)
+      .attr("y", d => d.x)
       .style("fill-opacity", 1)
       .style("display", "inline")
-      // .text(d => d.data.name.slice(0, 10))
+      .text(d => d.r > 15 ? d.data.name.slice(0, 10) : null)
       // .attr("transform", "rotate(0.1)")
 
 })
