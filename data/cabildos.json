@@ -519,7 +519,89 @@
               "name": "Estructura organizacional y descentralizada del Estado",
               "id": "3a",
               "comision": "c7",
-              "porcentaje": 9.0
+              "porcentaje": 9.0,
+              "wordCloud": [
+                {
+                  "ngram": "estado",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "forma",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "poder",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "descentralización",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "autoridades",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "oportunidades",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "participación",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "personas",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "redistribución",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "mecanismos",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "autonomía",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "territorios",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "poderes",
+                  "frecuencia":	1
+                },
+                {
+                  "ngram": "soluciones",
+                  "frecuencia":	1
+                },
+                {
+                  "ngram": "perspectiva",
+                  "frecuencia":	1
+                },
+                {
+                  "ngram": "soporte",
+                  "frecuencia":	1
+                },
+                {
+                  "ngram": "territorio",
+                  "frecuencia":	1
+                },
+                {
+                  "ngram": "problemas",
+                  "frecuencia":	1
+                },
+                {
+                  "ngram": "uso",
+                  "frecuencia":	1
+                },
+                {
+                  "ngram": "normas",
+                  "frecuencia":	1
+                }
+              ]
             }
           ]
         }
