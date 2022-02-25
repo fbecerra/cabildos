@@ -489,7 +489,89 @@
               "name": "Desarrollo Sostenible, Buen vivir",
               "id": "5f",
               "comision": "c5",
-              "porcentaje": 12.5
+              "porcentaje": 12.5,
+              "wordCloud": [
+                {
+                  "ngram": "estado",
+                  "frecuancia":	13
+                },
+                {
+                  "ngram": "modelo",
+                  "frecuancia":	12
+                },
+                {
+                  "ngram": "economía",
+                  "frecuancia":	8
+                },
+                {
+                  "ngram": "principio",
+                  "frecuancia":	7
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuancia":	7
+                },
+                {
+                  "ngram": "cambio",
+                  "frecuancia":	6
+                },
+                {
+                  "ngram": "recursos",
+                  "frecuancia":	6
+                },
+                {
+                  "ngram": "uso",
+                  "frecuancia":	5
+                },
+                {
+                  "ngram": "sociedad",
+                  "frecuancia":	5
+                },
+                {
+                  "ngram": "educación",
+                  "frecuancia":	5
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuancia":	5
+                },
+                {
+                  "ngram": "derechos",
+                  "frecuancia":	9
+                },
+                {
+                  "ngram": "medio",
+                  "frecuancia":	4
+                },
+                {
+                  "ngram": "desarrollo",
+                  "frecuancia":	4
+                },
+                {
+                  "ngram": "participación",
+                  "frecuancia":	4
+                },
+                {
+                  "ngram": "parte",
+                  "frecuancia":	4
+                },
+                {
+                  "ngram": "valor",
+                  "frecuancia":	4
+                },
+                {
+                  "ngram": "entorno",
+                  "frecuancia":	3
+                },
+                {
+                  "ngram": "agua",
+                  "frecuancia":	3
+                },
+                {
+                  "ngram": "falta",
+                  "frecuancia":	3
+                }
+              ]
             },
             {
               "name": "Derecho constitucional al agua y estatuto constitucional del agua",
