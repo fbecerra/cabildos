@@ -307,7 +307,89 @@
               "name": "Principios",
               "id": "2b",
               "comision": "c2",
-              "porcentaje": 13.0
+              "porcentaje": 13.0,
+              "wordCloud": [
+                {
+                  "ngram": "estado",
+                  "frecuencia":	24
+                },
+                {
+                  "ngram": "participación",
+                  "frecuencia":	14
+                },
+                {
+                  "ngram": "transparencia",
+                  "frecuencia":	11
+                },
+                {
+                  "ngram": "derecho",
+                  "frecuencia":	10
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia":	10
+                },
+                {
+                  "ngram": "seguridad",
+                  "frecuencia":	8
+                },
+                {
+                  "ngram": "igualdad",
+                  "frecuencia":	8
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuencia":	8
+                },
+                {
+                  "ngram": "poder",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "comunidad",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "tecnología",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "derechos",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "administración",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "creación",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "libertad",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "protección",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "sociedad",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "agua",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "paz",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "comunicación",
+                  "frecuencia":	4
+                }
+              ]
             },
             {
               "name": "Mecanismos de democracia directa y participativa; referéndums aprobatorios y revocatorios de mandato y de ley; iniciativa popular de ley, y democracia digital",
