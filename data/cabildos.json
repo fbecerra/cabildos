@@ -947,7 +947,89 @@
               "name": "Comisión 4 sobre Derechos Fundamentales.",
               "id": "4",
               "comision": "c4",
-              "porcentaje": 32.4
+              "porcentaje": 32.4,
+              "wordCloud": [
+                {
+                  "ngram": "derecho",
+                  "frecuencia": 23
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuencia": 7
+                },
+                {
+                  "ngram": "persona",
+                  "frecuencia": 7
+                },
+                {
+                  "ngram": "deber",
+                  "frecuencia": 6
+                },
+                {
+                  "ngram": "protección",
+                  "frecuencia": 4
+                },
+                {
+                  "ngram": "sociedad",
+                  "frecuencia": 3
+                },
+                {
+                  "ngram": "educación",
+                  "frecuencia": 3
+                },
+                {
+                  "ngram": "propuesta",
+                  "frecuencia": 3
+                },
+                {
+                  "ngram": "igualdad",
+                  "frecuencia": 3
+                },
+                {
+                  "ngram": "convivencia",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "paz",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "edad",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "ley",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "norma",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "sección",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "necesidad",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "mecanismo",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "democracia",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "autoridad",
+                  "frecuencia": 2
+                },
+                {
+                  "ngram": "asignatura",
+                  "frecuencia": 2
+                }
+              ]
             },
             {
               "name": "Educación",
