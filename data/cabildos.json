@@ -295,7 +295,89 @@
               "name": "Rol del Estado en conocimientos, culturas, ciencia, tecnología, comunicaciones, artes, patrimonio y humanidades",
               "id": "7b",
               "comision": "c7",
-              "porcentaje": 14.5
+              "porcentaje": 14.5,
+              "wordCloud": [
+                {
+                  "ngram": "cultura",
+                  "frecuencia":	29
+                },
+                {
+                  "ngram": "desarrollo",
+                  "frecuencia":	8
+                },
+                {
+                  "ngram": "fomento",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia":	6
+                },
+                {
+                  "ngram": "valor",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "derecho",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "espacios",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "acceso",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "patrimonio",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "culturas",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "estado",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "protección",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "necesidad",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "artes",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "riqueza",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "reflexión",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "modelo",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "lengua",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "pib",
+                  "frecuencia":	2
+                }
+              ]
             }
           ]
         },
