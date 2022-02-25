@@ -353,7 +353,90 @@
               "name": "Estado Plurinacional y libre determinación de los pueblos",
               "id": "1c",
               "comision": "c1",
-              "porcentaje": 9.5
+              "porcentaje": 9.5,
+              "wordCloud":
+              [
+                {
+                  "ngram": "estado",
+                  "frecuencia":	11
+                },
+                {
+                  "ngram": "reconocimiento",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "plurinacionalidad",
+                  "frecuencia":	5
+                },
+                {
+                  "ngram": "territorio",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "constitución",
+                  "frecuencia":	4
+                },
+                {
+                  "ngram": "democracia",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "derechos",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "equilibrio",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "autodeterminación",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "nación",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "acuerdo",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "respeto",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "proceso",
+                  "frecuencia":	3
+                },
+                {
+                  "ngram": "población",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "soluciones",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "cultura",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "sistema",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "desarrollo",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "determinación",
+                  "frecuencia":	2
+                },
+                {
+                  "ngram": "representantes",
+                  "frecuencia":	2
+                }
+              ]
             },
             {
               "name": "Seguridad pública, defensa nacional y rol de las Fuerzas Armadas en el régimen democrático contemporáneo",
