@@ -870,6 +870,146 @@
                   "ngram": "sueldos",
                   "frecuencia":	2
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "sistema",
+                  "children": [
+                    {
+                      "name": "Sistema",
+                      "children": [
+                        {
+                          "name": "de estricta probidad pública"
+                        },
+                        {
+                          "name": "electoral que asegure paridad y escaños reservados en órganos colegiados de representación"
+                        },
+                        {
+                          "name": "presidencial"
+                        },
+                        {
+                          "name": "sistema político, gobierno, poder legislativo y sistema electoral "
+                        },
+                        {
+                          "name": "sistema semipresidencial"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Sistema prevernir",
+                      "children": [
+                        {
+                          "name": "sistema debe prevenir y sancionar abusos"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Sistema ser",
+                      "children": [
+                        {
+                          "name": "sea un sistema semi presidencial donde exista un contrapeso entre el presidente y el congreso"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "estado",
+                  "children": [
+                    {
+                      "name": "Estado",
+                      "children": [
+                        {
+                          "name": "social de derechos, descentralizado, plurinacional, intercultural."
+                        },
+                        {
+                          "name": "que tenga institucionalidad, a nivel nacional e internacional, que le exija cumplimiento a los derechos humanos"
+                        },
+                        {
+                          "name": "plurinacional, que respete la diversidad sexual, las propuestas feministas, la preservación ecológica del medio ambiente y las expresiones regionales y locales"
+                        },
+                        {
+                          "name": "reducción del aparato estatal, las inversiones que hace el estado, los sueldos públicos, las dietas parlamentarias y eliminar los sueldos vitalicios de expresidentes."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Reconstruir estado",
+                      "children": [
+                        {
+                          "name": "con una propuesta más transparente y horizontal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "poder",
+                  "children": [
+                    {
+                      "name": "Poder",
+                      "children": [
+                        {
+                          "name": "cuarto poder articulado en asambleas territoriales y organizaciones sociales, con incidencia en el diseño de políticas públicas."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Descentralizar poder",
+                      "children": [
+                        {
+                          "name": "tomar ejemplos de modelos de estado federal para descentralizar el poder, evaluando mecanismos para armonizar normas a nivel federal, estatal y local"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Devolver poder",
+                      "children": [
+                        {
+                          "name": "al pueblo para el necesario reconocimiento de nuevas voces"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Intercalar poder",
+                      "children": [
+                        {
+                          "name": "de manejar las urgencias parlamentarias entre el presidente de la república y la presidencia de la cámara política del congreso y acotando a una cantidad predeterminada mensual de urgencias"
+                        }
+                      ]
+                    }
+                  ]
+                }
+                ,
+                {
+                  "name": "participación",
+                  "children": [
+                    {
+                      "name": "Democratizar participación",
+                      "children": [
+                        {
+                          "name": "local, con nuevas formas territoriales de participación ciudadana, que fiscalice el ejercicio de las funciones municipales."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Facilitar participación",
+                      "children": [
+                        {
+                          "name": "ciudadana y una mejor gobernanza"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Incentivar participación",
+                      "children": [
+                        {
+                          "name": "de las juntas de vecinos en los órganos del estado y aumentar su papel dirigente."
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
