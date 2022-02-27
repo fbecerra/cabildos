@@ -734,6 +734,77 @@
                   "ngram": "preocupación",
                   "frecuencia":	2
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "Derecho",
+                  "children": [
+                    {
+                      "name": "Garantizar derecho",
+                      "children": [
+                        {
+                          "name": "todo niño y niña tiene derecho a descansar y recrearse: se espera que al garantizar el derecho, cada niño/a pueda desarrollarse de manera integral"
+                        },
+                        {
+                          "name": "todo niño y niña tiene derecho a no ser discriminado bajo ningún punto de vista: se espera que al garantizar el derecho se fomente el respeto a las diferencias, igualdad de trato y la aceptación de las personas"
+                        },
+                        {
+                          "name": "todo niño y niña tiene derecho a la educación: se espera que al garantizar el derecho se generen mecanismos útiles para reconocer a las y los niños como sujetos sociales y, a su vez, se fomente el respeto y preocupación por el/la otro/a"
+                        },
+                        {
+                          "name": "todo niño y niña tiene derecho a crecer sano físico, mental y espiritualmente: se espera que al garantizar el derecho se entienda la familia como uno de los principales agentes a cargo de apoyar, motivar, formar y resguardar a los niños, niñas y adolescentes"
+                        },
+                        {
+                          "name": "todo niño y niña tiene derecho a desarrollar sus talentos con igualdad de oportunidades: se espera que al garantizar el derecho se generen mecanismos para el fomento de desarrollos de nuevos talentos que, en algún momento, pueden ser una contribución para la sociedad"
+                        },
+                        {
+                          "name": "todo niño y niña tiene derecho a expresarse libremente: se espera que al garantizar el derecho las opiniones de niños, niñas y adolescentes sean consideradas como importantes, válidas y fundamentales"
+                        },
+                        {
+                          "name": "todo niño y niña tiene derecho a un medioambiente sano y limpio: se espera que al garantizar el derecho permita la formación de manera integral y un desarrollo en un ambiente sano y limpio, junto con el fomento de la corresponsabilidad con el entorno"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Derecho",
+                      "children": [
+                        {
+                          "name": "de vivir en ambiente limpio , cuidar el medio ambiente , reciclar , reducir y reutilizar , derecho a ser felices , a tener una vivienda digna , vivir en un lugar tranquilo , derecho a el agua potable , derecho a la salud , respetar los derechos de los niños , niñas y adolescentes pero también a los de los adultos porque todos somos iguales"
+                        },
+                        {
+                          "name": "transversales de los nna y un sistema de cumplimiento y fiscalización para estos "
+                        },
+                        {
+                          "name": "a la crianza integral de los hijos , promoviendo el rol compartido de ambos padres , así como la responsabilidad"
+                        },
+                        {
+                          "name": "a la educación , a mayores espacios seguros y de recreación para la infancia , así también el derecho a sueldos dignos y derecho a la vivienda "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Jóvenes",
+                  "children": [
+                    {
+                      "name": "Jóvenes queremos",
+                      "children": [
+                        {
+                          "name": "vivir en un lugar limpio, verde, justo y seguro, queremos tener una educación de calidad, queremos tener participación en la toma de decisiones, queremos poder dar nuestra opinión, pero sobre todo queremos hacer cambios para integrar a todas, todos y todes en un peñalolén, un país y un mundo mejor."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Jóvenes manifiestan",
+                      "children": [
+                        {
+                          "name": "un transversal interés en contar con instancias de participación, tanto para las decisiones a la interna de sus liceos y escuelas, como para lo que compete a nivel país"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
