@@ -1515,6 +1515,174 @@
                   "ngram": "falta",
                   "frecuancia":	3
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "estado",
+                  "children": [
+                    {
+                      "name": "Estado debe velar",
+                      "children": [
+                        {
+                          "name": "por defender y proteger el medio ambiente, la biodiversidad y el derecho al buen vivir en un ambiente sano"
+                        },
+                        {
+                          "name": "por restringir el impacto ambiental"
+                        },
+                        {
+                          "name": "por fomentar, hacer efectiva y vinculante la participación ciudadana y de comunidades locales"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado",
+                      "children": [
+                        {
+                          "name": "solidario, con equilibrio social, económico y natural, no extractivista, restaurador, protector y propietario de los recursos naturales, con un efectivo rol fiscalizador y una fuerte participación de las comunidades"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe asegurar",
+                      "children": [
+                        {
+                          "name": "goce de áreas verdes, a disfrutar de ambientes libres de contaminación (lumínica, atmosférica, contaminación acústica, contaminación visual, entre otras)"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe garantizar",
+                      "children": [
+                        {
+                          "name": "que las actividades productivas no dañen el equilibrio de los ecosistemas"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe incorporar",
+                      "children": [
+                        {
+                          "name": "a las universidades dentro de este nuevo modelo económico, otorgándoles la importancia, autonomía y financiamiento adecuados (financiar ideas de investigación en base a su mérito en lugar de hacer competir a académicas/os) para que desarrollen investigación, desarrollo y pensamiento crítico."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe tener un rol",
+                      "children": [
+                        {
+                          "name": "planificador y ejecutor del modelo determinado en conjunto con la ciudadanía, que apunte a la diversificación de la matriz productiva para el desarrollo, invirtiendo en tecnología e innovación, con respeto al buen vivirde comunidades y a los recursos naturales"
+                        },
+                        {
+                          "name": "fundamental como productor y como facilitador de actividades productivas dentro y fuera de la lógica capitalista contemporánea, considerando a grupos históricamente invisibilizados en la discusión económica: es decir, debe tener un enfoque de género, que refleje cosmovisiones de pueblos originarios"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "modelo",
+                  "children": [
+                    {
+                      "name": "",
+                      "children": [
+                        {
+                          "name": ""
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "economía",
+                  "children": [
+                    {
+                      "name": "",
+                      "children": [
+                        {
+                          "name": ""
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "principio",
+                  "children": [
+                    {
+                      "name": "",
+                      "children": [
+                        {
+                          "name": ""
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "sistema",
+                  "children": [
+                    {
+                      "name": "",
+                      "children": [
+                        {
+                          "name": ""
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "recursos",
+                  "children": [
+                    {
+                      "name": "",
+                      "children": [
+                        {
+                          "name": ""
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "derecho",
+                  "children": [
+                    {
+                      "name": "",
+                      "children": [
+                        {
+                          "name": ""
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "uso",
+                  "children": [
+                    {
+                      "name": "",
+                      "children": [
+                        {
+                          "name": ""
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "educación",
+                  "children": [
+                    {
+                      "name": "",
+                      "children": [
+                        {
+                          "name": ""
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
