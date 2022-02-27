@@ -117,6 +117,247 @@
                   "ngram": "comunidad",
                   "frecuencia":	5
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "Educación",
+                  "children": [
+                    {
+                      "name": "Educación",
+                      "children": [
+                        {
+                          "name": "como un derecho"
+                        },
+                        {
+                          "name": "integral cívica medio"
+                        },
+                        {
+                          "name": "gratuita y de calidad"
+                        },
+                        {
+                          "name": "no sexista"
+                        },
+                        {
+                          "name": "libre de coacción y de imposición ideológica"
+                        },
+                        {
+                          "name": "no adultocentrista donde los niños niñas y adolescentes no solamente sean beneficiarios del sistema educativo sino que además protagonistas del mismo"
+                        },
+                        {
+                          "name": "laica"
+                        },
+                        {
+                          "name": "pública estatal"
+                        },
+                        {
+                          "name": "en la población educación cívica y política"
+                        },
+                        {
+                          "name": "cívica"
+                        },
+                        {
+                          "name": "para la participación"
+                        },
+                        {
+                          "name": "cívica para los pobladores motivación a la participación"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Garantizar educación",
+                      "children": [
+                        {
+                          "name": "integral de el ser humano de calidad universal laica y no discriminadora"
+                        },
+                        {
+                          "name": "como un derecho social"
+                        },
+                        {
+                          "name": "no sexista laica e inclusiva con enfoque feminista territorial étnico ecológico donde se promuevan la formación integral el trato digno el respeto y los derechos humanos"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Fortalecer educación",
+                      "children": [
+                        {
+                          "name": "pública elevando al más alto nivel la profesión y carrera docente"
+                        },
+                        {
+                          "name": " musical como agentes de cultura y expresión social fortalecimiento de fladem para enriquecer la educación musical"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Implementar educación",
+                      "children": [
+                        {
+                          "name": "de calidad para todos"
+                        },
+                        {
+                          "name": "intercultural"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Lograr educación",
+                      "children": [
+                        {
+                          "name": "digna y de calidad para todos y todas"
+                        },
+                        {
+                          "name": "en torno a la defensa de los derechos"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Considerar educación",
+                      "children": [
+                        {
+                          "name": "como un derecho irrenunciable orientada hacia el pleno desarrollo de la persona con enfoque de género y que permita el desarrollo de habilidades blandas emocionales y prácticas para la vida"
+                        },
+                        {
+                          "name": "para la ciudadanía y la convivencia social apuntando a el desarrollo de el ser humano en todas sus dimensiones y no solo en lo cognitivo"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "derecho",
+                  "children": [
+                    {
+                      "name": "Garantizar derecho",
+                      "children": [
+                        {
+                          "name": "a la educación"
+                        },
+                        {
+                          "name": "a una educación preescolar real independiente de la ubicación geográfica"
+                        },
+                        {
+                          "name": "a la educación pública permanente desde la educación inicial hasta la educación superior eliminando el rol subsidiario y promotor de la educación de mercado"
+                        },
+                        {
+                          "name": "de elección y de abrir instituciones educativas"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Ampliar derecho",
+                      "children": [
+                        {
+                          "name": "de sala cuna a todos los padres y madres trabajadores as que tengan hijas os menores de 2 años independiente de la situación contractual y jornada laboral"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "desarrollo",
+                  "children": [
+                    {
+                      "name": "Garantizar desarrollo",
+                      "children": [
+                        {
+                          "name": "de el ser humano como un ser íntegro considerando principalmente sus inteligencias diversas y necesidades educativas especiales"
+                        },
+                        {
+                          "name": "integral de las personas ampliando las oportunidades de las personas de escasos recursos lo cual debiese generarse desde la niñez"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Permitir desarrollo",
+                      "children": [
+                        {
+                          "name": "de habilidades blandas emocionales y prácticas para la vida"
+                        },
+                        {
+                          "name": "de la pertinencia cultural de los niños niñas y adolescentes mediante su proceso de enseñanza y aprendizaje"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Potenciar desarrollo",
+                      "children": [
+                        {
+                          "name": "de la cultura y la música en espacios escolares para potenciar el desarrollo integral"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Apuntar desarrollo",
+                      "children": [
+                        {
+                          "name": "de el ser humano en todas sus dimensiones y no solo en lo cognitivo"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Implementar desarrollo",
+                      "children": [
+                        {
+                          "name": "integral de el ser humano y no solo el desarrollo y crecimiento material de una nación"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Incluir desarrollo",
+                      "children": [
+                        {
+                          "name": "de habilidades blandas"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "estado",
+                  "children": [
+                    {
+                      "name": "Estado debe garantizar",
+                      "children": [
+                        {
+                          "name": "una educación inclusiva oportuna de calidad y sin lucro a la educación"
+                        },
+                        {
+                          "name": "y respetar la autonomía profesional de la docencia brindando condiciones laborales dignas y libres de agobio generando un plan que asegure dignidad durante toda la trayectoria del ejercicio docente"
+                        },
+                        {
+                          "name": "el acceso pleno a una educación de calidad gratuita participativa comunitaria e integral que sea consagrada como un derecho humano fundamental"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe desarrollar",
+                      "children": [
+                        {
+                          "name": "políticas públicas que permitan que los colegios generen un apoyo real a los estudiantes no solo en lo educativo sino también a nivel social y psicológico sobre todo en los contextos de vulnerabilidad"
+                        },
+                        {
+                          "name": "políticas públicas que favorezcan la prevención del uso de drogas y la educación sexual"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe asumir",
+                      "children": [
+                        {
+                          "name": "un rol prioritario garantizando y financiando el derecho a la educación pública permanente desde la educación inicial hasta la educación superior"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe diseñar",
+                      "children": [
+                        {
+                          "name": "e implementar políticas públicas que permitan mejorar la formación de los profesores y corregir aquellos aspectos deficientes"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
