@@ -117,6 +117,247 @@
                   "ngram": "comunidad",
                   "frecuencia":	5
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "Educación",
+                  "children": [
+                    {
+                      "name": "Educación",
+                      "children": [
+                        {
+                          "name": "como un derecho"
+                        },
+                        {
+                          "name": "integral cívica medio"
+                        },
+                        {
+                          "name": "gratuita y de calidad"
+                        },
+                        {
+                          "name": "no sexista"
+                        },
+                        {
+                          "name": "libre de coacción y de imposición ideológica"
+                        },
+                        {
+                          "name": "no adultocentrista donde los niños niñas y adolescentes no solamente sean beneficiarios del sistema educativo sino que además protagonistas del mismo"
+                        },
+                        {
+                          "name": "laica"
+                        },
+                        {
+                          "name": "pública estatal"
+                        },
+                        {
+                          "name": "en la población educación cívica y política"
+                        },
+                        {
+                          "name": "cívica"
+                        },
+                        {
+                          "name": "para la participación"
+                        },
+                        {
+                          "name": "cívica para los pobladores motivación a la participación"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Garantizar educación",
+                      "children": [
+                        {
+                          "name": "integral de el ser humano de calidad universal laica y no discriminadora"
+                        },
+                        {
+                          "name": "como un derecho social"
+                        },
+                        {
+                          "name": "no sexista laica e inclusiva con enfoque feminista territorial étnico ecológico donde se promuevan la formación integral el trato digno el respeto y los derechos humanos"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Fortalecer educación",
+                      "children": [
+                        {
+                          "name": "pública elevando al más alto nivel la profesión y carrera docente"
+                        },
+                        {
+                          "name": " musical como agentes de cultura y expresión social fortalecimiento de fladem para enriquecer la educación musical"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Implementar educación",
+                      "children": [
+                        {
+                          "name": "de calidad para todos"
+                        },
+                        {
+                          "name": "intercultural"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Lograr educación",
+                      "children": [
+                        {
+                          "name": "digna y de calidad para todos y todas"
+                        },
+                        {
+                          "name": "en torno a la defensa de los derechos"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Considerar educación",
+                      "children": [
+                        {
+                          "name": "como un derecho irrenunciable orientada hacia el pleno desarrollo de la persona con enfoque de género y que permita el desarrollo de habilidades blandas emocionales y prácticas para la vida"
+                        },
+                        {
+                          "name": "para la ciudadanía y la convivencia social apuntando a el desarrollo de el ser humano en todas sus dimensiones y no solo en lo cognitivo"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "derecho",
+                  "children": [
+                    {
+                      "name": "Garantizar derecho",
+                      "children": [
+                        {
+                          "name": "a la educación"
+                        },
+                        {
+                          "name": "a una educación preescolar real independiente de la ubicación geográfica"
+                        },
+                        {
+                          "name": "a la educación pública permanente desde la educación inicial hasta la educación superior eliminando el rol subsidiario y promotor de la educación de mercado"
+                        },
+                        {
+                          "name": "de elección y de abrir instituciones educativas"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Ampliar derecho",
+                      "children": [
+                        {
+                          "name": "de sala cuna a todos los padres y madres trabajadores as que tengan hijas os menores de 2 años independiente de la situación contractual y jornada laboral"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "desarrollo",
+                  "children": [
+                    {
+                      "name": "Garantizar desarrollo",
+                      "children": [
+                        {
+                          "name": "de el ser humano como un ser íntegro considerando principalmente sus inteligencias diversas y necesidades educativas especiales"
+                        },
+                        {
+                          "name": "integral de las personas ampliando las oportunidades de las personas de escasos recursos lo cual debiese generarse desde la niñez"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Permitir desarrollo",
+                      "children": [
+                        {
+                          "name": "de habilidades blandas emocionales y prácticas para la vida"
+                        },
+                        {
+                          "name": "de la pertinencia cultural de los niños niñas y adolescentes mediante su proceso de enseñanza y aprendizaje"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Potenciar desarrollo",
+                      "children": [
+                        {
+                          "name": "de la cultura y la música en espacios escolares para potenciar el desarrollo integral"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Apuntar desarrollo",
+                      "children": [
+                        {
+                          "name": "de el ser humano en todas sus dimensiones y no solo en lo cognitivo"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Implementar desarrollo",
+                      "children": [
+                        {
+                          "name": "integral de el ser humano y no solo el desarrollo y crecimiento material de una nación"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Incluir desarrollo",
+                      "children": [
+                        {
+                          "name": "de habilidades blandas"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "estado",
+                  "children": [
+                    {
+                      "name": "Estado debe garantizar",
+                      "children": [
+                        {
+                          "name": "una educación inclusiva oportuna de calidad y sin lucro a la educación"
+                        },
+                        {
+                          "name": "y respetar la autonomía profesional de la docencia brindando condiciones laborales dignas y libres de agobio generando un plan que asegure dignidad durante toda la trayectoria del ejercicio docente"
+                        },
+                        {
+                          "name": "el acceso pleno a una educación de calidad gratuita participativa comunitaria e integral que sea consagrada como un derecho humano fundamental"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe desarrollar",
+                      "children": [
+                        {
+                          "name": "políticas públicas que permitan que los colegios generen un apoyo real a los estudiantes no solo en lo educativo sino también a nivel social y psicológico sobre todo en los contextos de vulnerabilidad"
+                        },
+                        {
+                          "name": "políticas públicas que favorezcan la prevención del uso de drogas y la educación sexual"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe asumir",
+                      "children": [
+                        {
+                          "name": "un rol prioritario garantizando y financiando el derecho a la educación pública permanente desde la educación inicial hasta la educación superior"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe diseñar",
+                      "children": [
+                        {
+                          "name": "e implementar políticas públicas que permitan mejorar la formación de los profesores y corregir aquellos aspectos deficientes"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -205,6 +446,206 @@
                   "ngram": "enfermedades",
                   "frecuencia":	2
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "salud",
+                  "children": [
+                     {
+                       "name": "Salud",
+                       "children": [
+                         {
+                           "name": "que potencie y fomente la promoción y prevención de salud desde la primera infancia con enfoque familiar y comunitario con énfasis en la corresponsabilidad."
+                         },
+                         {
+                           "name": "cerca a las personas con equipos profesionales que visiten constantemente las comunidades"
+                         },
+                         {
+                           "name": "mental con información clara y oportuna con mayor visibilidad de las condiciones de salud mental"
+                         }
+                       ]
+                     },
+                     {
+                       "name": "Entender salud",
+                       "children": [
+                         {
+                           "name": "en sentido amplio desde lo psicosocial lo espiritual"
+                         },
+                         {
+                           "name": "como estado de completo bienestar "
+                         }
+                       ]
+                     },
+                     {
+                       "name": "Fortalecer salud",
+                       "children": [
+                         {
+                           "name": "pública para que esta se capaz de asegurar un sistema de calidad para todas y todos por igual."
+                         }
+                       ]
+                     },
+                     {
+                       "name": "Mejorar salud",
+                       "children": [
+                         {
+                           "name": "pública considerando a los trabajadores de la salud y a los usuarios y no solo a los profesionales."
+                         }
+                       ]
+                     },
+                     {
+                       "name": "Considerar salud",
+                       "children": [
+                         {
+                           "name": "en las decisiones y acciones que tengan impacto medio ambiental"
+                         }
+                       ]
+                     },
+                     {
+                       "name": "Regular salud",
+                       "children": [
+                         {
+                           "name": "privada"
+                         }
+                       ]
+                     },
+                     {
+                       "name": "Pensar salud",
+                       "children": [
+                         {
+                           "name": "como un bien social con enfoque en la calidad de vida de las personas las familias y comunidades."
+                         }
+                       ]
+                     },
+                     {
+                       "name": "Volver salud",
+                       "children": [
+                         {
+                           "name": "a ser administrada a nivel ministerio y no a nivel de municipalidades evitando inequidades"
+                         }
+                       ]
+                     }
+                  ]
+                },
+                {
+                  "name": "sistema",
+                  "children": [
+                    {
+                      "name": "Sistema",
+                      "children": [
+                        {
+                          "name": "de salud universal."
+                        },
+                        {
+                          "name": "que sea garantizado para todos sin excepción."
+                        },
+                        {
+                          "name": "único de salud."
+                        },
+                        {
+                          "name": "único e integrado que se reintegre al servicio único integrado las utilidades de las inversiones realizadas por las isapres"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Asegurar sistema",
+                      "children": [
+                        {
+                          "name": "De calidad para todas y todos por igual"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Cambiar sistema",
+                      "children": [
+                        {
+                          "name": "a la modalidad de salud pública de calidad y digna"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Contar sistema",
+                      "children": [
+                        {
+                          "name": "de salud único y universal que permita un acceso expedito a todas las personas de forma equitativo."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Requerir sistema",
+                      "children": [
+                        {
+                          "name": "de salud de calidad enfocado en el buen trato al paciente y en la calidad de los profesionales de salud que se estan formando"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "acceso",
+                  "children": [
+                    {
+                      "name": "Acceso",
+                      "children": [
+                        {
+                          "name": "a la rehabilitación"
+                        },
+                        {
+                          "name": "a los especialistas con mejores condiciones laborales para los especialistas profesionales y personal de salud"
+                        },
+                        {
+                          "name": "preferencial a la salud oral de mayor complejidad en personas que habitan territorios rurales y aislados"
+                        },
+                        {
+                          "name": "a la información de salud desde la prevención"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Garantizar acceso",
+                      "children": [
+                        {
+                          "name": "universal a una salud digna"
+                        },
+                        {
+                          "name": "expedito y de calidad a los tratamientos de patologías"
+                        },
+                        {
+                          "name": "pleno a la salud como un derecho fundamental para todas y todos sin importar el nivel socioeconómico"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Mejorar acceso",
+                      "children": [
+                        {
+                          "name": "en términos de horarios para las personas que trabajan"
+                        },
+                        {
+                          "name": "a la zona rural con ambulancias en cada posta"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Tener acceso",
+                      "children": [
+                        {
+                          "name": "preferencial a salud mental y reparación en zonas con conflictos medio ambientales"
+                        },
+                        {
+                          "name": " efectivo a los servicios de salud regulación de precios a los medicamentos."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Permitir acceso",
+                      "children": [
+                        {
+                          "name": " expedito a todas las personas de forma equitativo"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -292,6 +733,77 @@
                 {
                   "ngram": "preocupación",
                   "frecuencia":	2
+                }
+              ],
+              "wordTree": [
+                {
+                  "name": "Derecho",
+                  "children": [
+                    {
+                      "name": "Garantizar derecho",
+                      "children": [
+                        {
+                          "name": "todo niño y niña tiene derecho a descansar y recrearse: se espera que al garantizar el derecho, cada niño/a pueda desarrollarse de manera integral"
+                        },
+                        {
+                          "name": "todo niño y niña tiene derecho a no ser discriminado bajo ningún punto de vista: se espera que al garantizar el derecho se fomente el respeto a las diferencias, igualdad de trato y la aceptación de las personas"
+                        },
+                        {
+                          "name": "todo niño y niña tiene derecho a la educación: se espera que al garantizar el derecho se generen mecanismos útiles para reconocer a las y los niños como sujetos sociales y, a su vez, se fomente el respeto y preocupación por el/la otro/a"
+                        },
+                        {
+                          "name": "todo niño y niña tiene derecho a crecer sano físico, mental y espiritualmente: se espera que al garantizar el derecho se entienda la familia como uno de los principales agentes a cargo de apoyar, motivar, formar y resguardar a los niños, niñas y adolescentes"
+                        },
+                        {
+                          "name": "todo niño y niña tiene derecho a desarrollar sus talentos con igualdad de oportunidades: se espera que al garantizar el derecho se generen mecanismos para el fomento de desarrollos de nuevos talentos que, en algún momento, pueden ser una contribución para la sociedad"
+                        },
+                        {
+                          "name": "todo niño y niña tiene derecho a expresarse libremente: se espera que al garantizar el derecho las opiniones de niños, niñas y adolescentes sean consideradas como importantes, válidas y fundamentales"
+                        },
+                        {
+                          "name": "todo niño y niña tiene derecho a un medioambiente sano y limpio: se espera que al garantizar el derecho permita la formación de manera integral y un desarrollo en un ambiente sano y limpio, junto con el fomento de la corresponsabilidad con el entorno"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Derecho",
+                      "children": [
+                        {
+                          "name": "de vivir en ambiente limpio , cuidar el medio ambiente , reciclar , reducir y reutilizar , derecho a ser felices , a tener una vivienda digna , vivir en un lugar tranquilo , derecho a el agua potable , derecho a la salud , respetar los derechos de los niños , niñas y adolescentes pero también a los de los adultos porque todos somos iguales"
+                        },
+                        {
+                          "name": "transversales de los nna y un sistema de cumplimiento y fiscalización para estos "
+                        },
+                        {
+                          "name": "a la crianza integral de los hijos , promoviendo el rol compartido de ambos padres , así como la responsabilidad"
+                        },
+                        {
+                          "name": "a la educación , a mayores espacios seguros y de recreación para la infancia , así también el derecho a sueldos dignos y derecho a la vivienda "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Jóvenes",
+                  "children": [
+                    {
+                      "name": "Jóvenes queremos",
+                      "children": [
+                        {
+                          "name": "vivir en un lugar limpio, verde, justo y seguro, queremos tener una educación de calidad, queremos tener participación en la toma de decisiones, queremos poder dar nuestra opinión, pero sobre todo queremos hacer cambios para integrar a todas, todos y todes en un peñalolén, un país y un mundo mejor."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Jóvenes manifiestan",
+                      "children": [
+                        {
+                          "name": "un transversal interés en contar con instancias de participación, tanto para las decisiones a la interna de sus liceos y escuelas, como para lo que compete a nivel país"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -429,6 +941,146 @@
                   "ngram": "sueldos",
                   "frecuencia":	2
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "sistema",
+                  "children": [
+                    {
+                      "name": "Sistema",
+                      "children": [
+                        {
+                          "name": "de estricta probidad pública"
+                        },
+                        {
+                          "name": "electoral que asegure paridad y escaños reservados en órganos colegiados de representación"
+                        },
+                        {
+                          "name": "presidencial"
+                        },
+                        {
+                          "name": "sistema político, gobierno, poder legislativo y sistema electoral "
+                        },
+                        {
+                          "name": "sistema semipresidencial"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Sistema prevernir",
+                      "children": [
+                        {
+                          "name": "sistema debe prevenir y sancionar abusos"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Sistema ser",
+                      "children": [
+                        {
+                          "name": "sea un sistema semi presidencial donde exista un contrapeso entre el presidente y el congreso"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "estado",
+                  "children": [
+                    {
+                      "name": "Estado",
+                      "children": [
+                        {
+                          "name": "social de derechos, descentralizado, plurinacional, intercultural."
+                        },
+                        {
+                          "name": "que tenga institucionalidad, a nivel nacional e internacional, que le exija cumplimiento a los derechos humanos"
+                        },
+                        {
+                          "name": "plurinacional, que respete la diversidad sexual, las propuestas feministas, la preservación ecológica del medio ambiente y las expresiones regionales y locales"
+                        },
+                        {
+                          "name": "reducción del aparato estatal, las inversiones que hace el estado, los sueldos públicos, las dietas parlamentarias y eliminar los sueldos vitalicios de expresidentes."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Reconstruir estado",
+                      "children": [
+                        {
+                          "name": "con una propuesta más transparente y horizontal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "poder",
+                  "children": [
+                    {
+                      "name": "Poder",
+                      "children": [
+                        {
+                          "name": "cuarto poder articulado en asambleas territoriales y organizaciones sociales, con incidencia en el diseño de políticas públicas."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Descentralizar poder",
+                      "children": [
+                        {
+                          "name": "tomar ejemplos de modelos de estado federal para descentralizar el poder, evaluando mecanismos para armonizar normas a nivel federal, estatal y local"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Devolver poder",
+                      "children": [
+                        {
+                          "name": "al pueblo para el necesario reconocimiento de nuevas voces"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Intercalar poder",
+                      "children": [
+                        {
+                          "name": "de manejar las urgencias parlamentarias entre el presidente de la república y la presidencia de la cámara política del congreso y acotando a una cantidad predeterminada mensual de urgencias"
+                        }
+                      ]
+                    }
+                  ]
+                }
+                ,
+                {
+                  "name": "participación",
+                  "children": [
+                    {
+                      "name": "Democratizar participación",
+                      "children": [
+                        {
+                          "name": "local, con nuevas formas territoriales de participación ciudadana, que fiscalice el ejercicio de las funciones municipales."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Facilitar participación",
+                      "children": [
+                        {
+                          "name": "ciudadana y una mejor gobernanza"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Incentivar participación",
+                      "children": [
+                        {
+                          "name": "de las juntas de vecinos en los órganos del estado y aumentar su papel dirigente."
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -517,6 +1169,108 @@
                 {
                   "ngram": "representantes",
                   "frecuencia":	2
+                }
+              ],
+              "wordTree": [
+                {
+                  "name": "Estado",
+                  "children": [
+                    {
+                      "name": "Estado",
+                      "children": [
+                        {
+                          "name": "que vele por los derechos humanos"
+                        },
+                        {
+                          "name": "plurinacional: se concuerda en que se requiere comunicación, y un reconocimiento constitucional para las distintas naciones que habitan el territorio de chile"
+                        },
+                        {
+                          "name": "plurinacional y reconocimiento de los derechos de cada pueblo originario, respetando su cultura."
+                        },
+                        {
+                          "name": "plurilingüe: el país tiene varios idiomas y varias culturas por zonas."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Reconocer Estado",
+                      "children": [
+                        {
+                          "name": "plurinacional y libre determinación de los pueblos originarios"
+                        },
+                        {
+                          "name": "la existencia de la naciones preexistente a la nación chilena"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "No depender del estado",
+                      "children": [
+                        {
+                          "name": "en decisiones y dejar tener la propia orgánica oficial"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Reconocimiento",
+                  "children": [
+                    {
+                      "name": "Reconocimiento",
+                      "children": [
+                        {
+                          "name": "de diversas naciones sobre el territorio"
+                        },
+                        {
+                          "name": "de culturas y prácticas de pueblos originarios constitucionalmente"
+                        },
+                        {
+                          "name": " de que habían naciones preexistentes a la colonización y la historia que representa"
+                        },
+                        {
+                          "name": "y aseguración de sus elementos, tal como derechos, la historia y la cosmovisión"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Plurinacionalidad",
+                  "children": [
+                    {
+                      "name": "Plurinacionalidad",
+                      "children": [
+                        {
+                          "name": "Reconocimiento de diversas naciones sobre el territorio, velando por el desarrollo propio y la integración de distintas naciones que coexistirán a futuro. Respeto por todas las culturas presentes"
+                        },
+                        {
+                          "name": "que se genere un ministerio de pueblos indígenas para la representación plurinacional, con líderes de cada pueblo que representen conadi e interventores"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Derechos",
+                  "children": [
+                    {
+                      "name": "Reivindicar derechos",
+                      "children": [
+                        {
+                          "name": "de todos los pueblos"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Respetar derechos",
+                      "children": [
+                        {
+                          "name": "De naciones, originarios; sus costumbres y cosmovisiones, donde distintas naciones conviven en respeto y armonía"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -624,6 +1378,157 @@
                   "ngram": "pib",
                   "frecuencia":	2
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "Cultura",
+                  "children": [
+                    {
+                      "name": "Cultura",
+                      "children": [
+                        {
+                          "name": "Y artes como un derecho en el cual el estado debe ser un garante"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Integrar cultura",
+                      "children": [
+                        {
+                          "name": "de cada región priorizando el bien común, para así generar espacios para el esparcimiento e integración social"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Poner cultura",
+                      "children": [
+                        {
+                          "name": "de los pueblos indígenas en el centro"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estimular cultura",
+                      "children": [
+                        {
+                          "name": "y recreación que tenga un tiempo reconocido y destinado, que se valore para poder vivirla"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Incorporar cultura",
+                      "children": [
+                        {
+                          "name": "el arte y la recreación como un aprendizaje transversal en los colegios, estimulando la participación de la familia y la comunidad en estos espacios"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Desarrollo",
+                  "children": [
+                    {
+                      "name": "Regular desarrollo",
+                      "children": [
+                        {
+                          "name": "regular, garantizar y velar todo desarrollo científico tanto en conocimiento como en las diferentes áreas y/o aplicación de tecnologías"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Planificar desarrollo",
+                      "children": [
+                        {
+                          "name": "científico del conocimiento e impulsar innovaciones"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Derecho",
+                  "children": [
+                    {
+                      "name": "Derecho",
+                      "children": [
+                        {
+                          "name": "a el desarrollo cultural y artístico , integrando la cultura de cada región priorizando el bien común , para así generar espacios para el esparcimiento e integración social"
+                        },
+                        {
+                          "name": "así como se le asignan 44 horas semanales al trabajo obligatorio, se debiera considerar destinar horario para actividades culturales, recreativas y contemplándolo como un derecho fundamental"
+                        },
+                        {
+                          "name": "derecho a la libertad de investigación"
+                        },
+                        {
+                          "name": "derecho al internet"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Espacios",
+                  "children": [
+                    {
+                      "name": "Garantizar espacios",
+                      "children": [
+                        {
+                          "name": "garantizando espacios, talleres y presentaciones de forma permanente, para toda la comunidad, y en especial, para los jóvenes"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Tener espacios",
+                      "children": [
+                        {
+                          "name": "educar y propmover las distintas culturas dentro de un mismo territorio, respetando su libre expresión y entendiendo que no todos tienen la misma pertinencia cultural, por ello deben tener espacios de expresion propio"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Acceso",
+                  "children": [
+                    {
+                      "name": "Fomentar acceso",
+                      "children": [
+                        {
+                          "name": "al conocimiento como pauta de conexión cultural"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Garantizar acceso",
+                      "children": [
+                        {
+                          "name": "a la cultura y el arte, ya que esta genera un desarrollo integral de las personas, contribuyendo en la autoestima y la salud mental"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Fomento",
+                  "children": [
+                    {
+                      "name": "Fomento",
+                      "children": [
+                        {
+                          "name": "fomento de las vinculaciones entre la educación cívica, la memoria y el patrimonio"
+                        },
+                        {
+                          "name": "del arte y la cultura."
+                        },
+                        {
+                          "name": "de las nuevas tecnologías"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ]
@@ -717,6 +1622,122 @@
                 {
                   "ngram": "comunicación",
                   "frecuencia":	4
+                }
+              ],
+              "wordTree": [
+                {
+                  "name": "estado",
+                  "children": [
+                    {
+                      "name": "Estado",
+                      "children": [
+                        {
+                          "name": "de derecho y estado de justicia"
+                        },
+                        {
+                          "name": "plurinacional"
+                        },
+                        {
+                          "name": "social y garante de derechos"
+                        },
+                        {
+                          "name": " social, de derechos, plurinacional, comunitario y laico, basado en el respeto y en principios de soberanía, solidaridad, justicia, armonía, dignidad, del buen vivir y respeto a pluralidad económica"
+                        },
+                        {
+                          "name": "plurinacional, garantista, feminista e inclusivo con grupos invisibilizados "
+                        },
+                        {
+                          "name": "descentralizado, que consagremecanismos de participación directa a nivel local, regional, nacional y en el territorio internacional"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe garantizar",
+                      "children": [
+                        {
+                          "name": "no más corrupción"
+                        },
+                        {
+                          "name": "el rol social del suelo, entendiendo que es indispensable la creación de espacios de goce, cuidados y de colaboración, en un espacio social afectivo"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Mantener Estado",
+                      "children": [
+                        {
+                          "name": "de derecho y de justicia "
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Acabar estado",
+                      "children": [
+                        {
+                          "name": "subsidiario (neoliberal) y en su lugar avanzar a un estado de bienestar que tenga como fundamento a la sociedad toda"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe crear",
+                      "children": [
+                        {
+                          "name": "ciudades seguras para mujeres y niñas, desde una lógica política y no militar"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "participación",
+                  "children": [
+                    {
+                      "name": "Participación",
+                      "children": [
+                        {
+                          "name": "ciudadana y democratización del poder"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Asegurar participación",
+                      "children": [
+                        {
+                          "name": "la participación de todos y todas desde los 16 años."
+                        },
+                        {
+                          "name": "ciudadana en la redacción de la nueva constitución política del estado"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Garantizar participación",
+                      "children": [
+                        {
+                          "name": " la participación del pueblo con igualdad de oportunidades"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "transparencia",
+                  "children": [
+                    {
+                      "name": "Transparencia",
+                      "children": [
+                        {
+                          "name": "y separación entre lo político y lo financiero "
+                        },
+                        {
+                          "name": "de los servicios del estado"
+                        },
+                        {
+                          "name": "probidad y anticorrupción"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -817,6 +1838,297 @@
                 {
                   "ngram": "falta",
                   "frecuancia":	3
+                }
+              ],
+              "wordTree": [
+                {
+                  "name": "estado",
+                  "children": [
+                    {
+                      "name": "Estado debe velar",
+                      "children": [
+                        {
+                          "name": "por defender y proteger el medio ambiente, la biodiversidad y el derecho al buen vivir en un ambiente sano"
+                        },
+                        {
+                          "name": "por restringir el impacto ambiental"
+                        },
+                        {
+                          "name": "por fomentar, hacer efectiva y vinculante la participación ciudadana y de comunidades locales"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado",
+                      "children": [
+                        {
+                          "name": "solidario, con equilibrio social, económico y natural, no extractivista, restaurador, protector y propietario de los recursos naturales, con un efectivo rol fiscalizador y una fuerte participación de las comunidades"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe asegurar",
+                      "children": [
+                        {
+                          "name": "goce de áreas verdes, a disfrutar de ambientes libres de contaminación (lumínica, atmosférica, contaminación acústica, contaminación visual, entre otras)"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe garantizar",
+                      "children": [
+                        {
+                          "name": "que las actividades productivas no dañen el equilibrio de los ecosistemas"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe incorporar",
+                      "children": [
+                        {
+                          "name": "a las universidades dentro de este nuevo modelo económico, otorgándoles la importancia, autonomía y financiamiento adecuados (financiar ideas de investigación en base a su mérito en lugar de hacer competir a académicas/os) para que desarrollen investigación, desarrollo y pensamiento crítico."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe tener un rol",
+                      "children": [
+                        {
+                          "name": "planificador y ejecutor del modelo determinado en conjunto con la ciudadanía, que apunte a la diversificación de la matriz productiva para el desarrollo, invirtiendo en tecnología e innovación, con respeto al buen vivirde comunidades y a los recursos naturales"
+                        },
+                        {
+                          "name": "fundamental como productor y como facilitador de actividades productivas dentro y fuera de la lógica capitalista contemporánea, considerando a grupos históricamente invisibilizados en la discusión económica: es decir, debe tener un enfoque de género, que refleje cosmovisiones de pueblos originarios"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "modelo",
+                  "children": [
+                    {
+                      "name": "Definir modelo",
+                      "children": [
+                        {
+                          "name": "desarrollo sostenido por distintas estrategias multiescalares (nacionales y subnacionales), que sea sensible al contexto sociohistórico en el cual esta constitución se escribe, así como la sociedad que espera construir"
+                        },
+                        {
+                          "name": "qué es lo que se entenderá como economía, lo que determinará otras definiciones relevantes tales como capacidad económica, objetivos económicos y administración de recursos."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Avanzar modelo",
+                      "children": [
+                        {
+                          "name": "hacia una industrialización progresiva que exporte productos terminados o con mayor valor agregado y la prestación y exportación de servicios especializados o tecnológicos"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Modelo debe asegurar",
+                      "children": [
+                        {
+                          "name": "salarios y condiciones de trabajo que permitan pagar el costo de una vida digna que considere todo lo necesario para la supervivenciay desarrollo laboral, intelectual, interpersonal, emocional, y espiritual de las personas"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Construir modelo",
+                      "children": [
+                        {
+                          "name": "económico basado en el equilibrio, dejar de ser extractivista y antropocéntrico con respecto de la naturaleza, coherente a un desarrollo económico circular"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Cambiar modelo",
+                      "children": [
+                        {
+                          "name": "de estado subsidiario a estado garante"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "economía",
+                  "children": [
+                    {
+                      "name": "Economía",
+                      "children": [
+                        {
+                          "name": "de el buen vivir , economía circular , economía feminista "
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Impulsar economía",
+                      "children": [
+                        {
+                          "name": "circular"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "principio",
+                  "children": [
+                    {
+                      "name": "Principio",
+                      "children": [
+                        {
+                          "name": "de soberanía alimentaria sustentable garantizada para toda la población"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Implementar principio",
+                      "children": [
+                        {
+                          "name": "de preferencia por impuestos no regresivos , incluyendo un impuesto a el valor de el suelo o terreno , que considere la plusvalía de este , y que reemplace progresivamente a el iva"
+                        },
+                        {
+                          "name": "que no se puedan imponer impuestos manifiestamente desproporcionados o injustos"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "sistema",
+                  "children": [
+                    {
+                      "name": "Cambiar sistema",
+                      "children": [
+                        {
+                          "name": "extractivista mono productivo que no resguarda la sustentabilidad de los recursos naturales."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Aplicar sistema",
+                      "children": [
+                        {
+                          "name": "económico mixto, entendiéndolo como que el patrimonio nacional sea el estatal, que el área privada intervenga en la economía del país, pero que no lo maneje"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Desarrollar sistema",
+                      "children": [
+                        {
+                          "name": "de seguridad social."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "recursos",
+                  "children": [
+                    {
+                      "name": "Desprivatizar Recursos",
+                      "children": [
+                        {
+                          "name": "naturales"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Controlar recursos",
+                      "children": [
+                        {
+                          "name": "estratégicos bajo principios de sustentabilidad de los ecosistemas"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Invertir recursos",
+                      "children": [
+                        {
+                          "name": "económicos en equilibrio con las necesidades de cada territorio."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "derecho",
+                  "children": [
+                    {
+                      "name": "Derecho",
+                      "children": [
+                        {
+                          "name": "de vivir en un lugar libre de contaminación"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Limitar derecho",
+                      "children": [
+                        {
+                          "name": "limitar el derecho a propiedad en la nueva constitución"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "uso",
+                  "children": [
+                    {
+                      "name": "limitar uso",
+                      "children": [
+                        {
+                          "name": "de suelo y el tipo de impacto ambiental que pueden soportar."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Tener uso",
+                      "children": [
+                        {
+                          "name": "racional de los distintos recursos naturales"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "educación",
+                  "children": [
+                    {
+                      "name": "Educacion",
+                      "children": [
+                        {
+                          "name": "medioambientalista desde la temprana edad"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Contar con educacion",
+                      "children": [
+                        {
+                          "name": "educación ambiental que permita a los niños/as y jóvenes conocer los procesos de los bosques y su fauna y flora"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Participación",
+                  "children": [
+                    {
+                      "name": "Participación",
+                      "children": [
+                        {
+                          "name": "vinculante de la ciudadanía sobre el diseño y gestión del uso de suelo y planificación territorial"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -929,6 +2241,89 @@
                 {
                   "ngram": "normas",
                   "frecuencia":	1
+                }
+              ],
+              "wordTree": [
+                {
+                  "name": "Estado",
+                  "children": [
+                    {
+                      "name": "Estado",
+                      "children": [
+                        {
+                          "name": "unitario, plurinacional, con reconocimiento de macrozonas y autonomía territorial."
+                        },
+                        {
+                          "name": "descentralizado como actor fundamental en la sociedad, orientado hacia el interés y bien común"
+                        },
+                        {
+                          "name": "descentralizado"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Forma de estado",
+                      "children": [
+                        {
+                          "name": "forma de estado, ordenamiento, autonomía, descentralización, equidad, justicia territorial, gobiernos locales y organización fiscal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "descentralización",
+                  "children": [
+                    {
+                      "name": "Descentralizar poder",
+                      "children": [
+                        {
+                          "name": "en las mismas regiones y darle mayor énfasis a las provincias"
+                        },
+                        {
+                          "name": "en que las comunidades puedan tomar decisiones de forma autónoma "
+                        },
+                        {
+                          "name": "tomando ejemplos de modelos de estado federal, evaluando mecanismos para armonizar normas a nivel federal, estatal y local"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "descentralización",
+                      "children": [
+                        {
+                          "name": "en políticas administrativas mayor transparencia de las decisiones políticas y acceso a las discusiones mayor autonomía tanto a gobierno regional y local sobre su territorio."
+                        },
+                        {
+                          "name": "participación y democratización"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Propender a descentralización",
+                      "children": [
+                        {
+                          "name": "para asegurar la participación paritaria de las regiones en organizaciones representativas"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "autoridades",
+                  "children": [
+                    {
+                      "name": "Fortalecer Autoridades",
+                      "children": [
+                        {
+                          "name": "locales, es importante que quienes postulen a esos cargos sean del territorio, la figura del delegado presidencial no debe existir más, la de los gobernadores es suficiente"
+                        },
+                        {
+                          "name": "regionales, que la autonomía emane del poder de las autoridades locales"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
