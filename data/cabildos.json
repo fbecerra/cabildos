@@ -1583,10 +1583,45 @@
                   "name": "modelo",
                   "children": [
                     {
-                      "name": "",
+                      "name": "Definir modelo",
                       "children": [
                         {
-                          "name": ""
+                          "name": "desarrollo sostenido por distintas estrategias multiescalares (nacionales y subnacionales), que sea sensible al contexto sociohistórico en el cual esta constitución se escribe, así como la sociedad que espera construir"
+                        },
+                        {
+                          "name": "qué es lo que se entenderá como economía, lo que determinará otras definiciones relevantes tales como capacidad económica, objetivos económicos y administración de recursos."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Avanzar modelo",
+                      "children": [
+                        {
+                          "name": "hacia una industrialización progresiva que exporte productos terminados o con mayor valor agregado y la prestación y exportación de servicios especializados o tecnológicos"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Modelo debe asegurar",
+                      "children": [
+                        {
+                          "name": "salarios y condiciones de trabajo que permitan pagar el costo de una vida digna que considere todo lo necesario para la supervivenciay desarrollo laboral, intelectual, interpersonal, emocional, y espiritual de las personas"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Construir modelo",
+                      "children": [
+                        {
+                          "name": "económico basado en el equilibrio, dejar de ser extractivista y antropocéntrico con respecto de la naturaleza, coherente a un desarrollo económico circular"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Cambiar modelo",
+                      "children": [
+                        {
+                          "name": "de estado subsidiario a estado garante"
                         }
                       ]
                     }
@@ -1596,10 +1631,18 @@
                   "name": "economía",
                   "children": [
                     {
-                      "name": "",
+                      "name": "Economía",
                       "children": [
                         {
-                          "name": ""
+                          "name": "de el buen vivir , economía circular , economía feminista "
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Impulsar economía",
+                      "children": [
+                        {
+                          "name": "circular"
                         }
                       ]
                     }
@@ -1609,10 +1652,21 @@
                   "name": "principio",
                   "children": [
                     {
-                      "name": "",
+                      "name": "Principio",
                       "children": [
                         {
-                          "name": ""
+                          "name": "de soberanía alimentaria sustentable garantizada para toda la población"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Implementar principio",
+                      "children": [
+                        {
+                          "name": "de preferencia por impuestos no regresivos , incluyendo un impuesto a el valor de el suelo o terreno , que considere la plusvalía de este , y que reemplace progresivamente a el iva"
+                        },
+                        {
+                          "name": "que no se puedan imponer impuestos manifiestamente desproporcionados o injustos"
                         }
                       ]
                     }
@@ -1622,10 +1676,26 @@
                   "name": "sistema",
                   "children": [
                     {
-                      "name": "",
+                      "name": "Cambiar sistema",
                       "children": [
                         {
-                          "name": ""
+                          "name": "extractivista mono productivo que no resguarda la sustentabilidad de los recursos naturales."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Aplicar sistema",
+                      "children": [
+                        {
+                          "name": "económico mixto, entendiéndolo como que el patrimonio nacional sea el estatal, que el área privada intervenga en la economía del país, pero que no lo maneje"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Desarrollar sistema",
+                      "children": [
+                        {
+                          "name": "de seguridad social."
                         }
                       ]
                     }
@@ -1635,10 +1705,26 @@
                   "name": "recursos",
                   "children": [
                     {
-                      "name": "",
+                      "name": "Desprivatizar Recursos",
                       "children": [
                         {
-                          "name": ""
+                          "name": "naturales"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Controlar recursos",
+                      "children": [
+                        {
+                          "name": "estratégicos bajo principios de sustentabilidad de los ecosistemas"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Invertir recursos",
+                      "children": [
+                        {
+                          "name": "económicos en equilibrio con las necesidades de cada territorio."
                         }
                       ]
                     }
@@ -1648,10 +1734,18 @@
                   "name": "derecho",
                   "children": [
                     {
-                      "name": "",
+                      "name": "Derecho",
                       "children": [
                         {
-                          "name": ""
+                          "name": "de vivir en un lugar libre de contaminación"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Limitar derecho",
+                      "children": [
+                        {
+                          "name": "limitar el derecho a propiedad en la nueva constitución"
                         }
                       ]
                     }
@@ -1661,10 +1755,18 @@
                   "name": "uso",
                   "children": [
                     {
-                      "name": "",
+                      "name": "limitar uso",
                       "children": [
                         {
-                          "name": ""
+                          "name": "de suelo y el tipo de impacto ambiental que pueden soportar."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Tener uso",
+                      "children": [
+                        {
+                          "name": "racional de los distintos recursos naturales"
                         }
                       ]
                     }
@@ -1674,10 +1776,31 @@
                   "name": "educación",
                   "children": [
                     {
-                      "name": "",
+                      "name": "Educacion",
                       "children": [
                         {
-                          "name": ""
+                          "name": "medioambientalista desde la temprana edad"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Contar con educacion",
+                      "children": [
+                        {
+                          "name": "educación ambiental que permita a los niños/as y jóvenes conocer los procesos de los bosques y su fauna y flora"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Participación",
+                  "children": [
+                    {
+                      "name": "Participación",
+                      "children": [
+                        {
+                          "name": "vinculante de la ciudadanía sobre el diseño y gestión del uso de suelo y planificación territorial"
                         }
                       ]
                     }
