@@ -1099,6 +1099,108 @@
                   "ngram": "representantes",
                   "frecuencia":	2
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "Estado",
+                  "children": [
+                    {
+                      "name": "Estado",
+                      "children": [
+                        {
+                          "name": "que vele por los derechos humanos"
+                        },
+                        {
+                          "name": "plurinacional: se concuerda en que se requiere comunicación, y un reconocimiento constitucional para las distintas naciones que habitan el territorio de chile"
+                        },
+                        {
+                          "name": "plurinacional y reconocimiento de los derechos de cada pueblo originario, respetando su cultura."
+                        },
+                        {
+                          "name": "plurilingüe: el país tiene varios idiomas y varias culturas por zonas."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Reconocer Estado",
+                      "children": [
+                        {
+                          "name": "plurinacional y libre determinación de los pueblos originarios"
+                        },
+                        {
+                          "name": "la existencia de la naciones preexistente a la nación chilena"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "No depender del estado",
+                      "children": [
+                        {
+                          "name": "en decisiones y dejar tener la propia orgánica oficial"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Reconocimiento",
+                  "children": [
+                    {
+                      "name": "Reconocimiento",
+                      "children": [
+                        {
+                          "name": "de diversas naciones sobre el territorio"
+                        },
+                        {
+                          "name": "de culturas y prácticas de pueblos originarios constitucionalmente"
+                        },
+                        {
+                          "name": " de que habían naciones preexistentes a la colonización y la historia que representa"
+                        },
+                        {
+                          "name": "y aseguración de sus elementos, tal como derechos, la historia y la cosmovisión"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Plurinacionalidad",
+                  "children": [
+                    {
+                      "name": "Plurinacionalidad",
+                      "children": [
+                        {
+                          "name": "Reconocimiento de diversas naciones sobre el territorio, velando por el desarrollo propio y la integración de distintas naciones que coexistirán a futuro. Respeto por todas las culturas presentes"
+                        },
+                        {
+                          "name": "que se genere un ministerio de pueblos indígenas para la representación plurinacional, con líderes de cada pueblo que representen conadi e interventores"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Derechos",
+                  "children": [
+                    {
+                      "name": "Reivindicar derechos",
+                      "children": [
+                        {
+                          "name": "de todos los pueblos"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Respetar derechos",
+                      "children": [
+                        {
+                          "name": "De naciones, originarios; sus costumbres y cosmovisiones, donde distintas naciones conviven en respeto y armonía"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
