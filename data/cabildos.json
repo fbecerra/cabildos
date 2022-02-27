@@ -446,6 +446,206 @@
                   "ngram": "enfermedades",
                   "frecuencia":	2
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "salud",
+                  "children": [
+                     {
+                       "name": "Salud",
+                       "children": [
+                         {
+                           "name": "que potencie y fomente la promoción y prevención de salud desde la primera infancia con enfoque familiar y comunitario con énfasis en la corresponsabilidad."
+                         },
+                         {
+                           "name": "cerca a las personas con equipos profesionales que visiten constantemente las comunidades"
+                         },
+                         {
+                           "name": "mental con información clara y oportuna con mayor visibilidad de las condiciones de salud mental"
+                         }
+                       ]
+                     },
+                     {
+                       "name": "Entender salud",
+                       "children": [
+                         {
+                           "name": "en sentido amplio desde lo psicosocial lo espiritual"
+                         },
+                         {
+                           "name": "como estado de completo bienestar "
+                         }
+                       ]
+                     },
+                     {
+                       "name": "Fortalecer salud",
+                       "children": [
+                         {
+                           "name": "pública para que esta se capaz de asegurar un sistema de calidad para todas y todos por igual."
+                         }
+                       ]
+                     },
+                     {
+                       "name": "Mejorar salud",
+                       "children": [
+                         {
+                           "name": "pública considerando a los trabajadores de la salud y a los usuarios y no solo a los profesionales."
+                         }
+                       ]
+                     },
+                     {
+                       "name": "Considerar salud",
+                       "children": [
+                         {
+                           "name": "en las decisiones y acciones que tengan impacto medio ambiental"
+                         }
+                       ]
+                     },
+                     {
+                       "name": "Regular salud",
+                       "children": [
+                         {
+                           "name": "privada"
+                         }
+                       ]
+                     },
+                     {
+                       "name": "Pensar salud",
+                       "children": [
+                         {
+                           "name": "como un bien social con enfoque en la calidad de vida de las personas las familias y comunidades."
+                         }
+                       ]
+                     },
+                     {
+                       "name": "Volver salud",
+                       "children": [
+                         {
+                           "name": "a ser administrada a nivel ministerio y no a nivel de municipalidades evitando inequidades"
+                         }
+                       ]
+                     }
+                  ]
+                },
+                {
+                  "name": "sistema",
+                  "children": [
+                    {
+                      "name": "Sistema",
+                      "children": [
+                        {
+                          "name": "de salud universal."
+                        },
+                        {
+                          "name": "que sea garantizado para todos sin excepción."
+                        },
+                        {
+                          "name": "único de salud."
+                        },
+                        {
+                          "name": "único e integrado que se reintegre al servicio único integrado las utilidades de las inversiones realizadas por las isapres"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Asegurar sistema",
+                      "children": [
+                        {
+                          "name": "De calidad para todas y todos por igual"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Cambiar sistema",
+                      "children": [
+                        {
+                          "name": "a la modalidad de salud pública de calidad y digna"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Contar sistema",
+                      "children": [
+                        {
+                          "name": "de salud único y universal que permita un acceso expedito a todas las personas de forma equitativo."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Requerir sistema",
+                      "children": [
+                        {
+                          "name": "de salud de calidad enfocado en el buen trato al paciente y en la calidad de los profesionales de salud que se estan formando"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "acceso",
+                  "children": [
+                    {
+                      "name": "Acceso",
+                      "children": [
+                        {
+                          "name": "a la rehabilitación"
+                        },
+                        {
+                          "name": "a los especialistas con mejores condiciones laborales para los especialistas profesionales y personal de salud"
+                        },
+                        {
+                          "name": "preferencial a la salud oral de mayor complejidad en personas que habitan territorios rurales y aislados"
+                        },
+                        {
+                          "name": "a la información de salud desde la prevención"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Garantizar acceso",
+                      "children": [
+                        {
+                          "name": "universal a una salud digna"
+                        },
+                        {
+                          "name": "expedito y de calidad a los tratamientos de patologías"
+                        },
+                        {
+                          "name": "pleno a la salud como un derecho fundamental para todas y todos sin importar el nivel socioeconómico"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Mejorar acceso",
+                      "children": [
+                        {
+                          "name": "en términos de horarios para las personas que trabajan"
+                        },
+                        {
+                          "name": "a la zona rural con ambulancias en cada posta"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Tener acceso",
+                      "children": [
+                        {
+                          "name": "preferencial a salud mental y reparación en zonas con conflictos medio ambientales"
+                        },
+                        {
+                          "name": " efectivo a los servicios de salud regulación de precios a los medicamentos."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Permitir acceso",
+                      "children": [
+                        {
+                          "name": " expedito a todas las personas de forma equitativo"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
