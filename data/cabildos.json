@@ -1299,6 +1299,122 @@
                   "ngram": "comunicación",
                   "frecuencia":	4
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "estado",
+                  "children": [
+                    {
+                      "name": "Estado",
+                      "children": [
+                        {
+                          "name": "de derecho y estado de justicia"
+                        },
+                        {
+                          "name": "plurinacional"
+                        },
+                        {
+                          "name": "social y garante de derechos"
+                        },
+                        {
+                          "name": " social, de derechos, plurinacional, comunitario y laico, basado en el respeto y en principios de soberanía, solidaridad, justicia, armonía, dignidad, del buen vivir y respeto a pluralidad económica"
+                        },
+                        {
+                          "name": "plurinacional, garantista, feminista e inclusivo con grupos invisibilizados "
+                        },
+                        {
+                          "name": "descentralizado, que consagremecanismos de participación directa a nivel local, regional, nacional y en el territorio internacional"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe garantizar",
+                      "children": [
+                        {
+                          "name": "no más corrupción"
+                        },
+                        {
+                          "name": "el rol social del suelo, entendiendo que es indispensable la creación de espacios de goce, cuidados y de colaboración, en un espacio social afectivo"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Mantener Estado",
+                      "children": [
+                        {
+                          "name": "de derecho y de justicia "
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Acabar estado",
+                      "children": [
+                        {
+                          "name": "subsidiario (neoliberal) y en su lugar avanzar a un estado de bienestar que tenga como fundamento a la sociedad toda"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estado debe crear",
+                      "children": [
+                        {
+                          "name": "ciudades seguras para mujeres y niñas, desde una lógica política y no militar"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "participación",
+                  "children": [
+                    {
+                      "name": "Participación",
+                      "children": [
+                        {
+                          "name": "ciudadana y democratización del poder"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Asegurar participación",
+                      "children": [
+                        {
+                          "name": "la participación de todos y todas desde los 16 años."
+                        },
+                        {
+                          "name": "ciudadana en la redacción de la nueva constitución política del estado"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Garantizar participación",
+                      "children": [
+                        {
+                          "name": " la participación del pueblo con igualdad de oportunidades"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "transparencia",
+                  "children": [
+                    {
+                      "name": "Transparencia",
+                      "children": [
+                        {
+                          "name": "y separación entre lo político y lo financiero "
+                        },
+                        {
+                          "name": "de los servicios del estado"
+                        },
+                        {
+                          "name": "probidad y anticorrupción"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
