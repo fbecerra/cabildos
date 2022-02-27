@@ -1205,6 +1205,157 @@
                   "ngram": "pib",
                   "frecuencia":	2
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "Cultura",
+                  "children": [
+                    {
+                      "name": "Cultura",
+                      "children": [
+                        {
+                          "name": "Y artes como un derecho en el cual el estado debe ser un garante"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Integrar cultura",
+                      "children": [
+                        {
+                          "name": "de cada región priorizando el bien común, para así generar espacios para el esparcimiento e integración social"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Poner cultura",
+                      "children": [
+                        {
+                          "name": "de los pueblos indígenas en el centro"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Estimular cultura",
+                      "children": [
+                        {
+                          "name": "y recreación que tenga un tiempo reconocido y destinado, que se valore para poder vivirla"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Incorporar cultura",
+                      "children": [
+                        {
+                          "name": "el arte y la recreación como un aprendizaje transversal en los colegios, estimulando la participación de la familia y la comunidad en estos espacios"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Desarrollo",
+                  "children": [
+                    {
+                      "name": "Regular desarrollo",
+                      "children": [
+                        {
+                          "name": "regular, garantizar y velar todo desarrollo científico tanto en conocimiento como en las diferentes áreas y/o aplicación de tecnologías"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Planificar desarrollo",
+                      "children": [
+                        {
+                          "name": "científico del conocimiento e impulsar innovaciones"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Derecho",
+                  "children": [
+                    {
+                      "name": "Derecho",
+                      "children": [
+                        {
+                          "name": "a el desarrollo cultural y artístico , integrando la cultura de cada región priorizando el bien común , para así generar espacios para el esparcimiento e integración social"
+                        },
+                        {
+                          "name": "así como se le asignan 44 horas semanales al trabajo obligatorio, se debiera considerar destinar horario para actividades culturales, recreativas y contemplándolo como un derecho fundamental"
+                        },
+                        {
+                          "name": "derecho a la libertad de investigación"
+                        },
+                        {
+                          "name": "derecho al internet"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Espacios",
+                  "children": [
+                    {
+                      "name": "Garantizar espacios",
+                      "children": [
+                        {
+                          "name": "garantizando espacios, talleres y presentaciones de forma permanente, para toda la comunidad, y en especial, para los jóvenes"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Tener espacios",
+                      "children": [
+                        {
+                          "name": "educar y propmover las distintas culturas dentro de un mismo territorio, respetando su libre expresión y entendiendo que no todos tienen la misma pertinencia cultural, por ello deben tener espacios de expresion propio"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Acceso",
+                  "children": [
+                    {
+                      "name": "Fomentar acceso",
+                      "children": [
+                        {
+                          "name": "al conocimiento como pauta de conexión cultural"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Garantizar acceso",
+                      "children": [
+                        {
+                          "name": "a la cultura y el arte, ya que esta genera un desarrollo integral de las personas, contribuyendo en la autoestima y la salud mental"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Fomento",
+                  "children": [
+                    {
+                      "name": "Fomento",
+                      "children": [
+                        {
+                          "name": "fomento de las vinculaciones entre la educación cívica, la memoria y el patrimonio"
+                        },
+                        {
+                          "name": "del arte y la cultura."
+                        },
+                        {
+                          "name": "de las nuevas tecnologías"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ]
