@@ -1918,6 +1918,89 @@
                   "ngram": "normas",
                   "frecuencia":	1
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "Estado",
+                  "children": [
+                    {
+                      "name": "Estado",
+                      "children": [
+                        {
+                          "name": "unitario, plurinacional, con reconocimiento de macrozonas y autonomía territorial."
+                        },
+                        {
+                          "name": "descentralizado como actor fundamental en la sociedad, orientado hacia el interés y bien común"
+                        },
+                        {
+                          "name": "descentralizado"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Forma de estado",
+                      "children": [
+                        {
+                          "name": "forma de estado, ordenamiento, autonomía, descentralización, equidad, justicia territorial, gobiernos locales y organización fiscal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "descentralización",
+                  "children": [
+                    {
+                      "name": "Descentralizar poder",
+                      "children": [
+                        {
+                          "name": "en las mismas regiones y darle mayor énfasis a las provincias"
+                        },
+                        {
+                          "name": "en que las comunidades puedan tomar decisiones de forma autónoma "
+                        },
+                        {
+                          "name": "tomando ejemplos de modelos de estado federal, evaluando mecanismos para armonizar normas a nivel federal, estatal y local"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "descentralización",
+                      "children": [
+                        {
+                          "name": "en políticas administrativas mayor transparencia de las decisiones políticas y acceso a las discusiones mayor autonomía tanto a gobierno regional y local sobre su territorio."
+                        },
+                        {
+                          "name": "participación y democratización"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Propender a descentralización",
+                      "children": [
+                        {
+                          "name": "para asegurar la participación paritaria de las regiones en organizaciones representativas"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "autoridades",
+                  "children": [
+                    {
+                      "name": "Fortalecer Autoridades",
+                      "children": [
+                        {
+                          "name": "locales, es importante que quienes postulen a esos cargos sean del territorio, la figura del delegado presidencial no debe existir más, la de los gobernadores es suficiente"
+                        },
+                        {
+                          "name": "regionales, que la autonomía emane del poder de las autoridades locales"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ]
