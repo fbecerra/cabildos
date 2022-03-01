@@ -162,7 +162,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   const charSize = 2;
 
   let pack = data => d3.pack()
-    .size([width, height])
+    .size([height, width])
     .padding(charSize)
   (d3.hierarchy(data)
     .sum(d => d.porcentaje)
@@ -172,19 +172,26 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   console.log(root)
   let focus = root;
   let view;
-  const svgWidth = 1.2 * width;
+  const svgHeight = 700,
+        svgWidth = 1.5 * width;
 
   const svg = d3.select("#cabildos").append("svg")
-      .attr("viewBox", [0, 0, width, height])
+      .attr("viewBox", [0, 0, svgWidth, svgHeight])
       .attr("width", svgWidth)
-      .attr("height", height)
-      .attr("style", "max-width: 100%; height: auto; height: intrinsic; position: relative; z-index: -1;")
+      .attr("height", svgHeight)
+      .attr("style", "max-width: 100%; height: auto; height: intrinsic; position: relative;")
       .attr("font-family", "sans-serif")
       .attr("font-size", 10)
       .attr("text-anchor", "middle")
-      .attr("transform", `scale(1.4)`);
+      // .attr("transform", `scale(1.4)`);
 
   const offset = (height - svgWidth) / 2;
+
+  // function updateDiv(id) {
+  //   let cabildo = cabildos.children.filter(d => d.name == id);
+  //
+  //   let details = d3.select("#details");
+  // }
 
   const node = svg.append("g")
     .style("transform", `translate(-40px, -${offset}px)`)
@@ -195,9 +202,13 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr('stroke-width', 1.0)
       .attr("fill", d => d.children ? "white" : cabildos.comisiones[d.data.comision].color)
       .attr("pointer-events", d => !d.children ? "none" : null)
-      .attr("cx", d => d.y)
-      .attr("cy", d => d.x)
-      .attr("r", d => d.r)
+      .attr("cx", d => 1.4 * d.y)
+      .attr("cy", d => 1.4 * d.x - 150)
+      .attr("r", d => 1.4 * d.r)
+      // .on("click", (event, d) => {
+      //   console.log(d);
+      //   updateDiv('Plataforma CC'); //updateDiv(d.cabildo);
+      // })
       // .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
       // .on("mouseout", function() { d3.select(this).attr("stroke", "lightgrey"); })
 
@@ -210,8 +221,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     .selectAll("text")
     .data(root.descendants().slice(1).filter(function(d) { return !d.children; }))
     .join("text")
-      .attr("x", d => d.y)
-      .attr("y", d => d.x)
+      .attr("x", d => 1.4 * d.y)
+      .attr("y", d => 1.4 * d.x - 150)
       .style("fill-opacity", 1)
       .style("display", "inline")
       .text(d => d.r > 15 ? d.data.name.slice(0, 10) : null)
