@@ -275,6 +275,31 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .style("display", "inline-block")
         .html(d => `${d.ngram}<sup>${d.frecuencia}</sup>`)
 
+    function wrap(text, width) {
+      text.each(function() {
+        var text = d3.select(this),
+            words = text.text().split(/\s+/).reverse(),
+            word,
+            line = [words.pop()],
+            lineNumber = 0,
+            lineHeightText = 1.01 * lineHeight, // ems
+            x = text.attr("x"),
+            y = text.attr("y"),
+            dy = parseFloat(text.attr("0")),
+            tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).text(line);
+        while (word = words.pop()) {
+          line.push(word);
+          tspan.text(line.join(" "));
+          if (tspan.node().getComputedTextLength() > width) {
+            line.pop();
+            tspan.text(line.join(" "));
+            line = [word];
+            tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", lineHeightText + "px").text(word);
+          }
+        }
+      });
+    }
+
     // WORD TREE
     let treeSvg = temaDiv.filter(d => d.hasOwnProperty("wordTree"))
       .selectAll(".tree-svg")
@@ -294,7 +319,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("height", 300)
 
     const padding = 0;
-    const lineHeight = 12;
+    const lineHeight = 14;
 
     const treeG = treeSvg.selectAll(".tree-group")
       .data(d => [d])
@@ -311,8 +336,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .each(d => {
           let treeRoot = d3.hierarchy(d);
           const dx = 20;
-          const dy = 300 / (treeRoot.height + padding);
-          d3.tree().nodeSize([dx, dy])(treeRoot);
+          const dy = 100 / (treeRoot.height + padding);
+          d3.tree().separation((a,b) => (a.parent === b.parent ? 1 : 2) * a.depth).nodeSize([dx, dy])(treeRoot);
           d.tree = treeRoot;
 
           let x0 = Infinity,
@@ -330,7 +355,10 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
           d.y1 = y1;
           d.y0 = y0;
         })
-        .attr("transform", d => `translate(${(d.x0 + d.x1)/2},${(d.y0 + d.y1)/2})`)
+        .attr("transform", d => {
+          console.log(d.x0, d.x1, d.y0, d.y1)
+          return `translate(${-d.x0},${d.y1})`
+        })
 
     treeG.selectAll("path")
       .data(d => d.tree.links())
@@ -360,6 +388,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("x", d => d.children ? -6 : 6)
         .attr("text-anchor", d => d.children ? "end" : "start")
         .text(d => d.data.name)
+        .call(wrap, 500)
       // .attr("fill", "none")
       // .attr("stroke", halo)
       // .attr("stroke-width", haloWidth);
@@ -400,9 +429,9 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("r", d => 1.4 * d.r)
       .on("click", (event, d) => {
         console.log(d);
-        updateDiv('Plataforma CC'); //updateDiv(d.cabildo);
         hideBubbles();
         showDetails();
+        updateDiv('Plataforma CC'); //updateDiv(d.cabildo);
       })
       // .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
       // .on("mouseout", function() { d3.select(this).attr("stroke", "lightgrey"); })
