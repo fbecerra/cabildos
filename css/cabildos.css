@@ -1,0 +1,7 @@
+#sticky {
+  z-index: 10;
+}
+
+#cabildo-details {
+  display: none;
+}

@@ -187,11 +187,92 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   const offset = (height - svgWidth) / 2;
 
-  // function updateDiv(id) {
-  //   let cabildo = cabildos.children.filter(d => d.name == id);
-  //
-  //   let details = d3.select("#details");
-  // }
+  function updateDiv(id) {
+
+    let svgBarMargin = {top: 0, left: 20, bottom: 20, right: 0},
+        svgBarWidth = 500 - svgBarMargin.left - svgBarMargin.right,
+        svgBarHeight = 700 - svgBarMargin.top - svgBarMargin.bottom;
+
+    let cabildo = cabildos.children.filter(d => d.name == id);
+    let comisiones = cabildo[0].children.sort((a, b) => ('' + a.name).localeCompare(b.name))
+    let temas = cabildo[0].children.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
+
+    let xScale = d3.scaleLinear()
+      .domain([0, temas[0].porcentaje])
+      .range([svgBarMargin.left, svgBarWidth]);
+
+    let yScale = d3.scaleBand()
+      .domain(d3.range(temas.length))
+      .range([svgBarMargin.top, svgBarHeight])
+      .padding(0.1);
+
+    console.log(yScale(0), temas.length)
+
+    let xAxis = d3.axisBottom(xScale),
+        yAxis = d3.axisLeft(yScale).ticks(10);
+
+    let details = d3.select("#details");
+
+    let divCabildo = details.selectAll(".title")
+      .data(cabildo)
+      .join("div")
+        .attr("class", "title")
+        .html(d => d.name);
+
+    let svgBar = details.selectAll("svg")
+      .data(cabildo)
+      .join("svg")
+        .attr("class", ".bar-chart")
+        .attr("width", svgBarWidth)
+        .attr("height", svgBarHeight)
+
+    svgBar.append("g")
+      .attr("transform", `translate(0,${svgBarHeight})`)
+      .call(xAxis)
+
+    svgBar.append("g")
+      .attr("transform", `translate(${svgBarMargin.left},0)`)
+      .call(yAxis)
+
+    let gBar = svgBar.selectAll(".bar-group")
+      .data(d => [d])
+      .join("g")
+        .attr("class", ".bar-group")
+        .attr("transform", `translate(${svgBarMargin.left},${svgBarMargin.top})`)
+
+    gBar.selectAll("rect")
+      .data(temas)
+      .join("rect")
+        .attr("class", "bar")
+        .attr("x", xScale(0))
+        .attr("y", (d, i) => yScale(i))
+        .attr("width", d => xScale(d.porcentaje) - xScale(0))
+        .attr("height", yScale.bandwidth());
+
+
+
+  }
+
+  function showBubbles() {
+    d3.select("#bubbles").style("display", "flex");
+  }
+
+  function hideBubbles() {
+    d3.select("#bubbles").style("display", "none");
+  }
+
+  function showDetails() {
+    d3.select("#cabildo-details").style("display", "flex");
+  }
+
+  function hideDetails() {
+    d3.select("#cabildo-details").style("display", "none");
+  }
+
+  d3.select("#back-button").on("click", () => {
+    hideDetails();
+    showBubbles();
+  })
 
   const node = svg.append("g")
     .style("transform", `translate(-40px, -${offset}px)`)
@@ -205,10 +286,12 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("cx", d => 1.4 * d.y)
       .attr("cy", d => 1.4 * d.x - 150)
       .attr("r", d => 1.4 * d.r)
-      // .on("click", (event, d) => {
-      //   console.log(d);
-      //   updateDiv('Plataforma CC'); //updateDiv(d.cabildo);
-      // })
+      .on("click", (event, d) => {
+        console.log(d);
+        updateDiv('Plataforma CC'); //updateDiv(d.cabildo);
+        hideBubbles();
+        showDetails();
+      })
       // .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
       // .on("mouseout", function() { d3.select(this).attr("stroke", "lightgrey"); })
 
