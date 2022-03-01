@@ -189,9 +189,9 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   function updateDiv(id) {
 
-    let svgBarMargin = {top: 0, left: 200, bottom: 20, right: 50},
+    let svgBarMargin = {top: 20, left: 200, bottom: 20, right: 50},
         svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
-        svgBarHeight = 700 + svgBarMargin.top + svgBarMargin.bottom;
+        svgBarHeight = 500 + svgBarMargin.top + svgBarMargin.bottom;
 
     let cabildo = cabildos.children.filter(d => d.name == id);
     let comisiones = cabildo[0].children.sort((a, b) => ('' + a.name).localeCompare(b.name))
@@ -201,10 +201,9 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .domain([0, temas[0].porcentaje])
       .range([0, svgBarWidth - svgBarMargin.left - svgBarMargin.right]);
 
-    let yScale = d3.scaleBand()
-      .domain(d3.range(temas.length))
-      .range([svgBarMargin.top, svgBarHeight])
-      .padding(0.1);
+    let yScale = d3.scaleLinear()
+      .domain([0, temas.length - 1])
+      .range([svgBarMargin.top, svgBarHeight - svgBarMargin.top - svgBarMargin.bottom]);
 
     let xAxis = d3.axisBottom(xScale),
         yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => temas[d].name);
@@ -226,27 +225,31 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("height", svgBarHeight)
 
     svgBar.append("g")
-      .attr("transform", `translate(0,${svgBarHeight})`)
+      .attr("transform", `translate(${svgBarMargin.left},${svgBarHeight - svgBarMargin.top - svgBarMargin.bottom + 20})`)
       .call(xAxis)
 
     svgBar.append("g")
       .attr("transform", `translate(${svgBarMargin.left},0)`)
       .call(yAxis)
+      .call(g => {
+        g.selectAll(".tick line").remove()
+        g.selectAll(".domain").remove()
+      })
 
     let gBar = svgBar.selectAll(".bar-group")
       .data(d => [d])
       .join("g")
         .attr("class", ".bar-group")
-        .attr("transform", `translate(${svgBarMargin.left},${svgBarMargin.top})`)
+        .attr("transform", `translate(${svgBarMargin.left},0)`)
 
     gBar.selectAll("line")
       .data(temas)
       .join("line")
         .attr("class", "line")
         .attr("x1", d => xScale(0))
-        .attr("y1", (d, i) => yScale(i) + yScale.bandwidth()/2)
+        .attr("y1", (d, i) => yScale(i))
         .attr("x2", d => xScale(d.porcentaje) - xScale(0))
-        .attr("y2", (d, i) => yScale(i) + yScale.bandwidth()/2)
+        .attr("y2", (d, i) => yScale(i))
         .attr("stroke", "black")
 
     gBar.selectAll("circle")
@@ -254,7 +257,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .join("circle")
         .attr("class", "circle")
         .attr("cx", d => xScale(d.porcentaje) - xScale(0))
-        .attr("cy", (d, i) => yScale(i) + yScale.bandwidth()/2)
+        .attr("cy", (d, i) => yScale(i))
         .attr("r", 5)
         // .attr("width", )
         // .attr("height", yScale.bandwidth());
