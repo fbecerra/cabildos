@@ -259,8 +259,14 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("cx", d => xScale(d.porcentaje) - xScale(0))
         .attr("cy", (d, i) => yScale(i))
         .attr("r", 5)
-        // .attr("width", )
-        // .attr("height", yScale.bandwidth());
+
+    gBar.selectAll("text")
+      .data(temas)
+      .join("text")
+        .attr("class", "text")
+        .attr("x", d => xScale(d.porcentaje) - xScale(0) + 10)
+        .attr("y", (d, i) => yScale(i) + 6)
+        .text(d => d.porcentaje)
 
     let comisionesDiv = details.selectAll(".comision")
       .data(comisiones)
