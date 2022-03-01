@@ -210,6 +210,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         yAxis = d3.axisLeft(yScale).ticks(10);
 
     let details = d3.select("#details");
+    let detailsWidth = details.node().getBoundingClientRect().width;
 
     let divCabildo = details.selectAll(".cabildo-title")
       .data(cabildo)
@@ -300,6 +301,9 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       });
     }
 
+    const padding = 0;
+    const lineHeight = 14;
+
     // WORD TREE
     let treeSvg = temaDiv.filter(d => d.hasOwnProperty("wordTree"))
       .selectAll(".tree-svg")
@@ -313,31 +317,11 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       //   return [d3.tree().nodeSize([dx, dy])(treeRoot)]
       // })
       .join("svg")
-        .attr("class", "tree-svg")
-        // .attr("viewBox", [-100, -50, 500, 200])
-        .attr("width", 700)
-        .attr("height", 300)
-
-    const padding = 0;
-    const lineHeight = 14;
-
-    const treeG = treeSvg.selectAll(".tree-group")
-      .data(d => [d])
-      //   {
-      //   let treeRoot = d3.hierarchy(d);
-      //   const dx = 10;
-      //   const dy = 500 / (treeRoot.height);
-      //   console.log(treeRoot, d3.tree().nodeSize([dx, dy])(treeRoot))
-      //   return [d3.tree().nodeSize([dx, dy])(treeRoot)]
-      //   // return d.links()
-      // })
-      .join("g")
-        .attr("class", "tree-group")
         .each(d => {
           let treeRoot = d3.hierarchy(d);
-          const dx = 20;
-          const dy = 100 / (treeRoot.height + padding);
-          d3.tree().separation((a,b) => (a.parent === b.parent ? 1 : 2) * a.depth).nodeSize([dx, dy])(treeRoot);
+          d.dx = 20;
+          d.dy = 400 / (treeRoot.height + padding);
+          d3.tree().separation((a,b) => (a.parent === b.parent ? 2.0 : 2.3) * a.depth).nodeSize([d.dx, d.dy])(treeRoot);
           d.tree = treeRoot;
 
           let x0 = Infinity,
@@ -354,10 +338,19 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
           d.x0 = x0;
           d.y1 = y1;
           d.y0 = y0;
+          d.height = d.x1 - d.x0 + d.dx * 4;
         })
+        .attr("class", "tree-svg")
+        .attr("width", detailsWidth)
+        .attr("height", d => d.height)
+
+    const treeG = treeSvg.selectAll(".tree-group")
+      .data(d => [d])
+      .join("g")
+        .attr("class", "tree-group")
         .attr("transform", d => {
           console.log(d.x0, d.x1, d.y0, d.y1)
-          return `translate(${-d.x0},${d.y1})`
+          return `translate(${130},${-d.x0 + 10})`
         })
 
     treeG.selectAll("path")
@@ -388,7 +381,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("x", d => d.children ? -6 : 6)
         .attr("text-anchor", d => d.children ? "end" : "start")
         .text(d => d.data.name)
-        .call(wrap, 500)
+        .call(wrap, 370)
       // .attr("fill", "none")
       // .attr("stroke", halo)
       // .attr("stroke-width", haloWidth);
