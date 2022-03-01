@@ -206,17 +206,15 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .range([svgBarMargin.top, svgBarHeight])
       .padding(0.1);
 
-    console.log(yScale(0), temas.length)
-
     let xAxis = d3.axisBottom(xScale),
         yAxis = d3.axisLeft(yScale).ticks(10);
 
     let details = d3.select("#details");
 
-    let divCabildo = details.selectAll(".title")
+    let divCabildo = details.selectAll(".cabildo-title")
       .data(cabildo)
       .join("div")
-        .attr("class", "title")
+        .attr("class", "cabildo-title")
         .html(d => d.name);
 
     let svgBar = details.selectAll("svg")
@@ -249,8 +247,108 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("width", d => xScale(d.porcentaje) - xScale(0))
         .attr("height", yScale.bandwidth());
 
+    let comisionesDiv = details.selectAll(".comision")
+      .data(comisiones)
+      .join("div")
+        .attr("class", "comision")
 
+    comisionesDiv.append("div")
+      .attr("class", "comision-title")
+      .html(d => d.name)
 
+    let temaDiv = comisionesDiv.selectAll(".tema")
+      .data(d => d.children)
+      .join("div")
+        .attr("class", "tema")
+
+    // WORD CLOUD
+    let cloudDiv = temaDiv.filter(d => d.hasOwnProperty("wordCloud"))
+      .selectAll(".cloud-div")
+      .data(d => [d])
+      .join("div")
+        .attr("class", "cloud-div")
+
+    cloudDiv.selectAll("span")
+      .data(d => d.wordCloud)
+      .join("span")
+        .style("font-size", d => 4 * d.frecuencia + "px")
+        .html(d => `${d.ngram}<sup>${d.frecuencia}</sup>`)
+
+    // WORD TREE
+    let treeSvg = temaDiv.filter(d => d.hasOwnProperty("wordTree"))
+      .selectAll(".tree-svg")
+      .data(d => d.wordTree)
+      //   {
+      //   console.log(d)
+      //   let treeRoot = d3.hierarchy(d.wordTree);
+      //   const dx = 10;
+      //   const dy = 500 / (treeRoot.height);
+      //   console.log(treeRoot, d3.tree().nodeSize([dx, dy])(treeRoot))
+      //   return [d3.tree().nodeSize([dx, dy])(treeRoot)]
+      // })
+      .join("svg")
+        .attr("class", "tree-svg")
+        // .attr("viewBox", [-100, -50, 500, 200])
+        .attr("width", 700)
+        .attr("height", 300)
+
+    const padding = 0;
+    const lineHeight = 12;
+
+    treeSvg.selectAll(".tree-group")
+      .data(d => [d])
+      //   {
+      //   let treeRoot = d3.hierarchy(d);
+      //   const dx = 10;
+      //   const dy = 500 / (treeRoot.height);
+      //   console.log(treeRoot, d3.tree().nodeSize([dx, dy])(treeRoot))
+      //   return [d3.tree().nodeSize([dx, dy])(treeRoot)]
+      //   // return d.links()
+      // })
+      .join("g")
+        .attr("class", "tree-group")
+        .each(d => {
+          let treeRoot = d3.hierarchy(d);
+          const dx = 20;
+          const dy = 300 / (treeRoot.height + padding);
+          d3.tree().nodeSize([dx, dy])(treeRoot);
+          d.tree = treeRoot;
+        })
+        // .attr("d", d3.linkHorizontal()
+        //     .x(d => d.y)
+        //     .y(d => d.x));
+
+    treeSvg.selectAll("path")
+      .data(d => d.tree.links())
+      .join("path")
+        .attr("fill", "none")
+        .attr("stroke", "black")
+        .attr("stroke-opacity", 0.4)
+        .attr("stroke-width", 1.5)
+        .attr("d", d3.linkHorizontal()
+            .x(d => d.y)
+            .y(d => d.x));
+
+    let node = treeSvg.append("g")
+      .selectAll("circle")
+      .data(d => d.tree.descendants())
+      .join("g")
+        .attr("transform", d => `translate(${d.y},${d.x})`)
+
+    node.append("circle")
+      .attr("fill", "steelblue")
+      .attr("r", 5);
+
+    node.selectAll("text")
+      .data(d => [d])
+      .join("text")
+        .attr("dy", "0.32em")
+        .attr("x", d => d.children ? -6 : 6)
+        .attr("text-anchor", d => d.children ? "end" : "start")
+        .text(d => d.data.name)
+      // .attr("fill", "none")
+      // .attr("stroke", halo)
+      // .attr("stroke-width", haloWidth);
   }
 
   function showBubbles() {
