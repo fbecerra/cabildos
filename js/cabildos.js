@@ -189,9 +189,9 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   function updateDiv(id) {
 
-    let svgBarMargin = {top: 0, left: 20, bottom: 20, right: 0},
-        svgBarWidth = 500 - svgBarMargin.left - svgBarMargin.right,
-        svgBarHeight = 700 - svgBarMargin.top - svgBarMargin.bottom;
+    let svgBarMargin = {top: 0, left: 200, bottom: 20, right: 50},
+        svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
+        svgBarHeight = 700 + svgBarMargin.top + svgBarMargin.bottom;
 
     let cabildo = cabildos.children.filter(d => d.name == id);
     let comisiones = cabildo[0].children.sort((a, b) => ('' + a.name).localeCompare(b.name))
@@ -199,7 +199,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     let xScale = d3.scaleLinear()
       .domain([0, temas[0].porcentaje])
-      .range([svgBarMargin.left, svgBarWidth]);
+      .range([0, svgBarWidth - svgBarMargin.left - svgBarMargin.right]);
 
     let yScale = d3.scaleBand()
       .domain(d3.range(temas.length))
@@ -207,7 +207,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .padding(0.1);
 
     let xAxis = d3.axisBottom(xScale),
-        yAxis = d3.axisLeft(yScale).ticks(10);
+        yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => temas[d].name);
 
     let details = d3.select("#details");
     let detailsWidth = details.node().getBoundingClientRect().width;
@@ -239,14 +239,25 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("class", ".bar-group")
         .attr("transform", `translate(${svgBarMargin.left},${svgBarMargin.top})`)
 
-    gBar.selectAll("rect")
+    gBar.selectAll("line")
       .data(temas)
-      .join("rect")
-        .attr("class", "bar")
-        .attr("x", xScale(0))
-        .attr("y", (d, i) => yScale(i))
-        .attr("width", d => xScale(d.porcentaje) - xScale(0))
-        .attr("height", yScale.bandwidth());
+      .join("line")
+        .attr("class", "line")
+        .attr("x1", d => xScale(0))
+        .attr("y1", (d, i) => yScale(i) + yScale.bandwidth()/2)
+        .attr("x2", d => xScale(d.porcentaje) - xScale(0))
+        .attr("y2", (d, i) => yScale(i) + yScale.bandwidth()/2)
+        .attr("stroke", "black")
+
+    gBar.selectAll("circle")
+      .data(temas)
+      .join("circle")
+        .attr("class", "circle")
+        .attr("cx", d => xScale(d.porcentaje) - xScale(0))
+        .attr("cy", (d, i) => yScale(i) + yScale.bandwidth()/2)
+        .attr("r", 5)
+        // .attr("width", )
+        // .attr("height", yScale.bandwidth());
 
     let comisionesDiv = details.selectAll(".comision")
       .data(comisiones)
