@@ -180,8 +180,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("width", svgWidth)
       .attr("height", svgHeight)
       .attr("style", "max-width: 100%; height: auto; height: intrinsic; position: relative;")
-      .attr("font-family", "sans-serif")
-      .attr("font-size", 10)
       .attr("text-anchor", "middle")
       // .attr("transform", `scale(1.4)`);
 
@@ -220,7 +218,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     let svgBar = details.selectAll("svg")
       .data(cabildo)
       .join("svg")
-        .attr("class", ".bar-chart")
+        .attr("class", "bar-chart")
         .attr("width", svgBarWidth)
         .attr("height", svgBarHeight)
 
@@ -249,8 +247,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("x1", d => xScale(0))
         .attr("y1", (d, i) => yScale(i))
         .attr("x2", d => xScale(d.porcentaje) - xScale(0))
-        .attr("y2", (d, i) => yScale(i))
-        .attr("stroke", "black")
+        .attr("y2", (d, i) => yScale(i));
 
     gBar.selectAll("circle")
       .data(temas)
@@ -258,14 +255,16 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("class", "circle")
         .attr("cx", d => xScale(d.porcentaje) - xScale(0))
         .attr("cy", (d, i) => yScale(i))
-        .attr("r", 5)
+        .attr("stroke", d => cabildos.comisiones[d.comision].color)
+        .attr("fill", "#F8F9FA")
+        .attr("r", 6);
 
     gBar.selectAll("text")
       .data(temas)
       .join("text")
         .attr("class", "text")
         .attr("x", d => xScale(d.porcentaje) - xScale(0) + 10)
-        .attr("y", (d, i) => yScale(i) + 6)
+        .attr("y", (d, i) => yScale(i) + 4)
         .text(d => d.porcentaje)
 
     let comisionesDiv = details.selectAll(".comision")
@@ -377,9 +376,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .data(d => d.tree.links())
       .join("path")
         .attr("fill", "none")
-        .attr("stroke", "black")
-        .attr("stroke-opacity", 0.4)
-        .attr("stroke-width", 1.5)
         .attr("d", d3.linkHorizontal()
             .x(d => d.y)
             .y(d => d.x));
@@ -391,7 +387,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("transform", d => `translate(${d.y},${d.x})`)
 
     node.append("circle")
-      .attr("fill", "steelblue")
       .attr("r", 5);
 
     node.selectAll("text")
@@ -452,7 +447,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     .join("circle")
       .attr('stroke', d => d.depth === 1 ? 'lightgrey' : color(d.data.comision))
       .attr('stroke-width', 1.0)
-      .attr("fill", d => d.children ? "white" : cabildos.comisiones[d.data.comision].color)
+      .attr("fill", d => d.children ? "#F8F9FA" : cabildos.comisiones[d.data.comision].color)
       .attr("pointer-events", d => !d.children ? "none" : null)
       .attr("cx", d => 1.4 * d.y)
       .attr("cy", d => 1.4 * d.x - 150)
