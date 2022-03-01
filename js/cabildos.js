@@ -296,7 +296,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     const padding = 0;
     const lineHeight = 12;
 
-    treeSvg.selectAll(".tree-group")
+    const treeG = treeSvg.selectAll(".tree-group")
       .data(d => [d])
       //   {
       //   let treeRoot = d3.hierarchy(d);
@@ -314,12 +314,25 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
           const dy = 300 / (treeRoot.height + padding);
           d3.tree().nodeSize([dx, dy])(treeRoot);
           d.tree = treeRoot;
-        })
-        // .attr("d", d3.linkHorizontal()
-        //     .x(d => d.y)
-        //     .y(d => d.x));
 
-    treeSvg.selectAll("path")
+          let x0 = Infinity,
+              x1 = -x0,
+              y0 = Infinity,
+              y1 = -y0;
+          d.tree.each(d => {
+            if (d.x > x1) x1 = d.x;
+            if (d.x < x0) x0 = d.x;
+            if (d.y > y1) y1 = d.y;
+            if (d.y < y0) y0 = d.y;
+          })
+          d.x1 = x1;
+          d.x0 = x0;
+          d.y1 = y1;
+          d.y0 = y0;
+        })
+        .attr("transform", d => `translate(${(d.x0 + d.x1)/2},${(d.y0 + d.y1)/2})`)
+
+    treeG.selectAll("path")
       .data(d => d.tree.links())
       .join("path")
         .attr("fill", "none")
@@ -330,7 +343,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
             .x(d => d.y)
             .y(d => d.x));
 
-    let node = treeSvg.append("g")
+    let node = treeG.append("g")
       .selectAll("circle")
       .data(d => d.tree.descendants())
       .join("g")
