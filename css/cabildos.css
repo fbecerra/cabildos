@@ -6,6 +6,17 @@
   background-color: white;
 }
 
+#back-button {
+  position: fixed;
+  top: 100px;
+}
+
+#up-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 #bubbles, #cabildo-details {
   padding-top: 100px;
 }

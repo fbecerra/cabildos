@@ -428,6 +428,23 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     showBubbles();
   })
 
+  d3.select("#up-button").on("click", () => {
+    window.scroll(0, 0);
+  })
+
+  function scrollToElement(id){
+    function findPos(obj) {
+        var curtop = 0;
+        if (obj.offsetParent) {
+            do {
+                curtop += obj.offsetTop;
+            } while (obj = obj.offsetParent);
+        return curtop;
+        }
+    }
+    window.scroll(0,findPos(document.getElementById(id)) - 50);
+  }
+
   const node = svg.append("g")
     .style("transform", `translate(-40px, -${offset}px)`)
     .selectAll("circle")
