@@ -272,6 +272,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .data(d => d.wordCloud)
       .join("span")
         .style("font-size", d => 4 * d.frecuencia + "px")
+        .style("display", "inline-block")
         .html(d => `${d.ngram}<sup>${d.frecuencia}</sup>`)
 
     // WORD TREE
