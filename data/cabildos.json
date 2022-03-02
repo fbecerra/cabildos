@@ -2,25 +2,271 @@
   "name": "cabildos",
   "comisiones": {
     "c1": {
-      "color": "#DCA755"
+      "color": "#DCA755",
+      "shortName": "Sistema político",
+      "longName": "Sistema Político, Gobierno, Poder Legislativo y Sistema Electoral"
     },
     "c2": {
-      "color": "#C23125"
+      "color": "#C23125",
+      "shortName": "Principios",
+      "longName": "Sobre Principios Constitucionales, Democracia, Nacionalidad y Ciudadanía."
     },
     "c3": {
-      "color": "#678DC6"
+      "color": "#678DC6",
+      "shortName": "Estado",
+      "longName": "Forma de Estado, Ordenamiento, Autonomía, Descentrilación, Equidad, Justicia Territorial, Gobiernos Locales y Organización Fiscal"
     },
     "c4": {
-      "color": "#9B1560"
+      "color": "#9B1560",
+      "shortName": "Derechos",
+      "longName": "Derechos Fundamentales"
     },
     "c5": {
-      "color": "#60AA58"
+      "color": "#60AA58",
+      "shortName": "Medio ambiente",
+      "longName": "Medio Ambiente, Derechos de la Naturaleza, Bienes Naturales y Modelo Económico"
     },
     "c6": {
-      "color": "#D86437"
+      "color": "#D86437",
+      "shortName": "Justicia",
+      "longName": "Sistema de Justicia, Órganos Autónomos de Control y Reforma Constitucional"
     },
     "c7": {
-      "color": "#F1DD5D"
+      "color": "#F1DD5D",
+      "shortName": "Ciencia y cultura",
+      "longName": "Sistemas de Conocimientos, Culturas, Ciencia, Tecnología, Artes y Patrimonios"
+    }
+  },
+  "cabildos": {
+    "antp": {
+      "shorName": "ANTP",
+      "longName": "Ahora nos toca participar"
+    },
+    "cc": {
+      "shorName": "Plataforma CC",
+      "longName": "Plataforma CC"
+    },
+    "cqq": {
+      "shorName": "CQQ",
+      "longName": "El Chile que queremos"
+    },
+    "mus": {
+      "shorName": "MUS",
+      "longName": "Mesa de Unidad Social"
+    },
+    "tqh": {
+      "shorName": "TQH",
+      "longName": "Tenemos que hablar de Chile (2021 - 2022)"
+    },
+    "tqhe": {
+      "shorName": "TQH Chile a escala",
+      "longName": "TQH Chile a escala"
+    }
+  },
+  "temas": {
+    "1a": {
+      "shortName": "",
+      "longName": "Instituciones, organización del Estado y régimen político"
+    },
+    "1c": {
+      "shortName": "",
+      "longName": "Estado Plurinacional y libre determinación de los pueblos"
+    },
+    "1d": {
+      "shortName": "",
+      "longName": "Buen gobierno, probidad y transparencia pública"
+    },
+    "1e": {
+      "shortName": "",
+      "longName": "Sistema electoral y organizaciones políticas"
+    },
+    "1f": {
+      "shortName": "",
+      "longName": "Seguridad pública, defensa nacional y rol de las Fuerzas Armadas en el régimen democrático contemporáneo"
+    },
+    "1g": {
+      "shortName": "",
+      "longName": "Relaciones exteriores, integración regional y cooperación fronteriza"
+    },
+    "2a": {
+      "shortName": "",
+      "longName": "Preámbulo"
+    },
+    "2b": {
+      "shortName": "",
+      "longName": "Principios"
+    },
+    "2c": {
+      "shortName": "",
+      "longName": "Nacionalidad y cudadanía"
+    },
+    "2e": {
+      "shortName": "",
+      "longName": "Integración de fuentes del derecho internacional de los Derechos Humanos"
+    },
+    "2f": {
+      "shortName": "",
+      "longName": "Mecanismos de democracia directa y participativa; referéndums aprobatorios y revocatorios de mandato y de ley; iniciativa popular de ley, y democracia digital"
+    },
+    "3a": {
+      "shortName": "",
+      "longName": "Estructura organizacional y descentralizada del Estado"
+    },
+    "3b": {
+      "shortName": "",
+      "longName": "Organización territorial interior del Estado y división político-administrativa"
+    },
+    "3c": {
+      "shortName": "",
+      "longName": "Mecanismos de equidad territorial"
+    },
+    "3d": {
+      "shortName": "",
+      "longName": "Gobiernos locales"
+    },
+    "3e": {
+      "shortName": "",
+      "longName": "Autonomías territoriales e indígenas"
+    },
+    "3f": {
+      "shortName": "",
+      "longName": "Igualdad y cargas tributarias"
+    },
+    "3g": {
+      "shortName": "",
+      "longName": "Reforma administrativa"
+    },
+    "3h": {
+      "shortName": "",
+      "longName": "Modernización del Estado"
+    },
+    "3i": {
+      "shortName": "",
+      "longName": "Territorios insulares y zonas extremas"
+    },
+    "3j": {
+      "shortName": "",
+      "longName": "Ruralidad y relación campo-ciudad"
+    },
+    "4a": {
+      "shortName": "",
+      "longName": "Derechos civiles"
+    },
+    "4a1": {
+      "shortName": "",
+      "longName": "Igualdad ante la ley"
+    },
+    "4b": {
+      "shortName": "",
+      "longName": "Derecho a la verdad, la justicia, la reparación integral de las víctimas, sus familiares y a la sociedad en su conjunto, respecto de los delitos cometidos por agentes del Estado y que constituyen vioaciones a los Derechos Humanos"
+    },
+    "4c": {
+      "shortName": "",
+      "longName": "Derechos de las personas chilenas residentes en el extranjero"
+    },
+    "4d1": {
+      "shortName": "",
+      "longName": "Libertad de emitir opinión, de información, de culto y de prensa"
+    },
+    "4e": {
+      "shortName": "",
+      "longName": "Derechos sexuales y reproductivos"
+    },
+    "4e1": {
+      "shortName": "",
+      "longName": "Debido proceso con todos sus derechos asociados"
+    },
+    "4f": {
+      "shortName": "",
+      "longName": "Reinserción y privados de libertad"
+    },
+    "4g": {
+      "shortName": "",
+      "longName": "Derechos de las personas con discapacidad"
+    },
+    "4h": {
+      "shortName": "",
+      "longName": "Niñez y Juventud"
+    },
+    "4j": {
+      "shortName": "",
+      "longName": "Derecho a la vivienda, a la ciudad, a la tierra y al territorio"
+    },
+    "4k": {
+      "shortName": "",
+      "longName": "Derecho al trabajo y su protección"
+    },
+    "4l": {
+      "shortName": "",
+      "longName": "Derecho al cuidado y reconocimiento del trabajo doméstico y de cuidado no remunerado"
+    },
+    "4n": {
+      "shortName": "",
+      "longName": "Seguridad Social y sistema de pensiones"
+    },
+    "4n1": {
+      "shortName": "",
+      "longName": "Derecho al deporte, la actividad física y la recreación"
+    },
+    "4ñ": {
+      "shortName": "",
+      "longName": "Derechos de las personas mayores"
+    },
+    "4ñ1": {
+      "shortName": "",
+      "longName": "Derecho a vivir en un ambiente sano y ecológicament eequilibrado"
+    },
+    "4o": {
+      "shortName": "Salud",
+      "longName": "Salud en todas las políticas con enfoque en los determinantes sociales"
+    },
+    "4o1": {
+      "shortName": "",
+      "longName": "Derecho humano al agua y saneamiento; y otros derechos humanos ambientales"
+    },
+    "4p": {
+      "shortName": "Educación",
+      "longName": "Educación"
+    },
+    "4q": {
+      "shortName": "",
+      "longName": "Derechos de las mujeres"
+    },
+    "4t": {
+      "shortName": "",
+      "longName": "Disidencias y diversidades sexuales"
+    },
+    "4u": {
+      "shortName": "",
+      "longName": "Migrantes"
+    },
+    "4w": {
+      "shortName": "",
+      "longName": "Libertad de emprender y desarrollar actividades económicas"
+    },
+    "4z": {
+      "shortName": "",
+      "longName": "Derecho de propiedad"
+    },
+    "5a": {
+      "shortName": "",
+      "longName": "Medioambiente, biodiversidad, principios de la bioética y bienes naturales comunes"
+    },
+    "5b": {
+      "shortName": "",
+      "longName": "Derechos de la naturaleza y la vida no humana"
+    },
+    "5d": {
+      "shortName": "",
+      "longName": "Derecho constitucional al agua y estatuto constitucional del agua"
+    },
+    "5f": {
+      "shortName": "",
+      "longName": "Desarrollo Sostenible, Buen vivir"
+    },
+    "7b": {
+      "shortName": "",
+      "longName": "Rol del Estado en conocimientos, culturas, ciencia, tecnología, comunicaciones, artes, patrimonio y humanidades"
     }
   },
   "children": [
