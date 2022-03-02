@@ -1,0 +1,106 @@
+body {
+  background-color: var(--bs-gray-100);
+  color: var(--bs-gray-700);
+  font-family: Karla;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form-control {
+  background-color: var(--bs-gray-100);
+}
+
+.label {
+  text-transform: uppercase;
+}
+
+.node-label {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.cabildo-title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.bar-chart {
+  margin: 60px 0;
+}
+
+.bar-chart .line {
+  stroke: var(--bs-gray-600);
+  stroke-width: 0.7px;
+}
+
+.bar-chart .circle {
+  stroke-width: 1.0px;
+}
+
+.bar-chart text {
+  font-size: 12.8px;
+  line-height: 19px;
+}
+
+.comision-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.cloud-div {
+  margin-top: 30px;
+}
+
+.word-div {
+  color: var(--cc-primary);
+  display: inline-block;
+  margin-right: 16px;
+  margin-bottom: 12px;
+}
+
+.tree-group circle {
+  fill: var(--cc-primary);
+}
+
+.tree-group text, .tree-group text tspan {
+  /* stroke: var(--bs-gray-800); */
+  font-size: 12.8px;
+  line-height: 19px;
+}
+
+.tree-group path {
+  stroke: var(--cc-primary);
+  stroke-width: 1px;
+  storke-opacity: 0.4;
+}
+
+#sticky {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  height: 100px;
+  background-color: var(--bs-gray-100);
+}
+
+#back-button {
+  position: fixed;
+  top: 100px;
+}
+
+#up-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#bubbles, #cabildo-details {
+  padding-top: 100px;
+}
+
+#cabildo-details {
+  display: none;
+}
