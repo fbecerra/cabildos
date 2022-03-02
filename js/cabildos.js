@@ -281,6 +281,10 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .join("div")
         .attr("class", "tema")
 
+    temaDiv.append("div")
+      .attr("class", "tema-title")
+      .html(d => d.name)
+
     // WORD CLOUD
     let cloudDiv = temaDiv.filter(d => d.hasOwnProperty("wordCloud"))
       .selectAll(".cloud-div")
@@ -336,14 +340,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     let treeSvg = temaDiv.filter(d => d.hasOwnProperty("wordTree"))
       .selectAll(".tree-svg")
       .data(d => d.wordTree)
-      //   {
-      //   console.log(d)
-      //   let treeRoot = d3.hierarchy(d.wordTree);
-      //   const dx = 10;
-      //   const dy = 500 / (treeRoot.height);
-      //   console.log(treeRoot, d3.tree().nodeSize([dx, dy])(treeRoot))
-      //   return [d3.tree().nodeSize([dx, dy])(treeRoot)]
-      // })
       .join("svg")
         .each(d => {
           let treeRoot = d3.hierarchy(d);
