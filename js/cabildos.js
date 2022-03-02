@@ -287,11 +287,20 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .data(d => [d])
       .join("div")
         .attr("class", "cloud-div")
+        .each(d => {
+          let sizeScale = d3.scaleLinear()
+            .domain(d3.extent(d.wordCloud, w => w.frecuencia))
+            .range([12, 81])
+          d.wordCloud.forEach(w => {
+            w.fontSize = sizeScale(w.frecuencia)
+          })
+        })
 
-    cloudDiv.selectAll("span")
+    cloudDiv.selectAll(".word-div")
       .data(d => d.wordCloud)
-      .join("span")
-        .style("font-size", d => 4 * d.frecuencia + "px")
+      .join("div")
+        .attr("class", "word-div")
+        .style("font-size", d => d.fontSize + "px")
         .style("display", "inline-block")
         .html(d => `${d.ngram}<sup>${d.frecuencia}</sup>`)
 
