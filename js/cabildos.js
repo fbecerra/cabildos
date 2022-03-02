@@ -301,7 +301,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .join("div")
         .attr("class", "word-div")
         .style("font-size", d => d.fontSize + "px")
-        .style("display", "inline-block")
+        .style("line-height", d => 1.1 * d.fontSize + "px")
         .html(d => `${d.ngram}<sup>${d.frecuencia}</sup>`)
 
     function wrap(text, width) {
