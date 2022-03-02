@@ -184,6 +184,150 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   const offset = (height - svgWidth) / 2;
 
+  function updateTooltip(event, node) {
+
+    let tooltip = d3.select("#tooltip");
+    tooltip.selectAll("*").remove();
+    let tooltipWidth = tooltip.node().getBoundingClientRect().width / 2;
+
+    if (node.depth === 1) {
+
+      let cabildo = cabildos.children.filter(d => d.name == node.data.name);
+      let comisiones = cabildo[0].children.sort((a, b) => ('' + a.name).localeCompare(b.name))
+      let temas = cabildo[0].children.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
+
+      // CABILDO
+      let svgBarMargin = {top: 20, left: 100, bottom: 20, right: 20},
+          svgBarWidth = tooltipWidth + svgBarMargin.left + svgBarMargin.right,
+          svgBarHeight = 300 + svgBarMargin.top + svgBarMargin.bottom;
+
+      let xScale = d3.scaleLinear()
+        .domain([0, temas[0].porcentaje])
+        .range([0, svgBarWidth - svgBarMargin.left - svgBarMargin.right]);
+
+      let yScale = d3.scaleLinear()
+        .domain([0, temas.length - 1])
+        .range([svgBarMargin.top, svgBarHeight - svgBarMargin.top - svgBarMargin.bottom]);
+
+      let xAxis = d3.axisBottom(xScale),
+          yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => temas[d].name);
+
+      let divCabildo = tooltip.selectAll(".cabildo-title")
+        .data(cabildo)
+        .join("div")
+          .attr("class", "cabildo-title")
+          .html(d => d.name);
+
+      let svgBar = tooltip.selectAll("svg")
+        .data(cabildo)
+        .join("svg")
+          .attr("class", "bar-chart")
+          .attr("width", svgBarWidth)
+          .attr("height", svgBarHeight)
+
+      svgBar.append("g")
+        .attr("transform", `translate(${svgBarMargin.left},${svgBarHeight - svgBarMargin.top - svgBarMargin.bottom + 20})`)
+        .call(xAxis)
+
+      svgBar.append("g")
+        .attr("transform", `translate(${svgBarMargin.left},0)`)
+        .call(yAxis)
+        .call(g => {
+          g.selectAll(".tick line").remove()
+          g.selectAll(".domain").remove()
+        })
+
+      let gBar = svgBar.selectAll(".bar-group")
+        .data(d => [d])
+        .join("g")
+          .attr("class", ".bar-group")
+          .attr("transform", `translate(${svgBarMargin.left},0)`)
+
+      gBar.selectAll("line")
+        .data(temas)
+        .join("line")
+          .attr("class", "line")
+          .attr("x1", d => xScale(0))
+          .attr("y1", (d, i) => yScale(i))
+          .attr("x2", d => xScale(d.porcentaje) - xScale(0))
+          .attr("y2", (d, i) => yScale(i));
+
+      gBar.selectAll("circle")
+        .data(temas)
+        .join("circle")
+          .attr("class", "circle")
+          .attr("cx", d => xScale(d.porcentaje) - xScale(0))
+          .attr("cy", (d, i) => yScale(i))
+          .attr("stroke", d => cabildos.comisiones[d.comision].color)
+          .attr("fill", "#F8F9FA")
+          .attr("r", 6);
+
+      gBar.selectAll("text")
+        .data(temas)
+        .join("text")
+          .attr("class", "text")
+          .attr("x", d => xScale(d.porcentaje) - xScale(0) + 10)
+          .attr("y", (d, i) => yScale(i) + 4)
+          .text(d => d.porcentaje)
+    } else {
+
+      tooltip.append("div")
+        .attr("class", "cabildo-title")
+          .html(node.parent.parent.data.name)
+
+      tooltip.append("div")
+        .attr("class", "comision-title")
+          .html(node.parent.data.name)
+
+      if (node.data.hasOwnProperty("wordCloud")) {
+        let sizeScale = d3.scaleLinear()
+          .domain(d3.extent(node.data.wordCloud, w => w.frecuencia))
+          .range([12, 41]);
+
+        tooltip.append("div")
+          .selectAll(".word-div")
+          .data(node.data.wordCloud)
+          .join("div")
+            .attr("class", "word-div")
+            .style("font-size", d => sizeScale(d.frecuencia) + "px")
+            .style("line-height", d => 1.1 * sizeScale(d.frecuencia) + "px")
+            .html(d => `${d.ngram}<sup>${d.frecuencia}</sup>`)
+      }
+
+      // let temaDiv = comisionesDiv.selectAll(".tema")
+      //   .data(d => d.children)
+      //   .join("div")
+      //     .attr("class", "tema")
+      //
+      // temaDiv.append("div")
+      //   .attr("class", "tema-title")
+      //   .html(d => d.name)
+      //
+      // // WORD CLOUD
+      // let cloudDiv = temaDiv.filter(d => d.hasOwnProperty("wordCloud"))
+      //   .selectAll(".cloud-div")
+      //   .data(d => [d])
+      //   .join("div")
+      //     .attr("class", "cloud-div")
+      //     .each(d => {
+      //       let sizeScale = d3.scaleLinear()
+      //         .domain(d3.extent(d.wordCloud, w => w.frecuencia))
+      //         .range([12, 81])
+      //       d.wordCloud.forEach(w => {
+      //         w.fontSize = sizeScale(w.frecuencia)
+      //       })
+      //     })
+      //
+      // cloudDiv.selectAll(".word-div")
+      //   .data(d => d.wordCloud)
+      //   .join("div")
+      //     .attr("class", "word-div")
+      //     .style("font-size", d => d.fontSize + "px")
+      //     .style("line-height", d => 1.1 * d.fontSize + "px")
+      //     .html(d => `${d.ngram}<sup>${d.frecuencia}</sup>`)
+    }
+  }
+
   function updateDiv(id) {
 
     let svgBarMargin = {top: 20, left: 200, bottom: 20, right: 50},
@@ -469,7 +613,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         showDetails();
         updateDiv(cabildo); //updateDiv(d.cabildo);
       })
-      // .on("mouseover", function(event, d) { console.log(d.data.name); })
+      .on("mouseover", updateTooltip)
       // .on("mouseout", function() { d3.select(this).attr("stroke", "lightgrey"); })
 
   const orient = ({
