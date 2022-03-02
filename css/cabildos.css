@@ -12,6 +12,10 @@ body {
   background-color: var(--bs-gray-100);
 }
 
+.label {
+  text-transform: uppercase;
+}
+
 .cabildo-title {
   font-weight: 500;
   font-size: 32px;

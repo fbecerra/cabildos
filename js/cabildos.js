@@ -445,6 +445,11 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     window.scroll(0,findPos(document.getElementById(id)) - 50);
   }
 
+  const depth1 = root.descendants().filter(d => d.depth === 1);
+  const delaunay = d3.Delaunay.from(depth1, d => d.y, d => d.x);
+  const voronoi = delaunay.voronoi([- 1,- 1, width + 1, height + 1])
+  const cells = depth1.map((d, i) => [d, voronoi.cellPolygon(i)]);
+
   const node = svg.append("g")
     .style("transform", `translate(-40px, -${offset}px)`)
     .selectAll("circle")
@@ -467,17 +472,58 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         showDetails();
         updateDiv('Plataforma CC'); //updateDiv(d.cabildo);
       })
-      // .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
+      // .on("mouseover", function(event, d) { console.log(d.data.name); })
       // .on("mouseout", function() { d3.select(this).attr("stroke", "lightgrey"); })
 
-  const label = svg.append("g")
+  const orient = ({
+    top: (text, radius) => {
+      let rect = text.node().getBoundingClientRect();
+      return text.attr("text-anchor", "middle").attr("x", 0).attr("y", - radius - rect.height/2)
+    },
+    right: (text, radius) => {
+      let rect = text.node().getBoundingClientRect();
+      return text.attr("text-anchor", "start").attr("x", radius + rect.width/2).attr("y", 0)
+    },
+    bottom: (text, radius) => {
+      let rect = text.node().getBoundingClientRect();
+      return text.attr("text-anchor", "middle").attr("x", 0).attr("y", radius + rect.height)
+    },
+    left: (text, radius) => {
+      let rect = text.node().getBoundingClientRect();
+      return text.attr("text-anchor", "end").attr("x", - radius - rect.width/2).attr("y", 0)
+    }
+  })
+
+  svg.append("g")
+      .selectAll(".label")
+      .data(cells)
+      .join("text")
+        .attr("class", "label")
+        .style("stroke-width", 0)
+        .style("opacity", 0.8)
+        .text(([d]) => d.data.name)
+        .each(function([d, cell]) {
+          const x = d.y;
+          const y = d.x;
+          const [cx, cy] = d3.polygonCentroid(cell);
+          d.angle = (Math.round(Math.atan2(cy - y, cx - x) / Math.PI * 2) + 4) % 4;
+          d3.select(this).call(d.angle === 0 ? orient.right
+              : d.angle === 3 ? orient.top
+              : d.angle === 1 ? orient.bottom
+              : orient.left, 1.4 * d.r);
+        })
+        .attr("transform", ([d]) => `translate(${1.4 * d.y}, ${1.4 * d.x - 150})`)
+        // .call(wrap, 50)
+
+  svg.append("g")
       .style("font", "10px sans-serif")
       .attr("pointer-events", "none")
       .attr("text-anchor", "middle")
       .style("transform", `translate(0, -${offset}px)`)
-    .selectAll("text")
+    .selectAll(".node-label")
     .data(root.descendants().slice(1).filter(function(d) { return !d.children; }))
     .join("text")
+      .attr("class", "node-label")
       .attr("x", d => 1.4 * d.y)
       .attr("y", d => 1.4 * d.x - 150)
       .attr('color', d => cabildos.comisiones[d.data.comision].color)
