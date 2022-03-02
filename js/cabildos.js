@@ -424,6 +424,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .data(d => d.children)
       .join("div")
         .attr("class", "tema")
+        .attr("id", d => d.id)
 
     temaDiv.append("div")
       .attr("class", "tema-title")
@@ -583,7 +584,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         return curtop;
         }
     }
-    window.scroll(0,findPos(document.getElementById(id)) - 50);
+    window.scroll(0,findPos(document.getElementById(id)) - 100);
   }
 
   const depth1 = root.descendants().filter(d => d.depth === 1);
@@ -607,11 +608,13 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("cy", d => 1.4 * d.x - 150)
       .attr("r", d => 1.4 * d.r)
       .on("click", (event, d) => {
-        console.log(d);
-        let cabildo = d.depth == 1 ? d.data.name : d.parent.parent.data.name
+        let cabildo = d.depth === 1 ? d.data.name : d.parent.parent.data.name
         hideBubbles();
         showDetails();
         updateDiv(cabildo); //updateDiv(d.cabildo);
+        if (d.depth === 3) {
+          scrollToElement(d.data.id)
+        }
       })
       .on("mouseover", updateTooltip)
       // .on("mouseout", function() { d3.select(this).attr("stroke", "lightgrey"); })
