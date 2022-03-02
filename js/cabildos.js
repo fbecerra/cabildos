@@ -118,7 +118,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   function hideCircles() {
     let calculateOpacity = d => {
       if (d.depth === 1) {
-        console.log(d)
         let thisLevel = (d.data.name === state.cabildo || state.cabildo === 'Todos');
         let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.data.name === state.comision)
                           .reduce((a,b) => a || b, false);
@@ -372,10 +371,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .data(d => [d])
       .join("g")
         .attr("class", "tree-group")
-        .attr("transform", d => {
-          console.log(d.x0, d.x1, d.y0, d.y1)
-          return `translate(${130},${-d.x0 + 10})`
-        })
+        .attr("transform", d => `translate(${130},${-d.x0 + 10})`)
 
     treeG.selectAll("path")
       .data(d => d.tree.links())
@@ -453,24 +449,24 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   const node = svg.append("g")
     .style("transform", `translate(-40px, -${offset}px)`)
     .selectAll("circle")
-    .data(root.descendants().slice(1))
+    .data(root.descendants().slice(1).filter(d => d.depth === 1 || d.depth === 3))
     .join("circle")
-      .attr('stroke', d => d.depth === 1 ? "#adb5bd" : d.depth === 2 ? null : cabildos.comisiones[d.data.comision].color)
+      // .attr('stroke', d => d.depth === 1 ? "#adb5bd" : d.depth === 2 ? null : cabildos.comisiones[d.data.comision].color)
       .attr('stroke', d => d.depth === 3 ? cabildos.comisiones[d.data.comision].color : null)
       // .attr('stroke', d => d.children ? "#EAEAEA" : cabildos.comisiones[d.data.comision].color)
       .attr('stroke-width', 1.0)
       // .attr("fill", d => d.children ? "#EAEAEA" : cabildos.comisiones[d.data.comision].color)
       // .attr("fill", d => "#f8f9fa")
       .attr("fill", d => "#EAEAEA")
-      .attr("pointer-events", d => !d.children ? "none" : null)
       .attr("cx", d => 1.4 * d.y)
       .attr("cy", d => 1.4 * d.x - 150)
       .attr("r", d => 1.4 * d.r)
       .on("click", (event, d) => {
         console.log(d);
+        let cabildo = d.depth == 1 ? d.data.name : d.parent.parent.data.name
         hideBubbles();
         showDetails();
-        updateDiv('Plataforma CC'); //updateDiv(d.cabildo);
+        updateDiv(cabildo); //updateDiv(d.cabildo);
       })
       // .on("mouseover", function(event, d) { console.log(d.data.name); })
       // .on("mouseout", function() { d3.select(this).attr("stroke", "lightgrey"); })
