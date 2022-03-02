@@ -206,6 +206,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => temas[d].name);
 
     let details = d3.select("#details");
+    details.selectAll("*").remove();
     let detailsWidth = details.node().getBoundingClientRect().width;
 
     let divCabildo = details.selectAll(".cabildo-title")
