@@ -516,7 +516,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         // .call(wrap, 50)
 
   svg.append("g")
-      .style("font", "10px sans-serif")
+      // .style("font", "10px sans-serif")
       .attr("pointer-events", "none")
       .attr("text-anchor", "middle")
       .style("transform", `translate(0, -${offset}px)`)
@@ -526,7 +526,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("class", "node-label")
       .attr("x", d => 1.4 * d.y)
       .attr("y", d => 1.4 * d.x - 150)
-      .attr('color', d => cabildos.comisiones[d.data.comision].color)
+      .style('fill', d => cabildos.comisiones[d.data.comision].color)
       .style("fill-opacity", 1)
       .style("display", "inline")
       .text(d => d.r > 15 ? d.data.name.slice(0, 10) : null)

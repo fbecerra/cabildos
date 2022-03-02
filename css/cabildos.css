@@ -16,6 +16,11 @@ body {
   text-transform: uppercase;
 }
 
+.node-label {
+  font-size: 12px;
+  line-height: 18px;
+}
+
 .cabildo-title {
   font-weight: 500;
   font-size: 32px;
