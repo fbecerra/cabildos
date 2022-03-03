@@ -334,7 +334,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   function updateDiv(id) {
 
-    let svgBarMargin = {top: 20, left: 200, bottom: 20, right: 50},
+    let svgBarMargin = {top: 40, left: 200, bottom: 20, right: 50},
         svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
         svgBarHeight = 500 + svgBarMargin.top + svgBarMargin.bottom;
 
@@ -369,6 +369,12 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("class", "bar-chart")
         .attr("width", svgBarWidth)
         .attr("height", svgBarHeight)
+
+    svgBar.append("g")
+      .attr("class", "title")
+      .attr("transform", `translate(${svgBarMargin.left},${svgBarMargin.top/4})`)
+      .append("text")
+        .text("Porcentaje de instancias en las que se mencionó el tema")
 
     svgBar.append("g")
       .attr("transform", `translate(${svgBarMargin.left},${svgBarHeight - svgBarMargin.top - svgBarMargin.bottom + 20})`)

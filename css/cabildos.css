@@ -31,6 +31,15 @@ body {
   margin: 60px 0;
 }
 
+.bar-chart .title text {
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--bs-gray-700);
+}
+
 .bar-chart .line {
   stroke: var(--bs-gray-600);
   stroke-width: 0.7px;
