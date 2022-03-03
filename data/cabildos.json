@@ -68,6 +68,14 @@
       "shortName": "",
       "longName": "Instituciones, organización del Estado y régimen político"
     },
+    "1b": {
+      "shortName": "",
+      "longName": "Materias de ley y formación de la ley"
+    },
+    "1beg": {
+      "shortName": "",
+      "longName": "Poder ejecutivo y administración pública"
+    },
     "1c": {
       "shortName": "",
       "longName": "Estado Plurinacional y libre determinación de los pueblos"
@@ -88,6 +96,10 @@
       "shortName": "",
       "longName": "Relaciones exteriores, integración regional y cooperación fronteriza"
     },
+    "1n": {
+      "shortName": "",
+      "longName": "Cambios politicos"
+    },
     "2a": {
       "shortName": "",
       "longName": "Preámbulo"
@@ -100,6 +112,10 @@
       "shortName": "",
       "longName": "Nacionalidad y cudadanía"
     },
+    "2d": {
+      "shortName": "",
+      "longName": "Participación"
+    },
     "2e": {
       "shortName": "",
       "longName": "Integración de fuentes del derecho internacional de los Derechos Humanos"
@@ -111,6 +127,10 @@
     "3a": {
       "shortName": "",
       "longName": "Estructura organizacional y descentralizada del Estado"
+    },
+    "3acd": {
+      "shortName": "",
+      "longName": "Poder local, territorias y descentralización"
     },
     "3b": {
       "shortName": "",
@@ -148,6 +168,22 @@
       "shortName": "",
       "longName": "Ruralidad y relación campo-ciudad"
     },
+    "3k": {
+      "shortName": "",
+      "longName": "Chilenos exterior"
+    },
+    "3l": {
+      "shortName": "",
+      "longName": "Integración de las personas chilenas residentes en el extranjero"
+    },
+    "3m": {
+      "shortName": "",
+      "longName": "Autonomía afrodescendiente"
+    },
+    "4": {
+      "shortName": "",
+      "longName": "Medios comunicación"
+    },
     "4a": {
       "shortName": "",
       "longName": "Derechos civiles"
@@ -164,6 +200,10 @@
       "shortName": "",
       "longName": "Derechos de las personas chilenas residentes en el extranjero"
     },
+    "4c1": {
+      "shortName": "",
+      "longName": "Seguridad"
+    },
     "4d1": {
       "shortName": "",
       "longName": "Libertad de emitir opinión, de información, de culto y de prensa"
@@ -176,6 +216,10 @@
       "shortName": "",
       "longName": "Debido proceso con todos sus derechos asociados"
     },
+    "4eqt": {
+      "shortName": "",
+      "longName": "Igualdad de género"
+    },
     "4f": {
       "shortName": "",
       "longName": "Reinserción y privados de libertad"
@@ -184,9 +228,17 @@
       "shortName": "",
       "longName": "Derechos de las personas con discapacidad"
     },
+    "4gh": {
+      "shortName": "",
+      "longName": "Protección social"
+    },
     "4h": {
       "shortName": "",
       "longName": "Niñez y Juventud"
+    },
+    "4i": {
+      "shortName": "",
+      "longName": "Derechos individuales"
     },
     "4j": {
       "shortName": "",
@@ -232,6 +284,10 @@
       "shortName": "",
       "longName": "Derechos de las mujeres"
     },
+    "4r": {
+      "shortName": "",
+      "longName": "Privadas libertad"
+    },
     "4t": {
       "shortName": "",
       "longName": "Disidencias y diversidades sexuales"
@@ -256,17 +312,45 @@
       "shortName": "",
       "longName": "Derechos de la naturaleza y la vida no humana"
     },
+    "5bcdfijm": {
+      "shortName": "",
+      "longName": "Medioambiente"
+    },
     "5d": {
       "shortName": "",
       "longName": "Derecho constitucional al agua y estatuto constitucional del agua"
+    },
+    "5dfm": {
+      "shortName": "",
+      "longName": "Cambios al modelo"
     },
     "5f": {
       "shortName": "",
       "longName": "Desarrollo Sostenible, Buen vivir"
     },
+    "5m": {
+      "shortName": "",
+      "longName": "Protección"
+    },
+    "6a": {
+      "shortName": "",
+      "longName": "Poder judicial"
+    },
+    "6abf": {
+      "shortName": "",
+      "longName": "Justicia"
+    },
+    "7abc": {
+      "shortName": "",
+      "longName": "Arte cultura"
+    },
     "7b": {
       "shortName": "",
       "longName": "Rol del Estado en conocimientos, culturas, ciencia, tecnología, comunicaciones, artes, patrimonio y humanidades"
+    },
+    "7e": {
+      "shortName": "",
+      "longName": "Democratización"
     }
   },
   "children": [
