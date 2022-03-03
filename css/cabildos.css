@@ -82,13 +82,13 @@ body {
   z-index: 10;
   position: fixed;
   top: 0;
-  height: 100px;
+  height: 140px;
   background-color: var(--bs-gray-100);
 }
 
 #back-button {
   position: fixed;
-  top: 100px;
+  top: 140px;
 }
 
 #up-button {
@@ -98,7 +98,7 @@ body {
 }
 
 #bubbles, #cabildo-details {
-  padding-top: 100px;
+  padding-top: 140px;
 }
 
 #cabildo-details {
