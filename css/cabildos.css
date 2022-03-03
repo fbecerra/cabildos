@@ -40,6 +40,15 @@ body {
   color: var(--bs-gray-700);
 }
 
+.bar-chart .tick text {
+  font-family: Karla;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12.8px;
+  line-height: 19px;
+  color: var(--bs-gray-700);
+}
+
 .bar-chart .line {
   stroke: var(--bs-gray-600);
   stroke-width: 0.7px;
