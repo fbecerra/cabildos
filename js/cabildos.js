@@ -141,11 +141,15 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     node.transition()
       .duration(transitionTime)
-      .attr("opacity", calculateOpacity);
+      .style("opacity", calculateOpacity);
 
     label.transition()
       .duration(transitionTime)
-      .attr("opacity", calculateOpacity);
+      .style("opacity", ([d, cell]) => calculateOpacity(d));
+
+    nodeLabel.transition()
+      .duration(transitionTime)
+      .style("opacity", calculateOpacity);
   }
 
 
@@ -638,7 +642,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     }
   })
 
-  svg.append("g")
+  const label = svg.append("g")
       .selectAll(".label")
       .data(cells)
       .join("text")
@@ -659,7 +663,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("transform", ([d]) => `translate(${1.4 * d.y}, ${1.4 * d.x - 150})`)
         // .call(wrap, 50)
 
-  svg.append("g")
+  const nodeLabel = svg.append("g")
       // .style("font", "10px sans-serif")
       .attr("pointer-events", "none")
       .attr("text-anchor", "middle")
