@@ -71,12 +71,15 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     let filteredTemas = filteredCabildos.map(d => d.children.filter(e => e.name === state.comision || state.comision === 'Todas').map(c => c.children.filter(e => e.name === state.tema || state.tema === 'Todos')).flat()).flat();
 
-    allCabildos = getUniqueElements(filteredCabildos, 'name');
-    allComisiones = getUniqueElements(filteredComisiones, 'name');
-    allTemas = getUniqueElements(filteredTemas, 'name');
+    let allCabildos = getUniqueElements(filteredCabildos, 'name');
+    let allComisiones = getUniqueElements(filteredComisiones, 'name');
+    let allTemas = getUniqueElements(filteredTemas, 'name');
 
+    let allCabildosNames = getUniqueElements(filteredCabildos, 'id').map(d => cabildos.cabildos[d].longName);
+    let allComisionesNames = getUniqueElements(filteredComisiones, 'id').map(d => cabildos.comisiones[d].shortName);
+    let allTemasNames = getUniqueElements(filteredTemas, 'id').map(d => cabildos.temas[d].longName);
 
-    let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildos], ['Todos', ...allCabildos]);
+    let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildosNames], ['Todos', ...allCabildos]);
     if (state.cabildo !== 'Todos') {
       selectCabildo.node().value = state.cabildo;
     } else {
@@ -88,7 +91,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       hideCircles();
     });
 
-    let selectComision = addOptions("select-comision", ['Todas', ...allComisiones], ['Todas', ...allComisiones]);
+    let selectComision = addOptions("select-comision", ['Todas', ...allComisionesNames], ['Todas', ...allComisiones]);
     if (state.comision !== 'Todos') {
       selectComision.node().value = state.comision;
     } else {
@@ -100,7 +103,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       hideCircles();
     });
 
-    let selectTema = addOptions("select-tema", ['Todos', ...allTemas], ['Todos', ...allTemas]);
+    let selectTema = addOptions("select-tema", ['Todos', ...allTemasNames], ['Todos', ...allTemas]);
     if (state.tema !== 'Todos') {
       selectTema.node().value = state.tema;
     } else {
