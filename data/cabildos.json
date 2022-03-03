@@ -272,15 +272,19 @@
   "children": [
     {
       "name": "Plataforma CC",
+      "description": "",
       "children": [
         {
           "name": "Comision 4",
           "id": "c4",
+          "description": "",
           "children": [
             {
               "name": "Educación",
               "id": "4p",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 42.3,
               "wordCloud": [
                 {
@@ -610,6 +614,8 @@
               "name": "Salud",
               "id": "4o",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 12.2,
               "wordCloud": [
                 {
@@ -898,6 +904,8 @@
               "name": "Niñez y Juventud",
               "id": "4h",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 7.5,
               "wordCloud": [
                 {
@@ -1057,42 +1065,56 @@
               "name": "Seguridad Social y sistema de pensiones",
               "id": "4n",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 7.0
             },
             {
               "name": "Derecho a la vivienda, a la ciudad, a la tierra y al territorio",
               "id": "4j",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 6.5
             },
             {
               "name": "Derechos de las personas con discapacidad",
               "id": "4g",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 6.5
             },
             {
               "name": "Derecho humano al agua y saneamiento; y otros derechos humanos ambientales",
               "id": "4o1",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 5.5
             },
             {
               "name": "Derechos de las mujeres",
               "id": "4q",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 5.5
             },
             {
               "name": "Derecho a la verdad, la justicia, la reparación integral de las víctimas, sus familiares y a la sociedad en su conjunto, respecto de los delitos cometidos por agentes del Estado y que constituyen vioaciones a los Derechos Humanos",
               "id": "4b",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 5.0
             },
             {
               "name": "Derecho al trabajo y su protección",
               "id": "4k",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 5.0
             }
           ]
@@ -1100,12 +1122,15 @@
         {
           "name": "Comision 1",
           "id": "c1",
+          "description": "",
           "children": [
             {
               "name": "Instituciones, organización del Estado y régimen político",
               "id": "1a",
               "comision": "c1",
               "porcentaje": 15.3,
+              "description": "",
+              "nCabildos": "",
               "wordCloud" : [
                 {
                   "ngram": "sistema",
@@ -1333,6 +1358,8 @@
               "name": "Estado Plurinacional y libre determinación de los pueblos",
               "id": "1c",
               "comision": "c1",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 9.5,
               "wordCloud":
               [
@@ -1524,12 +1551,16 @@
               "name": "Seguridad pública, defensa nacional y rol de las Fuerzas Armadas en el régimen democrático contemporáneo",
               "id": "1f",
               "comision": "c1",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 6.0
             },
             {
               "name": "Buen gobierno, probidad y transparencia pública",
               "id": "1d",
               "comision": "c1",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 5.0
             }
           ]
@@ -1537,11 +1568,14 @@
         {
           "name": "Comision 7",
           "id": "c7",
+          "description": "",
           "children": [
             {
               "name": "Rol del Estado en conocimientos, culturas, ciencia, tecnología, comunicaciones, artes, patrimonio y humanidades",
               "id": "7b",
               "comision": "c7",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 14.5,
               "wordCloud": [
                 {
@@ -1782,11 +1816,14 @@
         {
           "name": "Comision 2",
           "id": "c2",
+          "description": "",
           "children": [
             {
               "name": "Principios",
               "id": "2b",
               "comision": "c2",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 13.0,
               "wordCloud": [
                 {
@@ -1991,6 +2028,8 @@
               "name": "Mecanismos de democracia directa y participativa; referéndums aprobatorios y revocatorios de mandato y de ley; iniciativa popular de ley, y democracia digital",
               "id": "2f",
               "comision": "c2",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 6.5
             }
           ]
@@ -1998,6 +2037,7 @@
         {
           "name": "Comision 5",
           "id": "c5",
+          "description": "",
           "children": [
             {
               "name": "Desarrollo Sostenible, Buen vivir",
@@ -2382,18 +2422,24 @@
               "name": "Derecho constitucional al agua y estatuto constitucional del agua",
               "id": "5d",
               "comision": "c5",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 6.5
             },
             {
               "name": "Medioambiente, biodiversidad, principios de la bioética y bienes naturales comunes",
               "id": "5a",
               "comision": "c5",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 6.0
             },
             {
               "name": "Derechos de la naturaleza y la vida no humana",
               "id": "5b",
               "comision": "c5",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 6.0
             }
           ]
@@ -2401,11 +2447,14 @@
         {
           "name": "Comision 3",
           "id": "c3",
+          "description": "",
           "children": [
             {
               "name": "Estructura organizacional y descentralizada del Estado",
               "id": "3a",
               "comision": "c7",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 9.0,
               "wordCloud": [
                 {
@@ -2583,11 +2632,14 @@
         {
           "name": "Comision 4",
           "id": "c4",
+          "description": "",
           "children": [
             {
               "name": "Comisión 4 sobre Derechos Fundamentales.",
               "id": "4",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 32.4,
               "wordCloud": [
                 {
@@ -2676,18 +2728,24 @@
               "name": "Educación",
               "id": "4p",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 7.4
             },
             {
               "name": "Niñez y juventud",
               "id": "4h",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.5
             },
             {
               "name": "Derecho al trabajo y su protección",
               "id": "4k",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.5
             }
           ]
@@ -2695,11 +2753,14 @@
         {
           "name": "Comision 3",
           "id": "c3",
+          "description": "",
           "children": [
             {
               "name": "Estructura organizacional y descentralización del estado",
               "id": "3a",
               "comision": "c3",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 30.9,
               "wordCloud": [
                 {
@@ -2788,6 +2849,8 @@
               "name": "Integración de las personas chilenas residentes en el extranjero",
               "id": "3l",
               "comision": "c3",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.5
             }
           ]
@@ -2800,12 +2863,16 @@
               "name": "Estado Plurinacional",
               "id": "1c",
               "comision": "c1",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 2.9
             },
             {
               "name": "Buen gobierno",
               "id": "1d",
               "comision": "c1",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.5
             }
           ]
@@ -2818,12 +2885,16 @@
               "name": "Principios",
               "id": "2b",
               "comision": "c2",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.5
             },
             {
               "name": "Integracion",
               "id": "2e",
               "comision": "c2",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.5
             }
           ]
@@ -2836,6 +2907,8 @@
               "name": "Proteccion",
               "id": "5m",
               "comision": "c5",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 14.7
             }
           ]
@@ -2848,6 +2921,8 @@
               "name": "Rol Estado",
               "id": "7b",
               "comision": "c3",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 2.9
             }
           ]
@@ -2860,11 +2935,14 @@
         {
           "name": "Comision 1",
           "id": "c1",
+          "description": "",
           "children": [
             {
               "name": "Instituciones",
               "id": "1a",
               "comision": "c1",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 15.3,
               "wordCloud": [
                 {
@@ -2953,18 +3031,24 @@
               "name": "Buen gobierno",
               "id": "1d",
               "comision": "c1",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.3
             },
             {
               "name": "Materias de ley",
               "id": "1b",
               "comision": "c1",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.1
             },
             {
               "name": "Sistema electoral",
               "id": "1e",
               "comision": "c1",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 0.2
             }
           ]
@@ -2977,18 +3061,24 @@
               "name": "Principios",
               "id": "2b",
               "comision": "c2",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 2.1
             },
             {
               "name": "Mecanismos",
               "id": "2f",
               "comision": "c2",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.5
             },
             {
               "name": "Nacionalidad",
               "id": "2c",
               "comision": "c2",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.1
             }
           ]
@@ -2996,23 +3086,30 @@
         {
           "name": "Comision 3",
           "id": "c3",
+          "description": "",
           "children": [
             {
               "name": "Estructura",
               "id": "3a",
               "comision": "c3",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.8
             },
             {
               "name": "Igualdad",
               "id": "3f",
               "comision": "c3",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 0.1
             },
             {
               "name": "Autonomias",
               "id": "3e",
               "comision": "c3",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 0.1
             }
           ]
@@ -3020,11 +3117,14 @@
         {
           "name": "Comision 4",
           "id": "c4",
+          "description": "",
           "children": [
             {
               "name": "Educación",
               "id": "4p",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 42.3,
               "wordCloud": [
                 {
@@ -3113,6 +3213,8 @@
               "name": "Salud",
               "id": "4o",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 12.2,
               "wordCloud": [
                 {
@@ -3201,6 +3303,8 @@
               "name": "Pensiones",
               "id": "4n",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 7.6,
               "wordCloud": [
                 {
@@ -3289,36 +3393,48 @@
               "name": "Niñez y juventud",
               "id": "4h",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.7
             },
             {
               "name": "Vivienda",
               "id": "4j",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.0
             },
             {
               "name": "Trabajo",
               "id": "4k",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 0.7
             },
             {
               "name": "Seguridad",
               "id": "4c1",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 0.6
             },
             {
               "name": "Personas mayores",
               "id": "4ñ",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 0.4
             },
             {
               "name": "Mujeres",
               "id": "4q",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 0.2
             }
           ]
@@ -3326,17 +3442,22 @@
         {
           "name": "Comision 5",
           "id": "c5",
+          "description": "",
           "children": [
             {
               "name": "Desarrollo sostenible",
               "id": "5f",
               "comision": "c5",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 2.5
             },
             {
               "name": "Medioambiente",
               "id": "5a",
               "comision": "c5",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.5
             }
           ]
@@ -3344,11 +3465,14 @@
         {
           "name": "Comision 6",
           "id": "c6",
+          "description": "",
           "children": [
             {
               "name": "Poder judicial",
               "id": "6a",
               "comision": "c6",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 4.0
             }
           ]
@@ -3356,11 +3480,14 @@
         {
           "name": "Comision 7",
           "id": "c7",
+          "description": "",
           "children": [
             {
               "name": "Democratizacion",
               "id": "7e",
               "comision": "c7",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 0.7
             }
           ]
@@ -3373,23 +3500,30 @@
         {
           "name": "Comision 1",
           "id": "c1",
+          "description": "",
           "children": [
             {
               "name": "Poder legislativo",
               "id": "1beg",
               "comision": "c1",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 4.6
             },
             {
               "name": "Pueblos Originarios",
               "id": "1c",
               "comision": "c1",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 2.3
             },
             {
               "name": "Seguridad publica",
               "id": "1f",
               "comision": "c1",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.9
             }
           ]
@@ -3397,17 +3531,22 @@
         {
           "name": "Comision 2",
           "id": "c2",
+          "description": "",
           "children": [
             {
               "name": "Participacion",
               "id": "2d",
               "comision": "c2",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 3.3
             },
             {
               "name": "Migracion",
               "id": "2c",
               "comision": "c2",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 0.3
             }
           ]
@@ -3415,17 +3554,22 @@
         {
           "name": "Comision 3",
           "id": "c3",
+          "description": "",
           "children": [
             {
               "name": "Tributacion",
               "id": "3f",
               "comision": "c3",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 4.0
             },
             {
               "name": "Poder local",
               "id": "3acd",
               "comision": "c3",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 2.2
             }
           ]
@@ -3433,65 +3577,86 @@
         {
           "name": "Comision 4",
           "id": "c4",
+          "description": "",
           "children": [
             {
               "name": "Educación",
               "id": "4p",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 11.6
             },
             {
               "name": "Salud",
               "id": "4o",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 11.6
             },
             {
               "name": "Pensiones",
               "id": "4n",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 11.5
             },
             {
               "name": "Empleo-Trabajo",
               "id": "4k",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 8.2
             },
             {
               "name": "Justicia y derechos",
               "id": "4a",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 6.2
             },
             {
               "name": "Vivienda",
               "id": "4j",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 3.8
             },
             {
               "name": "Proteccion social",
               "id": "4gh",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 3.0
             },
             {
               "name": "Transporte",
               "id": "4j",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 2.9
             },
             {
               "name": "Igualdad de genero",
               "id": "4eqt",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 1.4
             },
             {
               "name": "Medios comunicacion",
               "id": "4",
               "comision": "c4",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 0.7
             }
           ]
@@ -3499,17 +3664,22 @@
         {
           "name": "Comision 5",
           "id": "c5",
+          "description": "",
           "children": [
             {
               "name": "Medioambiente",
               "id": "5bcdfijm",
               "comision": "c5",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 7.7
             },
             {
               "name": "Cambios al modelo",
               "id": "5dfm",
               "comision": "c5",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 5.2
             }
           ]
@@ -3517,11 +3687,14 @@
         {
           "name": "Comision 6",
           "id": "c6",
+          "description": "",
           "children": [
             {
               "name": "Justicia",
               "id": "6abf",
               "comision": "c6",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 3.1
             }
           ]
@@ -3529,11 +3702,14 @@
         {
           "name": "Comision 7",
           "id": "c7",
+          "description": "",
           "children": [
             {
               "name": "Arte cultura",
               "id": "7abc",
               "comision": "c7",
+              "description": "",
+              "nCabildos": "",
               "porcentaje": 0.9
             }
           ]
