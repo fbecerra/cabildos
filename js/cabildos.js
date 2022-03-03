@@ -163,7 +163,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   let format = d3.format(",d");
 
-  const height = 600,
+  const height = 550,
         width = height;
   const charSize = 2;
 
@@ -178,8 +178,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   console.log(root)
   let focus = root;
   let view;
-  const svgHeight = 700,
-        svgWidth = 1.5 * width;
+  const svgHeight = window.innerHeight - d3.select("#sticky").node().getBoundingClientRect().height,
+        svgWidth = 1.5 * svgHeight;
 
   const svg = d3.select("#cabildos").append("svg")
       .attr("viewBox", [0, 0, svgWidth, svgHeight])
@@ -618,7 +618,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       // .attr("fill", d => "#f8f9fa")
       .attr("fill", d => "#EAEAEA")
       .attr("cx", d => 1.4 * d.y)
-      .attr("cy", d => 1.4 * d.x - 150)
+      .attr("cy", d => 1.4 * d.x - 130)
       .attr("r", d => 1.4 * d.r)
       .on("click", (event, d) => {
         let cabildo = d.depth === 1 ? d.data.name : d.parent.parent.data.name
@@ -669,7 +669,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
               : d.angle === 1 ? orient.bottom
               : orient.left, 1.4 * d.r);
         })
-        .attr("transform", ([d]) => `translate(${1.4 * d.y}, ${1.4 * d.x - 150})`)
+        .attr("transform", ([d]) => `translate(${1.4 * d.y}, ${1.4 * d.x - 130})`)
         // .call(wrap, 50)
 
   const nodeLabel = svg.append("g")
@@ -682,7 +682,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     .join("text")
       .attr("class", "node-label")
       .attr("x", d => 1.4 * d.y)
-      .attr("y", d => 1.4 * d.x - 150)
+      .attr("y", d => 1.4 * d.x - 130)
       .style('fill', d => cabildos.comisiones[d.data.comision].color)
       .style("fill-opacity", 1)
       .style("display", "inline")
