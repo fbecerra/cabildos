@@ -220,7 +220,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .data(cabildo)
         .join("div")
           .attr("class", "cabildo-title")
-          .html(d => d.name);
+          .html(d => cabildos.cabildos[d.id].shortName);
 
       let svgBar = tooltip.selectAll("svg")
         .data(cabildo)
@@ -334,7 +334,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   function updateDiv(id) {
 
-    let svgBarMargin = {top: 20, left: 200, bottom: 20, right: 50},
+    let svgBarMargin = {top: 40, left: 200, bottom: 20, right: 50},
         svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
         svgBarHeight = 500 + svgBarMargin.top + svgBarMargin.bottom;
 
@@ -361,7 +361,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .data(cabildo)
       .join("div")
         .attr("class", "cabildo-title")
-        .html(d => d.name);
+        .html(d => cabildos.cabildos[d.id].longName);
 
     let svgBar = details.selectAll("svg")
       .data(cabildo)
@@ -369,6 +369,12 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("class", "bar-chart")
         .attr("width", svgBarWidth)
         .attr("height", svgBarHeight)
+
+    svgBar.append("g")
+      .attr("class", "title")
+      .attr("transform", `translate(${svgBarMargin.left},${svgBarMargin.top/4})`)
+      .append("text")
+        .text("Porcentaje de instancias en las que se mencionó el tema")
 
     svgBar.append("g")
       .attr("transform", `translate(${svgBarMargin.left},${svgBarHeight - svgBarMargin.top - svgBarMargin.bottom + 20})`)
@@ -422,7 +428,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     comisionesDiv.append("div")
       .attr("class", "comision-title")
-      .html(d => d.name)
+      .html(d => d.comision + ". " + cabildos.comisiones[d.id].longName)
 
     let temaDiv = comisionesDiv.selectAll(".tema")
       .data(d => d.children)
@@ -432,7 +438,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     temaDiv.append("div")
       .attr("class", "tema-title")
-      .html(d => d.name)
+      .html(d => d.id + ". " + cabildos.temas[d.id].longName)
 
     // WORD CLOUD
     let cloudDiv = temaDiv.filter(d => d.hasOwnProperty("wordCloud"))

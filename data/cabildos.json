@@ -39,27 +39,27 @@
   },
   "cabildos": {
     "antp": {
-      "shorName": "ANTP",
+      "shortName": "ANTP",
       "longName": "Ahora nos toca participar"
     },
     "cc": {
-      "shorName": "Plataforma CC",
+      "shortName": "Plataforma CC",
       "longName": "Plataforma CC"
     },
     "cqq": {
-      "shorName": "CQQ",
+      "shortName": "CQQ",
       "longName": "El Chile que queremos"
     },
     "mus": {
-      "shorName": "MUS",
+      "shortName": "MUS",
       "longName": "Mesa de Unidad Social"
     },
     "tqh": {
-      "shorName": "TQH",
+      "shortName": "TQH",
       "longName": "Tenemos que hablar de Chile (2021 - 2022)"
     },
     "tqhe": {
-      "shorName": "TQH Chile a escala",
+      "shortName": "TQH Chile a escala",
       "longName": "TQH Chile a escala"
     }
   },
@@ -272,12 +272,14 @@
   "children": [
     {
       "name": "Plataforma CC",
+      "id": "cc",
       "description": "",
       "nTotalCabildos": "",
       "children": [
         {
           "name": "Comision 4",
           "id": "c4",
+          "comision": 4,
           "description": "",
           "children": [
             {
@@ -1123,6 +1125,7 @@
         {
           "name": "Comision 1",
           "id": "c1",
+          "comision": 1,
           "description": "",
           "children": [
             {
@@ -1569,6 +1572,7 @@
         {
           "name": "Comision 7",
           "id": "c7",
+          "comision": 7,
           "description": "",
           "children": [
             {
@@ -1817,6 +1821,7 @@
         {
           "name": "Comision 2",
           "id": "c2",
+          "comision": 2,
           "description": "",
           "children": [
             {
@@ -2038,6 +2043,7 @@
         {
           "name": "Comision 5",
           "id": "c5",
+          "comision": 5,
           "description": "",
           "children": [
             {
@@ -2448,6 +2454,7 @@
         {
           "name": "Comision 3",
           "id": "c3",
+          "comision": 3,
           "description": "",
           "children": [
             {
@@ -2629,10 +2636,12 @@
     },
     {
       "name": "Tenemos que Hablar de Chile (TQH) (2021-2022)",
+      "id": "tqh",
       "children": [
         {
           "name": "Comision 4",
           "id": "c4",
+          "comision": 4,
           "description": "",
           "children": [
             {
@@ -2754,6 +2763,7 @@
         {
           "name": "Comision 3",
           "id": "c3",
+          "comision": 3,
           "description": "",
           "children": [
             {
@@ -2881,6 +2891,7 @@
         {
           "name": "Comision 2",
           "id": "c2",
+          "comision": 2,
           "children": [
             {
               "name": "Principios",
@@ -2903,6 +2914,7 @@
         {
           "name": "Comision 5",
           "id": "c5",
+          "comision": 5,
           "children": [
             {
               "name": "Proteccion",
@@ -2917,6 +2929,7 @@
         {
           "name": "Comision 7",
           "id": "c7",
+          "comision": 7,
           "children": [
             {
               "name": "Rol Estado",
@@ -2932,10 +2945,12 @@
     },
     {
       "name": "TQH Chile a Escala",
+      "id": "tqhe",
       "children": [
         {
           "name": "Comision 1",
           "id": "c1",
+          "comision": 1,
           "description": "",
           "children": [
             {
@@ -3057,6 +3072,7 @@
         {
           "name": "Comision 2",
           "id": "c2",
+          "comision": 2,
           "children": [
             {
               "name": "Principios",
@@ -3087,6 +3103,7 @@
         {
           "name": "Comision 3",
           "id": "c3",
+          "comision": 3,
           "description": "",
           "children": [
             {
@@ -3118,6 +3135,7 @@
         {
           "name": "Comision 4",
           "id": "c4",
+          "comision": 4,
           "description": "",
           "children": [
             {
@@ -3443,6 +3461,7 @@
         {
           "name": "Comision 5",
           "id": "c5",
+          "comision": 5,
           "description": "",
           "children": [
             {
@@ -3466,6 +3485,7 @@
         {
           "name": "Comision 6",
           "id": "c6",
+          "comision": 6,
           "description": "",
           "children": [
             {
@@ -3481,6 +3501,7 @@
         {
           "name": "Comision 7",
           "id": "c7",
+          "comision": 7,
           "description": "",
           "children": [
             {
@@ -3497,10 +3518,12 @@
     },
     {
       "name": "Mesa de Unidad Social (MUS)",
+      "id": "mus",
       "children": [
         {
           "name": "Comision 1",
           "id": "c1",
+          "comision": 1,
           "description": "",
           "children": [
             {
@@ -3532,6 +3555,7 @@
         {
           "name": "Comision 2",
           "id": "c2",
+          "comision": 2,
           "description": "",
           "children": [
             {
@@ -3555,6 +3579,7 @@
         {
           "name": "Comision 3",
           "id": "c3",
+          "comision": 3,
           "description": "",
           "children": [
             {
@@ -3578,6 +3603,7 @@
         {
           "name": "Comision 4",
           "id": "c4",
+          "comision": 4,
           "description": "",
           "children": [
             {
@@ -3665,6 +3691,7 @@
         {
           "name": "Comision 5",
           "id": "c5",
+          "comision": 5,
           "description": "",
           "children": [
             {
@@ -3688,6 +3715,7 @@
         {
           "name": "Comision 6",
           "id": "c6",
+          "comision": 6,
           "description": "",
           "children": [
             {
@@ -3703,6 +3731,7 @@
         {
           "name": "Comision 7",
           "id": "c7",
+          "comision": 7,
           "description": "",
           "children": [
             {
@@ -3719,10 +3748,12 @@
     },
     {
       "name": "El Chile que Queremos (CQQ)",
+      "id": "cqq",
       "children": [
         {
           "name": "Comision 1",
           "id": "c1",
+          "comision": 1,
           "children": [
             {
               "name": "Cambios politicos",
@@ -3735,6 +3766,7 @@
         {
           "name": "Comision 4",
           "id": "c4",
+          "comision": 4,
           "children": [
             {
               "name": "Pensiones",
@@ -3772,6 +3804,7 @@
     },
     {
       "name": "Ahora Nos Toca Participar (ANTP)",
+      "id": "antp",
       "wordClouds": [
         [
           {
@@ -3966,6 +3999,7 @@
         {
           "name": "Comision 1",
           "id": "c1",
+          "comision": 1,
           "children": [
             {
               "name": "Sistema electoral",
@@ -3984,6 +4018,7 @@
         {
           "name": "Comision 2",
           "id": "c2",
+          "comision": 2,
           "children": [
             {
               "name": "Democracia directa",
@@ -4002,6 +4037,7 @@
         {
           "name": "Comision 3",
           "id": "c3",
+          "comision": 3,
           "children": [
             {
               "name": "Autonomia afrodescendiente",
@@ -4032,6 +4068,7 @@
         {
           "name": "Comision 4",
           "id": "c4",
+          "comision": 4,
           "children": [
             {
               "name": "Niñez y juventud",
@@ -4116,6 +4153,7 @@
         {
           "name": "Comision 7",
           "id": "c7",
+          "comision": 7,
           "children": [
             {
               "name": "Democratizacion",
