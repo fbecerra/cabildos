@@ -268,7 +268,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
           .attr("class", "text")
           .attr("x", d => xScale(d.porcentaje) - xScale(0) + 10)
           .attr("y", (d, i) => yScale(i) + 4)
-          .text(d => d.porcentaje)
+          .text(d => d.porcentaje + "%")
     } else {
 
       tooltip.append("div")
@@ -409,7 +409,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("class", "text")
         .attr("x", d => xScale(d.porcentaje) - xScale(0) + 10)
         .attr("y", (d, i) => yScale(i) + 4)
-        .text(d => d.porcentaje)
+        .text(d => d.porcentaje + "%")
 
     let comisionesDiv = details.selectAll(".comision")
       .data(comisiones)
