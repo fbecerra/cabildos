@@ -220,7 +220,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .data(cabildo)
         .join("div")
           .attr("class", "cabildo-title")
-          .html(d => d.name);
+          .html(d => cabildos.cabildos[d.id].shortName);
 
       let svgBar = tooltip.selectAll("svg")
         .data(cabildo)
@@ -361,7 +361,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .data(cabildo)
       .join("div")
         .attr("class", "cabildo-title")
-        .html(d => d.name);
+        .html(d => cabildos.cabildos[d.id].longName);
 
     let svgBar = details.selectAll("svg")
       .data(cabildo)
@@ -428,7 +428,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     comisionesDiv.append("div")
       .attr("class", "comision-title")
-      .html(d => d.name)
+      .html(d => d.comision + ". " + cabildos.comisiones[d.id].longName)
 
     let temaDiv = comisionesDiv.selectAll(".tema")
       .data(d => d.children)
@@ -438,7 +438,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     temaDiv.append("div")
       .attr("class", "tema-title")
-      .html(d => d.name)
+      .html(d => d.id + ". " + cabildos.temas[d.id].longName)
 
     // WORD CLOUD
     let cloudDiv = temaDiv.filter(d => d.hasOwnProperty("wordCloud"))
