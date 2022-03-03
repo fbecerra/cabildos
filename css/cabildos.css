@@ -8,6 +8,40 @@ body {
   line-height: 24px;
 }
 
+#title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--cc-primary);
+}
+
+#subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: var(--cc-primary);
+}
+
+#methods, #about {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#filters {
+  border-bottom: 0.5px dashed var(--cc-primary);
+  border-top: 0.5px dashed var(--cc-primary);
+}
+
+#filters-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
 .form-control {
   background-color: var(--bs-gray-100);
 }
