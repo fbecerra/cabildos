@@ -39,27 +39,27 @@
   },
   "cabildos": {
     "antp": {
-      "shorName": "ANTP",
+      "shortName": "ANTP",
       "longName": "Ahora nos toca participar"
     },
     "cc": {
-      "shorName": "Plataforma CC",
+      "shortName": "Plataforma CC",
       "longName": "Plataforma CC"
     },
     "cqq": {
-      "shorName": "CQQ",
+      "shortName": "CQQ",
       "longName": "El Chile que queremos"
     },
     "mus": {
-      "shorName": "MUS",
+      "shortName": "MUS",
       "longName": "Mesa de Unidad Social"
     },
     "tqh": {
-      "shorName": "TQH",
+      "shortName": "TQH",
       "longName": "Tenemos que hablar de Chile (2021 - 2022)"
     },
     "tqhe": {
-      "shorName": "TQH Chile a escala",
+      "shortName": "TQH Chile a escala",
       "longName": "TQH Chile a escala"
     }
   },
@@ -272,6 +272,7 @@
   "children": [
     {
       "name": "Plataforma CC",
+      "id": "cc".
       "description": "",
       "nTotalCabildos": "",
       "children": [
@@ -2635,6 +2636,7 @@
     },
     {
       "name": "Tenemos que Hablar de Chile (TQH) (2021-2022)",
+      "id": "tqh".
       "children": [
         {
           "name": "Comision 4",
@@ -2943,6 +2945,7 @@
     },
     {
       "name": "TQH Chile a Escala",
+      "id": "tqhe",
       "children": [
         {
           "name": "Comision 1",
@@ -3515,6 +3518,7 @@
     },
     {
       "name": "Mesa de Unidad Social (MUS)",
+      "id": "mus",
       "children": [
         {
           "name": "Comision 1",
@@ -3744,6 +3748,7 @@
     },
     {
       "name": "El Chile que Queremos (CQQ)",
+      "id": "cqq",
       "children": [
         {
           "name": "Comision 1",
@@ -3799,6 +3804,7 @@
     },
     {
       "name": "Ahora Nos Toca Participar (ANTP)",
+      "id": "antp",
       "wordClouds": [
         [
           {
