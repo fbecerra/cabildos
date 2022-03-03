@@ -217,7 +217,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .range([svgBarMargin.top, svgBarHeight - svgBarMargin.top - svgBarMargin.bottom]);
 
       let xAxis = d3.axisBottom(xScale),
-          yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => temas[d].name);
+          yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => cabildos.temas[temas[d].id].shortName);
 
       let divCabildo = tooltip.selectAll(".cabildo-title")
         .data(cabildo)
@@ -354,7 +354,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .range([svgBarMargin.top, svgBarHeight - svgBarMargin.top - svgBarMargin.bottom]);
 
     let xAxis = d3.axisBottom(xScale),
-        yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => temas[d].name);
+        yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => cabildos.temas[temas[d].id].shortName);
 
     let details = d3.select("#details");
     details.selectAll("*").remove();
