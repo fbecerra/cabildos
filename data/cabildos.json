@@ -272,7 +272,7 @@
   "children": [
     {
       "name": "Plataforma CC",
-      "id": "cc".
+      "id": "cc",
       "description": "",
       "nTotalCabildos": "",
       "children": [
@@ -2636,7 +2636,7 @@
     },
     {
       "name": "Tenemos que Hablar de Chile (TQH) (2021-2022)",
-      "id": "tqh".
+      "id": "tqh",
       "children": [
         {
           "name": "Comision 4",
