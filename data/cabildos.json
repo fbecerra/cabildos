@@ -273,6 +273,7 @@
     {
       "name": "Plataforma CC",
       "description": "",
+      "nTotalCabildos": "",
       "children": [
         {
           "name": "Comision 4",
