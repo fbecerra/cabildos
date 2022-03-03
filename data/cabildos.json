@@ -278,6 +278,7 @@
         {
           "name": "Comision 4",
           "id": "c4",
+          "comision": 4,
           "description": "",
           "children": [
             {
@@ -1123,6 +1124,7 @@
         {
           "name": "Comision 1",
           "id": "c1",
+          "comision": 1,
           "description": "",
           "children": [
             {
@@ -1569,6 +1571,7 @@
         {
           "name": "Comision 7",
           "id": "c7",
+          "comision": 7,
           "description": "",
           "children": [
             {
@@ -1817,6 +1820,7 @@
         {
           "name": "Comision 2",
           "id": "c2",
+          "comision": 2,
           "description": "",
           "children": [
             {
@@ -2038,6 +2042,7 @@
         {
           "name": "Comision 5",
           "id": "c5",
+          "comision": 5,
           "description": "",
           "children": [
             {
@@ -2448,6 +2453,7 @@
         {
           "name": "Comision 3",
           "id": "c3",
+          "comision": 3,
           "description": "",
           "children": [
             {
@@ -2633,6 +2639,7 @@
         {
           "name": "Comision 4",
           "id": "c4",
+          "comision": 4,
           "description": "",
           "children": [
             {
@@ -2754,6 +2761,7 @@
         {
           "name": "Comision 3",
           "id": "c3",
+          "comision": 3,
           "description": "",
           "children": [
             {
@@ -2881,6 +2889,7 @@
         {
           "name": "Comision 2",
           "id": "c2",
+          "comision": 2,
           "children": [
             {
               "name": "Principios",
@@ -2903,6 +2912,7 @@
         {
           "name": "Comision 5",
           "id": "c5",
+          "comision": 5,
           "children": [
             {
               "name": "Proteccion",
@@ -2917,6 +2927,7 @@
         {
           "name": "Comision 7",
           "id": "c7",
+          "comision": 7,
           "children": [
             {
               "name": "Rol Estado",
@@ -2936,6 +2947,7 @@
         {
           "name": "Comision 1",
           "id": "c1",
+          "comision": 1,
           "description": "",
           "children": [
             {
@@ -3057,6 +3069,7 @@
         {
           "name": "Comision 2",
           "id": "c2",
+          "comision": 2,
           "children": [
             {
               "name": "Principios",
@@ -3087,6 +3100,7 @@
         {
           "name": "Comision 3",
           "id": "c3",
+          "comision": 3,
           "description": "",
           "children": [
             {
@@ -3118,6 +3132,7 @@
         {
           "name": "Comision 4",
           "id": "c4",
+          "comision": 4,
           "description": "",
           "children": [
             {
@@ -3443,6 +3458,7 @@
         {
           "name": "Comision 5",
           "id": "c5",
+          "comision": 5,
           "description": "",
           "children": [
             {
@@ -3466,6 +3482,7 @@
         {
           "name": "Comision 6",
           "id": "c6",
+          "comision": 6,
           "description": "",
           "children": [
             {
@@ -3481,6 +3498,7 @@
         {
           "name": "Comision 7",
           "id": "c7",
+          "comision": 7,
           "description": "",
           "children": [
             {
@@ -3501,6 +3519,7 @@
         {
           "name": "Comision 1",
           "id": "c1",
+          "comision": 1,
           "description": "",
           "children": [
             {
@@ -3532,6 +3551,7 @@
         {
           "name": "Comision 2",
           "id": "c2",
+          "comision": 2,
           "description": "",
           "children": [
             {
@@ -3555,6 +3575,7 @@
         {
           "name": "Comision 3",
           "id": "c3",
+          "comision": 3,
           "description": "",
           "children": [
             {
@@ -3578,6 +3599,7 @@
         {
           "name": "Comision 4",
           "id": "c4",
+          "comision": 4,
           "description": "",
           "children": [
             {
@@ -3665,6 +3687,7 @@
         {
           "name": "Comision 5",
           "id": "c5",
+          "comision": 5,
           "description": "",
           "children": [
             {
@@ -3688,6 +3711,7 @@
         {
           "name": "Comision 6",
           "id": "c6",
+          "comision": 6,
           "description": "",
           "children": [
             {
@@ -3703,6 +3727,7 @@
         {
           "name": "Comision 7",
           "id": "c7",
+          "comision": 7,
           "description": "",
           "children": [
             {
@@ -3723,6 +3748,7 @@
         {
           "name": "Comision 1",
           "id": "c1",
+          "comision": 1,
           "children": [
             {
               "name": "Cambios politicos",
@@ -3735,6 +3761,7 @@
         {
           "name": "Comision 4",
           "id": "c4",
+          "comision": 4,
           "children": [
             {
               "name": "Pensiones",
@@ -3966,6 +3993,7 @@
         {
           "name": "Comision 1",
           "id": "c1",
+          "comision": 1,
           "children": [
             {
               "name": "Sistema electoral",
@@ -3984,6 +4012,7 @@
         {
           "name": "Comision 2",
           "id": "c2",
+          "comision": 2,
           "children": [
             {
               "name": "Democracia directa",
@@ -4002,6 +4031,7 @@
         {
           "name": "Comision 3",
           "id": "c3",
+          "comision": 3,
           "children": [
             {
               "name": "Autonomia afrodescendiente",
@@ -4032,6 +4062,7 @@
         {
           "name": "Comision 4",
           "id": "c4",
+          "comision": 4,
           "children": [
             {
               "name": "Niñez y juventud",
@@ -4116,6 +4147,7 @@
         {
           "name": "Comision 7",
           "id": "c7",
+          "comision": 7,
           "children": [
             {
               "name": "Democratizacion",
