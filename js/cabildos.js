@@ -204,9 +204,9 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       let temas = cabildo[0].children.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
 
       // CABILDO
-      let svgBarMargin = {top: 20, left: 100, bottom: 20, right: 20},
+      let svgBarMargin = {top: 40, left: 80, bottom: 20, right: 120},
           svgBarWidth = tooltipWidth + svgBarMargin.left + svgBarMargin.right,
-          svgBarHeight = 300 + svgBarMargin.top + svgBarMargin.bottom;
+          svgBarHeight = 320 + svgBarMargin.top + svgBarMargin.bottom;
 
       let xScale = d3.scaleLinear()
         .domain([0, temas[0].porcentaje])
@@ -223,7 +223,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .data(cabildo)
         .join("div")
           .attr("class", "cabildo-title")
-          .html(d => cabildos.cabildos[d.id].shortName);
+          .html(d => cabildos.cabildos[d.id].longName);
 
       let svgBar = tooltip.selectAll("svg")
         .data(cabildo)
@@ -231,6 +231,12 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
           .attr("class", "bar-chart")
           .attr("width", svgBarWidth)
           .attr("height", svgBarHeight)
+
+      svgBar.append("g")
+        .attr("class", "title")
+        .attr("transform", `translate(0,${svgBarMargin.top/2})`)
+        .append("text")
+          .text("Porcentaje de instancias en las que se mencionó el tema")
 
       svgBar.append("g")
         .attr("transform", `translate(${svgBarMargin.left},${svgBarHeight - svgBarMargin.top - svgBarMargin.bottom + 20})`)
@@ -280,11 +286,15 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
       tooltip.append("div")
         .attr("class", "cabildo-title")
-          .html(node.parent.parent.data.name)
+          .html(cabildos.cabildos[node.parent.parent.data.id].longName)
 
       tooltip.append("div")
         .attr("class", "comision-title")
-          .html(node.parent.data.name)
+          .html("Comisión " + node.parent.data.comision + ". " + cabildos.comisiones[node.parent.data.id].shortName)
+
+      tooltip.append("div")
+        .attr("class", "comision-title")
+          .html("Tema " + node.data.id + ". " + cabildos.temas[node.data.id].longName)
 
       if (node.data.hasOwnProperty("wordCloud")) {
         let sizeScale = d3.scaleLinear()
