@@ -297,7 +297,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
       tooltip.append("div")
         .attr("class", "comision-title")
-          .html("Comisión " + node.parent.data.comision + ". " + cabildos.comisiones[node.parent.data.id].longName)
+          .html(cabildos.comisiones[node.parent.data.id].longName)
 
       tooltip.append("div")
         .attr("class", "comision-title")
@@ -448,7 +448,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     comisionesDiv.append("div")
       .attr("class", "comision-title")
-      .html(d => d.comision + ". " + cabildos.comisiones[d.id].longName)
+      .html(d => cabildos.comisiones[d.id].longName)
 
     let temaDiv = comisionesDiv.selectAll(".tema")
       .data(d => d.children)
