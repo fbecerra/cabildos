@@ -460,6 +460,10 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("class", "tema-title")
       .html(d => d.id + ". " + cabildos.temas[d.id].longName)
 
+    temaDiv.append("div")
+      .attr("class", "tema-desciprtion")
+      .html(d => d.description)
+
     // WORD CLOUD
     let cloudDiv = temaDiv.filter(d => d.hasOwnProperty("wordCloud"))
       .selectAll(".cloud-div")
