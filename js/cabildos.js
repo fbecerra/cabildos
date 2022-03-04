@@ -297,7 +297,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
       tooltip.append("div")
         .attr("class", "comision-title")
-          .html("Comisión " + node.parent.data.comision + ". " + cabildos.comisiones[node.parent.data.id].shortName)
+          .html("Comisión " + node.parent.data.comision + ". " + cabildos.comisiones[node.parent.data.id].longName)
 
       tooltip.append("div")
         .attr("class", "comision-title")
