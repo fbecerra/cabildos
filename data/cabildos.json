@@ -4,37 +4,37 @@
     "c1": {
       "color": "#DCA755",
       "shortName": "Sistema político",
-      "longName": "Sistema Político, Gobierno, Poder Legislativo y Sistema Electoral"
+      "longName": "1. Sistema Político, Gobierno, Poder Legislativo y Sistema Electoral"
     },
     "c2": {
       "color": "#C23125",
       "shortName": "Principios",
-      "longName": "Sobre Principios Constitucionales, Democracia, Nacionalidad y Ciudadanía."
+      "longName": "2. Sobre Principios Constitucionales, Democracia, Nacionalidad y Ciudadanía."
     },
     "c3": {
       "color": "#678DC6",
       "shortName": "Estado",
-      "longName": "Forma de Estado, Ordenamiento, Autonomía, Descentrilación, Equidad, Justicia Territorial, Gobiernos Locales y Organización Fiscal"
+      "longName": "3. Forma de Estado, Ordenamiento, Autonomía, Descentrilación, Equidad, Justicia Territorial, Gobiernos Locales y Organización Fiscal"
     },
     "c4": {
       "color": "#9B1560",
       "shortName": "Derechos",
-      "longName": "Derechos Fundamentales"
+      "longName": "4. Derechos Fundamentales"
     },
     "c5": {
       "color": "#60AA58",
-      "shortName": "Medio ambiente",
-      "longName": "Medio Ambiente, Derechos de la Naturaleza, Bienes Naturales y Modelo Económico"
+      "shortName": "Medioambiente",
+      "longName": "5. Medio Ambiente, Derechos de la Naturaleza, Bienes Naturales y Modelo Económico"
     },
     "c6": {
       "color": "#D86437",
       "shortName": "Justicia",
-      "longName": "Sistema de Justicia, Órganos Autónomos de Control y Reforma Constitucional"
+      "longName": "6. Sistema de Justicia, Órganos Autónomos de Control y Reforma Constitucional"
     },
     "c7": {
       "color": "#F1DD5D",
       "shortName": "Ciencia y cultura",
-      "longName": "Sistemas de Conocimientos, Culturas, Ciencia, Tecnología, Artes y Patrimonios"
+      "longName": "7. Sistemas de Conocimientos, Culturas, Ciencia, Tecnología, Artes y Patrimonios"
     }
   },
   "cabildos": {
@@ -370,7 +370,7 @@
               "name": "Educación",
               "id": "4p",
               "comision": "c4",
-              "description": "",
+              "description": "En cuanto al tema “Educación”, se comprende como un derecho, con acceso libre, igualitario, digno y de calidad. Con un enfoque feminista, no adultocéntrico e intercultural, orientado al desarrollo integral de cada induviduo. Este derecho se debe garantizar en los  distintos niveles educativos y miembros de la comunidad. Para esto, el Estado debe garantizar el diseño y desarrollo de políticas públicas en ámbitos variados del desarrollo integral y en las condiciones laborales de los profesionales de la educación.",
               "nCabildos": "",
               "porcentaje": 42.3,
               "wordCloud": [
@@ -701,7 +701,7 @@
               "name": "Salud",
               "id": "4o",
               "comision": "c4",
-              "description": "",
+              "description": "La siguiente nube de palabras muestra los 20 objetos más repetidos. Se aprecia también una mirada sistémica, a través de referencias a modelo y sistema. Se destacan las menciones a acceso, como un marcador de preocupación por la obtención igualitaria del servicio y las menciones a atención y calidad, como marcadores de calidad general del servicio.",
               "nCabildos": "",
               "porcentaje": 12.2,
               "wordCloud": [
@@ -1217,7 +1217,7 @@
               "id": "1a",
               "comision": "c1",
               "porcentaje": 15.3,
-              "description": "",
+              "description": "En cuanto a las “Instituciones, organización del Estado y régimen político”, se identifican distintos puntos de discusión. Destacan la probidad, la paridad, el contrapeso de poderes y la prevención y/o sanción de abusos como características relevantes para regular el ejercicio del poder político. Se busca descentralizar el poder en instancias de decisión territoriales, devolver el poder al pueblo o bien balancear el poder entre parlamento y presidencia. Para esto, el Estado debe ser descentralizado, transparente, plurinacional, intercultural y protector de los derechos humanos, las diversidades sexuales, el medio ambiente y las localidades, con una propuesta transparente y horizontal, que fortalezca la participación directa y ciudadana.",
               "nCabildos": "",
               "wordCloud" : [
                 {
@@ -1663,7 +1663,7 @@
               "name": "Rol del Estado en conocimientos, culturas, ciencia, tecnología, comunicaciones, artes, patrimonio y humanidades",
               "id": "7b",
               "comision": "c7",
-              "description": "",
+              "description": "En cuanto al “Rol del Estado en conocimientos, culturas, ciencia, tecnología, comunicaciones, artes, patrimonios y humanidades”, destaca su acceso al conocimiento en estas materias como una actividad que debe ser garantizada con las condiciones apropiadas para su materialización desde la educación temprana, priorizando el bien común de cada región y poniendo los pueblos indígenas en el centro como un derecho base para un desarrollo integral.",
               "nCabildos": "",
               "porcentaje": 14.5,
               "wordCloud": [
@@ -1912,7 +1912,7 @@
               "name": "Principios",
               "id": "2b",
               "comision": "c2",
-              "description": "",
+              "description": "Para el tema “Principios”, se hace alusión a un Estado social, garante, plurinacional, feminista, inclusivo, descentralizado y de bienestar. Por otro lado, se hace referencias a condiciones actuales que se busca eliminar, como la corrupción, el estado subsidiario o la inseguridad para mujeres y niñas. Se enfatiza la necesidad de expandir la participación ciudadana o la idea de garantizar participación en igualdad de oportunidades. Se menciona la probidad, autonomía de las finanzas y la transparencia como características de los servicios públicos.",
               "nCabildos": "",
               "porcentaje": 13.0,
               "wordCloud": [
@@ -2134,6 +2134,7 @@
               "name": "Desarrollo Sostenible, Buen vivir",
               "id": "5f",
               "comision": "c5",
+              "description": "En cuanto al “Desarrollo Sostenible y el Buen vivir”, se identifica como rol del Estado el proteger el medio ambiente, la desprivatización de los recursos naturales y la aplicación del principio de sustentabilidad y equilibrio, según las necesidades del territorio, procurando el equilibrio entre la actividad económica y la sustentabilidad ambiental. Destaca el fomento de la participación ciudadana directa en asuntos ecológicos desde edades tempranas a través de la educación ambiental y la participación vinculante en decisiones relacionadas. Se menciona la transición desde un modelo económico centrado en la extracción de recursos hacia uno que asegure y garantice condiciones dignas de vida, teniendo como ejemplo los modelos de economía circular y economía feminista. También considera el cambio de un sistema económico extractivista por uno sustentable con un rol mixto entre el Estado y privado, asegurando el desarrollo de la seguridad social y garantizando la soberanía alimentaria.",
               "porcentaje": 12.5,
               "wordCloud": [
                 {
@@ -2545,7 +2546,7 @@
               "name": "Estructura organizacional y descentralizada del Estado",
               "id": "3a",
               "comision": "c3",
-              "description": "",
+              "description": "En cuanto a la “Estructura organizacional y descentralizada del Estado” se identifican características asociadas a su ordenamiento fundamental como un Estado plurinacional, descentralizado, con autonomía territorial, equitativo y orientado al bien común. Se mencionan las autoridades locales y regionales, con énfasis específico en la descentralización y la autonomía territorial.",
               "nCabildos": "",
               "porcentaje": 9.0,
               "wordCloud": [
