@@ -46,6 +46,22 @@ body {
   background-color: var(--bs-gray-100);
 }
 
+#how-to {
+  position: relative;
+}
+
+#legend {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  background-color: var(--bs-gray-100);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+#legend.show {
+  display: block;
+}
+
 .label {
   text-transform: uppercase;
 }
@@ -61,7 +77,7 @@ body {
   line-height: 38px;
 }
 
-.bar-chart {
+#details .bar-chart {
   margin: 60px 0;
 }
 
@@ -134,13 +150,13 @@ body {
   z-index: 10;
   position: fixed;
   top: 0;
-  height: 140px;
+  height: 170px;
   background-color: var(--bs-gray-100);
 }
 
 #back-button {
   position: fixed;
-  top: 140px;
+  top: 170px;
 }
 
 #up-button {
@@ -150,7 +166,7 @@ body {
 }
 
 #bubbles, #cabildo-details {
-  padding-top: 140px;
+  padding-top: 170px;
 }
 
 #cabildo-details {

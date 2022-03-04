@@ -7,6 +7,13 @@ const transitionTime = 500;
 
 const container = d3.select("#cabildos");
 
+d3.select("#how-to")
+  .on("mousemove", () => {
+    console.log('here')
+    d3.select("#legend").classed("show", true)
+  })
+  .on("mouseout", () => d3.select("#legend").classed("show", false))
+
 Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   let cabildos = data[0];
   console.log(cabildos);
@@ -52,32 +59,32 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   function updateOptions() {
 
     let filteredCabildos = cabildos.children.filter(d => {
-      let thisLevel = (d.name === state.cabildo || state.cabildo === 'Todos');
-      let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.name === state.comision)
+      let thisLevel = (d.id === state.cabildo || state.cabildo === 'Todos');
+      let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.id === state.comision)
                         .reduce((a,b) => a || b, false);
       let lowerLowerLevel = d.children.map(c => c.children.flat()).flat()
-                             .map(e => state.tema === 'Todos' || e.name === state.tema)
+                             .map(e => state.tema === 'Todos' || e.id === state.tema)
                              .reduce((a,b) => a || b, false);
       return (thisLevel && lowerLevel && lowerLowerLevel);
     })
 
     let filteredComisiones = filteredCabildos.map(d => {
       return d.children.filter(e => {
-        let thisLevel = e.name === state.comision || state.comision === 'Todas';
-        let lowerLevel = e.children.map(c => state.tema === 'Todos' || c.name === state.tema).reduce((a,b) => a || b, false);
+        let thisLevel = e.id === state.comision || state.comision === 'Todas';
+        let lowerLevel = e.children.map(c => state.tema === 'Todos' || c.id === state.tema).reduce((a,b) => a || b, false);
         return (thisLevel && lowerLevel);
       }).flat()
     }).flat()
 
-    let filteredTemas = filteredCabildos.map(d => d.children.filter(e => e.name === state.comision || state.comision === 'Todas').map(c => c.children.filter(e => e.name === state.tema || state.tema === 'Todos')).flat()).flat();
+    let filteredTemas = filteredCabildos.map(d => d.children.filter(e => e.id === state.comision || state.comision === 'Todas').map(c => c.children.filter(e => e.id === state.tema || state.tema === 'Todos')).flat()).flat();
 
-    let allCabildos = getUniqueElements(filteredCabildos, 'name');
-    let allComisiones = getUniqueElements(filteredComisiones, 'name');
-    let allTemas = getUniqueElements(filteredTemas, 'name');
+    let allCabildos = getUniqueElements(filteredCabildos, 'id');
+    let allComisiones = getUniqueElements(filteredComisiones, 'id');
+    let allTemas = getUniqueElements(filteredTemas, 'id');
 
-    let allCabildosNames = getUniqueElements(filteredCabildos, 'id').map(d => cabildos.cabildos[d].longName);
-    let allComisionesNames = getUniqueElements(filteredComisiones, 'id').map(d => cabildos.comisiones[d].shortName);
-    let allTemasNames = getUniqueElements(filteredTemas, 'id').map(d => cabildos.temas[d].longName);
+    let allCabildosNames = allCabildos.map(d => cabildos.cabildos[d].longName);
+    let allComisionesNames = allComisiones.map(d => cabildos.comisiones[d].shortName);
+    let allTemasNames = allTemas.map(d => cabildos.temas[d].longName);
 
     let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildosNames], ['Todos', ...allCabildos]);
     if (state.cabildo !== 'Todos') {
@@ -121,23 +128,23 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   function hideCircles() {
     let calculateOpacity = d => {
       if (d.depth === 1) {
-        let thisLevel = (d.data.name === state.cabildo || state.cabildo === 'Todos');
-        let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.data.name === state.comision)
+        let thisLevel = (d.data.id === state.cabildo || state.cabildo === 'Todos');
+        let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.data.id === state.comision)
                           .reduce((a,b) => a || b, false);
         let lowerLowerLevel = d.children.map(c => c.children.flat()).flat()
-                               .map(e => state.tema === 'Todos' || e.data.name === state.tema)
+                               .map(e => state.tema === 'Todos' || e.data.id === state.tema)
                                .reduce((a,b) => a || b, false);
         return (thisLevel && lowerLevel && lowerLowerLevel) ? 1 : 0;
       } else if (d.depth === 2) {
-        let thisLevel = (d.data.name === state.comision || state.comision === 'Todas');
-        let upperLevel = (d.parent.data.name === state.cabildo || state.cabildo === 'Todos');
-        let lowerLevel = d.children.map(c => state.tema === 'Todos' || c.data.name === state.tema)
+        let thisLevel = (d.data.id === state.comision || state.comision === 'Todas');
+        let upperLevel = (d.parent.data.id === state.cabildo || state.cabildo === 'Todos');
+        let lowerLevel = d.children.map(c => state.tema === 'Todos' || c.data.id === state.tema)
                           .reduce((a,b) => a || b, false);
         return (thisLevel && upperLevel && lowerLevel) ? 1 : 0;
       } else if (d.depth === 3) {
-        let thisLevel = (d.data.name === state.tema || state.tema === 'Todos')
-        let upperLevel = (d.parent.data.name === state.comision || state.comision === 'Todas');
-        let upperUpperLevel = (d.parent.parent.data.name === state.cabildo || state.cabildo === 'Todos');
+        let thisLevel = (d.data.id === state.tema || state.tema === 'Todos')
+        let upperLevel = (d.parent.data.id === state.comision || state.comision === 'Todas');
+        let upperUpperLevel = (d.parent.parent.data.id === state.cabildo || state.cabildo === 'Todos');
         return (thisLevel && upperLevel && upperUpperLevel) ? 1 : 0;
       }
     }
@@ -163,7 +170,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   let format = d3.format(",d");
 
-  const height = 600,
+  const height = 550,
         width = height;
   const charSize = 2;
 
@@ -178,8 +185,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   console.log(root)
   let focus = root;
   let view;
-  const svgHeight = 700,
-        svgWidth = 1.5 * width;
+  const svgHeight = window.innerHeight - d3.select("#sticky").node().getBoundingClientRect().height,
+        svgWidth = 1.5 * svgHeight;
 
   const svg = d3.select("#cabildos").append("svg")
       .attr("viewBox", [0, 0, svgWidth, svgHeight])
@@ -204,9 +211,9 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       let temas = cabildo[0].children.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
 
       // CABILDO
-      let svgBarMargin = {top: 20, left: 100, bottom: 20, right: 20},
+      let svgBarMargin = {top: 40, left: 80, bottom: 20, right: 120},
           svgBarWidth = tooltipWidth + svgBarMargin.left + svgBarMargin.right,
-          svgBarHeight = 300 + svgBarMargin.top + svgBarMargin.bottom;
+          svgBarHeight = 320 + svgBarMargin.top + svgBarMargin.bottom;
 
       let xScale = d3.scaleLinear()
         .domain([0, temas[0].porcentaje])
@@ -217,13 +224,13 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .range([svgBarMargin.top, svgBarHeight - svgBarMargin.top - svgBarMargin.bottom]);
 
       let xAxis = d3.axisBottom(xScale),
-          yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => temas[d].name);
+          yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => cabildos.temas[temas[d].id].shortName);
 
       let divCabildo = tooltip.selectAll(".cabildo-title")
         .data(cabildo)
         .join("div")
           .attr("class", "cabildo-title")
-          .html(d => cabildos.cabildos[d.id].shortName);
+          .html(d => cabildos.cabildos[d.id].longName);
 
       let svgBar = tooltip.selectAll("svg")
         .data(cabildo)
@@ -231,6 +238,12 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
           .attr("class", "bar-chart")
           .attr("width", svgBarWidth)
           .attr("height", svgBarHeight)
+
+      svgBar.append("g")
+        .attr("class", "title")
+        .attr("transform", `translate(0,${svgBarMargin.top/2})`)
+        .append("text")
+          .text("Porcentaje de instancias en las que se mencionó el tema")
 
       svgBar.append("g")
         .attr("transform", `translate(${svgBarMargin.left},${svgBarHeight - svgBarMargin.top - svgBarMargin.bottom + 20})`)
@@ -280,11 +293,15 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
       tooltip.append("div")
         .attr("class", "cabildo-title")
-          .html(node.parent.parent.data.name)
+          .html(cabildos.cabildos[node.parent.parent.data.id].longName)
 
       tooltip.append("div")
         .attr("class", "comision-title")
-          .html(node.parent.data.name)
+          .html("Comisión " + node.parent.data.comision + ". " + cabildos.comisiones[node.parent.data.id].shortName)
+
+      tooltip.append("div")
+        .attr("class", "comision-title")
+          .html("Tema " + node.data.id + ". " + cabildos.temas[node.data.id].longName)
 
       if (node.data.hasOwnProperty("wordCloud")) {
         let sizeScale = d3.scaleLinear()
@@ -354,7 +371,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .range([svgBarMargin.top, svgBarHeight - svgBarMargin.top - svgBarMargin.bottom]);
 
     let xAxis = d3.axisBottom(xScale),
-        yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => temas[d].name);
+        yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => cabildos.temas[temas[d].id].shortName);
 
     let details = d3.select("#details");
     details.selectAll("*").remove();
@@ -597,7 +614,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         return curtop;
         }
     }
-    window.scroll(0,findPos(document.getElementById(id)) - 100);
+    window.scroll(0,findPos(document.getElementById(id)) - 170);
   }
 
   const depth1 = root.descendants().filter(d => d.depth === 1);
@@ -618,7 +635,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       // .attr("fill", d => "#f8f9fa")
       .attr("fill", d => "#EAEAEA")
       .attr("cx", d => 1.4 * d.y)
-      .attr("cy", d => 1.4 * d.x - 150)
+      .attr("cy", d => 1.4 * d.x - 130)
       .attr("r", d => 1.4 * d.r)
       .on("click", (event, d) => {
         let cabildo = d.depth === 1 ? d.data.name : d.parent.parent.data.name
@@ -669,7 +686,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
               : d.angle === 1 ? orient.bottom
               : orient.left, 1.4 * d.r);
         })
-        .attr("transform", ([d]) => `translate(${1.4 * d.y}, ${1.4 * d.x - 150})`)
+        .attr("transform", ([d]) => `translate(${1.4 * d.y}, ${1.4 * d.x - 130})`)
         // .call(wrap, 50)
 
   const nodeLabel = svg.append("g")
@@ -682,7 +699,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     .join("text")
       .attr("class", "node-label")
       .attr("x", d => 1.4 * d.y)
-      .attr("y", d => 1.4 * d.x - 150)
+      .attr("y", d => 1.4 * d.x - 130)
       .style('fill', d => cabildos.comisiones[d.data.comision].color)
       .style("fill-opacity", 1)
       .style("display", "inline")
