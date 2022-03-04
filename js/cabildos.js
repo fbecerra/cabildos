@@ -607,7 +607,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         return curtop;
         }
     }
-    window.scroll(0,findPos(document.getElementById(id)) - 100);
+    window.scroll(0,findPos(document.getElementById(id)) - 170);
   }
 
   const depth1 = root.descendants().filter(d => d.depth === 1);
