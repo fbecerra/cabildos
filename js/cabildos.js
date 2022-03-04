@@ -52,32 +52,32 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   function updateOptions() {
 
     let filteredCabildos = cabildos.children.filter(d => {
-      let thisLevel = (d.name === state.cabildo || state.cabildo === 'Todos');
-      let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.name === state.comision)
+      let thisLevel = (d.id === state.cabildo || state.cabildo === 'Todos');
+      let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.id === state.comision)
                         .reduce((a,b) => a || b, false);
       let lowerLowerLevel = d.children.map(c => c.children.flat()).flat()
-                             .map(e => state.tema === 'Todos' || e.name === state.tema)
+                             .map(e => state.tema === 'Todos' || e.id === state.tema)
                              .reduce((a,b) => a || b, false);
       return (thisLevel && lowerLevel && lowerLowerLevel);
     })
 
     let filteredComisiones = filteredCabildos.map(d => {
       return d.children.filter(e => {
-        let thisLevel = e.name === state.comision || state.comision === 'Todas';
-        let lowerLevel = e.children.map(c => state.tema === 'Todos' || c.name === state.tema).reduce((a,b) => a || b, false);
+        let thisLevel = e.id === state.comision || state.comision === 'Todas';
+        let lowerLevel = e.children.map(c => state.tema === 'Todos' || c.id === state.tema).reduce((a,b) => a || b, false);
         return (thisLevel && lowerLevel);
       }).flat()
     }).flat()
 
-    let filteredTemas = filteredCabildos.map(d => d.children.filter(e => e.name === state.comision || state.comision === 'Todas').map(c => c.children.filter(e => e.name === state.tema || state.tema === 'Todos')).flat()).flat();
+    let filteredTemas = filteredCabildos.map(d => d.children.filter(e => e.id === state.comision || state.comision === 'Todas').map(c => c.children.filter(e => e.id === state.tema || state.tema === 'Todos')).flat()).flat();
 
-    let allCabildos = getUniqueElements(filteredCabildos, 'name');
-    let allComisiones = getUniqueElements(filteredComisiones, 'name');
-    let allTemas = getUniqueElements(filteredTemas, 'name');
+    let allCabildos = getUniqueElements(filteredCabildos, 'id');
+    let allComisiones = getUniqueElements(filteredComisiones, 'id');
+    let allTemas = getUniqueElements(filteredTemas, 'id');
 
-    let allCabildosNames = getUniqueElements(filteredCabildos, 'id').map(d => cabildos.cabildos[d].longName);
-    let allComisionesNames = getUniqueElements(filteredComisiones, 'id').map(d => cabildos.comisiones[d].shortName);
-    let allTemasNames = getUniqueElements(filteredTemas, 'id').map(d => cabildos.temas[d].longName);
+    let allCabildosNames = allCabildos.map(d => cabildos.cabildos[d].longName);
+    let allComisionesNames = allComisiones.map(d => cabildos.comisiones[d].shortName);
+    let allTemasNames = allTemas.map(d => cabildos.temas[d].longName);
 
     let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildosNames], ['Todos', ...allCabildos]);
     if (state.cabildo !== 'Todos') {
@@ -121,23 +121,23 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   function hideCircles() {
     let calculateOpacity = d => {
       if (d.depth === 1) {
-        let thisLevel = (d.data.name === state.cabildo || state.cabildo === 'Todos');
-        let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.data.name === state.comision)
+        let thisLevel = (d.data.id === state.cabildo || state.cabildo === 'Todos');
+        let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.data.id === state.comision)
                           .reduce((a,b) => a || b, false);
         let lowerLowerLevel = d.children.map(c => c.children.flat()).flat()
-                               .map(e => state.tema === 'Todos' || e.data.name === state.tema)
+                               .map(e => state.tema === 'Todos' || e.data.id === state.tema)
                                .reduce((a,b) => a || b, false);
         return (thisLevel && lowerLevel && lowerLowerLevel) ? 1 : 0;
       } else if (d.depth === 2) {
-        let thisLevel = (d.data.name === state.comision || state.comision === 'Todas');
-        let upperLevel = (d.parent.data.name === state.cabildo || state.cabildo === 'Todos');
-        let lowerLevel = d.children.map(c => state.tema === 'Todos' || c.data.name === state.tema)
+        let thisLevel = (d.data.id === state.comision || state.comision === 'Todas');
+        let upperLevel = (d.parent.data.id === state.cabildo || state.cabildo === 'Todos');
+        let lowerLevel = d.children.map(c => state.tema === 'Todos' || c.data.id === state.tema)
                           .reduce((a,b) => a || b, false);
         return (thisLevel && upperLevel && lowerLevel) ? 1 : 0;
       } else if (d.depth === 3) {
-        let thisLevel = (d.data.name === state.tema || state.tema === 'Todos')
-        let upperLevel = (d.parent.data.name === state.comision || state.comision === 'Todas');
-        let upperUpperLevel = (d.parent.parent.data.name === state.cabildo || state.cabildo === 'Todos');
+        let thisLevel = (d.data.id === state.tema || state.tema === 'Todos')
+        let upperLevel = (d.parent.data.id === state.comision || state.comision === 'Todas');
+        let upperUpperLevel = (d.parent.parent.data.id === state.cabildo || state.cabildo === 'Todos');
         return (thisLevel && upperLevel && upperUpperLevel) ? 1 : 0;
       }
     }
