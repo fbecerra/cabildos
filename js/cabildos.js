@@ -7,6 +7,13 @@ const transitionTime = 500;
 
 const container = d3.select("#cabildos");
 
+d3.select("#how-to")
+  .on("mousemove", () => {
+    console.log('here')
+    d3.select("#legend").classed("show", true)
+  })
+  .on("mouseout", () => d3.select("#legend").classed("show", false))
+
 Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   let cabildos = data[0];
   console.log(cabildos);

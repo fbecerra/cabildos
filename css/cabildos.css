@@ -46,6 +46,22 @@ body {
   background-color: var(--bs-gray-100);
 }
 
+#how-to {
+  position: relative;
+}
+
+#legend {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  background-color: var(--bs-gray-100);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+#legend.show {
+  display: block;
+}
+
 .label {
   text-transform: uppercase;
 }
