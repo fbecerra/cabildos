@@ -48,6 +48,7 @@ body {
 
 #how-to {
   position: relative;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 #legend {
@@ -143,7 +144,7 @@ body {
 .tree-group path {
   stroke: var(--cc-primary);
   stroke-width: 1px;
-  storke-opacity: 0.4;
+  stroke-opacity: 0.4;
 }
 
 #sticky {
@@ -166,9 +167,52 @@ body {
 }
 
 #bubbles, #cabildo-details {
-  padding-top: 170px;
+  padding-top: 234px;
 }
 
 #cabildo-details {
   display: none;
+}
+
+.menu-links {
+  text-decoration: none;
+  color: var(--bs-gray-700);
+}
+
+a:hover {
+  color: var(--cc-primary);
+}
+
+.smaller-text {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.btn-outline-primary {
+  color: var(--cc-primary);
+  border-color: var(--cc-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--cc-primary);
+  border-color: var(--cc-primary);
+}
+
+.btn-fab {
+  color: var(--cc-primary);
+  border-radius: 50%;
+  border: 1px solid var(--cc-primary);
+}
+
+.btn-fab:hover{
+  color: var(--bs-gray-100);
+  background-color: var(--cc-primary);
+  border-radius: 50%;
+  border: 1px solid var(--cc-primary);
+}
+
+.form-select:focus {
+  border-color: var(--cc-primary);
+  outline: 0;
+  box-shadow: none;
 }

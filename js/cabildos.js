@@ -8,7 +8,7 @@ const transitionTime = 500;
 const container = d3.select("#cabildos");
 
 d3.select("#how-to")
-  .on("mousemove", () => {
+  .on("click", () => {
     console.log('here')
     d3.select("#legend").classed("show", true)
   })
