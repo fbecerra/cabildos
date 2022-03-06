@@ -65,215 +65,215 @@
   },
   "temas": {
     "1a": {
-      "shortName": "",
+      "shortName": "Estado",
       "longName": "Instituciones, organización del Estado y régimen político"
     },
     "1b": {
-      "shortName": "",
+      "shortName": "Ley",
       "longName": "Materias de ley y formación de la ley"
     },
     "1beg": {
-      "shortName": "",
+      "shortName": "Poder ejecutivo",
       "longName": "Poder ejecutivo y administración pública"
     },
     "1c": {
-      "shortName": "",
+      "shortName": "Plurinacionalidad",
       "longName": "Estado Plurinacional y libre determinación de los pueblos"
     },
     "1d": {
-      "shortName": "",
+      "shortName": "Probidad y transparencia",
       "longName": "Buen gobierno, probidad y transparencia pública"
     },
     "1e": {
-      "shortName": "",
+      "shortName": "Sistema electoral",
       "longName": "Sistema electoral y organizaciones políticas"
     },
     "1f": {
-      "shortName": "",
+      "shortName": "Seguridad pública",
       "longName": "Seguridad pública, defensa nacional y rol de las Fuerzas Armadas en el régimen democrático contemporáneo"
     },
     "1g": {
-      "shortName": "",
+      "shortName": "Relaciones exteriores",
       "longName": "Relaciones exteriores, integración regional y cooperación fronteriza"
     },
     "1n": {
-      "shortName": "",
+      "shortName": "Cambios politicos",
       "longName": "Cambios politicos"
     },
     "2a": {
-      "shortName": "",
+      "shortName": "Preámbulo",
       "longName": "Preámbulo"
     },
     "2b": {
-      "shortName": "",
+      "shortName": "Principios",
       "longName": "Principios"
     },
     "2c": {
-      "shortName": "",
+      "shortName": "Nacionalidad y cudadanía",
       "longName": "Nacionalidad y cudadanía"
     },
     "2d": {
-      "shortName": "",
+      "shortName": "Participación",
       "longName": "Participación"
     },
     "2e": {
-      "shortName": "",
+      "shortName": "Derecho internacional",
       "longName": "Integración de fuentes del derecho internacional de los Derechos Humanos"
     },
     "2f": {
-      "shortName": "",
+      "shortName": "Democracia directa",
       "longName": "Mecanismos de democracia directa y participativa; referéndums aprobatorios y revocatorios de mandato y de ley; iniciativa popular de ley, y democracia digital"
     },
     "3a": {
-      "shortName": "",
+      "shortName": "Estructura del Estado",
       "longName": "Estructura organizacional y descentralizada del Estado"
     },
     "3acd": {
-      "shortName": "",
+      "shortName": "Descentralización",
       "longName": "Poder local, territorias y descentralización"
     },
     "3b": {
-      "shortName": "",
+      "shortName": "Organización territorial",
       "longName": "Organización territorial interior del Estado y división político-administrativa"
     },
     "3c": {
-      "shortName": "",
+      "shortName": "Equidad territorial",
       "longName": "Mecanismos de equidad territorial"
     },
     "3d": {
-      "shortName": "",
+      "shortName": "Gobiernos locales",
       "longName": "Gobiernos locales"
     },
     "3e": {
-      "shortName": "",
+      "shortName": "Autonomías territoriales e indígenas",
       "longName": "Autonomías territoriales e indígenas"
     },
     "3f": {
-      "shortName": "",
+      "shortName": "Igualdad y cargas tributarias",
       "longName": "Igualdad y cargas tributarias"
     },
     "3g": {
-      "shortName": "",
+      "shortName": "Reforma administrativa",
       "longName": "Reforma administrativa"
     },
     "3h": {
-      "shortName": "",
+      "shortName": "Modernización del Estado",
       "longName": "Modernización del Estado"
     },
     "3i": {
-      "shortName": "",
+      "shortName": "Territorios insulares",
       "longName": "Territorios insulares y zonas extremas"
     },
     "3j": {
-      "shortName": "",
+      "shortName": "Ruralidad",
       "longName": "Ruralidad y relación campo-ciudad"
     },
     "3k": {
-      "shortName": "",
+      "shortName": "Chilenos exterior",
       "longName": "Chilenos exterior"
     },
     "3l": {
-      "shortName": "",
+      "shortName": "Chilenos residentes en el extranjero",
       "longName": "Integración de las personas chilenas residentes en el extranjero"
     },
     "3m": {
-      "shortName": "",
+      "shortName": "Autonomía afrodescendiente",
       "longName": "Autonomía afrodescendiente"
     },
     "4": {
-      "shortName": "",
+      "shortName": "Medios comunicación",
       "longName": "Medios comunicación"
     },
     "4a": {
-      "shortName": "",
+      "shortName": "Derechos civiles",
       "longName": "Derechos civiles"
     },
     "4a1": {
-      "shortName": "",
+      "shortName": "Igualdad ante la ley",
       "longName": "Igualdad ante la ley"
     },
     "4b": {
-      "shortName": "",
+      "shortName": "Reparación de víctimas de violaciones de DDHH",
       "longName": "Derecho a la verdad, la justicia, la reparación integral de las víctimas, sus familiares y a la sociedad en su conjunto, respecto de los delitos cometidos por agentes del Estado y que constituyen vioaciones a los Derechos Humanos"
     },
     "4c": {
-      "shortName": "",
+      "shortName": "Chilenos residentes en el extranjero",
       "longName": "Derechos de las personas chilenas residentes en el extranjero"
     },
     "4c1": {
-      "shortName": "",
+      "shortName": "Seguridad",
       "longName": "Seguridad"
     },
     "4d1": {
-      "shortName": "",
+      "shortName": "Libertad de opinión",
       "longName": "Libertad de emitir opinión, de información, de culto y de prensa"
     },
     "4e": {
-      "shortName": "",
+      "shortName": "Derechos sexuales y reproductivos",
       "longName": "Derechos sexuales y reproductivos"
     },
     "4e1": {
-      "shortName": "",
+      "shortName": "Debido proceso",
       "longName": "Debido proceso con todos sus derechos asociados"
     },
     "4eqt": {
-      "shortName": "",
+      "shortName": "Igualdad de género",
       "longName": "Igualdad de género"
     },
     "4f": {
-      "shortName": "",
+      "shortName": "Reinserción y privados de libertad",
       "longName": "Reinserción y privados de libertad"
     },
     "4g": {
-      "shortName": "",
+      "shortName": "Derechos de las personas con discapacidad",
       "longName": "Derechos de las personas con discapacidad"
     },
     "4gh": {
-      "shortName": "",
+      "shortName": "Protección social",
       "longName": "Protección social"
     },
     "4h": {
-      "shortName": "",
+      "shortName": "Niñez y Juventud",
       "longName": "Niñez y Juventud"
     },
     "4i": {
-      "shortName": "",
+      "shortName": "Derechos individuales",
       "longName": "Derechos individuales"
     },
     "4j": {
-      "shortName": "",
+      "shortName": "Derecho a la vivienda",
       "longName": "Derecho a la vivienda, a la ciudad, a la tierra y al territorio"
     },
     "4k": {
-      "shortName": "",
+      "shortName": "Derecho al trabajo",
       "longName": "Derecho al trabajo y su protección"
     },
     "4l": {
-      "shortName": "",
+      "shortName": "Derecho al cuidado",
       "longName": "Derecho al cuidado y reconocimiento del trabajo doméstico y de cuidado no remunerado"
     },
     "4n": {
-      "shortName": "",
+      "shortName": "Seguridad Social",
       "longName": "Seguridad Social y sistema de pensiones"
     },
     "4n1": {
-      "shortName": "",
+      "shortName": "Derecho al deporte",
       "longName": "Derecho al deporte, la actividad física y la recreación"
     },
     "4ñ": {
-      "shortName": "",
+      "shortName": "Derechos de las personas mayores",
       "longName": "Derechos de las personas mayores"
     },
     "4ñ1": {
-      "shortName": "",
-      "longName": "Derecho a vivir en un ambiente sano y ecológicament eequilibrado"
+      "shortName": "Derecho a vivir en un ambiente sano",
+      "longName": "Derecho a vivir en un ambiente sano y ecológicament equilibrado"
     },
     "4o": {
       "shortName": "Salud",
       "longName": "Salud en todas las políticas con enfoque en los determinantes sociales"
     },
     "4o1": {
-      "shortName": "",
+      "shortName": "Derecho al agua",
       "longName": "Derecho humano al agua y saneamiento; y otros derechos humanos ambientales"
     },
     "4p": {
@@ -281,75 +281,75 @@
       "longName": "Educación"
     },
     "4q": {
-      "shortName": "",
+      "shortName": "Derechos de las mujeres",
       "longName": "Derechos de las mujeres"
     },
     "4r": {
-      "shortName": "",
+      "shortName": "Privadas libertad",
       "longName": "Privadas libertad"
     },
     "4t": {
-      "shortName": "",
+      "shortName": "Disidencias y diversidades sexuales",
       "longName": "Disidencias y diversidades sexuales"
     },
     "4u": {
-      "shortName": "",
+      "shortName": "Migrantes",
       "longName": "Migrantes"
     },
     "4w": {
-      "shortName": "",
+      "shortName": "Libertad de emprender",
       "longName": "Libertad de emprender y desarrollar actividades económicas"
     },
     "4z": {
-      "shortName": "",
+      "shortName": "Derecho de propiedad",
       "longName": "Derecho de propiedad"
     },
     "5a": {
-      "shortName": "",
+      "shortName": "Medioambiente",
       "longName": "Medioambiente, biodiversidad, principios de la bioética y bienes naturales comunes"
     },
     "5b": {
-      "shortName": "",
+      "shortName": "Derechos de la naturaleza",
       "longName": "Derechos de la naturaleza y la vida no humana"
     },
     "5bcdfijm": {
-      "shortName": "",
+      "shortName": "Medioambiente",
       "longName": "Medioambiente"
     },
     "5d": {
-      "shortName": "",
+      "shortName": "Derecho constitucional al agua ",
       "longName": "Derecho constitucional al agua y estatuto constitucional del agua"
     },
     "5dfm": {
-      "shortName": "",
+      "shortName": "Cambios al modelo",
       "longName": "Cambios al modelo"
     },
     "5f": {
-      "shortName": "",
+      "shortName": "Desarrollo Sostenible",
       "longName": "Desarrollo Sostenible, Buen vivir"
     },
     "5m": {
-      "shortName": "",
+      "shortName": "Protección",
       "longName": "Protección"
     },
     "6a": {
-      "shortName": "",
+      "shortName": "Poder judicial",
       "longName": "Poder judicial"
     },
     "6abf": {
-      "shortName": "",
+      "shortName": "Justicia",
       "longName": "Justicia"
     },
     "7abc": {
-      "shortName": "",
+      "shortName": "Arte cultura",
       "longName": "Arte cultura"
     },
     "7b": {
-      "shortName": "",
+      "shortName": "Rol del Estado en conocimientos",
       "longName": "Rol del Estado en conocimientos, culturas, ciencia, tecnología, comunicaciones, artes, patrimonio y humanidades"
     },
     "7e": {
-      "shortName": "",
+      "shortName": "Democratización",
       "longName": "Democratización"
     }
   },

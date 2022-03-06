@@ -84,7 +84,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     let allCabildosNames = allCabildos.map(d => cabildos.cabildos[d].longName);
     let allComisionesNames = allComisiones.map(d => cabildos.comisiones[d].shortName);
-    let allTemasNames = allTemas.map(d => cabildos.temas[d].longName);
+    let allTemasNames = allTemas.map(d => cabildos.temas[d].shortName);
 
     let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildosNames], ['Todos', ...allCabildos]);
     if (state.cabildo !== 'Todos') {
@@ -461,7 +461,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .html(d => d.id + ". " + cabildos.temas[d.id].longName)
 
     temaDiv.append("div")
-      .attr("class", "tema-desciprtion")
+      .attr("class", "tema-description")
       .html(d => d.description)
 
     // WORD CLOUD
