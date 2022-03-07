@@ -447,6 +447,25 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("y", (d, i) => yScale(i) + 4)
         .text(d => d.porcentaje + "%")
 
+    if (cabildo[0].hasOwnProperty("rankings")) {
+      details.selectAll(".ranking-title")
+        .data(cabildo)
+        .join("div")
+          .attr("class", "ranking-title")
+          .html(d => d.rankings.title);
+
+      details.selectAll(".ranking-description")
+        .data(cabildo)
+        .join("div")
+          .attr("class", "ranking-description")
+          .html(d => d.rankings.description)
+
+      details.selectAll(".ranking-image")
+        .data(cabildo[0].rankings.images)
+        .join("div")
+          .html(d => `<img src=${d} />`)
+    }
+
     let comisionesDiv = details.selectAll(".comision")
       .data(comisiones)
       .join("div")
@@ -588,10 +607,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       // .attr("stroke", halo)
       // .attr("stroke-width", haloWidth);
 
-    if (id === 'Plataforma CC') {
-      details.append("div")
-        .html('<img src=assets/ranking-periodo.svg />')
-    }
   }
 
   function showBubbles() {

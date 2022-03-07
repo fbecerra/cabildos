@@ -359,6 +359,11 @@
       "id": "cc",
       "description": "",
       "nTotalCabildos": "",
+      "rankings": {
+        "title": "1. Comparación entre períodos de cabildos",
+        "description": "<p>Los cabildos fueron ingresados a la plataforma en dos momentos distintos. En términos generales, los cabildos que indican ‘Período Anterior’ se refieren a cabildos entre 2019 y 2021, y los que indican ‘Período Actual’, se refieren al periodo entre finales del 2021 y enero de 2022. Cabe señalar que existe una diferencia en la cantidad de cabildos asociados a cada período: el período actual tiene asociado 84 cabildos, mientras que el periodo anterior tiene 116.</p><p>A partir de esta comparación  podemos observar cómo las menciones a ciertos grupos sociales, como “pueblos originarios” e instancias como “participación ciudadana” pierden relevancia frente otras identidades sociales, como “personas mayores” o “personas con discapacidad” o temas como “salud mental”. Esto puede ser explicado porque actualmente el proceso ha incorporado mecanismos de inclusión para la participación ciudadana o representatividad indígena, pero no necesariamente para estos otros grupos. En ese sentido, esto puede referir a la necesidad de abrir mecanismos de inclusión a los grupos o temáticas que adquieren prioridad en el periodo actual.</p>",
+        "images": ["assets/ranking-periodo.svg", "assets/ranking-tokens.svg"]
+      },
       "children": [
         {
           "name": "Comision 4",
@@ -2817,6 +2822,103 @@
                   "ngram": "asignatura",
                   "frecuencia": 2
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "derecho",
+                  "children": [
+                    {
+                      "name": "derecho a",
+                      "children": [
+                        {
+                          "name": "La vida, integridad física y psíquica de las personas"
+                        },
+                        {
+                          "name": "La educación"
+                        },
+                        {
+                          "name": "La salud"
+                        },
+                        {
+                          "name": "Vivir en medio ambiente limpio y sustentable"
+                        },
+                        {
+                          "name": "La vivienda digna y con condiciones mínimas para subsistencia"
+                        },
+                        {
+                          "name": "Acceso internet para todos y en todo lugar"
+                        },
+                        {
+                          "name": "La democracia en el trabajo"
+                        },
+                        {
+                          "name": "Vivir en paz (crecimiento, sin delincuencia, desarrollo, vejez, pensiones), vivienda, salud, educación, protección al medio ambiente, no discriminación, crecimiento sostenible (agricultura, no contaminación, áreas verdes), contar con agua potable, propiedad privada,  igualdad de género,  Igualdad ante la ley. "
+                        }
+                      ]
+                    },
+                    {
+                      "name": "garantizar derecho",
+                      "children": [
+                        {
+                          "name": "a salud y cuidado , justicia igualitaria para toda la ciudadanía, educación de calidad no sexista, vida sin violencia y sustentable, vivienda, protección y autocuidado, trabajo y salario justo, jubilación digna en un mismo sistema para toda la ciudadanía."
+                        },
+                        {
+                          "name": "fundamentales de los habitantes del país en forma inneludible"
+                        },
+                        {
+                          "name": "de todas las personas, sin discriminación arbitraria (siguiendo los principios regentes de la constitución)"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "las personas tenemos derecho",
+                      "children": [
+                        {
+                          "name": "inalienables"
+                        },
+                        {
+                          "name": "a la vida y a morir dignamente"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "la naturaleza tiene derechos"
+                    }
+                  ]
+                },
+                {
+                  "name": "deber",
+                  "children": [
+                    {
+                      "name": "deberes",
+                      "children": [
+                        {
+                          "name": "de los gobernarnante de tratarnos como personas capaces de dirigir nuestra vida."
+                        },
+                        {
+                          "name": "como ciudadanos como padres, como vecinos, es decir en diferentes niveles."
+                        },
+                        {
+                          "name": "sociales hacia nuestra comunidad."
+                        },
+                        {
+                          "name": "respetar las nuevas normas, respetar a los demás miembros de la sociedad, respetar al medio ambiente,  educarse civicamente, participar civicamente, usar las tecnologías adecuadamente."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "el deber",
+                      "children": [
+                        {
+                          "name": "el estado tiene el deber de que se garanticen concretamente los derechos fundamentales."
+                        },
+                        {
+                          "name": "las personas tenemos el deber de cuidarnos y de proteger la naturaleza."
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -2938,6 +3040,77 @@
                 {
                   "ngram": "aspecto",
                   "frecuencia": 2
+                }
+              ],
+              "wordTree": [
+                {
+                  "name": "estado",
+                  "children": [
+                    {
+                      "name": "Chile es un estado",
+                      "children": [
+                        {
+                          "name": "unitario integrado por regiones que tendrán grados de autonomía determinados por la ley."
+                        },
+                        {
+                          "name": "unitario y descentralizado, con regiones que cuenten con autonomía administrativa y financiera."
+                        },
+                        {
+                          "name": "provincial conformado por entidades autónomas que promueven la equidad, solidaridad y sostenibilidad de los territorios."
+                        },
+                        {
+                          "name": "unitario y descentralizado, en donde cada una de las regiones es independiente y autónomo en la toma de decisiones."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "el estado",
+                      "children": [
+                        {
+                          "name": "descentralizará la toma de decisiones sobre los aspectos de desarrollo integral de las regiones."
+                        },
+                        {
+                          "name": "liderará la creación de capacidades y servicios básicos en las distintas regiones."
+                        },
+                        {
+                          "name": "velará por la eficiencia de la administración local en el proceso de descentralización."
+                        },
+                        {
+                          "name": "deberá reconocer y validar constitucionalmente las autonomías de los territorios."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "región y provincia",
+                  "children": [
+                    {
+                      "name": "regiones",
+                      "children": [
+                        {
+                          "name": "deben tener las mismas oportunidades para desarrollar mejor cada región."
+                        },
+                        {
+                          "name": "que cuenten con autonomía administrativa y financiera que les permita tomar decisiones."
+                        },
+                        {
+                          "name": "tengan participación y mayor equidad en el desarrollo de cada región con participación ciudadana."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "provincia",
+                      "children": [
+                        {
+                          "name": "autónoma se divide en comunas y estas en distritos (villas o poblaciones)."
+                        },
+                        {
+                          "name": "autónomas, comunas, distritos y autonomías originarias."
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -3126,6 +3299,98 @@
                   "ngram": "forma",
                   "frecuencia": 11
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "sistema",
+                  "children": [
+                    {
+                      "name": "cambiar el sistema",
+                      "children": [
+                        {
+                          "name": "podemos cambiar el uso de los recursos para invertir en el resto, en la educación, en la salud, en previsión."
+                        },
+                        {
+                          "name": "que tenemos donde los políticos lo único que hacen es pelear entre ellos y no soluciones para la gente pobre."
+                        },
+                        {
+                          "name": "político llevan años ganando plata a costa de nosotros."
+                        },
+                        {
+                          "name": "político cambiaría todo para la gente, siento que el sistema político es el malo, se debe empezar por la cabeza."
+                        },
+                        {
+                          "name": "político, va a cambiar todo lo otro."
+                        },
+                        {
+                          "name": "porque es más importante que cambiar a la persona."
+                        },
+                        {
+                          "name": "podemos cambiar las bases de nuestro país."
+                        },
+                        {
+                          "name": "de votación por mayoría real."
+                        },
+                        {
+                          "name": "político, porque de ahí viene todo lo malo: la desigualdad, la injusticia, ellos son los que mandan todo."
+                        },
+                        {
+                          "name": "político, va a cambiar todo en el país."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "debe existir un sistema",
+                      "children": [
+                        {
+                          "name": "político sano que exija personas claras que trabajen por el bien del país, por el crecimiento, la equidad."
+                        },
+                        {
+                          "name": "igualitario desde la política."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "estado",
+                  "children": [
+                    {
+                      "name": "el estado",
+                      "children": [
+                        {
+                          "name": "colabora, pero no se hace cargo de las necesidades de la gente."
+                        },
+                        {
+                          "name": "debe tener una política a largo plazo, enfocado en ciencia y tecnología."
+                        },
+                        {
+                          "name": "debe garantizar los derechos y satisfacer las necesidades de la gente."
+                        },
+                        {
+                          "name": "tiene que promover, cambiar o gestionar los temas que abordamos."
+                        },
+                        {
+                          "name": "debería poner en primera linea a las personas."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "estado",
+                      "children": [
+                        {
+                          "name": "fortalecer al estado para que ofrezca calidad en los servicios y prime el bienestar."
+                        },
+                        {
+                          "name": "si tenemos un estado orientado al bienestar de la gente, podemos incidir en mejorar la educación, salud y pensiones."
+                        },
+                        {
+                          "name": "tener un estado garante, representa mis inqietudes."
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -3311,6 +3576,245 @@
                   "ngram": "oportunidad",
                   "frecuencia": 27
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "educación",
+                  "children": [
+                    {
+                      "name": "tener educación",
+                      "children": [
+                        {
+                          "name": " técnica, si tenemos una buena educación para tener mejores personas, profesionales o técnicos en todas las áreas."
+                        },
+                        {
+                          "name": "pública y gratuita, porque tenemos que tener estudiantes con derechos de acceder a una educación de calidad."
+                        },
+                        {
+                          "name": "igualitaria y tendremos una mejor sociedad, es una mejora completa."
+                        },
+                        {
+                          "name": "integral para las personas con discapacidades."
+                        },
+                        {
+                          "name": "digna, como mamá de un niño con capacidades diferentes."
+                        },
+                        {
+                          "name": "de calidad."
+                        },
+                        {
+                          "name": "técnica, si tenemos una buena educación para tener mejores personas, profesionales o técnicos en todas las áreas."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "incluir educación",
+                      "children": [
+                        {
+                          "name": "cívica para que las personas sepan qué significa la política y tener una base para reclamar los derechos."
+                        },
+                        {
+                          "name": "sexual, cívica."
+                        },
+                        {
+                          "name": "sobre amor propio, mejorar el entusiasmo de cada uno porque son temas que nos involucran."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "existir educación",
+                      "children": [
+                        {
+                          "name": "sexual en el país y revisar el tema de horarios extendidos."
+                        },
+                        {
+                          "name": "gratuita para todas las personas, para que todas las personas tengan la garantía de estudiar."
+                        },
+                        {
+                          "name": "igual para todos, sin discriminar por situación socioeconómica."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "necesitar educación",
+                      "children": [
+                        {
+                          "name": "de calidad."
+                        },
+                        {
+                          "name": "de excelencia desde un nivel básico, donde se puedan incorporar otros idiomas y así poder insertarnos en el mundo."
+                        },
+                        {
+                          "name": "de calidad garantizada para todos."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "potenciar educación",
+                      "children": [
+                        {
+                          "name": "cívica y educación en valores, ello sirve para crecer de forma más integral."
+                        },
+                        {
+                          "name": "pública, creando nuevos ciudadanos, fomentando prácticas que lo fortalezcan, en pro a una educación cívica."
+                        },
+                        {
+                          "name": "para el día de mañana ser mejores."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "reforzar educación",
+                      "children": [
+                        {
+                          "name": " cívica y filosofía, basada en el respeto hacia los demás."
+                        },
+                        {
+                          "name": " pública, deben exigir buenas carreras técnicas, para una mejor integración laboral."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "asegurar educación",
+                      "children": [
+                        {
+                          "name": "gratuita en la medida en que las personas devuelvan sus servicios al país."
+                        },
+                        {
+                          "name": "pública y de calidad que no dependa de un puntaje, sino de tus habilidades."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "niños",
+                  "children": [
+                    {
+                      "name": "enseñar a los niños",
+                      "children": [
+                        {
+                          "name": "a ser más conscientes con todo, con la naturaleza, los animales, con los que son distintos, etc"
+                        },
+                        {
+                          "name": "a sentir, explorar, no tanto memorizar"
+                        },
+                        {
+                          "name": "a respetar y a no mirar en menos a los demás"
+                        },
+                        {
+                          "name": "sobre perseverancia, trabajar en ello desde pequeños"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "niños tengan",
+                      "children": [
+                        {
+                          "name": "igualdad de educación"
+                        },
+                        {
+                          "name": "toda su materia guardada en la nube, para que no necesiten lápices y cuadernos"
+                        },
+                        {
+                          "name": "las mismas posibilidades"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "educar a los niños",
+                      "children": [
+                        {
+                          "name": "desde pequeños con un pensamiento diferente"
+                        },
+                        {
+                          "name": "mejor porque son el futuro"
+                        },
+                        {
+                          "name": "desde lo preescolar hasta la educación superior y posterior también"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "tener niños",
+                      "children": [
+                        {
+                          "name": "con más consciencia, con ideas más claras con lo que podemos mejorar"
+                        },
+                        {
+                          "name": "educados es el futuro"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "mantener a los niños",
+                      "children": [
+                        {
+                          "name": "incentivados, mejorar la cultura, la educación es la base"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "país",
+                  "children": [
+                    {
+                      "name": "ser un país",
+                      "children": [
+                        {
+                          "name": "con opinión, que se puede defender y opinar"
+                        },
+                        {
+                          "name": "un país avanzado, y no hay nada más importante en la población que estar preparados"
+                        },
+                        {
+                          "name": "educado a corto plazo podría ser un país desarrollado"
+                        },
+                        {
+                          "name": "más educado nos va a ayudar la salud, las pensiones, el trabajo"
+                        },
+                        {
+                          "name": "empoderado para enfrentear los cambios en la sociedad"
+                        },
+                        {
+                          "name": "rico y que se valora a sí mismo si tenemos una buena educación"
+                        },
+                        {
+                          "name": "un país desarrollado,  tenemos que potenciar la educación para el día de mañana ser mejores"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "tener un país",
+                      "children": [
+                        {
+                          "name": "preparado y con educación para todos"
+                        },
+                        {
+                          "name": "más parejo"
+                        },
+                        {
+                          "name": "más equitativo, ahí estamos al debe"
+                        },
+                        {
+                          "name": "educado podremos lograr mejores cosas para la sociedad"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "construir un país",
+                      "children": [
+                        {
+                          "name": "con valores y derechos"
+                        },
+                        {
+                          "name": "mejor, que nos entregue herramientas para decidir sobre nuestros representantes"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -3401,6 +3905,134 @@
                   "ngram": "malo",
                   "frecuencia": 10
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "salud",
+                  "children": [
+                    {
+                      "name": "si no tenemos salud",
+                      "children": [
+                        {
+                          "name": "no tenemos nada y para ello, es necesario que se refuercen las políticas públicas en esta área."
+                        },
+                        {
+                          "name": "no podemos reclamar nada."
+                        },
+                        {
+                          "name": "no tenemos vida, si nos enfermamos tenemos que solucionar eso."
+                        },
+                        {
+                          "name": "no tendremos pensiones tampoco."
+                        },
+                        {
+                          "name": "no podemos tener trabajo, y si se enferma uno se enferma la familia."
+                        },
+                        {
+                          "name": "uno no puede salir adelante."
+                        },
+                        {
+                          "name": "no podemos hacer nada."
+                        },
+                        {
+                          "name": "no tendremos buena educación."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "sin salud",
+                      "children": [
+                        {
+                          "name": "no podemos hacer nada y porque la salud mental es inaccesible hoy."
+                        },
+                        {
+                          "name": "no hacemos nada, entendiendo que hay que prevenir partiendo de uno."
+                        },
+                        {
+                          "name": "sin salud no podemos hacer nada."
+                        },
+                        {
+                          "name": "no podríamos hablar de nada y por eso es lo mas importante y nos preocupa por eso."
+                        },
+                        {
+                          "name": "no podemos estudiar ni vivir tranquilamente."
+                        },
+                        {
+                          "name": "nadie puede salir a trabajar, para mi es una prioridad."
+                        },
+                        {
+                          "name": "no puedes trabajar, no puedes sacar la familia adelante, a mi hija, no puedes hacer nada."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "sistema",
+                  "children": [
+                    {
+                      "name": "cambiar el sistema",
+                      "children": [
+                        {
+                          "name": "de salud y debería ser accesible para todos, incluso para los que tenemos pensiones,"
+                        },
+                        {
+                          "name": ", acabar con la brecha entre la atención pública y privada."
+                        },
+                        {
+                          "name": "de salud a uno más social va a aydar al bienestar de las personas."
+                        },
+                        {
+                          "name": "para todas las personas."
+                        },
+                        {
+                          "name": "para que desde niños puedan tener un futuro distinto."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "mejorar el sistema",
+                      "children": [
+                        {
+                          "name": "que debería beneficiar a las personas."
+                        },
+                        {
+                          "name": ", es la base de todo el desarrollo y el progreso social."
+                        },
+                        {
+                          "name": "dándole recursos a los consultorios."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "que el sistema sea",
+                      "children": [
+                        {
+                          "name": "más justo para todos."
+                        },
+                        {
+                          "name": "el que era antes porque actualmente no hay mucho acceso a buena salud."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "reestructurar el sistema",
+                      "children": [
+                        {
+                          "name": "incluyendo los impuestos."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "reformar el sistema",
+                      "children": [
+                        {
+                          "name": "de salud."
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -3490,6 +4122,126 @@
                 {
                   "ngram": "fundamental",
                   "frecuencia": 6
+                }
+              ],
+              "wordTree": [
+                {
+                  "name": "afp",
+                  "children": [
+                    {
+                      "name": "cambiar las afp",
+                      "children": [
+                        {
+                          "name": "es un robo al final esa plata no llega en su totalidad para nosotros en nuestra vejez."
+                        },
+                        {
+                          "name": "."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "no querer afp",
+                      "children": [
+                        {
+                          "name": "para mejorar el tema de la igualdad."
+                        },
+                        {
+                          "name": "es un robo al final esa plata no llega en su totalidad para nosotros en nuestra vejez."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "sacar las afp",
+                      "children": [
+                        {
+                          "name": "porque no aportan."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "las afp son",
+                      "children": [
+                        {
+                          "name": "la base de la desigualdad, se necesita una legislación que garantice un reparto justo."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "sistema",
+                  "children": [
+                    {
+                      "name": "cambiar el sistema",
+                      "children": [
+                        {
+                          "name": "para que las personas reciban todo su dinero cuando se jubilen."
+                        },
+                        {
+                          "name": "previsional es prioritario."
+                        },
+                        {
+                          "name": "previsional, ya que nos afecta a todos."
+                        },
+                        {
+                          "name": "previsional porque va a aumentar el número de adultos mayores."
+                        },
+                        {
+                          "name": "de afp es lo más urgente, los adultos mayores están muy desvalidos."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "el sistema funciona",
+                      "children": [
+                        {
+                          "name": "pero deberían también correr con las pérdidas, para poder tener dinero en la vejez y poder disfrutar."
+                        },
+                        {
+                          "name": "muy mal y creo que las personas que trabajan toda la vida no pueden recibir una pensión tan baja."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "el sistema otorga",
+                      "children": [
+                        {
+                          "name": "pensiones demasiado bajas, no alcanza para una buena calidad de vida."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "bajo",
+                  "children": [
+                    {
+                      "name": "las pensiones son muy bajas",
+                      "children": [
+                        {
+                          "name": "y no alcanzan para nada."
+                        },
+                        {
+                          "name": "y algunas pensiones que dan, son municipales, que da el alcalde de la comuna y son demasiado bajas."
+                        },
+                        {
+                          "name": "hay mucha desigualdad y el sistema es injusto e indigno."
+                        },
+                        {
+                          "name": "para substitir en este país, no alcanza para nada."
+                        },
+                        {
+                          "name": "no alcanzan para pagar casi nada y no se alcanza a disfrutar un poquito la plata"
+                        },
+                        {
+                          "name": "y en el país hay plata para subirlas, existe mucha desigualdad en los ingresos."
+                        },
+                        {
+                          "name": "y una persona cuando se pensiona vienen todos los achaques."
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
