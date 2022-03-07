@@ -4118,6 +4118,126 @@
                   "ngram": "fundamental",
                   "frecuencia": 6
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "afp",
+                  "children": [
+                    {
+                      "name": "cambiar las afp",
+                      "children": [
+                        {
+                          "name": "es un robo al final esa plata no llega en su totalidad para nosotros en nuestra vejez."
+                        },
+                        {
+                          "name": "."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "no querer afp",
+                      "children": [
+                        {
+                          "name": "para mejorar el tema de la igualdad."
+                        },
+                        {
+                          "name": "es un robo al final esa plata no llega en su totalidad para nosotros en nuestra vejez."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "sacar las afp",
+                      "children": [
+                        {
+                          "name": "porque no aportan."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "las afp son",
+                      "children": [
+                        {
+                          "name": "la base de la desigualdad, se necesita una legislación que garantice un reparto justo."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "sistema",
+                  "children": [
+                    {
+                      "name": "cambiar el sistema",
+                      "children": [
+                        {
+                          "name": "para que las personas reciban todo su dinero cuando se jubilen."
+                        },
+                        {
+                          "name": "previsional es prioritario."
+                        },
+                        {
+                          "name": "previsional, ya que nos afecta a todos."
+                        },
+                        {
+                          "name": "previsional porque va a aumentar el número de adultos mayores."
+                        },
+                        {
+                          "name": "de afp es lo más urgente, los adultos mayores están muy desvalidos."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "el sistema funciona",
+                      "children": [
+                        {
+                          "name": "pero deberían también correr con las pérdidas, para poder tener dinero en la vejez y poder disfrutar."
+                        },
+                        {
+                          "name": "muy mal y creo que las personas que trabajan toda la vida no pueden recibir una pensión tan baja."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "el sistema otorga",
+                      "children": [
+                        {
+                          "name": "pensiones demasiado bajas, no alcanza para una buena calidad de vida."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "bajo",
+                  "children": [
+                    {
+                      "name": "las pensiones son muy bajas",
+                      "children": [
+                        {
+                          "name": "y no alcanzan para nada."
+                        },
+                        {
+                          "name": "y algunas pensiones que dan, son municipales, que da el alcalde de la comuna y son demasiado bajas."
+                        },
+                        {
+                          "name": "hay mucha desigualdad y el sistema es injusto e indigno."
+                        },
+                        {
+                          "name": "para substitir en este país, no alcanza para nada."
+                        },
+                        {
+                          "name": "no alcanzan para pagar casi nada y no se alcanza a disfrutar un poquito la plata"
+                        },
+                        {
+                          "name": "y en el país hay plata para subirlas, existe mucha desigualdad en los ingresos."
+                        },
+                        {
+                          "name": "y una persona cuando se pensiona vienen todos los achaques."
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
