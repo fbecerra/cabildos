@@ -359,6 +359,11 @@
       "id": "cc",
       "description": "",
       "nTotalCabildos": "",
+      "rankings": {
+        "title": "1. Comparación entre períodos de cabildos",
+        "description": "<p>Los cabildos fueron ingresados a la plataforma en dos momentos distintos. En términos generales, los cabildos que indican ‘Período Anterior’ se refieren a cabildos entre 2019 y 2021, y los que indican ‘Período Actual’, se refieren al periodo entre finales del 2021 y enero de 2022. Cabe señalar que existe una diferencia en la cantidad de cabildos asociados a cada período: el período actual tiene asociado 84 cabildos, mientras que el periodo anterior tiene 116.</p><p>A partir de esta comparación  podemos observar cómo las menciones a ciertos grupos sociales, como “pueblos originarios” e instancias como “participación ciudadana” pierden relevancia frente otras identidades sociales, como “personas mayores” o “personas con discapacidad” o temas como “salud mental”. Esto puede ser explicado porque actualmente el proceso ha incorporado mecanismos de inclusión para la participación ciudadana o representatividad indígena, pero no necesariamente para estos otros grupos. En ese sentido, esto puede referir a la necesidad de abrir mecanismos de inclusión a los grupos o temáticas que adquieren prioridad en el periodo actual.</p>",
+        "images": ["assets/ranking-periodo.svg", "assets/ranking-tokens.svg"]
+      },
       "children": [
         {
           "name": "Comision 4",
