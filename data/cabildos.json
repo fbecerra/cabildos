@@ -2817,6 +2817,103 @@
                   "ngram": "asignatura",
                   "frecuencia": 2
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "derecho",
+                  "children": [
+                    {
+                      "name": "derecho a",
+                      "children": [
+                        {
+                          "name": "La vida, integridad física y psíquica de las personas"
+                        },
+                        {
+                          "name": "La educación"
+                        },
+                        {
+                          "name": "La salud"
+                        },
+                        {
+                          "name": "Vivir en medio ambiente limpio y sustentable"
+                        },
+                        {
+                          "name": "La vivienda digna y con condiciones mínimas para subsistencia"
+                        },
+                        {
+                          "name": "Acceso internet para todos y en todo lugar"
+                        },
+                        {
+                          "name": "La democracia en el trabajo"
+                        },
+                        {
+                          "name": "Vivir en paz (crecimiento, sin delincuencia, desarrollo, vejez, pensiones), vivienda, salud, educación, protección al medio ambiente, no discriminación, crecimiento sostenible (agricultura, no contaminación, áreas verdes), contar con agua potable, propiedad privada,  igualdad de género,  Igualdad ante la ley. "
+                        }
+                      ]
+                    },
+                    {
+                      "name": "garantizar derecho",
+                      "children": [
+                        {
+                          "name": "a salud y cuidado , justicia igualitaria para toda la ciudadanía, educación de calidad no sexista, vida sin violencia y sustentable, vivienda, protección y autocuidado, trabajo y salario justo, jubilación digna en un mismo sistema para toda la ciudadanía."
+                        },
+                        {
+                          "name": "fundamentales de los habitantes del país en forma inneludible"
+                        },
+                        {
+                          "name": "de todas las personas, sin discriminación arbitraria (siguiendo los principios regentes de la constitución)"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "las personas tenemos derecho",
+                      "children": [
+                        {
+                          "name": "inalienables"
+                        },
+                        {
+                          "name": "a la vida y a morir dignamente"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "la naturaleza tiene derechos"
+                    }
+                  ]
+                },
+                {
+                  "name": "deber",
+                  "children": [
+                    {
+                      "name": "deberes",
+                      "children": [
+                        {
+                          "name": "de los gobernarnante de tratarnos como personas capaces de dirigir nuestra vida."
+                        },
+                        {
+                          "name": "como ciudadanos como padres, como vecinos, es decir en diferentes niveles."
+                        },
+                        {
+                          "name": "sociales hacia nuestra comunidad."
+                        },
+                        {
+                          "name": "respetar las nuevas normas, respetar a los demás miembros de la sociedad, respetar al medio ambiente,  educarse civicamente, participar civicamente, usar las tecnologías adecuadamente."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "el deber",
+                      "children": [
+                        {
+                          "name": "el estado tiene el deber de que se garanticen concretamente los derechos fundamentales."
+                        },
+                        {
+                          "name": "las personas tenemos el deber de cuidarnos y de proteger la naturaleza."
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
