@@ -8,14 +8,10 @@ const transitionTime = 500;
 const container = d3.select("#cabildos");
 
 d3.select("#how-to")
-  .on("click", () => {
-    console.log('here')
-    d3.select("#legend").classed("show", true)
-  })
+  .on("click", () => d3.select("#legend").classed("show", true))
 
 window.onclick = function(event) {
   let parent = document.getElementById("how-to");
-  console.log(event.path, parent, event.path.includes(parent))
   if (!event.path.includes(parent)) {
     var dropdown = document.getElementById("legend");
     if (dropdown.classList.contains('show')) {
