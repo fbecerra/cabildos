@@ -48,6 +48,12 @@ body {
 
 #how-to {
   position: relative;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+#how-to:hover {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.30);
 }
 
 #legend {
@@ -72,7 +78,7 @@ body {
 }
 
 .cabildo-title {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 32px;
   line-height: 38px;
 }
@@ -114,9 +120,22 @@ body {
 }
 
 .comision-title {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 24px;
-  line-height: 29px;
+  line-height: 38px;
+  margin-bottom: 10px;
+}
+
+.tema-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.tema-description {
+  font-size: 14px;
+  margin-left: 20px;
 }
 
 .cloud-div {
@@ -143,7 +162,7 @@ body {
 .tree-group path {
   stroke: var(--cc-primary);
   stroke-width: 1px;
-  storke-opacity: 0.4;
+  stroke-opacity: 0.4;
 }
 
 #sticky {
@@ -166,9 +185,52 @@ body {
 }
 
 #bubbles, #cabildo-details {
-  padding-top: 170px;
+  padding-top: 234px;
 }
 
 #cabildo-details {
   display: none;
+}
+
+.menu-links {
+  text-decoration: none;
+  color: var(--bs-gray-700);
+}
+
+a:hover {
+  color: var(--cc-primary);
+}
+
+.smaller-text {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.btn-outline-primary {
+  color: var(--cc-primary);
+  border-color: var(--cc-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--cc-primary);
+  border-color: var(--cc-primary);
+}
+
+.btn-fab {
+  color: var(--cc-primary);
+  border-radius: 50%;
+  border: 1px solid var(--cc-primary);
+}
+
+.btn-fab:hover{
+  color: var(--bs-gray-100);
+  background-color: var(--cc-primary);
+  border-radius: 50%;
+  border: 1px solid var(--cc-primary);
+}
+
+.form-select:focus {
+  border-color: var(--cc-primary);
+  outline: 0;
+  box-shadow: none;
 }
