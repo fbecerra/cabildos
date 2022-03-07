@@ -461,7 +461,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .html(d => cabildos.comisiones[d.id].longName)
 
     let temaDiv = comisionesDiv.selectAll(".tema")
-      .data(d => d.children)
+      .data(d => d.children.filter(c => c.hasOwnProperty("wordCloud") || c.hasOwnProperty("wordTree")))
       .join("div")
         .attr("class", "tema")
         .attr("id", d => d.id)
