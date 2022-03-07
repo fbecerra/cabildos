@@ -3294,6 +3294,98 @@
                   "ngram": "forma",
                   "frecuencia": 11
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "sistema",
+                  "children": [
+                    {
+                      "name": "cambiar el sistema",
+                      "children": [
+                        {
+                          "name": "podemos cambiar el uso de los recursos para invertir en el resto, en la educación, en la salud, en previsión."
+                        },
+                        {
+                          "name": "que tenemos donde los políticos lo único que hacen es pelear entre ellos y no soluciones para la gente pobre."
+                        },
+                        {
+                          "name": "político llevan años ganando plata a costa de nosotros."
+                        },
+                        {
+                          "name": "político cambiaría todo para la gente, siento que el sistema político es el malo, se debe empezar por la cabeza."
+                        },
+                        {
+                          "name": "político, va a cambiar todo lo otro."
+                        },
+                        {
+                          "name": "porque es más importante que cambiar a la persona."
+                        },
+                        {
+                          "name": "podemos cambiar las bases de nuestro país."
+                        },
+                        {
+                          "name": "de votación por mayoría real."
+                        },
+                        {
+                          "name": "político, porque de ahí viene todo lo malo: la desigualdad, la injusticia, ellos son los que mandan todo."
+                        },
+                        {
+                          "name": "político, va a cambiar todo en el país."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "debe existir un sistema",
+                      "children": [
+                        {
+                          "name": "político sano que exija personas claras que trabajen por el bien del país, por el crecimiento, la equidad."
+                        },
+                        {
+                          "name": "igualitario desde la política."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "estado",
+                  "children": [
+                    {
+                      "name": "el estado",
+                      "children": [
+                        {
+                          "name": "colabora, pero no se hace cargo de las necesidades de la gente."
+                        },
+                        {
+                          "name": "debe tener una política a largo plazo, enfocado en ciencia y tecnología."
+                        },
+                        {
+                          "name": "debe garantizar los derechos y satisfacer las necesidades de la gente."
+                        },
+                        {
+                          "name": "tiene que promover, cambiar o gestionar los temas que abordamos."
+                        },
+                        {
+                          "name": "debería poner en primera linea a las personas."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "estado",
+                      "children": [
+                        {
+                          "name": "fortalecer al estado para que ofrezca calidad en los servicios y prime el bienestar."
+                        },
+                        {
+                          "name": "si tenemos un estado orientado al bienestar de la gente, podemos incidir en mejorar la educación, salud y pensiones."
+                        },
+                        {
+                          "name": "tener un estado garante, representa mis inqietudes."
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
