@@ -8,11 +8,17 @@ const transitionTime = 500;
 const container = d3.select("#cabildos");
 
 d3.select("#how-to")
-  .on("click", () => {
-    console.log('here')
-    d3.select("#legend").classed("show", true)
-  })
-  .on("mouseout", () => d3.select("#legend").classed("show", false))
+  .on("click", () => d3.select("#legend").classed("show", true))
+
+window.onclick = function(event) {
+  let parent = document.getElementById("how-to");
+  if (!event.path.includes(parent)) {
+    var dropdown = document.getElementById("legend");
+    if (dropdown.classList.contains('show')) {
+      dropdown.classList.remove('show');
+    }
+  }
+}
 
 Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   let cabildos = data[0];
@@ -211,7 +217,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       let temas = cabildo[0].children.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
 
       // CABILDO
-      let svgBarMargin = {top: 40, left: 80, bottom: 20, right: 120},
+      let svgBarMargin = {top: 40, left: 150, bottom: 20, right: 120},
           svgBarWidth = tooltipWidth + svgBarMargin.left + svgBarMargin.right,
           svgBarHeight = 320 + svgBarMargin.top + svgBarMargin.bottom;
 
@@ -354,7 +360,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   function updateDiv(id) {
 
-    let svgBarMargin = {top: 40, left: 200, bottom: 20, right: 50},
+    let svgBarMargin = {top: 40, left: 350, bottom: 20, right: 50},
         svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
         svgBarHeight = 500 + svgBarMargin.top + svgBarMargin.bottom;
 
@@ -451,7 +457,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .html(d => cabildos.comisiones[d.id].longName)
 
     let temaDiv = comisionesDiv.selectAll(".tema")
-      .data(d => d.children)
+      .data(d => d.children.filter(c => c.hasOwnProperty("wordCloud") || c.hasOwnProperty("wordTree")))
       .join("div")
         .attr("class", "tema")
         .attr("id", d => d.id)
@@ -581,6 +587,11 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       // .attr("fill", "none")
       // .attr("stroke", halo)
       // .attr("stroke-width", haloWidth);
+
+    if (id === 'Plataforma CC') {
+      details.append("div")
+        .html('<img src=assets/ranking-periodo.svg />')
+    }
   }
 
   function showBubbles() {
@@ -693,6 +704,35 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("transform", ([d]) => `translate(${1.4 * d.y}, ${1.4 * d.x - 130})`)
         // .call(wrap, 50)
 
+  const lineHeight = 14;
+
+  function wrap(text, width) {
+    text.each(function() {
+      var text = d3.select(this),
+          words = text.text().split(/\s+/).reverse(),
+          word,
+          line = [words.pop()],
+          lineNumber = 0,
+          lineHeightText = 1.01, // ems
+          x = text.attr("x"),
+          y = text.attr("y"),
+          dy = parseFloat(text.attr("0")),
+          tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).text(line);
+      while (word = words.pop()) {
+        line.push(word);
+        tspan.text(line.join(" "));
+        if (tspan.node().getComputedTextLength() > width) {
+          line.pop();
+          tspan.text(line.join(" "));
+          line = [word];
+          tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * 1.01 * lineHeight + "px").text(word);
+        }
+      }
+      let rectHeight = text.node().getBoundingClientRect().height;
+      if (lineNumber > 1) text.attr("transform", `translate(0, ${-rectHeight/4})`);
+    });
+  }
+
   const nodeLabel = svg.append("g")
       // .style("font", "10px sans-serif")
       .attr("pointer-events", "none")
@@ -707,7 +747,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .style('fill', d => cabildos.comisiones[d.data.comision].color)
       .style("fill-opacity", 1)
       .style("display", "inline")
-      .text(d => d.r > 15 ? d.data.name.slice(0, 10) : null)
+      .text(d => d.r > 15 ? cabildos.temas[d.data.id].shortName : null)
+      .call(wrap, 30)
       // .attr("transform", "rotate(0.1)")
 
 })
