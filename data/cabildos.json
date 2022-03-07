@@ -3036,6 +3036,77 @@
                   "ngram": "aspecto",
                   "frecuencia": 2
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "estado",
+                  "children": [
+                    {
+                      "name": "Chile es un estado",
+                      "children": [
+                        {
+                          "name": "unitario integrado por regiones que tendrán grados de autonomía determinados por la ley."
+                        },
+                        {
+                          "name": "unitario y descentralizado, con regiones que cuenten con autonomía administrativa y financiera."
+                        },
+                        {
+                          "name": "provincial conformado por entidades autónomas que promueven la equidad, solidaridad y sostenibilidad de los territorios."
+                        },
+                        {
+                          "name": "unitario y descentralizado, en donde cada una de las regiones es independiente y autónomo en la toma de decisiones."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "el estado",
+                      "children": [
+                        {
+                          "name": "descentralizará la toma de decisiones sobre los aspectos de desarrollo integral de las regiones."
+                        },
+                        {
+                          "name": "liderará la creación de capacidades y servicios básicos en las distintas regiones."
+                        },
+                        {
+                          "name": "velará por la eficiencia de la administración local en el proceso de descentralización."
+                        },
+                        {
+                          "name": "deberá reconocer y validar constitucionalmente las autonomías de los territorios."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "región y provincia",
+                  "children": [
+                    {
+                      "name": "regiones",
+                      "children": [
+                        {
+                          "name": "deben tener las mismas oportunidades para desarrollar mejor cada región."
+                        },
+                        {
+                          "name": "que cuenten con autonomía administrativa y financiera que les permita tomar decisiones."
+                        },
+                        {
+                          "name": "tengan participación y mayor equidad en el desarrollo de cada región con participación ciudadana."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "provincia",
+                      "children": [
+                        {
+                          "name": "autónoma se divide en comunas y estas en distritos (villas o poblaciones)."
+                        },
+                        {
+                          "name": "autónomas, comunas, distritos y autonomías originarias."
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
