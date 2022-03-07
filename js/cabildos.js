@@ -217,7 +217,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       let temas = cabildo[0].children.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
 
       // CABILDO
-      let svgBarMargin = {top: 40, left: 80, bottom: 20, right: 120},
+      let svgBarMargin = {top: 40, left: 150, bottom: 20, right: 120},
           svgBarWidth = tooltipWidth + svgBarMargin.left + svgBarMargin.right,
           svgBarHeight = 320 + svgBarMargin.top + svgBarMargin.bottom;
 
@@ -360,7 +360,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   function updateDiv(id) {
 
-    let svgBarMargin = {top: 40, left: 200, bottom: 20, right: 50},
+    let svgBarMargin = {top: 40, left: 350, bottom: 20, right: 50},
         svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
         svgBarHeight = 500 + svgBarMargin.top + svgBarMargin.bottom;
 
