@@ -587,6 +587,11 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       // .attr("fill", "none")
       // .attr("stroke", halo)
       // .attr("stroke-width", haloWidth);
+
+    if (id === 'Plataforma CC') {
+      details.append("div")
+        .html('<img src=assets/ranking-periodo.svg />')
+    }
   }
 
   function showBubbles() {
