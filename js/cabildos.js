@@ -703,6 +703,35 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("transform", ([d]) => `translate(${1.4 * d.y}, ${1.4 * d.x - 130})`)
         // .call(wrap, 50)
 
+  const lineHeight = 14;
+
+  function wrap(text, width) {
+    text.each(function() {
+      var text = d3.select(this),
+          words = text.text().split(/\s+/).reverse(),
+          word,
+          line = [words.pop()],
+          lineNumber = 0,
+          lineHeightText = 1.01, // ems
+          x = text.attr("x"),
+          y = text.attr("y"),
+          dy = parseFloat(text.attr("0")),
+          tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).text(line);
+      while (word = words.pop()) {
+        line.push(word);
+        tspan.text(line.join(" "));
+        if (tspan.node().getComputedTextLength() > width) {
+          line.pop();
+          tspan.text(line.join(" "));
+          line = [word];
+          tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * 1.01 * lineHeight + "px").text(word);
+        }
+      }
+      let rectHeight = text.node().getBoundingClientRect().height;
+      if (lineNumber > 1) text.attr("transform", `translate(0, ${-rectHeight/4})`);
+    });
+  }
+
   const nodeLabel = svg.append("g")
       // .style("font", "10px sans-serif")
       .attr("pointer-events", "none")
@@ -717,7 +746,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .style('fill', d => cabildos.comisiones[d.data.comision].color)
       .style("fill-opacity", 1)
       .style("display", "inline")
-      .text(d => d.r > 15 ? d.data.name.slice(0, 10) : null)
+      .text(d => d.r > 15 ? cabildos.temas[d.data.id].shortName : null)
+      .call(wrap, 30)
       // .attr("transform", "rotate(0.1)")
 
 })
