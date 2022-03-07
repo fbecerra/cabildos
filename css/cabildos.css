@@ -68,6 +68,11 @@ body {
   display: block;
 }
 
+.legend-svg {
+  height: 72px;
+  line-height: 72px;
+}
+
 .label {
   text-transform: uppercase;
 }
