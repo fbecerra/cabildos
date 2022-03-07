@@ -3571,6 +3571,245 @@
                   "ngram": "oportunidad",
                   "frecuencia": 27
                 }
+              ],
+              "wordTree": [
+                {
+                  "name": "educación",
+                  "children": [
+                    {
+                      "name": "tener educación",
+                      "children": [
+                        {
+                          "name": " técnica, si tenemos una buena educación para tener mejores personas, profesionales o técnicos en todas las áreas."
+                        },
+                        {
+                          "name": "pública y gratuita, porque tenemos que tener estudiantes con derechos de acceder a una educación de calidad."
+                        },
+                        {
+                          "name": "igualitaria y tendremos una mejor sociedad, es una mejora completa."
+                        },
+                        {
+                          "name": "integral para las personas con discapacidades."
+                        },
+                        {
+                          "name": "digna, como mamá de un niño con capacidades diferentes."
+                        },
+                        {
+                          "name": "de calidad."
+                        },
+                        {
+                          "name": "técnica, si tenemos una buena educación para tener mejores personas, profesionales o técnicos en todas las áreas."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "incluir educación",
+                      "children": [
+                        {
+                          "name": "cívica para que las personas sepan qué significa la política y tener una base para reclamar los derechos."
+                        },
+                        {
+                          "name": "sexual, cívica."
+                        },
+                        {
+                          "name": "sobre amor propio, mejorar el entusiasmo de cada uno porque son temas que nos involucran."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "existir educación",
+                      "children": [
+                        {
+                          "name": "sexual en el país y revisar el tema de horarios extendidos."
+                        },
+                        {
+                          "name": "gratuita para todas las personas, para que todas las personas tengan la garantía de estudiar."
+                        },
+                        {
+                          "name": "igual para todos, sin discriminar por situación socioeconómica."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "necesitar educación",
+                      "children": [
+                        {
+                          "name": "de calidad."
+                        },
+                        {
+                          "name": "de excelencia desde un nivel básico, donde se puedan incorporar otros idiomas y así poder insertarnos en el mundo."
+                        },
+                        {
+                          "name": "de calidad garantizada para todos."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "potenciar educación",
+                      "children": [
+                        {
+                          "name": "cívica y educación en valores, ello sirve para crecer de forma más integral."
+                        },
+                        {
+                          "name": "pública, creando nuevos ciudadanos, fomentando prácticas que lo fortalezcan, en pro a una educación cívica."
+                        },
+                        {
+                          "name": "para el día de mañana ser mejores."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "reforzar educación",
+                      "children": [
+                        {
+                          "name": " cívica y filosofía, basada en el respeto hacia los demás."
+                        },
+                        {
+                          "name": " pública, deben exigir buenas carreras técnicas, para una mejor integración laboral."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "asegurar educación",
+                      "children": [
+                        {
+                          "name": "gratuita en la medida en que las personas devuelvan sus servicios al país."
+                        },
+                        {
+                          "name": "pública y de calidad que no dependa de un puntaje, sino de tus habilidades."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "niños",
+                  "children": [
+                    {
+                      "name": "enseñar a los niños",
+                      "children": [
+                        {
+                          "name": "a ser más conscientes con todo, con la naturaleza, los animales, con los que son distintos, etc"
+                        },
+                        {
+                          "name": "a sentir, explorar, no tanto memorizar"
+                        },
+                        {
+                          "name": "a respetar y a no mirar en menos a los demás"
+                        },
+                        {
+                          "name": "sobre perseverancia, trabajar en ello desde pequeños"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "niños tengan",
+                      "children": [
+                        {
+                          "name": "igualdad de educación"
+                        },
+                        {
+                          "name": "toda su materia guardada en la nube, para que no necesiten lápices y cuadernos"
+                        },
+                        {
+                          "name": "las mismas posibilidades"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "educar a los niños",
+                      "children": [
+                        {
+                          "name": "desde pequeños con un pensamiento diferente"
+                        },
+                        {
+                          "name": "mejor porque son el futuro"
+                        },
+                        {
+                          "name": "desde lo preescolar hasta la educación superior y posterior también"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "tener niños",
+                      "children": [
+                        {
+                          "name": "con más consciencia, con ideas más claras con lo que podemos mejorar"
+                        },
+                        {
+                          "name": "educados es el futuro"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "mantener a los niños",
+                      "children": [
+                        {
+                          "name": "incentivados, mejorar la cultura, la educación es la base"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "país",
+                  "children": [
+                    {
+                      "name": "ser un país",
+                      "children": [
+                        {
+                          "name": "con opinión, que se puede defender y opinar"
+                        },
+                        {
+                          "name": "un país avanzado, y no hay nada más importante en la población que estar preparados"
+                        },
+                        {
+                          "name": "educado a corto plazo podría ser un país desarrollado"
+                        },
+                        {
+                          "name": "más educado nos va a ayudar la salud, las pensiones, el trabajo"
+                        },
+                        {
+                          "name": "empoderado para enfrentear los cambios en la sociedad"
+                        },
+                        {
+                          "name": "rico y que se valora a sí mismo si tenemos una buena educación"
+                        },
+                        {
+                          "name": "un país desarrollado,  tenemos que potenciar la educación para el día de mañana ser mejores"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "tener un país",
+                      "children": [
+                        {
+                          "name": "preparado y con educación para todos"
+                        },
+                        {
+                          "name": "más parejo"
+                        },
+                        {
+                          "name": "más equitativo, ahí estamos al debe"
+                        },
+                        {
+                          "name": "educado podremos lograr mejores cosas para la sociedad"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "construir un país",
+                      "children": [
+                        {
+                          "name": "con valores y derechos"
+                        },
+                        {
+                          "name": "mejor, que nos entregue herramientas para decidir sobre nuestros representantes"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -3660,6 +3899,134 @@
                 {
                   "ngram": "malo",
                   "frecuencia": 10
+                }
+              ],
+              "wordTree": [
+                {
+                  "name": "salud",
+                  "children": [
+                    {
+                      "name": "si no tenemos salud",
+                      "children": [
+                        {
+                          "name": "no tenemos nada y para ello, es necesario que se refuercen las políticas públicas en esta área."
+                        },
+                        {
+                          "name": "no podemos reclamar nada."
+                        },
+                        {
+                          "name": "no tenemos vida, si nos enfermamos tenemos que solucionar eso."
+                        },
+                        {
+                          "name": "no tendremos pensiones tampoco."
+                        },
+                        {
+                          "name": "no podemos tener trabajo, y si se enferma uno se enferma la familia."
+                        },
+                        {
+                          "name": "uno no puede salir adelante."
+                        },
+                        {
+                          "name": "no podemos hacer nada."
+                        },
+                        {
+                          "name": "no tendremos buena educación."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "sin salud",
+                      "children": [
+                        {
+                          "name": "no podemos hacer nada y porque la salud mental es inaccesible hoy."
+                        },
+                        {
+                          "name": "no hacemos nada, entendiendo que hay que prevenir partiendo de uno."
+                        },
+                        {
+                          "name": "sin salud no podemos hacer nada."
+                        },
+                        {
+                          "name": "no podríamos hablar de nada y por eso es lo mas importante y nos preocupa por eso."
+                        },
+                        {
+                          "name": "no podemos estudiar ni vivir tranquilamente."
+                        },
+                        {
+                          "name": "nadie puede salir a trabajar, para mi es una prioridad."
+                        },
+                        {
+                          "name": "no puedes trabajar, no puedes sacar la familia adelante, a mi hija, no puedes hacer nada."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "sistema",
+                  "children": [
+                    {
+                      "name": "cambiar el sistema",
+                      "children": [
+                        {
+                          "name": "de salud y debería ser accesible para todos, incluso para los que tenemos pensiones,"
+                        },
+                        {
+                          "name": ", acabar con la brecha entre la atención pública y privada."
+                        },
+                        {
+                          "name": "de salud a uno más social va a aydar al bienestar de las personas."
+                        },
+                        {
+                          "name": "para todas las personas."
+                        },
+                        {
+                          "name": "para que desde niños puedan tener un futuro distinto."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "mejorar el sistema",
+                      "children": [
+                        {
+                          "name": "que debería beneficiar a las personas."
+                        },
+                        {
+                          "name": ", es la base de todo el desarrollo y el progreso social."
+                        },
+                        {
+                          "name": "dándole recursos a los consultorios."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "que el sistema sea",
+                      "children": [
+                        {
+                          "name": "más justo para todos."
+                        },
+                        {
+                          "name": "el que era antes porque actualmente no hay mucho acceso a buena salud."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "reestructurar el sistema",
+                      "children": [
+                        {
+                          "name": "incluyendo los impuestos."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "reformar el sistema",
+                      "children": [
+                        {
+                          "name": "de salud."
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
