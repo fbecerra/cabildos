@@ -4652,7 +4652,9 @@
               "name": "Cambios politicos",
               "id": "1n",
               "comision": "c1",
-              "porcentaje": 6.3
+              "porcentaje": 6.3,
+              "wordCloud": [{"ngram": "falta", "frecuencia": 349}, {"ngram": "pais", "frecuencia": 296}, {"ngram": "ma", "frecuencia": 213}, {"ngram": "persona", "frecuencia": 193}, {"ngram": "chile", "frecuencia": 186}, {"ngram": "educacion", "frecuencia": 182}, {"ngram": "existe", "frecuencia": 173}, {"ngram": "sociedad", "frecuencia": 160}, {"ngram": "desigualdad", "frecuencia": 148}, {"ngram": "gente", "frecuencia": 145}, {"ngram": "salud", "frecuencia": 142}, {"ngram": "problema", "frecuencia": 141}, {"ngram": "comuna", "frecuencia": 129}, {"ngram": "delincuencia", "frecuencia": 129}, {"ngram": "recurso", "frecuencia": 127}, {"ngram": "mejora", "frecuencia": 124}, {"ngram": "cara", "frecuencia": 122}, {"ngram": "mal", "frecuencia": 108}, {"ngram": "poca", "frecuencia": 105}, {"ngram": "trabajo", "frecuencia": 104}],
+              "wordNetwork": "assets/ecqq/cambios-politicos.png"
             }
           ]
         },
@@ -4665,31 +4667,41 @@
               "name": "Pensiones",
               "id": "4n",
               "comision": "c4",
-              "porcentaje": 33.9
+              "porcentaje": 33.9,
+              "wordCloud": [{"ngram": "persona", "frecuencia": 1161}, {"ngram": "afp", "frecuencia": 1080}, {"ngram": "ma", "frecuencia": 1079}, {"ngram": "sueldo minimo", "frecuencia": 1059}, {"ngram": "pai", "frecuencia": 919}, {"ngram": "pensione", "frecuencia": 703}, {"ngram": "solo", "frecuencia": 627}, {"ngram": "pensiones digna", "frecuencia": 572}, {"ngram": "tener", "frecuencia": 555}, {"ngram": "gente", "frecuencia": 534}, {"ngram": "si", "frecuencia": 508}, {"ngram": "agua", "frecuencia": 503}, {"ngram": "dinero", "frecuencia": 498}, {"ngram": "mejorar pensiones", "frecuencia": 491}, {"ngram": "mayor", "frecuencia": 476}, {"ngram": "trabajo", "frecuencia": 474}, {"ngram": "sistema pensiones", "frecuencia": 466}, {"ngram": "educacion", "frecuencia": 458}, {"ngram": "ano", "frecuencia": 456}, {"ngram": "poder", "frecuencia": 447}],
+              "wordNetwork": "assets/ecqq/pensiones.png"
             },
             {
               "name": "Salud",
               "id": "4o",
               "comision": "c4",
-              "porcentaje": 22.2
+              "porcentaje": 22.2,
+              "wordCloud": [{"ngram": "ma", "frecuencia": 1428}, {"ngram": "listas espera", "frecuencia": 1204}, {"ngram": "salud", "frecuencia": 922}, {"ngram": "salud publica", "frecuencia": 796}, {"ngram": "medicamento", "frecuencia": 637}, {"ngram": "lista espera", "frecuencia": 581}, {"ngram": "atencion", "frecuencia": 570}, {"ngram": "mejorar", "frecuencia": 516}, {"ngram": "falta", "frecuencia": 512}, {"ngram": "mas especialista", "frecuencia": 512}, {"ngram": "mala atencion", "frecuencia": 506}, {"ngram": "falta especialista", "frecuencia": 478}, {"ngram": "mayor", "frecuencia": 458}, {"ngram": "mejorar atencion", "frecuencia": 440}, {"ngram": "mejor atencion", "frecuencia": 439}, {"ngram": "hospitale", "frecuencia": 434}, {"ngram": "adulto mayor", "frecuencia": 429}, {"ngram": "sistema salud", "frecuencia": 427}, {"ngram": "medico", "frecuencia": 420}, {"ngram": "persona", "frecuencia": 404}],
+              "wordNetwork": "assets/ecqq/salud.png"
             },
             {
               "name": "Educación",
               "id": "4p",
               "comision": "c4",
-              "porcentaje": 15.2
+              "porcentaje": 15.2,
+              "wordCloud": [{"ngram": "educacion calidad", "frecuencia": 783}, {"ngram": "ma", "frecuencia": 700}, {"ngram": "calidad educacion", "frecuencia": 689}, {"ngram": "educacion", "frecuencia": 597}, {"ngram": "mejorar calidad", "frecuencia": 512}, {"ngram": "mejorar", "frecuencia": 500}, {"ngram": "educacion publica", "frecuencia": 458}, {"ngram": "derecho", "frecuencia": 457}, {"ngram": "gratuidad", "frecuencia": 407}, {"ngram": "pais", "frecuencia": 370}, {"ngram": "educacion gratuita", "frecuencia": 339}, {"ngram": "acceso educacion", "frecuencia": 335}, {"ngram": "salud", "frecuencia": 334}, {"ngram": "educacion superior", "frecuencia": 299}, {"ngram": "mejor", "frecuencia": 272}, {"ngram": "colegio", "frecuencia": 272}, {"ngram": "educacion civica", "frecuencia": 263}, {"ngram": "mejor calidad", "frecuencia": 262}, {"ngram": "igual", "frecuencia": 253}, {"ngram": "gratuita calidad", "frecuencia": 253}],
+              "wordNetwork": "assets/ecqq/educacion.png"
             },
             {
               "name": "Condiciones laborales",
               "id": "4k",
               "comision": "c4",
-              "porcentaje": 12.2
+              "porcentaje": 12.2,
+              "wordCloud": [{"ngram": "adultos mayore", "frecuencia": 1038}, {"ngram": "ma", "frecuencia": 934}, {"ngram": "trabajo", "frecuencia": 891}, {"ngram": "igualdad", "frecuencia": 374}, {"ngram": "falta", "frecuencia": 354}, {"ngram": "persona", "frecuencia": 354}, {"ngram": "mayor", "frecuencia": 340}, {"ngram": "mejorar", "frecuencia": 315}, {"ngram": "jovenes", "frecuencia": 288}, {"ngram": "educacion", "frecuencia": 288}, {"ngram": "sueldo", "frecuencia": 275}, {"ngram": "nino", "frecuencia": 270}, {"ngram": "mas oportunidades", "frecuencia": 269}, {"ngram": "profesores", "frecuencia": 231}, {"ngram": "digno", "frecuencia": 210}, {"ngram": "chileno", "frecuencia": 207}, {"ngram": "beneficio", "frecuencia": 205}, {"ngram": "mejore", "frecuencia": 202}, {"ngram": "mejor", "frecuencia": 187}, {"ngram": "mejores sueldo", "frecuencia": 175}],
+              "wordNetwork": "assets/ecqq/condiciones-laborales.png"
             },
             {
               "name": "Vivienda",
               "id": "4j",
               "comision": "c4",
-              "porcentaje": 10.2
+              "porcentaje": 10.2,
+              "wordCloud": [{"ngram": "mas", "frecuencia": 686}, {"ngram": "clase media", "frecuencia": 401}, {"ngram": "pais", "frecuencia": 365}, {"ngram": "persona", "frecuencia": 355}, {"ngram": "necesidades basica", "frecuencia": 339}, {"ngram": "sueldo", "frecuencia": 304}, {"ngram": "politico", "frecuencia": 255}, {"ngram": "educacion", "frecuencia": 243}, {"ngram": "vivienda", "frecuencia": 227}, {"ngram": "cubrir necesidades", "frecuencia": 226}, {"ngram": "beneficio", "frecuencia": 203}, {"ngram": "ingreso", "frecuencia": 200}, {"ngram": "acceso", "frecuencia": 198}, {"ngram": "sociales", "frecuencia": 197}, {"ngram": "leyes", "frecuencia": 190}, {"ngram": "pensiones", "frecuencia": 187}, {"ngram": "bajo", "frecuencia": 184}, {"ngram": "cae", "frecuencia": 167}, {"ngram": "mejorar", "frecuencia": 152}, {"ngram": "mayor", "frecuencia": 150}],
+              "wordNetwork": "assets/ecqq/vivienda-y-substistencia.png"
             }
           ]
         }
