@@ -82,6 +82,10 @@ body {
   line-height: 18px;
 }
 
+#cabildos svg circle {
+  cursor: pointer;
+}
+
 .cabildo-title {
   font-weight: 700;
   font-size: 32px;
@@ -174,13 +178,11 @@ body {
   z-index: 10;
   position: fixed;
   top: 0;
-  height: 170px;
   background-color: var(--bs-gray-100);
 }
 
 #back-button {
   position: fixed;
-  top: 170px;
 }
 
 #up-button {
