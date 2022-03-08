@@ -128,6 +128,10 @@
       "shortName": "Estructura del Estado",
       "longName": "Estructura organizacional y descentralizada del Estado"
     },
+    "3abg": {
+      "shortName": "Poder ejecutivo",
+      "longName": "Poder ejecutivo y administración pública"
+    },
     "3acd": {
       "shortName": "Descentralización",
       "longName": "Poder local, territorias y descentralización"
@@ -362,7 +366,7 @@
       "rankings": {
         "title": "1. Comparación entre períodos de cabildos",
         "description": "<p>Los cabildos fueron ingresados a la plataforma en dos momentos distintos. En términos generales, los cabildos que indican ‘Período Anterior’ se refieren a cabildos entre 2019 y 2021, y los que indican ‘Período Actual’, se refieren al periodo entre finales del 2021 y enero de 2022. Cabe señalar que existe una diferencia en la cantidad de cabildos asociados a cada período: el período actual tiene asociado 84 cabildos, mientras que el periodo anterior tiene 116.</p><p>A partir de esta comparación  podemos observar cómo las menciones a ciertos grupos sociales, como “pueblos originarios” e instancias como “participación ciudadana” pierden relevancia frente otras identidades sociales, como “personas mayores” o “personas con discapacidad” o temas como “salud mental”. Esto puede ser explicado porque actualmente el proceso ha incorporado mecanismos de inclusión para la participación ciudadana o representatividad indígena, pero no necesariamente para estos otros grupos. En ese sentido, esto puede referir a la necesidad de abrir mecanismos de inclusión a los grupos o temáticas que adquieren prioridad en el periodo actual.</p>",
-        "images": ["assets/ranking-periodo.svg", "assets/ranking-tokens.svg"]
+        "images": ["assets/cc/ranking-periodo.svg", "assets/cc/ranking-tokens.svg"]
       },
       "children": [
         {
@@ -4369,7 +4373,9 @@
               "comision": "c1",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 4.6
+              "porcentaje": 4.6,
+              "wordCloud": [{"ngram": "dieta parlamentaria", "frecuencia": 75}, {"ngram": "sueldo", "frecuencia": 41}, {"ngram": "voto obligatorio", "frecuencia": 41}, {"ngram": "parlamentarios", "frecuencia": 29}, {"ngram": "politico", "frecuencia": 28}, {"ngram": "ley", "frecuencia": 25}, {"ngram": "leyes", "frecuencia": 22}, {"ngram": "mas", "frecuencia": 21}, {"ngram": "sueldos parlamentarios", "frecuencia": 21}, {"ngram": "parlamento", "frecuencia": 19}, {"ngram": "cargos publico", "frecuencia": 19}, {"ngram": "bajar dieta", "frecuencia": 18}, {"ngram": "reducir", "frecuencia": 16}, {"ngram": "eliminar", "frecuencia": 16}, {"ngram": "sistema", "frecuencia": 15}, {"ngram": "cambio", "frecuencia": 15}, {"ngram": "representantes", "frecuencia": 15}, {"ngram": "reeleccion", "frecuencia": 14}, {"ngram": "disminuir", "frecuencia": 14}, {"ngram": "publico", "frecuencia": 14}],
+              "wordNetwork": "assets/mus/poder-legislativo.png"
             },
             {
               "name": "Pueblos Originarios",
@@ -4377,7 +4383,9 @@
               "comision": "c1",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 2.3
+              "porcentaje": 2.3,
+              "wordCloud": [{"ngram": "pueblos originario", "frecuencia": 91}, {"ngram": "mapuche", "frecuencia": 35}, {"ngram": "plurinacional", "frecuencia": 31}, {"ngram": "reconocimiento pueblo", "frecuencia": 24}, {"ngram": "derecho", "frecuencia": 23}, {"ngram": "pueblos indigenas", "frecuencia": 18}, {"ngram": "territorio", "frecuencia": 17}, {"ngram": "indigena", "frecuencia": 17}, {"ngram": "reconocimiento", "frecuencia": 15}, {"ngram": "autonomia", "frecuencia": 14}, {"ngram": "reconocimiento constitucional", "frecuencia": 13}, {"ngram": "cultura", "frecuencia": 12}, {"ngram": "reivindicacion", "frecuencia": 12}, {"ngram": "tierra", "frecuencia": 11}, {"ngram": "desmilitarizacion", "frecuencia": 10}, {"ngram": "mas", "frecuencia": 10}, {"ngram": "chile", "frecuencia": 10}, {"ngram": "constitucional pueblos", "frecuencia": 10}, {"ngram": "debe", "frecuencia": 9}, {"ngram": "desmilitarizacion wallmapu", "frecuencia": 9}],
+              "wordNetwork": "assets/mus/pueblos-originarios.png"
             },
             {
               "name": "Seguridad publica",
@@ -4385,7 +4393,9 @@
               "comision": "c1",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 1.9
+              "porcentaje": 1.9,
+              "wordCloud": [{"ngram": "fuerzas armadas", "frecuencia": 29}, {"ngram": "carabineros", "frecuencia": 28}, {"ngram": "ffaa", "frecuencia": 23}, {"ngram": "seguridad", "frecuencia": 22}, {"ngram": "orden", "frecuencia": 17}, {"ngram": "mas", "frecuencia": 13}, {"ngram": "gasto", "frecuencia": 11}, {"ngram": "militares", "frecuencia": 10}, {"ngram": "sistema", "frecuencia": 10}, {"ngram": "ciudadano", "frecuencia": 9}, {"ngram": "fin", "frecuencia": 8}, {"ngram": "instituciones", "frecuencia": 8}, {"ngram": "fuerza", "frecuencia": 8}, {"ngram": "privilegios", "frecuencia": 8}, {"ngram": "violencia", "frecuencia": 7}, {"ngram": "recursos", "frecuencia": 7}, {"ngram": "cambiar", "frecuencia": 7}, {"ngram": "publico", "frecuencia": 7}, {"ngram": "poder", "frecuencia": 7}, {"ngram": "derechos humanos", "frecuencia": 7}],
+              "wordNetwork": "assets/mus/seguridad.png"
             }
           ]
         },
@@ -4401,7 +4411,9 @@
               "comision": "c2",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 3.3
+              "porcentaje": 3.3,
+              "wordCloud": [{"ngram": "participacion", "frecuencia": 48}, {"ngram": "participacion ciudadana", "frecuencia": 41}, {"ngram": "espacio", "frecuencia": 32}, {"ngram": "vinculante", "frecuencia": 31}, {"ngram": "ciudadania", "frecuencia": 24}, {"ngram": "ciudadana", "frecuencia": 19}, {"ngram": "mayor participacion", "frecuencia": 19}, {"ngram": "democracia", "frecuencia": 18}, {"ngram": "comunidad", "frecuencia": 17}, {"ngram": "instancias", "frecuencia": 17}, {"ngram": "mas", "frecuencia": 15}, {"ngram": "organizacion", "frecuencia": 15}, {"ngram": "pueblo", "frecuencia": 15}, {"ngram": "ciudadano", "frecuencia": 15}, {"ngram": "asamblea", "frecuencia": 14}, {"ngram": "plebiscito", "frecuencia": 13}, {"ngram": "crear", "frecuencia": 13}, {"ngram": "dialogo", "frecuencia": 13}, {"ngram": "generar", "frecuencia": 12}, {"ngram": "politica", "frecuencia": 12}],
+              "wordNetwork": "assets/mus/participacion.png"
             },
             {
               "name": "Migracion",
@@ -4409,7 +4421,9 @@
               "comision": "c2",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 0.3
+              "porcentaje": 0.3,
+              "wordCloud": [{"ngram": "migrante", "frecuencia": 9}, {"ngram": "derecho", "frecuencia": 9}, {"ngram": "ley", "frecuencia": 6}, {"ngram": "migracion", "frecuencia": 6}, {"ngram": "servicios", "frecuencia": 3}, {"ngram": "revisar", "frecuencia": 3}, {"ngram": "ciudadanos", "frecuencia": 3}, {"ngram": "pais", "frecuencia": 3}, {"ngram": "tener", "frecuencia": 3}, {"ngram": "garantizar", "frecuencia": 3}, {"ngram": "contar", "frecuencia": 2}, {"ngram": "cada", "frecuencia": 2}, {"ngram": "dia", "frecuencia": 2}, {"ngram": "mayor", "frecuencia": 2}, {"ngram": "personas", "frecuencia": 2}, {"ngram": "mejorar", "frecuencia": 2}, {"ngram": "condiciones", "frecuencia": 2}, {"ngram": "migratoria", "frecuencia": 2}, {"ngram": "migraciones", "frecuencia": 2}, {"ngram": "constitucion", "frecuencia": 2}],
+              "wordNetwork": "assets/mus/migracion.png"
             }
           ]
         },
@@ -4425,7 +4439,19 @@
               "comision": "c3",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 4.0
+              "porcentaje": 4.0,
+              "wordCloud": [{"ngram": "impuesto", "frecuencia": 145}, {"ngram": "reforma tributaria", "frecuencia": 57}, {"ngram": "mas", "frecuencia": 43}, {"ngram": "impuesto especifico", "frecuencia": 24}, {"ngram": "empresa", "frecuencia": 23}, {"ngram": "persona", "frecuencia": 20}, {"ngram": "combustible", "frecuencia": 17}, {"ngram": "ingreso", "frecuencia": 17}, {"ngram": "tributaria", "frecuencia": 16}, {"ngram": "mas rico", "frecuencia": 16}, {"ngram": "eliminacion", "frecuencia": 15}, {"ngram": "sistema", "frecuencia": 15}, {"ngram": "eliminar impuesto", "frecuencia": 14}, {"ngram": "grandes empresas", "frecuencia": 13}, {"ngram": "mayor", "frecuencia": 11}, {"ngram": "iva", "frecuencia": 11}, {"ngram": "aumento", "frecuencia": 11}, {"ngram": "especifico combustible", "frecuencia": 11}, {"ngram": "cambio", "frecuencia": 10}, {"ngram": "tributacion", "frecuencia": 9}],
+              "wordNetwork": "assets/mus/tributacion.png"
+            },
+            {
+              "name": "Poder ejecuivo",
+              "id": "3abg",
+              "comision": "c3",
+              "description": "",
+              "nCabildos": "",
+              "porcentaje": 3.6,
+              "wordCloud": [{"ngram": "fiscalizacion", "frecuencia": 31}, {"ngram": "publico", "frecuencia": 28}, {"ngram": "politico", "frecuencia": 24}, {"ngram": "mas", "frecuencia": 21}, {"ngram": "regular", "frecuencia": 20}, {"ngram": "servicio", "frecuencia": 19}, {"ngram": "regulacion", "frecuencia": 18}, {"ngram": "mayor", "frecuencia": 18}, {"ngram": "cargo", "frecuencia": 18}, {"ngram": "cargos publicos", "frecuencia": 18}, {"ngram": "sistema", "frecuencia": 17}, {"ngram": "sueldo", "frecuencia": 16}, {"ngram": "publica", "frecuencia": 15}, {"ngram": "transparencia", "frecuencia": 15}, {"ngram": "politica", "frecuencia": 15}, {"ngram": "recursos", "frecuencia": 14}, {"ngram": "control", "frecuencia": 14}, {"ngram": "fin", "frecuencia": 13}, {"ngram": "empresa", "frecuencia": 12}, {"ngram": "sueldos vitalicios", "frecuencia": 12}],
+              "wordNetwork": "assets/mus/poder-ejecutivo.png"
             },
             {
               "name": "Poder local",
@@ -4433,7 +4459,9 @@
               "comision": "c3",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 2.2
+              "porcentaje": 2.2,
+              "wordCloud": [{"ngram": "descentralizacion", "frecuencia": 45}, {"ngram": "recurso", "frecuencia": 31}, {"ngram": "mas", "frecuencia": 19}, {"ngram": "comuna", "frecuencia": 18}, {"ngram": "regiones", "frecuencia": 17}, {"ngram": "mayor", "frecuencia": 16}, {"ngram": "politica", "frecuencia": 14}, {"ngram": "poder", "frecuencia": 13}, {"ngram": "pais", "frecuencia": 13}, {"ngram": "region", "frecuencia": 12}, {"ngram": "locales", "frecuencia": 12}, {"ngram": "territorio", "frecuencia": 12}, {"ngram": "local", "frecuencia": 10}, {"ngram": "regionales", "frecuencia": 10}, {"ngram": "territoriales", "frecuencia": 10}, {"ngram": "municipal", "frecuencia": 9}, {"ngram": "gobierno", "frecuencia": 9}, {"ngram": "autonomia", "frecuencia": 9}, {"ngram": "cada", "frecuencia": 9}, {"ngram": "decisiones", "frecuencia": 9}],
+              "wordNetwork": "assets/mus/poder-local.png"
             }
           ]
         },
@@ -4449,7 +4477,9 @@
               "comision": "c4",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 11.6
+              "porcentaje": 11.6,
+              "wordCloud": [{"ngram": "educacion", "frecuencia": 500}, {"ngram": "educacion publica", "frecuencia": 95}, {"ngram": "educacion civica", "frecuencia": 94}, {"ngram": "educacion calidad", "frecuencia": 83}, {"ngram": "educacion gratuita", "frecuencia": 81}, {"ngram": "mas", "frecuencia": 76}, {"ngram": "calidad educacion", "frecuencia": 75}, {"ngram": "gratuita calidad", "frecuencia": 73}, {"ngram": "mejorar", "frecuencia": 62}, {"ngram": "derecho", "frecuencia": 54}, {"ngram": "sistema", "frecuencia": 45}, {"ngram": "cae educacion", "frecuencia": 42}, {"ngram": "formacion", "frecuencia": 39}, {"ngram": "acceso", "frecuencia": 37}, {"ngram": "debe", "frecuencia": 35}, {"ngram": "estudiante", "frecuencia": 32}, {"ngram": "publica gratuita", "frecuencia": 32}, {"ngram": "publica calidad", "frecuencia": 32}, {"ngram": "recursos", "frecuencia": 31}, {"ngram": "eliminar", "frecuencia": 30}],
+              "wordNetwork": "assets/mus/educacion.png"
             },
             {
               "name": "Salud",
@@ -4457,7 +4487,9 @@
               "comision": "c4",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 11.6
+              "porcentaje": 11.6,
+              "wordCloud": [{"ngram": "salud", "frecuencia": 634}, {"ngram": "salud publica", "frecuencia": 116}, {"ngram": "calidad", "frecuencia": 115}, {"ngram": "sistema salud", "frecuencia": 91}, {"ngram": "acceso", "frecuencia": 86}, {"ngram": "atencion", "frecuencia": 75}, {"ngram": "salud mental", "frecuencia": 71}, {"ngram": "mejorar", "frecuencia": 68}, {"ngram": "medicamento", "frecuencia": 65}, {"ngram": "mas", "frecuencia": 54}, {"ngram": "recurso", "frecuencia": 53}, {"ngram": "servicio", "frecuencia": 47}, {"ngram": "especialista", "frecuencia": 44}, {"ngram": "mayor", "frecuencia": 43}, {"ngram": "profesionales", "frecuencia": 41}, {"ngram": "mejora", "frecuencia": 39}, {"ngram": "publico", "frecuencia": 32}, {"ngram": "salud digna", "frecuencia": 32}, {"ngram": "hospitales", "frecuencia": 30}, {"ngram": "mejor", "frecuencia": 30}],
+              "wordNetwork": "assets/mus/salud.png"
             },
             {
               "name": "Pensiones",
@@ -4465,7 +4497,9 @@
               "comision": "c4",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 11.5
+              "porcentaje": 11.5,
+              "wordCloud": [{"ngram": "pensiones", "frecuencia": 260}, {"ngram": "afp", "frecuencia": 243}, {"ngram": "sistema pensiones", "frecuencia": 154}, {"ngram": "pensiones digna", "frecuencia": 92}, {"ngram": "mas afp", "frecuencia": 75}, {"ngram": "sistema", "frecuencia": 59}, {"ngram": "pension", "frecuencia": 43}, {"ngram": "jubilaciones", "frecuencia": 42}, {"ngram": "mejorar pensiones", "frecuencia": 41}, {"ngram": "fin afp", "frecuencia": 39}, {"ngram": "nuevo sistema", "frecuencia": 39}, {"ngram": "fondo", "frecuencia": 36}, {"ngram": "mejorar", "frecuencia": 34}, {"ngram": "jubilacion", "frecuencia": 33}, {"ngram": "sueldo minimo", "frecuencia": 32}, {"ngram": "cambio", "frecuencia": 29}, {"ngram": "reforma", "frecuencia": 29}, {"ngram": "sistema previsional", "frecuencia": 29}, {"ngram": "persona", "frecuencia": 28}, {"ngram": "cambio sistema", "frecuencia": 28}],
+              "wordNetwork": "assets/mus/pensiones.png"
             },
             {
               "name": "Empleo-Trabajo",
@@ -4473,7 +4507,9 @@
               "comision": "c4",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 8.2
+              "porcentaje": 8.2,
+              "wordCloud": [{"ngram": "sueldo minimo", "frecuencia": 157}, {"ngram": "trabajo", "frecuencia": 75}, {"ngram": "sueldo", "frecuencia": 71}, {"ngram": "aumento sueldo", "frecuencia": 44}, {"ngram": "laboral", "frecuencia": 43}, {"ngram": "sueldos dignos", "frecuencia": 38}, {"ngram": "mas", "frecuencia": 32}, {"ngram": "digno", "frecuencia": 30}, {"ngram": "salario", "frecuencia": 28}, {"ngram": "salario minimo", "frecuencia": 27}, {"ngram": "trabajadores", "frecuencia": 26}, {"ngram": "minimo", "frecuencia": 25}, {"ngram": "ingreso", "frecuencia": 23}, {"ngram": "familia", "frecuencia": 22}, {"ngram": "mejorar sueldo", "frecuencia": 22}, {"ngram": "costo vida", "frecuencia": 19}, {"ngram": "honorarios", "frecuencia": 18}, {"ngram": "publico", "frecuencia": 18}, {"ngram": "persona", "frecuencia": 18}, {"ngram": "hora", "frecuencia": 18}],
+              "wordNetwork": "assets/mus/empleo-trabajo.png"
             },
             {
               "name": "Justicia y derechos",
@@ -4481,7 +4517,9 @@
               "comision": "c4",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 6.2
+              "porcentaje": 6.2,
+              "wordCloud": [{"ngram": "derecho", "frecuencia": 59}, {"ngram": "derechos humanos", "frecuencia": 50}, {"ngram": "servicios basico", "frecuencia": 49}, {"ngram": "mas", "frecuencia": 41}, {"ngram": "agua", "frecuencia": 34}, {"ngram": "justicia", "frecuencia": 33}, {"ngram": "persona", "frecuencia": 32}, {"ngram": "acceso", "frecuencia": 30}, {"ngram": "recurso", "frecuencia": 26}, {"ngram": "igualdad", "frecuencia": 24}, {"ngram": "salud educacion", "frecuencia": 24}, {"ngram": "basico", "frecuencia": 23}, {"ngram": "derechos sociales", "frecuencia": 23}, {"ngram": "publico", "frecuencia": 20}, {"ngram": "calidad", "frecuencia": 20}, {"ngram": "social", "frecuencia": 20}, {"ngram": "ddhh", "frecuencia": 19}, {"ngram": "equidad", "frecuencia": 19}, {"ngram": "politica", "frecuencia": 18}, {"ngram": "mejorar", "frecuencia": 17}],
+              "wordNetwork": "assets/mus/justicia-y-derechos.png"
             },
             {
               "name": "Vivienda",
@@ -4489,7 +4527,9 @@
               "comision": "c4",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 3.8
+              "porcentaje": 3.8,
+              "wordCloud": [{"ngram": "vivienda", "frecuencia": 126}, {"ngram": "acceso vivienda", "frecuencia": 32}, {"ngram": "vivienda digna", "frecuencia": 27}, {"ngram": "derecho", "frecuencia": 24}, {"ngram": "calidad", "frecuencia": 18}, {"ngram": "digna", "frecuencia": 13}, {"ngram": "acceso", "frecuencia": 13}, {"ngram": "subsidio", "frecuencia": 11}, {"ngram": "mejorar", "frecuencia": 10}, {"ngram": "sociales", "frecuencia": 9}, {"ngram": "social", "frecuencia": 7}, {"ngram": "sistema", "frecuencia": 7}, {"ngram": "inmobiliaria", "frecuencia": 7}, {"ngram": "garantizar", "frecuencia": 7}, {"ngram": "casa", "frecuencia": 6}, {"ngram": "debe", "frecuencia": 6}, {"ngram": "propia", "frecuencia": 6}, {"ngram": "mayor", "frecuencia": 5}, {"ngram": "constitucion", "frecuencia": 5}, {"ngram": "mas", "frecuencia": 5}],
+              "wordNetwork": "assets/mus/vivienda.png"
             },
             {
               "name": "Proteccion social",
@@ -4497,7 +4537,9 @@
               "comision": "c4",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 3.0
+              "porcentaje": 3.0,
+              "wordCloud": [{"ngram": "sename", "frecuencia": 45}, {"ngram": "nino", "frecuencia": 35}, {"ngram": "adultos mayores", "frecuencia": 32}, {"ngram": "sistema", "frecuencia": 24}, {"ngram": "derecho", "frecuencia": 24}, {"ngram": "infancia", "frecuencia": 21}, {"ngram": "mas", "frecuencia": 17}, {"ngram": "proteccion", "frecuencia": 16}, {"ngram": "politica", "frecuencia": 16}, {"ngram": "prevision", "frecuencia": 14}, {"ngram": "proteccion infancia", "frecuencia": 14}, {"ngram": "social", "frecuencia": 12}, {"ngram": "mejorar", "frecuencia": 12}, {"ngram": "vulnerable", "frecuencia": 11}, {"ngram": "sala cuna", "frecuencia": 11}, {"ngram": "cuidado", "frecuencia": 10}, {"ngram": "proteccion social", "frecuencia": 10}, {"ngram": "fin", "frecuencia": 9}, {"ngram": "familia", "frecuencia": 9}, {"ngram": "nina", "frecuencia": 9}],
+              "wordNetwork": "assets/mus/proteccion-social.png"
             },
             {
               "name": "Transporte",
@@ -4505,7 +4547,9 @@
               "comision": "c4",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 2.9
+              "porcentaje": 2.9,
+              "wordCloud": [{"ngram": "transporte", "frecuencia": 93}, {"ngram": "transporte publico", "frecuencia": 44}, {"ngram": "gratuito", "frecuencia": 25}, {"ngram": "pasaje", "frecuencia": 23}, {"ngram": "locomocion", "frecuencia": 16}, {"ngram": "tercera edad", "frecuencia": 16}, {"ngram": "mejorar", "frecuencia": 15}, {"ngram": "conectividad", "frecuencia": 15}, {"ngram": "sistema", "frecuencia": 15}, {"ngram": "estudiante", "frecuencia": 15}, {"ngram": "tarifa", "frecuencia": 12}, {"ngram": "tag", "frecuencia": 12}, {"ngram": "mas", "frecuencia": 10}, {"ngram": "precio", "frecuencia": 10}, {"ngram": "carreteras", "frecuencia": 10}, {"ngram": "adultos mayores", "frecuencia": 10}, {"ngram": "gratuidad", "frecuencia": 9}, {"ngram": "medio", "frecuencia": 9}, {"ngram": "calidad", "frecuencia": 9}, {"ngram": "comuna", "frecuencia": 8}],
+              "wordNetwork": "assets/mus/transporte.png"
             },
             {
               "name": "Igualdad de genero",
@@ -4513,7 +4557,9 @@
               "comision": "c4",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 1.4
+              "porcentaje": 1.4,
+              "wordCloud": [{"ngram": "genero", "frecuencia": 38}, {"ngram": "mujeres", "frecuencia": 16}, {"ngram": "violencia", "frecuencia": 15}, {"ngram": "igualdad genero", "frecuencia": 15}, {"ngram": "equidad", "frecuencia": 11}, {"ngram": "derecho", "frecuencia": 11}, {"ngram": "mujer", "frecuencia": 9}, {"ngram": "aborto libre", "frecuencia": 9}, {"ngram": "igualdad", "frecuencia": 8}, {"ngram": "ley", "frecuencia": 8}, {"ngram": "hombre", "frecuencia": 8}, {"ngram": "enfoque", "frecuencia": 7}, {"ngram": "sexuales", "frecuencia": 7}, {"ngram": "aborto", "frecuencia": 7}, {"ngram": "mayor", "frecuencia": 6}, {"ngram": "seguro", "frecuencia": 6}, {"ngram": "salud", "frecuencia": 5}, {"ngram": "reconocimiento", "frecuencia": 5}, {"ngram": "sexual", "frecuencia": 5}, {"ngram": "identidad", "frecuencia": 5}],
+              "wordNetwork": "assets/mus/igualdad-de-genero.png"
             },
             {
               "name": "Medios comunicacion",
@@ -4521,7 +4567,9 @@
               "comision": "c4",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 0.7
+              "porcentaje": 0.7,
+              "wordCloud": [{"ngram": "medios comunicacion", "frecuencia": 19}, {"ngram": "medios", "frecuencia": 9}, {"ngram": "informacion", "frecuencia": 7}, {"ngram": "independiente", "frecuencia": 6}, {"ngram": "ley", "frecuencia": 5}, {"ngram": "comunicacion", "frecuencia": 4}, {"ngram": "gobierno", "frecuencia": 4}, {"ngram": "prensa", "frecuencia": 4}, {"ngram": "derecho", "frecuencia": 4}, {"ngram": "mas", "frecuencia": 4}, {"ngram": "intereses", "frecuencia": 4}, {"ngram": "publico", "frecuencia": 4}, {"ngram": "informativos", "frecuencia": 3}, {"ngram": "democratizar", "frecuencia": 3}, {"ngram": "evitando", "frecuencia": 3}, {"ngram": "ciudadania", "frecuencia": 2}, {"ngram": "critica", "frecuencia": 2}, {"ngram": "social", "frecuencia": 2}, {"ngram": "sociales", "frecuencia": 2}, {"ngram": "participacion", "frecuencia": 2}],
+              "wordNetwork": "assets/mus/comunicacion.png"
             }
           ]
         },
@@ -4537,7 +4585,9 @@
               "comision": "c5",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 7.7
+              "porcentaje": 7.7,
+              "wordCloud": [{"ngram": "recursos naturales", "frecuencia": 279}, {"ngram": "agua", "frecuencia": 215}, {"ngram": "medio ambiente", "frecuencia": 83}, {"ngram": "nacionalizacion recurso", "frecuencia": 56}, {"ngram": "proteccion", "frecuencia": 52}, {"ngram": "zonas sacrificio", "frecuencia": 38}, {"ngram": "derecho", "frecuencia": 36}, {"ngram": "mas", "frecuencia": 35}, {"ngram": "codigo agua", "frecuencia": 32}, {"ngram": "uso", "frecuencia": 30}, {"ngram": "medioambiente", "frecuencia": 25}, {"ngram": "nacionalizacion", "frecuencia": 25}, {"ngram": "ley", "frecuencia": 23}, {"ngram": "ambiental", "frecuencia": 22}, {"ngram": "contaminacion", "frecuencia": 21}, {"ngram": "fin", "frecuencia": 21}, {"ngram": "medioambiental", "frecuencia": 20}, {"ngram": "empresa", "frecuencia": 20}, {"ngram": "explotacion", "frecuencia": 19}, {"ngram": "cobre litio", "frecuencia": 19}],
+              "wordNetwork": "assets/mus/medioambiente.png"
             },
             {
               "name": "Cambios al modelo",
@@ -4545,7 +4595,9 @@
               "comision": "c5",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 5.2
+              "porcentaje": 5.2,
+              "wordCloud": [{"ngram": "tpp", "frecuencia": 54}, {"ngram": "economia", "frecuencia": 29}, {"ngram": "desarrollo", "frecuencia": 25}, {"ngram": "empresa", "frecuencia": 24}, {"ngram": "servicios basicos", "frecuencia": 24}, {"ngram": "fin", "frecuencia": 23}, {"ngram": "recurso", "frecuencia": 21}, {"ngram": "recursos naturales", "frecuencia": 21}, {"ngram": "mas", "frecuencia": 20}, {"ngram": "economico", "frecuencia": 20}, {"ngram": "social", "frecuencia": 19}, {"ngram": "sistema", "frecuencia": 19}, {"ngram": "subsidiario", "frecuencia": 18}, {"ngram": "derecho", "frecuencia": 17}, {"ngram": "modelo economico", "frecuencia": 17}, {"ngram": "cambio", "frecuencia": 16}, {"ngram": "pais", "frecuencia": 16}, {"ngram": "extractivista", "frecuencia": 14}, {"ngram": "nacionalizacion", "frecuencia": 14}, {"ngram": "bienes", "frecuencia": 14}],
+              "wordNetwork": "assets/mus/cambios-al-modelo.png"
             }
           ]
         },
@@ -4561,7 +4613,9 @@
               "comision": "c6",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 3.1
+              "porcentaje": 3.1,
+              "wordCloud": [{"ngram": "justicia", "frecuencia": 63}, {"ngram": "corrupcion", "frecuencia": 51}, {"ngram": "pena", "frecuencia": 21}, {"ngram": "politico", "frecuencia": 17}, {"ngram": "igualdad", "frecuencia": 16}, {"ngram": "mas", "frecuencia": 16}, {"ngram": "social", "frecuencia": 14}, {"ngram": "colusion", "frecuencia": 13}, {"ngram": "sistema", "frecuencia": 13}, {"ngram": "impunidad", "frecuencia": 13}, {"ngram": "ley", "frecuencia": 12}, {"ngram": "igualitaria", "frecuencia": 12}, {"ngram": "politica", "frecuencia": 12}, {"ngram": "fin", "frecuencia": 11}, {"ngram": "publico", "frecuencia": 11}, {"ngram": "carcel efectiva", "frecuencia": 11}, {"ngram": "persona", "frecuencia": 10}, {"ngram": "empresa", "frecuencia": 10}, {"ngram": "toda", "frecuencia": 10}, {"ngram": "leyes", "frecuencia": 9}],
+              "wordNetwork": "assets/mus/justicia.png"
             }
           ]
         },
@@ -4577,7 +4631,9 @@
               "comision": "c7",
               "description": "",
               "nCabildos": "",
-              "porcentaje": 0.9
+              "porcentaje": 0.9,
+              "wordCloud": [{"ngram": "cultura", "frecuencia": 52}, {"ngram": "arte", "frecuencia": 15}, {"ngram": "espacio", "frecuencia": 14}, {"ngram": "mas", "frecuencia": 9}, {"ngram": "publico", "frecuencia": 9}, {"ngram": "recurso", "frecuencia": 9}, {"ngram": "acceso", "frecuencia": 8}, {"ngram": "cultural", "frecuencia": 8}, {"ngram": "culturales", "frecuencia": 6}, {"ngram": "generar", "frecuencia": 6}, {"ngram": "desarrollo", "frecuencia": 6}, {"ngram": "derecho", "frecuencia": 6}, {"ngram": "personas", "frecuencia": 5}, {"ngram": "fomentar", "frecuencia": 5}, {"ngram": "publicas", "frecuencia": 5}, {"ngram": "identidad", "frecuencia": 5}, {"ngram": "recreacion", "frecuencia": 5}, {"ngram": "artesano", "frecuencia": 5}, {"ngram": "nacional", "frecuencia": 5}, {"ngram": "escritores", "frecuencia": 5}],
+              "wordNetwork": "assets/mus/.png"
             }
           ]
         }
@@ -4596,7 +4652,9 @@
               "name": "Cambios politicos",
               "id": "1n",
               "comision": "c1",
-              "porcentaje": 6.3
+              "porcentaje": 6.3,
+              "wordCloud": [{"ngram": "falta", "frecuencia": 349}, {"ngram": "pais", "frecuencia": 296}, {"ngram": "mas", "frecuencia": 213}, {"ngram": "persona", "frecuencia": 193}, {"ngram": "chile", "frecuencia": 186}, {"ngram": "educacion", "frecuencia": 182}, {"ngram": "existe", "frecuencia": 173}, {"ngram": "sociedad", "frecuencia": 160}, {"ngram": "desigualdad", "frecuencia": 148}, {"ngram": "gente", "frecuencia": 145}, {"ngram": "salud", "frecuencia": 142}, {"ngram": "problema", "frecuencia": 141}, {"ngram": "comuna", "frecuencia": 129}, {"ngram": "delincuencia", "frecuencia": 129}, {"ngram": "recurso", "frecuencia": 127}, {"ngram": "mejora", "frecuencia": 124}, {"ngram": "cara", "frecuencia": 122}, {"ngram": "mal", "frecuencia": 108}, {"ngram": "poca", "frecuencia": 105}, {"ngram": "trabajo", "frecuencia": 104}],
+              "wordNetwork": "assets/ecqq/cambios-politicos.png"
             }
           ]
         },
@@ -4609,31 +4667,41 @@
               "name": "Pensiones",
               "id": "4n",
               "comision": "c4",
-              "porcentaje": 33.9
+              "porcentaje": 33.9,
+              "wordCloud": [{"ngram": "persona", "frecuencia": 1161}, {"ngram": "afp", "frecuencia": 1080}, {"ngram": "mas", "frecuencia": 1079}, {"ngram": "sueldo minimo", "frecuencia": 1059}, {"ngram": "pai", "frecuencia": 919}, {"ngram": "pensione", "frecuencia": 703}, {"ngram": "solo", "frecuencia": 627}, {"ngram": "pensiones digna", "frecuencia": 572}, {"ngram": "tener", "frecuencia": 555}, {"ngram": "gente", "frecuencia": 534}, {"ngram": "si", "frecuencia": 508}, {"ngram": "agua", "frecuencia": 503}, {"ngram": "dinero", "frecuencia": 498}, {"ngram": "mejorar pensiones", "frecuencia": 491}, {"ngram": "mayor", "frecuencia": 476}, {"ngram": "trabajo", "frecuencia": 474}, {"ngram": "sistema pensiones", "frecuencia": 466}, {"ngram": "educacion", "frecuencia": 458}, {"ngram": "ano", "frecuencia": 456}, {"ngram": "poder", "frecuencia": 447}],
+              "wordNetwork": "assets/ecqq/pensiones.png"
             },
             {
               "name": "Salud",
               "id": "4o",
               "comision": "c4",
-              "porcentaje": 22.2
+              "porcentaje": 22.2,
+              "wordCloud": [{"ngram": "mas", "frecuencia": 1428}, {"ngram": "listas espera", "frecuencia": 1204}, {"ngram": "salud", "frecuencia": 922}, {"ngram": "salud publica", "frecuencia": 796}, {"ngram": "medicamento", "frecuencia": 637}, {"ngram": "lista espera", "frecuencia": 581}, {"ngram": "atencion", "frecuencia": 570}, {"ngram": "mejorar", "frecuencia": 516}, {"ngram": "falta", "frecuencia": 512}, {"ngram": "mas especialista", "frecuencia": 512}, {"ngram": "mala atencion", "frecuencia": 506}, {"ngram": "falta especialista", "frecuencia": 478}, {"ngram": "mayor", "frecuencia": 458}, {"ngram": "mejorar atencion", "frecuencia": 440}, {"ngram": "mejor atencion", "frecuencia": 439}, {"ngram": "hospitale", "frecuencia": 434}, {"ngram": "adulto mayor", "frecuencia": 429}, {"ngram": "sistema salud", "frecuencia": 427}, {"ngram": "medico", "frecuencia": 420}, {"ngram": "persona", "frecuencia": 404}],
+              "wordNetwork": "assets/ecqq/salud.png"
             },
             {
               "name": "Educación",
               "id": "4p",
               "comision": "c4",
-              "porcentaje": 15.2
+              "porcentaje": 15.2,
+              "wordCloud": [{"ngram": "educacion calidad", "frecuencia": 783}, {"ngram": "mas", "frecuencia": 700}, {"ngram": "calidad educacion", "frecuencia": 689}, {"ngram": "educacion", "frecuencia": 597}, {"ngram": "mejorar calidad", "frecuencia": 512}, {"ngram": "mejorar", "frecuencia": 500}, {"ngram": "educacion publica", "frecuencia": 458}, {"ngram": "derecho", "frecuencia": 457}, {"ngram": "gratuidad", "frecuencia": 407}, {"ngram": "pais", "frecuencia": 370}, {"ngram": "educacion gratuita", "frecuencia": 339}, {"ngram": "acceso educacion", "frecuencia": 335}, {"ngram": "salud", "frecuencia": 334}, {"ngram": "educacion superior", "frecuencia": 299}, {"ngram": "mejor", "frecuencia": 272}, {"ngram": "colegio", "frecuencia": 272}, {"ngram": "educacion civica", "frecuencia": 263}, {"ngram": "mejor calidad", "frecuencia": 262}, {"ngram": "igual", "frecuencia": 253}, {"ngram": "gratuita calidad", "frecuencia": 253}],
+              "wordNetwork": "assets/ecqq/educacion.png"
             },
             {
               "name": "Condiciones laborales",
               "id": "4k",
               "comision": "c4",
-              "porcentaje": 12.2
+              "porcentaje": 12.2,
+              "wordCloud": [{"ngram": "adultos mayore", "frecuencia": 1038}, {"ngram": "mas", "frecuencia": 934}, {"ngram": "trabajo", "frecuencia": 891}, {"ngram": "igualdad", "frecuencia": 374}, {"ngram": "falta", "frecuencia": 354}, {"ngram": "persona", "frecuencia": 354}, {"ngram": "mayor", "frecuencia": 340}, {"ngram": "mejorar", "frecuencia": 315}, {"ngram": "jovenes", "frecuencia": 288}, {"ngram": "educacion", "frecuencia": 288}, {"ngram": "sueldo", "frecuencia": 275}, {"ngram": "nino", "frecuencia": 270}, {"ngram": "mas oportunidades", "frecuencia": 269}, {"ngram": "profesores", "frecuencia": 231}, {"ngram": "digno", "frecuencia": 210}, {"ngram": "chileno", "frecuencia": 207}, {"ngram": "beneficio", "frecuencia": 205}, {"ngram": "mejore", "frecuencia": 202}, {"ngram": "mejor", "frecuencia": 187}, {"ngram": "mejores sueldo", "frecuencia": 175}],
+              "wordNetwork": "assets/ecqq/condiciones-laborales.png"
             },
             {
               "name": "Vivienda",
               "id": "4j",
               "comision": "c4",
-              "porcentaje": 10.2
+              "porcentaje": 10.2,
+              "wordCloud": [{"ngram": "mas", "frecuencia": 686}, {"ngram": "clase media", "frecuencia": 401}, {"ngram": "pais", "frecuencia": 365}, {"ngram": "persona", "frecuencia": 355}, {"ngram": "necesidades basica", "frecuencia": 339}, {"ngram": "sueldo", "frecuencia": 304}, {"ngram": "politico", "frecuencia": 255}, {"ngram": "educacion", "frecuencia": 243}, {"ngram": "vivienda", "frecuencia": 227}, {"ngram": "cubrir necesidades", "frecuencia": 226}, {"ngram": "beneficio", "frecuencia": 203}, {"ngram": "ingreso", "frecuencia": 200}, {"ngram": "acceso", "frecuencia": 198}, {"ngram": "sociales", "frecuencia": 197}, {"ngram": "leyes", "frecuencia": 190}, {"ngram": "pensiones", "frecuencia": 187}, {"ngram": "bajo", "frecuencia": 184}, {"ngram": "cae", "frecuencia": 167}, {"ngram": "mejorar", "frecuencia": 152}, {"ngram": "mayor", "frecuencia": 150}],
+              "wordNetwork": "assets/ecqq/vivienda-y-substistencia.png"
             }
           ]
         }

@@ -653,6 +653,12 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       // .attr("stroke", halo)
       // .attr("stroke-width", haloWidth);
 
+    temaDiv.selectAll(".word-network")
+      .data(d => [d.wordNetwork])
+      .join("div")
+        .attr("class", "word-network")
+        .html(d => `<img src=${d} />`)
+
   }
 
   function syncDropdowns(d) {
