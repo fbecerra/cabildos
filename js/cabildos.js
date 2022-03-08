@@ -366,7 +366,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
         svgBarHeight = 500 + svgBarMargin.top + svgBarMargin.bottom;
 
-    let cabildo = cabildos.children.filter(d => d.name == id);
+    let cabildo = cabildos.children.filter(d => d.id == id);
     let comisiones = cabildo[0].children.sort((a, b) => ('' + a.name).localeCompare(b.name))
     let temas = cabildo[0].children.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
 
@@ -670,7 +670,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("cy", d => 1.4 * d.x - 130)
       .attr("r", d => 1.4 * d.r)
       .on("click", (event, d) => {
-        let cabildo = d.depth === 1 ? d.data.name : d.parent.parent.data.name
+        let cabildo = d.depth === 1 ? d.data.id : d.parent.parent.data.id
         hideBubbles();
         showDetails();
         updateDiv(cabildo); //updateDiv(d.cabildo);
