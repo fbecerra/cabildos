@@ -406,6 +406,28 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     details.selectAll("*").remove();
     let detailsWidth = details.node().getBoundingClientRect().width;
 
+    d3.select(window).on("scroll", (event, d) => {
+      if (state.showing === 'details') {
+        let yOffset = d3.select("#sticky").node().getBoundingClientRect().height;
+        comisiones.forEach(c => {
+          let rect = d3.select("#" + c.id).node().getBoundingClientRect();
+          if ((rect.top - yOffset < 0) & (0 < rect.top + rect.height - yOffset)) {
+            state.comision = c.id;
+            d3.select("#select-comision").node().value = state.comision;
+          }
+        })
+        temas.forEach(t => {
+          // console.log(t)
+          // let rect = d3.select("#" + t.id).node().getBoundingClientRect();
+          // if ((rect.top - yOffset < 0) & (0 < rect.top + rect.height - yOffset)) {
+          //   // state.tema = t.id;
+          //   console.log(t.id)
+          //   // updateOptions();
+          // }
+        })
+      }
+    })
+
     let divCabildo = details.selectAll(".cabildo-title")
       .data(cabildo)
       .join("div")
