@@ -132,7 +132,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   updateOptions();
 
   function hideCircles() {
-    let calculateOpacity = d => {
+    let isSelected = d => {
       if (d.depth === 1) {
         let thisLevel = (d.data.id === state.cabildo || state.cabildo === 'Todos');
         let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.data.id === state.comision)
@@ -140,32 +140,34 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         let lowerLowerLevel = d.children.map(c => c.children.flat()).flat()
                                .map(e => state.tema === 'Todos' || e.data.id === state.tema)
                                .reduce((a,b) => a || b, false);
-        return (thisLevel && lowerLevel && lowerLowerLevel) ? 1 : 0;
+        return (thisLevel && lowerLevel && lowerLowerLevel);
       } else if (d.depth === 2) {
         let thisLevel = (d.data.id === state.comision || state.comision === 'Todas');
         let upperLevel = (d.parent.data.id === state.cabildo || state.cabildo === 'Todos');
         let lowerLevel = d.children.map(c => state.tema === 'Todos' || c.data.id === state.tema)
                           .reduce((a,b) => a || b, false);
-        return (thisLevel && upperLevel && lowerLevel) ? 1 : 0;
+        return (thisLevel && upperLevel && lowerLevel);
       } else if (d.depth === 3) {
         let thisLevel = (d.data.id === state.tema || state.tema === 'Todos')
         let upperLevel = (d.parent.data.id === state.comision || state.comision === 'Todas');
         let upperUpperLevel = (d.parent.parent.data.id === state.cabildo || state.cabildo === 'Todos');
-        return (thisLevel && upperLevel && upperUpperLevel) ? 1 : 0;
+        return (thisLevel && upperLevel && upperUpperLevel);
       }
     }
 
     node.transition()
       .duration(transitionTime)
-      .style("opacity", calculateOpacity);
+      .each(d => d.selected = isSelected(d))
+      .style("opacity", d => d.selected ? 1 : 0)
+      .style("pointer-events", d => d.selected ? "auto" : "none");
 
     label.transition()
       .duration(transitionTime)
-      .style("opacity", ([d, cell]) => calculateOpacity(d));
+      .style("opacity", ([d, cell]) => isSelected(d) ? 1 : 0);
 
     nodeLabel.transition()
       .duration(transitionTime)
-      .style("opacity", calculateOpacity);
+      .style("opacity", d => isSelected(d) ? 1 : 0);
   }
 
 
