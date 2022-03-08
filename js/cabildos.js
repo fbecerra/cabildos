@@ -2,6 +2,7 @@ state = {
   cabildo: 'Todos',
   comision: 'Todas',
   tema: 'Todos',
+  showing: 'circles'
 }
 const transitionTime = 500;
 
@@ -101,7 +102,11 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     selectCabildo.on("change", (event, d) => {
       state.cabildo = event.target.value;
       updateOptions();
-      hideCircles();
+      if (state.showing === 'circles') {
+        hideCircles();
+      } else if (state.showing === 'details') {
+        updateDiv(state.cabildo)
+      }
     });
 
     let selectComision = addOptions("select-comision", ['Todas', ...allComisionesNames], ['Todas', ...allComisiones]);
@@ -113,7 +118,15 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     selectComision.on("change", (event, d) => {
       state.comision = event.target.value;
       updateOptions();
-      hideCircles();
+      if (state.showing === 'circles') {
+        hideCircles();
+      } else if (state.showing === 'details') {
+        if (state.comision === 'Todas') {
+          scrollTo(0,0);
+        } else {
+          scrollToElement(state.comision);
+        }
+      }
     });
 
     let selectTema = addOptions("select-tema", ['Todos', ...allTemasNames], ['Todos', ...allTemas]);
@@ -125,14 +138,22 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     selectTema.on("change", (event, d) => {
       state.tema = event.target.value;
       updateOptions();
-      hideCircles();
+      if (state.showing === 'circles') {
+        hideCircles();
+      } else if (state.showing === 'details') {
+        if (state.tema === 'Todos') {
+          scrollTo(0,0);
+        } else {
+          scrollToElement(state.tema);
+        }
+      }
     });
   }
 
   updateOptions();
 
   function hideCircles() {
-    let calculateOpacity = d => {
+    let isSelected = d => {
       if (d.depth === 1) {
         let thisLevel = (d.data.id === state.cabildo || state.cabildo === 'Todos');
         let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.data.id === state.comision)
@@ -140,32 +161,34 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         let lowerLowerLevel = d.children.map(c => c.children.flat()).flat()
                                .map(e => state.tema === 'Todos' || e.data.id === state.tema)
                                .reduce((a,b) => a || b, false);
-        return (thisLevel && lowerLevel && lowerLowerLevel) ? 1 : 0;
+        return (thisLevel && lowerLevel && lowerLowerLevel);
       } else if (d.depth === 2) {
         let thisLevel = (d.data.id === state.comision || state.comision === 'Todas');
         let upperLevel = (d.parent.data.id === state.cabildo || state.cabildo === 'Todos');
         let lowerLevel = d.children.map(c => state.tema === 'Todos' || c.data.id === state.tema)
                           .reduce((a,b) => a || b, false);
-        return (thisLevel && upperLevel && lowerLevel) ? 1 : 0;
+        return (thisLevel && upperLevel && lowerLevel);
       } else if (d.depth === 3) {
         let thisLevel = (d.data.id === state.tema || state.tema === 'Todos')
         let upperLevel = (d.parent.data.id === state.comision || state.comision === 'Todas');
         let upperUpperLevel = (d.parent.parent.data.id === state.cabildo || state.cabildo === 'Todos');
-        return (thisLevel && upperLevel && upperUpperLevel) ? 1 : 0;
+        return (thisLevel && upperLevel && upperUpperLevel);
       }
     }
 
     node.transition()
       .duration(transitionTime)
-      .style("opacity", calculateOpacity);
+      .each(d => d.selected = isSelected(d))
+      .style("opacity", d => d.selected ? 1 : 0)
+      .style("pointer-events", d => d.selected ? "auto" : "none");
 
     label.transition()
       .duration(transitionTime)
-      .style("opacity", ([d, cell]) => calculateOpacity(d));
+      .style("opacity", ([d, cell]) => isSelected(d) ? 1 : 0);
 
     nodeLabel.transition()
       .duration(transitionTime)
-      .style("opacity", calculateOpacity);
+      .style("opacity", d => isSelected(d) ? 1 : 0);
   }
 
 
@@ -364,7 +387,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
         svgBarHeight = 500 + svgBarMargin.top + svgBarMargin.bottom;
 
-    let cabildo = cabildos.children.filter(d => d.name == id);
+    let cabildo = cabildos.children.filter(d => d.id == id);
     let comisiones = cabildo[0].children.sort((a, b) => ('' + a.name).localeCompare(b.name))
     let temas = cabildo[0].children.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
 
@@ -382,6 +405,28 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     let details = d3.select("#details");
     details.selectAll("*").remove();
     let detailsWidth = details.node().getBoundingClientRect().width;
+
+    d3.select(window).on("scroll", (event, d) => {
+      if (state.showing === 'details') {
+        let yOffset = d3.select("#sticky").node().getBoundingClientRect().height;
+        comisiones.forEach(c => {
+          let rect = d3.select("#" + c.id).node().getBoundingClientRect();
+          if ((rect.top - yOffset < 0) & (0 < rect.top + rect.height - yOffset)) {
+            state.comision = c.id;
+            d3.select("#select-comision").node().value = state.comision;
+          }
+        })
+        temas.forEach(t => {
+          // console.log(t)
+          // let rect = d3.select("#" + t.id).node().getBoundingClientRect();
+          // if ((rect.top - yOffset < 0) & (0 < rect.top + rect.height - yOffset)) {
+          //   // state.tema = t.id;
+          //   console.log(t.id)
+          //   // updateOptions();
+          // }
+        })
+      }
+    })
 
     let divCabildo = details.selectAll(".cabildo-title")
       .data(cabildo)
@@ -470,6 +515,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .data(comisiones)
       .join("div")
         .attr("class", "comision")
+        .attr("id", d => d.id)
 
     comisionesDiv.append("div")
       .attr("class", "comision-title")
@@ -483,7 +529,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     temaDiv.append("div")
       .attr("class", "tema-title")
-      .html(d => d.id + ". " + cabildos.temas[d.id].longName)
+      .html(d => cabildos.temas[d.id].longName)
 
     temaDiv.append("div")
       .attr("class", "tema-description")
@@ -609,6 +655,26 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   }
 
+  function syncDropdowns(d) {
+    if (d.depth === 1) {
+      let cabildoId = d.data.id;
+      d3.select("#select-cabildo").node().value = cabildoId
+      state.cabildo = cabildoId;
+    } else {
+      let cabildoId = d.parent.parent.data.id;
+      d3.select("#select-cabildo").node().value = cabildoId
+      state.cabildo = cabildoId;
+
+      let comisionId = d.parent.data.id;
+      d3.select("#select-comision").node().value = comisionId
+      state.comision = comisionId;
+
+      let temaId = d.data.id;
+      d3.select("#select-tema").node().value = temaId
+      state.tema = temaId;
+    }
+  }
+
   function showBubbles() {
     d3.select("#bubbles").style("display", "flex");
   }
@@ -626,6 +692,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   }
 
   d3.select("#back-button").on("click", () => {
+    state.showing = 'circles';
     hideDetails();
     showBubbles();
   })
@@ -644,7 +711,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         return curtop;
         }
     }
-    window.scroll(0,findPos(document.getElementById(id)) - 170);
+    window.scroll(0,findPos(document.getElementById(id)) - d3.select("#sticky").node().getBoundingClientRect().height);
   }
 
   const depth1 = root.descendants().filter(d => d.depth === 1);
@@ -668,8 +735,10 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("cy", d => 1.4 * d.x - 130)
       .attr("r", d => 1.4 * d.r)
       .on("click", (event, d) => {
-        let cabildo = d.depth === 1 ? d.data.name : d.parent.parent.data.name
+        state.showing = 'details';
+        let cabildo = d.depth === 1 ? d.data.id : d.parent.parent.data.id
         hideBubbles();
+        syncDropdowns(d);
         showDetails();
         updateDiv(cabildo); //updateDiv(d.cabildo);
         if (d.depth === 3) {
