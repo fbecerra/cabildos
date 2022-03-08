@@ -611,6 +611,26 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   }
 
+  function syncDropdowns(d) {
+    console.log(d)
+    if (d.depth === 1) {
+      d3.select("#select-cabildo").node().value = id
+      state.cabildo = id;
+    } else {
+      let cabildoId = d.parent.parent.data.id;
+      d3.select("#select-cabildo").node().value = cabildoId
+      state.cabildo = cabildoId;
+
+      let comisionId = d.parent.data.id;
+      d3.select("#select-comision").node().value = comisionId
+      state.comision = comisionId;
+
+      let temaId = d.data.id;
+      d3.select("#select-tema").node().value = temaId
+      state.tema = temaId;
+    }
+  }
+
   function showBubbles() {
     d3.select("#bubbles").style("display", "flex");
   }
@@ -672,6 +692,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .on("click", (event, d) => {
         let cabildo = d.depth === 1 ? d.data.id : d.parent.parent.data.id
         hideBubbles();
+        syncDropdowns(d);
         showDetails();
         updateDiv(cabildo); //updateDiv(d.cabildo);
         if (d.depth === 3) {
