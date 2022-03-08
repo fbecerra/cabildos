@@ -485,7 +485,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     temaDiv.append("div")
       .attr("class", "tema-title")
-      .html(d => d.id + ". " + cabildos.temas[d.id].longName)
+      .html(d => cabildos.temas[d.id].longName)
 
     temaDiv.append("div")
       .attr("class", "tema-description")
