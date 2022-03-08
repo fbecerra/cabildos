@@ -2,6 +2,7 @@ state = {
   cabildo: 'Todos',
   comision: 'Todas',
   tema: 'Todos',
+  showing: 'circles'
 }
 const transitionTime = 500;
 
@@ -101,7 +102,11 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     selectCabildo.on("change", (event, d) => {
       state.cabildo = event.target.value;
       updateOptions();
-      hideCircles();
+      if (state.showing === 'circles') {
+        hideCircles();
+      } else if (state.showing === 'details') {
+        updateDiv(state.cabildo)
+      }
     });
 
     let selectComision = addOptions("select-comision", ['Todas', ...allComisionesNames], ['Todas', ...allComisiones]);
@@ -113,7 +118,15 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     selectComision.on("change", (event, d) => {
       state.comision = event.target.value;
       updateOptions();
-      hideCircles();
+      if (state.showing === 'circles') {
+        hideCircles();
+      } else if (state.showing === 'details') {
+        if (state.comision === 'Todas') {
+          scrollTo(0,0);
+        } else {
+          scrollToElement(state.comision);
+        }
+      }
     });
 
     let selectTema = addOptions("select-tema", ['Todos', ...allTemasNames], ['Todos', ...allTemas]);
@@ -125,7 +138,15 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     selectTema.on("change", (event, d) => {
       state.tema = event.target.value;
       updateOptions();
-      hideCircles();
+      if (state.showing === 'circles') {
+        hideCircles();
+      } else if (state.showing === 'details') {
+        if (state.tema === 'Todos') {
+          scrollTo(0,0);
+        } else {
+          scrollToElement(state.tema);
+        }
+      }
     });
   }
 
@@ -472,6 +493,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .data(comisiones)
       .join("div")
         .attr("class", "comision")
+        .attr("id", d => d.id)
 
     comisionesDiv.append("div")
       .attr("class", "comision-title")
@@ -612,10 +634,10 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   }
 
   function syncDropdowns(d) {
-    console.log(d)
     if (d.depth === 1) {
-      d3.select("#select-cabildo").node().value = id
-      state.cabildo = id;
+      let cabildoId = d.data.id;
+      d3.select("#select-cabildo").node().value = cabildoId
+      state.cabildo = cabildoId;
     } else {
       let cabildoId = d.parent.parent.data.id;
       d3.select("#select-cabildo").node().value = cabildoId
@@ -648,6 +670,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   }
 
   d3.select("#back-button").on("click", () => {
+    state.showing = 'circles';
     hideDetails();
     showBubbles();
   })
@@ -690,6 +713,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("cy", d => 1.4 * d.x - 130)
       .attr("r", d => 1.4 * d.r)
       .on("click", (event, d) => {
+        state.showing = 'details';
         let cabildo = d.depth === 1 ? d.data.id : d.parent.parent.data.id
         hideBubbles();
         syncDropdowns(d);
