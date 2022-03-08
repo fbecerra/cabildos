@@ -654,7 +654,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       // .attr("stroke-width", haloWidth);
 
     temaDiv.selectAll(".word-network")
-      .data(d => [d.wordNetwork])
+      .data(d => d.hasOwnProperty("wordNetwork") ? [d.wordNetwork] : [])
       .join("div")
         .attr("class", "word-network")
         .html(d => `<img src=${d} />`)
