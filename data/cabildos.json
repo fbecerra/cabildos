@@ -3394,6 +3394,75 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "name": "políticos",
+                  "children": [
+                    {
+                      "name": "cambiando los políticos",
+                      "children": [
+                        {
+                          "name": "podemos hacer cambios en la educación y justicia."
+                        },
+                        {
+                          "name": "podemos hacer cambios en todas las áreas."
+                        },
+                        {
+                          "name": "y autoridades podemos hacer cambios en las leyes."
+                        },
+                        {
+                          "name": "cambiarían todas las cosas. "
+                        },
+                        {
+                          "name": "vamos a poder tener nuevos políticos competentes"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "cambiar a los políticos",
+                      "children": [
+                        {
+                          "name": "hoy en día para hace reformas a las leyes."
+                        },
+                        {
+                          "name": "para que se puedan cambiar las cosas."
+                        },
+                        {
+                          "name": ", no tenemos que tener tantos y no nos representan."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "teniendo buenos políticos",
+                      "children": [
+                        {
+                          "name": "podremos hacer los cambios que necesitamos."
+                        },
+                        {
+                          "name": "tendríamos buenas reformas."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "necesitamos políticos",
+                      "children": [
+                        {
+                          "name": "con vocación de servicio."
+                        },
+                        {
+                          "name": "con un mayor compromiso país."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "reducir a los políticos",
+                      "children": [
+                        {
+                          "name": "porque se va mucha plata en sus sueldos. "
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
