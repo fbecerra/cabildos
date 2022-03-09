@@ -25,9 +25,41 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   let cabildos = data[0];
   console.log(cabildos);
 
+  const height = 550,
+        width = height;
+  const charSize = 2;
+
+  let pack = data => d3.pack()
+    .size([height, width])
+    .padding(charSize)
+  (d3.hierarchy(data)
+    .sum(d => d.porcentaje)
+    .sort((a, b) => b.porcentaje - a.porcentaje));
+
+  const root = pack(cabildos);
+  console.log(root)
+  let focus = root;
+  let view;
+
   function getUniqueElements(df, thisVariable) {
 
     let thisList = df.map(o => o[thisVariable]);
+
+    // uniq() found here https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
+    function uniq(a) {
+        return a.sort().filter(function(item, pos, ary) {
+            return !pos || item != ary[pos - 1];
+        });
+    }
+
+    let uniqueList = uniq(thisList);
+
+    return uniqueList;
+  }
+
+  function getUniqueElementsTwoLevels(df, thisVariable, thatVariable) {
+
+    let thisList = df.map(o => o[thisVariable][thatVariable]);
 
     // uniq() found here https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
     function uniq(a) {
@@ -57,43 +89,49 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     return element;
   }
 
-  let allCabildos, allComisiones, allTemas;
+  // let allCabildos, allComisiones, allTemas;
 
-  // let allCabildos = getUniqueElements(cabildos.children, 'name');
-  // let allComisiones = getUniqueElements(cabildos.children.map(d => d.children).flat(), 'name');
-  // let allTemas = getUniqueElements(cabildos.children.map(d => d.children.map(c => c.children).flat()).flat(), 'name');
+  let allCabildos = getUniqueElements(cabildos.children, 'id');
+  let allComisiones = getUniqueElements(cabildos.children.map(d => d.children).flat(), 'id');
+  let allTemas = getUniqueElements(cabildos.children.map(d => d.children.map(c => c.children).flat()).flat(), 'id');
+  console.log(allCabildos, allComisiones, allTemas)
 
   function updateOptions() {
 
-    let filteredCabildos = cabildos.children.filter(d => {
-      let thisLevel = (d.id === state.cabildo || state.cabildo === 'Todos');
-      let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.id === state.comision)
-                        .reduce((a,b) => a || b, false);
+    let filteredCabildos = root.children.filter(d => {
+      let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.data.id === state.comision)
+        .reduce((a,b) => a || b, false);
       let lowerLowerLevel = d.children.map(c => c.children.flat()).flat()
-                             .map(e => state.tema === 'Todos' || e.id === state.tema)
-                             .reduce((a,b) => a || b, false);
-      return (thisLevel && lowerLevel && lowerLowerLevel);
+        .map(c => state.tema === 'Todos' || c.data.id === state.tema)
+        .reduce((a,b) => a || b, false);
+      return lowerLevel && lowerLowerLevel
     })
 
-    let filteredComisiones = filteredCabildos.map(d => {
-      return d.children.filter(e => {
-        let thisLevel = e.id === state.comision || state.comision === 'Todas';
-        let lowerLevel = e.children.map(c => state.tema === 'Todos' || c.id === state.tema).reduce((a,b) => a || b, false);
-        return (thisLevel && lowerLevel);
-      }).flat()
-    }).flat()
+    let filteredComisiones = root.children.map(d => d.children.flat()).flat()
+      .filter(d => {
+        let upperLevel = state.comision === 'Todos' ||  d.parent.data.id == state.cabildo;
+        let lowerLevel = d.children.map(c => state.tema === 'Todos' || c.data.id === state.tema)
+          .reduce((a,b) => a || b, false);
+        return upperLevel && lowerLevel;
+      })
 
-    let filteredTemas = filteredCabildos.map(d => d.children.filter(e => e.id === state.comision || state.comision === 'Todas').map(c => c.children.filter(e => e.id === state.tema || state.tema === 'Todos')).flat()).flat();
+    let filteredTemas = cabildos.children.filter(d => state.cabildo === 'Todos' || d.id === state.cabildo)
+      .map(d => d.children.flat())
+      .flat()
+      .filter(d => state.comision === 'Todas' || d.id === state.comision)
+      .map(d => d.children.flat())
+      .flat();
 
-    let allCabildos = getUniqueElements(filteredCabildos, 'id');
-    let allComisiones = getUniqueElements(filteredComisiones, 'id');
-    let allTemas = getUniqueElements(filteredTemas, 'id');
+    let theseCabildos = getUniqueElementsTwoLevels(filteredCabildos, 'data', 'id');
+    let theseComisiones = getUniqueElementsTwoLevels(filteredComisiones, 'data', 'id');
+    let theseTemas = getUniqueElements(filteredTemas, 'id');
+    // console.log(theseCabildos, theseCom)
 
-    let allCabildosNames = allCabildos.map(d => cabildos.cabildos[d].longName);
-    let allComisionesNames = allComisiones.map(d => cabildos.comisiones[d].shortName);
-    let allTemasNames = allTemas.map(d => cabildos.temas[d].shortName);
+    let allCabildosNames = theseCabildos.map(d => cabildos.cabildos[d].longName);
+    let allComisionesNames = theseComisiones.map(d => cabildos.comisiones[d].shortName);
+    let allTemasNames = theseTemas.map(d => cabildos.temas[d].shortName);
 
-    let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildosNames], ['Todos', ...allCabildos]);
+    let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildosNames], ['Todos', ...theseCabildos]);
     if (state.cabildo !== 'Todos') {
       selectCabildo.node().value = state.cabildo;
     } else {
@@ -109,7 +147,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       }
     });
 
-    let selectComision = addOptions("select-comision", ['Todas', ...allComisionesNames], ['Todas', ...allComisiones]);
+    let selectComision = addOptions("select-comision", ['Todas', ...allComisionesNames], ['Todas', ...theseComisiones]);
     if (state.comision !== 'Todos') {
       selectComision.node().value = state.comision;
     } else {
@@ -129,7 +167,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       }
     });
 
-    let selectTema = addOptions("select-tema", ['Todos', ...allTemasNames], ['Todos', ...allTemas]);
+    let selectTema = addOptions("select-tema", ['Todos', ...allTemasNames], ['Todos', ...theseTemas]);
     if (state.tema !== 'Todos') {
       selectTema.node().value = state.tema;
     } else {
@@ -199,21 +237,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   let format = d3.format(",d");
 
-  const height = 550,
-        width = height;
-  const charSize = 2;
-
-  let pack = data => d3.pack()
-    .size([height, width])
-    .padding(charSize)
-  (d3.hierarchy(data)
-    .sum(d => d.porcentaje)
-    .sort((a, b) => b.porcentaje - a.porcentaje));
-
-  const root = pack(cabildos);
-  console.log(root)
-  let focus = root;
-  let view;
   const svgHeight = window.innerHeight - d3.select("#sticky").node().getBoundingClientRect().height,
         svgWidth = 1.5 * svgHeight;
 
