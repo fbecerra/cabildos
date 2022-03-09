@@ -816,7 +816,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
           scrollToElement(d.data.id)
         }
       })
-      .on("mouseover", updateTooltip)
+      // .on("mouseover", updateTooltip)
       // .on("mouseout", function() { d3.select(this).attr("stroke", "lightgrey"); })
 
   const orient = ({
