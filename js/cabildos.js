@@ -106,7 +106,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     let filteredComisiones = root.children.map(d => d.children.flat()).flat()
       .filter(d => {
-        let upperLevel = state.comision === 'Todos' ||  d.parent.data.id == state.cabildo;
+        let upperLevel = state.cabildo === 'Todos' ||  d.parent.data.id == state.cabildo;
         let lowerLevel = d.children.map(c => state.tema === 'Todos' || c.data.id === state.tema)
           .reduce((a,b) => a || b, false);
         return upperLevel && lowerLevel;
@@ -122,7 +122,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     let theseCabildos = getUniqueElementsTwoLevels(filteredCabildos, 'data', 'id');
     let theseComisiones = getUniqueElementsTwoLevels(filteredComisiones, 'data', 'id');
     let theseTemas = getUniqueElements(filteredTemas, 'id');
-    // console.log(theseCabildos, theseCom)
 
     let allCabildosNames = theseCabildos.map(d => cabildos.cabildos[d].longName);
     let allComisionesNames = theseComisiones.map(d => cabildos.comisiones[d].shortName);
@@ -761,11 +760,22 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     d3.select("#cabildo-details").style("display", "none");
   }
 
-  d3.select("#back-button").on("click", () => {
+  function reset() {
     state.showing = 'circles';
+    state.cabildo = 'Todos';
+    state.comision = 'Todas';
+    state.tema = 'Todos';
+    d3.select("#select-cabildo").node().value = state.cabildo;
+    d3.select("#select-comision").node().value = state.comision;
+    d3.select("#select-tema").node().value = state.tema;
     hideDetails();
     showBubbles();
+    updateOptions();
     hideCircles();
+  }
+
+  d3.select("#back-button").on("click", () => {
+    reset();
   })
 
   d3.select("#up-button").on("click", () => {
