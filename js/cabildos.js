@@ -389,7 +389,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     let cabildo = cabildos.children.filter(d => d.id == id);
     let comisiones = cabildo[0].children.sort((a, b) => ('' + a.name).localeCompare(b.name))
-    let temas = cabildo[0].children.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
+          .filter(c => c.children.reduce((a,b) => a | b.hasOwnProperty("wordCloud") | b.hasOwnProperty("wordTree") | b.hasOwnProperty("wordNetwork"), false))
+    let temas = comisiones.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
 
     let xScale = d3.scaleLinear()
       .domain([0, temas[0].porcentaje])
