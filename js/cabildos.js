@@ -412,17 +412,19 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
           .filter(c => c.children.reduce((a,b) => a | b.hasOwnProperty("wordCloud") | b.hasOwnProperty("wordTree") | b.hasOwnProperty("wordNetwork"), false))
     let temas = comisiones.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
 
+    let xScale, yScale, xAxis, yAxis;
+
     if (comisiones.length > 0) {
-      let xScale = d3.scaleLinear()
+      xScale = d3.scaleLinear()
         .domain([0, temas[0].porcentaje])
         .range([0, svgBarWidth - svgBarMargin.left - svgBarMargin.right]);
 
-      let yScale = d3.scaleLinear()
+      yScale = d3.scaleLinear()
         .domain([0, temas.length - 1])
         .range([svgBarMargin.top, svgBarHeight - svgBarMargin.top - svgBarMargin.bottom]);
 
-      let xAxis = d3.axisBottom(xScale),
-          yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => cabildos.temas[temas[d].id].shortName);
+      xAxis = d3.axisBottom(xScale);
+      yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => cabildos.temas[temas[d].id].shortName);
     }
 
     let details = d3.select("#details");
