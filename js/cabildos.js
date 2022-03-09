@@ -260,9 +260,11 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       let temas = cabildo[0].children.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
 
       // CABILDO
+      let barHeight = temas.length < 10 ? 20 : 14;
+
       let svgBarMargin = {top: 40, left: 150, bottom: 20, right: 120},
           svgBarWidth = tooltipWidth + svgBarMargin.left + svgBarMargin.right,
-          svgBarHeight = 320 + svgBarMargin.top + svgBarMargin.bottom;
+          svgBarHeight = temas.length * barHeight + svgBarMargin.top + svgBarMargin.bottom;
 
       let xScale = d3.scaleLinear()
         .domain([0, temas[0].porcentaje])
