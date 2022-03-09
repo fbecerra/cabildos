@@ -826,14 +826,14 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         syncDropdowns(d);
         showDetails();
         updateDiv(cabildo); //updateDiv(d.cabildo);
-        if (d.depth === 3 & (d.hasOwnProperty("wordCloud") | d.hasOwnProperty("wordTree") | d.hasOwnProperty("wordNetwork"))) {
-          scrollToElement(d.data.id)
+        console.log(d)
+        if (d.depth === 3 && (d.data.hasOwnProperty("wordCloud") || d.data.hasOwnProperty("wordTree") || d.data.hasOwnProperty("wordNetwork"))) {
+          scrollToElement("t" + d.data.id)
         }
       })
       .on("mouseover", (event, d) => {
         if (d.depth === 1) {
           svg.selectAll("circle").filter(c => {
-            console.log(c,d)
             return (c.depth === 1 && c.data.id === d.data.id) || (c.depth === 3 && c.parent.parent.data.id === d.data.id)
           })
           .attr("fill", "darkgray");
@@ -844,7 +844,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .on("mouseout", (event, d) => {
         if (d.depth === 1) {
           svg.selectAll("circle").filter(c => {
-            console.log(c,d)
             return (c.depth === 1 && c.data.id === d.data.id) || (c.depth === 3 && c.parent.parent.data.id === d.data.id)
           })
           .attr("fill", "#EAEAEA");
