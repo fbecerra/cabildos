@@ -830,8 +830,29 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
           scrollToElement(d.data.id)
         }
       })
-      // .on("mouseover", updateTooltip)
-      // .on("mouseout", function() { d3.select(this).attr("stroke", "lightgrey"); })
+      .on("mouseover", (event, d) => {
+        if (d.depth === 1) {
+          svg.selectAll("circle").filter(c => {
+            console.log(c,d)
+            return (c.depth === 1 && c.data.id === d.data.id) || (c.depth === 3 && c.parent.parent.data.id === d.data.id)
+          })
+          .attr("fill", "darkgray");
+        } else if (d.depth === 3) {
+          d3.select(event.target).attr("stroke-width", 2.0);
+        }
+      })
+      .on("mouseout", (event, d) => {
+        if (d.depth === 1) {
+          svg.selectAll("circle").filter(c => {
+            console.log(c,d)
+            return (c.depth === 1 && c.data.id === d.data.id) || (c.depth === 3 && c.parent.parent.data.id === d.data.id)
+          })
+          .attr("fill", "#EAEAEA");
+        } else if (d.depth === 3) {
+          d3.select(event.target).attr("stroke-width", 1.0);
+        }
+
+      })
 
   const orient = ({
     top: (text, radius) => {
