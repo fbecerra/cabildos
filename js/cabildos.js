@@ -9,7 +9,7 @@ const transitionTime = 500;
 const container = d3.select("#cabildos");
 
 d3.select("#how-to")
-  .on("click", () => d3.select("#legend").classed("show", true))
+  .on("click", () => d3.select("#legend").classed("show", !d3.select("#legend").classed("show")))
 
 window.onclick = function(event) {
   let parent = document.getElementById("how-to");
