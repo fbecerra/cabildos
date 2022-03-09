@@ -403,14 +403,14 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   function updateDiv(id) {
 
-    let svgBarMargin = {top: 40, left: 350, bottom: 20, right: 50},
-        svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
-        svgBarHeight = 500 + svgBarMargin.top + svgBarMargin.bottom;
-
     let cabildo = cabildos.children.filter(d => d.id == id);
     let comisiones = cabildo[0].children.sort((a, b) => ('' + a.name).localeCompare(b.name))
           .filter(c => c.children.reduce((a,b) => a | b.hasOwnProperty("wordCloud") | b.hasOwnProperty("wordTree") | b.hasOwnProperty("wordNetwork"), false))
     let temas = comisiones.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
+
+    let svgBarMargin = {top: 40, left: 350, bottom: 20, right: 50},
+        svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
+        svgBarHeight = temas.length * 20 + svgBarMargin.top + svgBarMargin.bottom;
 
     let xScale, yScale, xAxis, yAxis;
 
