@@ -774,6 +774,10 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     hideCircles();
   }
 
+  d3.select("#title").on("click", () => {
+    reset();
+  })
+
   d3.select("#back-button").on("click", () => {
     reset();
   })
