@@ -25,9 +25,41 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   let cabildos = data[0];
   console.log(cabildos);
 
+  const height = 550,
+        width = height;
+  const charSize = 2;
+
+  let pack = data => d3.pack()
+    .size([height, width])
+    .padding(charSize)
+  (d3.hierarchy(data)
+    .sum(d => d.porcentaje)
+    .sort((a, b) => b.porcentaje - a.porcentaje));
+
+  const root = pack(cabildos);
+  console.log(root)
+  let focus = root;
+  let view;
+
   function getUniqueElements(df, thisVariable) {
 
     let thisList = df.map(o => o[thisVariable]);
+
+    // uniq() found here https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
+    function uniq(a) {
+        return a.sort().filter(function(item, pos, ary) {
+            return !pos || item != ary[pos - 1];
+        });
+    }
+
+    let uniqueList = uniq(thisList);
+
+    return uniqueList;
+  }
+
+  function getUniqueElementsTwoLevels(df, thisVariable, thatVariable) {
+
+    let thisList = df.map(o => o[thisVariable][thatVariable]);
 
     // uniq() found here https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
     function uniq(a) {
@@ -57,43 +89,46 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     return element;
   }
 
-  let allCabildos, allComisiones, allTemas;
-
-  // let allCabildos = getUniqueElements(cabildos.children, 'name');
-  // let allComisiones = getUniqueElements(cabildos.children.map(d => d.children).flat(), 'name');
-  // let allTemas = getUniqueElements(cabildos.children.map(d => d.children.map(c => c.children).flat()).flat(), 'name');
+  let allCabildos = getUniqueElements(cabildos.children, 'id');
+  let allComisiones = getUniqueElements(cabildos.children.map(d => d.children).flat(), 'id');
+  let allTemas = getUniqueElements(cabildos.children.map(d => d.children.map(c => c.children).flat()).flat(), 'id');
 
   function updateOptions() {
 
-    let filteredCabildos = cabildos.children.filter(d => {
-      let thisLevel = (d.id === state.cabildo || state.cabildo === 'Todos');
-      let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.id === state.comision)
-                        .reduce((a,b) => a || b, false);
+    let filteredCabildos = root.children.filter(d => {
+      let lowerLevel = d.children.map(c => state.comision === 'Todas' || c.data.id === state.comision)
+        .reduce((a,b) => a || b, false);
       let lowerLowerLevel = d.children.map(c => c.children.flat()).flat()
-                             .map(e => state.tema === 'Todos' || e.id === state.tema)
-                             .reduce((a,b) => a || b, false);
-      return (thisLevel && lowerLevel && lowerLowerLevel);
+        .map(c => state.tema === 'Todos' || c.data.id === state.tema)
+        .reduce((a,b) => a || b, false);
+      return lowerLevel && lowerLowerLevel
     })
 
-    let filteredComisiones = filteredCabildos.map(d => {
-      return d.children.filter(e => {
-        let thisLevel = e.id === state.comision || state.comision === 'Todas';
-        let lowerLevel = e.children.map(c => state.tema === 'Todos' || c.id === state.tema).reduce((a,b) => a || b, false);
-        return (thisLevel && lowerLevel);
-      }).flat()
-    }).flat()
+    let filteredComisiones = root.children.map(d => d.children.flat()).flat()
+      .filter(d => {
+        let upperLevel = state.comision === 'Todos' ||  d.parent.data.id == state.cabildo;
+        let lowerLevel = d.children.map(c => state.tema === 'Todos' || c.data.id === state.tema)
+          .reduce((a,b) => a || b, false);
+        return upperLevel && lowerLevel;
+      })
 
-    let filteredTemas = filteredCabildos.map(d => d.children.filter(e => e.id === state.comision || state.comision === 'Todas').map(c => c.children.filter(e => e.id === state.tema || state.tema === 'Todos')).flat()).flat();
+    let filteredTemas = cabildos.children.filter(d => state.cabildo === 'Todos' || d.id === state.cabildo)
+      .map(d => d.children.flat())
+      .flat()
+      .filter(d => state.comision === 'Todas' || d.id === state.comision)
+      .map(d => d.children.flat())
+      .flat();
 
-    let allCabildos = getUniqueElements(filteredCabildos, 'id');
-    let allComisiones = getUniqueElements(filteredComisiones, 'id');
-    let allTemas = getUniqueElements(filteredTemas, 'id');
+    let theseCabildos = getUniqueElementsTwoLevels(filteredCabildos, 'data', 'id');
+    let theseComisiones = getUniqueElementsTwoLevels(filteredComisiones, 'data', 'id');
+    let theseTemas = getUniqueElements(filteredTemas, 'id');
+    // console.log(theseCabildos, theseCom)
 
-    let allCabildosNames = allCabildos.map(d => cabildos.cabildos[d].longName);
-    let allComisionesNames = allComisiones.map(d => cabildos.comisiones[d].shortName);
-    let allTemasNames = allTemas.map(d => cabildos.temas[d].shortName);
+    let allCabildosNames = theseCabildos.map(d => cabildos.cabildos[d].longName);
+    let allComisionesNames = theseComisiones.map(d => cabildos.comisiones[d].shortName);
+    let allTemasNames = theseTemas.map(d => cabildos.temas[d].shortName);
 
-    let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildosNames], ['Todos', ...allCabildos]);
+    let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildosNames], ['Todos', ...theseCabildos]);
     if (state.cabildo !== 'Todos') {
       selectCabildo.node().value = state.cabildo;
     } else {
@@ -109,7 +144,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       }
     });
 
-    let selectComision = addOptions("select-comision", ['Todas', ...allComisionesNames], ['Todas', ...allComisiones]);
+    let selectComision = addOptions("select-comision", ['Todas', ...allComisionesNames], ['Todas', ...theseComisiones]);
     if (state.comision !== 'Todos') {
       selectComision.node().value = state.comision;
     } else {
@@ -129,7 +164,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       }
     });
 
-    let selectTema = addOptions("select-tema", ['Todos', ...allTemasNames], ['Todos', ...allTemas]);
+    let selectTema = addOptions("select-tema", ['Todos', ...allTemasNames], ['Todos', ...theseTemas]);
     if (state.tema !== 'Todos') {
       selectTema.node().value = state.tema;
     } else {
@@ -199,21 +234,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   let format = d3.format(",d");
 
-  const height = 550,
-        width = height;
-  const charSize = 2;
-
-  let pack = data => d3.pack()
-    .size([height, width])
-    .padding(charSize)
-  (d3.hierarchy(data)
-    .sum(d => d.porcentaje)
-    .sort((a, b) => b.porcentaje - a.porcentaje));
-
-  const root = pack(cabildos);
-  console.log(root)
-  let focus = root;
-  let view;
   const svgHeight = window.innerHeight - d3.select("#sticky").node().getBoundingClientRect().height,
         svgWidth = 1.5 * svgHeight;
 
@@ -240,9 +260,11 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       let temas = cabildo[0].children.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
 
       // CABILDO
+      let barHeight = temas.length < 10 ? 20 : 14;
+
       let svgBarMargin = {top: 40, left: 150, bottom: 20, right: 120},
           svgBarWidth = tooltipWidth + svgBarMargin.left + svgBarMargin.right,
-          svgBarHeight = 320 + svgBarMargin.top + svgBarMargin.bottom;
+          svgBarHeight = temas.length * barHeight + svgBarMargin.top + svgBarMargin.bottom;
 
       let xScale = d3.scaleLinear()
         .domain([0, temas[0].porcentaje])
@@ -383,24 +405,29 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   function updateDiv(id) {
 
-    let svgBarMargin = {top: 40, left: 350, bottom: 20, right: 50},
-        svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
-        svgBarHeight = 500 + svgBarMargin.top + svgBarMargin.bottom;
-
     let cabildo = cabildos.children.filter(d => d.id == id);
     let comisiones = cabildo[0].children.sort((a, b) => ('' + a.name).localeCompare(b.name))
-    let temas = cabildo[0].children.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
+          .filter(c => c.children.reduce((a,b) => a | b.hasOwnProperty("wordCloud") | b.hasOwnProperty("wordTree") | b.hasOwnProperty("wordNetwork"), false))
+    let temas = comisiones.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
 
-    let xScale = d3.scaleLinear()
-      .domain([0, temas[0].porcentaje])
-      .range([0, svgBarWidth - svgBarMargin.left - svgBarMargin.right]);
+    let svgBarMargin = {top: 40, left: 350, bottom: 20, right: 50},
+        svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
+        svgBarHeight = temas.length * 20 + svgBarMargin.top + svgBarMargin.bottom;
 
-    let yScale = d3.scaleLinear()
-      .domain([0, temas.length - 1])
-      .range([svgBarMargin.top, svgBarHeight - svgBarMargin.top - svgBarMargin.bottom]);
+    let xScale, yScale, xAxis, yAxis;
 
-    let xAxis = d3.axisBottom(xScale),
-        yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => cabildos.temas[temas[d].id].shortName);
+    if (comisiones.length > 0) {
+      xScale = d3.scaleLinear()
+        .domain([0, temas[0].porcentaje])
+        .range([0, svgBarWidth - svgBarMargin.left - svgBarMargin.right]);
+
+      yScale = d3.scaleLinear()
+        .domain([0, temas.length - 1])
+        .range([svgBarMargin.top, svgBarHeight - svgBarMargin.top - svgBarMargin.bottom]);
+
+      xAxis = d3.axisBottom(xScale);
+      yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => cabildos.temas[temas[d].id].shortName);
+    }
 
     let details = d3.select("#details");
     details.selectAll("*").remove();
@@ -409,22 +436,30 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     d3.select(window).on("scroll", (event, d) => {
       if (state.showing === 'details') {
         let yOffset = d3.select("#sticky").node().getBoundingClientRect().height;
-        comisiones.forEach(c => {
+        let filteredComisiones = comisiones.filter(c => {
           let rect = d3.select("#" + c.id).node().getBoundingClientRect();
-          if ((rect.top - yOffset < 0) & (0 < rect.top + rect.height - yOffset)) {
-            state.comision = c.id;
-            d3.select("#select-comision").node().value = state.comision;
-          }
+          return ((rect.top - yOffset < 0) & (0 < rect.top + rect.height - yOffset));
         })
-        temas.forEach(t => {
-          // console.log(t)
-          // let rect = d3.select("#" + t.id).node().getBoundingClientRect();
-          // if ((rect.top - yOffset < 0) & (0 < rect.top + rect.height - yOffset)) {
-          //   // state.tema = t.id;
-          //   console.log(t.id)
-          //   // updateOptions();
-          // }
-        })
+        if (filteredComisiones.length === 1) {
+          state.comision = filteredComisiones[0].id;
+        } else {
+          state.comision = 'Todas';
+        }
+        d3.select("#select-comision").node().value = state.comision;
+
+        // let filteredTemas = temas.filter(t => {
+        //   console.log(d3.select("#t" + t.id))
+        //   let rect = d3.select("#t" + t.id).node().getBoundingClientRect();
+        //   return ((rect.top - yOffset < 0) & (0 < rect.top + rect.height - yOffset));
+        // })
+        // if (filteredComisiones.length === 1) {
+        //   state.comision = filteredComisiones[0].id;
+        // } else {
+        //   state.comision = 'Todas';
+        // }
+        // d3.select("#select-tema").node().value = state.tema;
+
+        updateOptions();
       }
     })
 
@@ -434,63 +469,65 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("class", "cabildo-title")
         .html(d => cabildos.cabildos[d.id].longName);
 
-    let svgBar = details.selectAll("svg")
-      .data(cabildo)
-      .join("svg")
-        .attr("class", "bar-chart")
-        .attr("width", svgBarWidth)
-        .attr("height", svgBarHeight)
+    if (comisiones.length > 0) {
+      let svgBar = details.selectAll("svg")
+        .data(cabildo)
+        .join("svg")
+          .attr("class", "bar-chart")
+          .attr("width", svgBarWidth)
+          .attr("height", svgBarHeight)
 
-    svgBar.append("g")
-      .attr("class", "title")
-      .attr("transform", `translate(${svgBarMargin.left},${svgBarMargin.top/4})`)
-      .append("text")
-        .text("Porcentaje de instancias en las que se mencionó el tema")
+      svgBar.append("g")
+        .attr("class", "title")
+        .attr("transform", `translate(${svgBarMargin.left},${svgBarMargin.top/4})`)
+        .append("text")
+          .text("Porcentaje de instancias en las que se mencionó el tema")
 
-    svgBar.append("g")
-      .attr("transform", `translate(${svgBarMargin.left},${svgBarHeight - svgBarMargin.top - svgBarMargin.bottom + 20})`)
-      .call(xAxis)
+      svgBar.append("g")
+        .attr("transform", `translate(${svgBarMargin.left},${svgBarHeight - svgBarMargin.top - svgBarMargin.bottom + 20})`)
+        .call(xAxis)
 
-    svgBar.append("g")
-      .attr("transform", `translate(${svgBarMargin.left},0)`)
-      .call(yAxis)
-      .call(g => {
-        g.selectAll(".tick line").remove()
-        g.selectAll(".domain").remove()
-      })
-
-    let gBar = svgBar.selectAll(".bar-group")
-      .data(d => [d])
-      .join("g")
-        .attr("class", ".bar-group")
+      svgBar.append("g")
         .attr("transform", `translate(${svgBarMargin.left},0)`)
+        .call(yAxis)
+        .call(g => {
+          g.selectAll(".tick line").remove()
+          g.selectAll(".domain").remove()
+        })
 
-    gBar.selectAll("line")
-      .data(temas)
-      .join("line")
-        .attr("class", "line")
-        .attr("x1", d => xScale(0))
-        .attr("y1", (d, i) => yScale(i))
-        .attr("x2", d => xScale(d.porcentaje) - xScale(0))
-        .attr("y2", (d, i) => yScale(i));
+      let gBar = svgBar.selectAll(".bar-group")
+        .data(d => [d])
+        .join("g")
+          .attr("class", ".bar-group")
+          .attr("transform", `translate(${svgBarMargin.left},0)`)
 
-    gBar.selectAll("circle")
-      .data(temas)
-      .join("circle")
-        .attr("class", "circle")
-        .attr("cx", d => xScale(d.porcentaje) - xScale(0))
-        .attr("cy", (d, i) => yScale(i))
-        .attr("stroke", d => cabildos.comisiones[d.comision].color)
-        .attr("fill", "#F8F9FA")
-        .attr("r", 6);
+      gBar.selectAll("line")
+        .data(temas)
+        .join("line")
+          .attr("class", "line")
+          .attr("x1", d => xScale(0))
+          .attr("y1", (d, i) => yScale(i))
+          .attr("x2", d => xScale(d.porcentaje) - xScale(0))
+          .attr("y2", (d, i) => yScale(i));
 
-    gBar.selectAll("text")
-      .data(temas)
-      .join("text")
-        .attr("class", "text")
-        .attr("x", d => xScale(d.porcentaje) - xScale(0) + 10)
-        .attr("y", (d, i) => yScale(i) + 4)
-        .text(d => d.porcentaje + "%")
+      gBar.selectAll("circle")
+        .data(temas)
+        .join("circle")
+          .attr("class", "circle")
+          .attr("cx", d => xScale(d.porcentaje) - xScale(0))
+          .attr("cy", (d, i) => yScale(i))
+          .attr("stroke", d => cabildos.comisiones[d.comision].color)
+          .attr("fill", "#F8F9FA")
+          .attr("r", 6);
+
+      gBar.selectAll("text")
+        .data(temas)
+        .join("text")
+          .attr("class", "text")
+          .attr("x", d => xScale(d.porcentaje) - xScale(0) + 10)
+          .attr("y", (d, i) => yScale(i) + 4)
+          .text(d => d.porcentaje + "%")
+    }
 
     if (cabildo[0].hasOwnProperty("rankings")) {
       details.selectAll(".ranking-title")
@@ -511,6 +548,32 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
           .html(d => `<img src=${d} />`)
     }
 
+    if (cabildo[0].hasOwnProperty("wordClouds")) {
+
+      let generalCloudDiv = details.selectAll(".general-cloud-div")
+        .data(d => cabildo[0].wordClouds)
+        .join("div")
+          .attr("class", "general-cloud-div")
+          .each(d => {
+            console.log(d)
+            let sizeScale = d3.scaleLinear()
+              .domain(d3.extent(d, w => w.frecuencia))
+              .range([12, 81])
+            d.forEach(w => {
+              w.fontSize = sizeScale(w.frecuencia)
+            })
+          })
+
+      generalCloudDiv.selectAll(".general-word-div")
+        .data(d => d)
+        .join("div")
+          .attr("class", "general-word-div")
+          .style("font-size", d => d.fontSize + "px")
+          .style("line-height", d => 1.1 * d.fontSize + "px")
+          .html(d => `${d.ngram}<sup>${d.frecuencia}</sup>`)
+
+    }
+
     let comisionesDiv = details.selectAll(".comision")
       .data(comisiones)
       .join("div")
@@ -525,7 +588,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .data(d => d.children.filter(c => c.hasOwnProperty("wordCloud") || c.hasOwnProperty("wordTree")))
       .join("div")
         .attr("class", "tema")
-        .attr("id", d => d.id)
+        .attr("id", d => "t" + d.id)
 
     temaDiv.append("div")
       .attr("class", "tema-title")
@@ -679,6 +742,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       d3.select("#select-tema").node().value = temaId
       state.tema = temaId;
     }
+    updateOptions();
   }
 
   function showBubbles() {
@@ -701,6 +765,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     state.showing = 'circles';
     hideDetails();
     showBubbles();
+    hideCircles();
   })
 
   d3.select("#up-button").on("click", () => {
@@ -747,7 +812,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         syncDropdowns(d);
         showDetails();
         updateDiv(cabildo); //updateDiv(d.cabildo);
-        if (d.depth === 3) {
+        if (d.depth === 3 & (d.hasOwnProperty("wordCloud") | d.hasOwnProperty("wordTree") | d.hasOwnProperty("wordNetwork"))) {
           scrollToElement(d.data.id)
         }
       })

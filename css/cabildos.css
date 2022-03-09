@@ -147,11 +147,11 @@ body {
   margin-left: 20px;
 }
 
-.cloud-div {
+.cloud-div, .general-cloud-div {
   margin-top: 30px;
 }
 
-.word-div {
+.word-div, .general-word-div {
   color: var(--cc-primary);
   display: inline-block;
   margin-right: 16px;
