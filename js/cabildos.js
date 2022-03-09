@@ -748,7 +748,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         syncDropdowns(d);
         showDetails();
         updateDiv(cabildo); //updateDiv(d.cabildo);
-        if (d.depth === 3) {
+        if (d.depth === 3 & (d.hasOwnProperty("wordCloud") | d.hasOwnProperty("wordTree") | d.hasOwnProperty("wordNetwork"))) {
           scrollToElement(d.data.id)
         }
       })
