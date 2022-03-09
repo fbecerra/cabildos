@@ -9,7 +9,7 @@ const transitionTime = 500;
 const container = d3.select("#cabildos");
 
 d3.select("#how-to")
-  .on("click", () => d3.select("#legend").classed("show", true))
+  .on("click", () => d3.select("#legend").classed("show", !d3.select("#legend").classed("show")))
 
 window.onclick = function(event) {
   let parent = document.getElementById("how-to");
@@ -106,7 +106,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     let filteredComisiones = root.children.map(d => d.children.flat()).flat()
       .filter(d => {
-        let upperLevel = state.comision === 'Todos' ||  d.parent.data.id == state.cabildo;
+        let upperLevel = state.cabildo === 'Todos' ||  d.parent.data.id == state.cabildo;
         let lowerLevel = d.children.map(c => state.tema === 'Todos' || c.data.id === state.tema)
           .reduce((a,b) => a || b, false);
         return upperLevel && lowerLevel;
@@ -122,7 +122,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     let theseCabildos = getUniqueElementsTwoLevels(filteredCabildos, 'data', 'id');
     let theseComisiones = getUniqueElementsTwoLevels(filteredComisiones, 'data', 'id');
     let theseTemas = getUniqueElements(filteredTemas, 'id');
-    // console.log(theseCabildos, theseCom)
 
     let allCabildosNames = theseCabildos.map(d => cabildos.cabildos[d].longName);
     let allComisionesNames = theseComisiones.map(d => cabildos.comisiones[d].shortName);
@@ -761,11 +760,26 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     d3.select("#cabildo-details").style("display", "none");
   }
 
-  d3.select("#back-button").on("click", () => {
+  function reset() {
     state.showing = 'circles';
+    state.cabildo = 'Todos';
+    state.comision = 'Todas';
+    state.tema = 'Todos';
+    d3.select("#select-cabildo").node().value = state.cabildo;
+    d3.select("#select-comision").node().value = state.comision;
+    d3.select("#select-tema").node().value = state.tema;
     hideDetails();
     showBubbles();
+    updateOptions();
     hideCircles();
+  }
+
+  d3.select("#title").on("click", () => {
+    reset();
+  })
+
+  d3.select("#back-button").on("click", () => {
+    reset();
   })
 
   d3.select("#up-button").on("click", () => {
@@ -812,12 +826,32 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         syncDropdowns(d);
         showDetails();
         updateDiv(cabildo); //updateDiv(d.cabildo);
-        if (d.depth === 3 & (d.hasOwnProperty("wordCloud") | d.hasOwnProperty("wordTree") | d.hasOwnProperty("wordNetwork"))) {
-          scrollToElement(d.data.id)
+        console.log(d)
+        if (d.depth === 3 && (d.data.hasOwnProperty("wordCloud") || d.data.hasOwnProperty("wordTree") || d.data.hasOwnProperty("wordNetwork"))) {
+          scrollToElement("t" + d.data.id)
         }
       })
-      .on("mouseover", updateTooltip)
-      // .on("mouseout", function() { d3.select(this).attr("stroke", "lightgrey"); })
+      .on("mouseover", (event, d) => {
+        if (d.depth === 1) {
+          svg.selectAll("circle").filter(c => {
+            return (c.depth === 1 && c.data.id === d.data.id) || (c.depth === 3 && c.parent.parent.data.id === d.data.id)
+          })
+          .attr("fill", "darkgray");
+        } else if (d.depth === 3) {
+          d3.select(event.target).attr("stroke-width", 2.0);
+        }
+      })
+      .on("mouseout", (event, d) => {
+        if (d.depth === 1) {
+          svg.selectAll("circle").filter(c => {
+            return (c.depth === 1 && c.data.id === d.data.id) || (c.depth === 3 && c.parent.parent.data.id === d.data.id)
+          })
+          .attr("fill", "#EAEAEA");
+        } else if (d.depth === 3) {
+          d3.select(event.target).attr("stroke-width", 1.0);
+        }
+
+      })
 
   const orient = ({
     top: (text, radius) => {
