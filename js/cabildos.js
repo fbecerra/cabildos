@@ -89,12 +89,9 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     return element;
   }
 
-  // let allCabildos, allComisiones, allTemas;
-
   let allCabildos = getUniqueElements(cabildos.children, 'id');
   let allComisiones = getUniqueElements(cabildos.children.map(d => d.children).flat(), 'id');
   let allTemas = getUniqueElements(cabildos.children.map(d => d.children.map(c => c.children).flat()).flat(), 'id');
-  console.log(allCabildos, allComisiones, allTemas)
 
   function updateOptions() {
 
@@ -433,22 +430,30 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     d3.select(window).on("scroll", (event, d) => {
       if (state.showing === 'details') {
         let yOffset = d3.select("#sticky").node().getBoundingClientRect().height;
-        comisiones.forEach(c => {
+        let filteredComisiones = comisiones.filter(c => {
           let rect = d3.select("#" + c.id).node().getBoundingClientRect();
-          if ((rect.top - yOffset < 0) & (0 < rect.top + rect.height - yOffset)) {
-            state.comision = c.id;
-            d3.select("#select-comision").node().value = state.comision;
-          }
+          return ((rect.top - yOffset < 0) & (0 < rect.top + rect.height - yOffset));
         })
-        temas.forEach(t => {
-          // console.log(t)
-          // let rect = d3.select("#" + t.id).node().getBoundingClientRect();
-          // if ((rect.top - yOffset < 0) & (0 < rect.top + rect.height - yOffset)) {
-          //   // state.tema = t.id;
-          //   console.log(t.id)
-          //   // updateOptions();
-          // }
-        })
+        if (filteredComisiones.length === 1) {
+          state.comision = filteredComisiones[0].id;
+        } else {
+          state.comision = 'Todas';
+        }
+        d3.select("#select-comision").node().value = state.comision;
+
+        // let filteredTemas = temas.filter(t => {
+        //   console.log(d3.select("#t" + t.id))
+        //   let rect = d3.select("#t" + t.id).node().getBoundingClientRect();
+        //   return ((rect.top - yOffset < 0) & (0 < rect.top + rect.height - yOffset));
+        // })
+        // if (filteredComisiones.length === 1) {
+        //   state.comision = filteredComisiones[0].id;
+        // } else {
+        //   state.comision = 'Todas';
+        // }
+        // d3.select("#select-tema").node().value = state.tema;
+
+        updateOptions();
       }
     })
 
@@ -549,7 +554,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .data(d => d.children.filter(c => c.hasOwnProperty("wordCloud") || c.hasOwnProperty("wordTree")))
       .join("div")
         .attr("class", "tema")
-        .attr("id", d => d.id)
+        .attr("id", d => "t" + d.id)
 
     temaDiv.append("div")
       .attr("class", "tema-title")
@@ -703,6 +708,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       d3.select("#select-tema").node().value = temaId
       state.tema = temaId;
     }
+    updateOptions();
   }
 
   function showBubbles() {
