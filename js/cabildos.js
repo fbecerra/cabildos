@@ -246,7 +246,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
     let cabildo = cabildos.children.filter(d => d.id == id);
     let comisiones = cabildo[0].children.sort((a, b) => ('' + a.name).localeCompare(b.name))
-          .filter(c => c.children.reduce((a,b) => a | b.hasOwnProperty("wordCloud") | b.hasOwnProperty("wordTree") | b.hasOwnProperty("wordNetwork"), false))
+          .filter(c => c.hasOwnProperty("wordCloud") || c.children.reduce((a,b) => a || b.hasOwnProperty("wordCloud") || b.hasOwnProperty("wordTree") || b.hasOwnProperty("wordNetwork"), false))
     let temas = comisiones.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
     let temasBar = cabildo[0].children.map(d => d.children.filter(c => c.hasOwnProperty("porcentaje")).flat())
       .flat()
@@ -389,6 +389,27 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .join("div")
         .attr("class", "comision-description")
         .html(d => d.description)
+
+    let comisionWC = comisionesDiv.selectAll(".general-cloud-div")
+      .data(d => d.hasOwnProperty("wordCloud") ? [d] : [])
+      .join("div")
+        .attr("class", "general-cloud-div")
+        .each(d => {
+          let sizeScale = d3.scaleLinear()
+            .domain(d3.extent(d.wordCloud, w => w.frecuencia))
+            .range([12, 81])
+          d.wordCloud.forEach(w => {
+            w.fontSize = sizeScale(w.frecuencia)
+          })
+        })
+
+    comisionWC.selectAll(".general-word-div")
+      .data(d => d.wordCloud)
+      .join("div")
+        .attr("class", "general-word-div")
+        .style("font-size", d => d.fontSize + "px")
+        .style("line-height", d => 1.1 * d.fontSize + "px")
+        .html(d => `${d.ngram}<sup>${d.frecuencia}</sup>`)
 
     let temaDiv = comisionesDiv.selectAll(".tema")
       .data(d => d.children.filter(c => c.hasOwnProperty("wordCloud") || c.hasOwnProperty("wordTree")))
