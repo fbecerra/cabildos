@@ -233,7 +233,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   let format = d3.format(",d");
 
-  const svgHeight = window.innerHeight - d3.select("#sticky").node().getBoundingClientRect().height,
+  const svgHeight = window.innerHeight * 0.95 - d3.select("#sticky").node().getBoundingClientRect().height,
         svgWidth = 1.5 * svgHeight;
 
   const svg = d3.select("#cabildos").append("svg")
@@ -804,6 +804,10 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   const voronoi = delaunay.voronoi([- 1,- 1, width + 1, height + 1])
   const cells = depth1.map((d, i) => [d, voronoi.cellPolygon(i)]);
 
+  const expandFactor = 1.3;
+  const verticalOffset = 120;
+  const horizontalOffset = (d3.select("#cabildos").node().getBoundingClientRect().width - svgWidth)/2;
+
   const node = svg.append("g")
     .style("transform", `translate(-40px, -${offset}px)`)
     .selectAll("circle")
@@ -816,9 +820,9 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       // .attr("fill", d => d.children ? "#EAEAEA" : cabildos.comisiones[d.data.comision].color)
       // .attr("fill", d => "#f8f9fa")
       .attr("fill", d => "#EAEAEA")
-      .attr("cx", d => 1.4 * d.y)
-      .attr("cy", d => 1.4 * d.x - 130)
-      .attr("r", d => 1.4 * d.r)
+      .attr("cx", d => expandFactor * d.y + horizontalOffset)
+      .attr("cy", d => expandFactor * d.x - verticalOffset)
+      .attr("r", d => expandFactor * d.r)
       .on("click", (event, d) => {
         state.showing = 'details';
         let cabildo = d.depth === 1 ? d.data.id : d.parent.parent.data.id
@@ -826,7 +830,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         syncDropdowns(d);
         showDetails();
         updateDiv(cabildo); //updateDiv(d.cabildo);
-        console.log(d)
         if (d.depth === 3 && (d.data.hasOwnProperty("wordCloud") || d.data.hasOwnProperty("wordTree") || d.data.hasOwnProperty("wordNetwork"))) {
           scrollToElement("t" + d.data.id)
         }
@@ -888,9 +891,9 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
           d3.select(this).call(d.angle === 0 ? orient.right
               : d.angle === 3 ? orient.top
               : d.angle === 1 ? orient.bottom
-              : orient.left, 1.4 * d.r);
+              : orient.left, expandFactor * d.r);
         })
-        .attr("transform", ([d]) => `translate(${1.4 * d.y}, ${1.4 * d.x - 130})`)
+        .attr("transform", ([d]) => `translate(${expandFactor * d.y + horizontalOffset}, ${expandFactor * d.x - verticalOffset})`)
         // .call(wrap, 50)
 
   const lineHeight = 14;
@@ -931,8 +934,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     .data(root.descendants().slice(1).filter(function(d) { return !d.children; }))
     .join("text")
       .attr("class", "node-label")
-      .attr("x", d => 1.4 * d.y)
-      .attr("y", d => 1.4 * d.x - 130)
+      .attr("x", d => expandFactor * d.y + horizontalOffset)
+      .attr("y", d => expandFactor * d.x - verticalOffset)
       .style('fill', d => cabildos.comisiones[d.data.comision].color)
       .style("fill-opacity", 1)
       .style("display", "inline")
