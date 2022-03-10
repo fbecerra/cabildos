@@ -248,25 +248,24 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     let comisiones = cabildo[0].children.sort((a, b) => ('' + a.name).localeCompare(b.name))
           .filter(c => c.children.reduce((a,b) => a | b.hasOwnProperty("wordCloud") | b.hasOwnProperty("wordTree") | b.hasOwnProperty("wordNetwork"), false))
     let temas = comisiones.map(c => c.children.flat()).flat().sort((a,b) => b.porcentaje - a.porcentaje);
+    let temasBar = cabildo[0].children.map(d => d.children.filter(c => c.hasOwnProperty("porcentaje")).flat())
+      .flat()
+      .sort((a,b) => b.porcentaje - a.porcentaje);
 
     let svgBarMargin = {top: 40, left: 350, bottom: 20, right: 50},
         svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
-        svgBarHeight = temas.length * 20 + svgBarMargin.top + svgBarMargin.bottom;
+        svgBarHeight = temasBar.length * 20 + svgBarMargin.top + svgBarMargin.bottom;
 
-    let xScale, yScale, xAxis, yAxis;
+    let xScale = d3.scaleLinear()
+      .domain([0, temasBar[0].porcentaje])
+      .range([0, svgBarWidth - svgBarMargin.left - svgBarMargin.right]);
 
-    if (comisiones.length > 0) {
-      xScale = d3.scaleLinear()
-        .domain([0, temas[0].porcentaje])
-        .range([0, svgBarWidth - svgBarMargin.left - svgBarMargin.right]);
+    let yScale = d3.scaleLinear()
+      .domain([0, temasBar.length - 1])
+      .range([svgBarMargin.top, svgBarHeight - svgBarMargin.top - svgBarMargin.bottom]);
 
-      yScale = d3.scaleLinear()
-        .domain([0, temas.length - 1])
-        .range([svgBarMargin.top, svgBarHeight - svgBarMargin.top - svgBarMargin.bottom]);
-
-      xAxis = d3.axisBottom(xScale);
-      yAxis = d3.axisLeft(yScale).tickValues(d3.range(temas.length)).tickFormat(d => cabildos.temas[temas[d].id].shortName);
-    }
+    let xAxis = d3.axisBottom(xScale);
+    let yAxis = d3.axisLeft(yScale).tickValues(d3.range(temasBar.length)).tickFormat(d => cabildos.temas[temasBar[d].id].shortName);
 
     let details = d3.select("#details");
     details.selectAll("*").remove();
@@ -296,65 +295,63 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("class", "cabildo-title")
         .html(d => cabildos.cabildos[d.id].longName);
 
-    if (comisiones.length > 0) {
-      let svgBar = details.selectAll("svg")
-        .data(cabildo)
-        .join("svg")
-          .attr("class", "bar-chart")
-          .attr("width", svgBarWidth)
-          .attr("height", svgBarHeight)
+    let svgBar = details.selectAll("svg")
+      .data(cabildo)
+      .join("svg")
+        .attr("class", "bar-chart")
+        .attr("width", svgBarWidth)
+        .attr("height", svgBarHeight)
 
-      svgBar.append("g")
-        .attr("class", "title")
-        .attr("transform", `translate(${svgBarMargin.left},${svgBarMargin.top/4})`)
-        .append("text")
-          .text("Porcentaje de instancias en las que se mencionó el tema")
+    svgBar.append("g")
+      .attr("class", "title")
+      .attr("transform", `translate(${svgBarMargin.left},${svgBarMargin.top/4})`)
+      .append("text")
+        .text("Porcentaje de instancias en las que se mencionó el tema")
 
-      svgBar.append("g")
-        .attr("transform", `translate(${svgBarMargin.left},${svgBarHeight - svgBarMargin.top - svgBarMargin.bottom + 20})`)
-        .call(xAxis)
+    svgBar.append("g")
+      .attr("transform", `translate(${svgBarMargin.left},${svgBarHeight - svgBarMargin.top - svgBarMargin.bottom + 20})`)
+      .call(xAxis)
 
-      svgBar.append("g")
+    svgBar.append("g")
+      .attr("transform", `translate(${svgBarMargin.left},0)`)
+      .call(yAxis)
+      .call(g => {
+        g.selectAll(".tick line").remove()
+        g.selectAll(".domain").remove()
+      })
+
+    let gBar = svgBar.selectAll(".bar-group")
+      .data(d => [d])
+      .join("g")
+        .attr("class", ".bar-group")
         .attr("transform", `translate(${svgBarMargin.left},0)`)
-        .call(yAxis)
-        .call(g => {
-          g.selectAll(".tick line").remove()
-          g.selectAll(".domain").remove()
-        })
 
-      let gBar = svgBar.selectAll(".bar-group")
-        .data(d => [d])
-        .join("g")
-          .attr("class", ".bar-group")
-          .attr("transform", `translate(${svgBarMargin.left},0)`)
+    gBar.selectAll("line")
+      .data(temasBar)
+      .join("line")
+        .attr("class", "line")
+        .attr("x1", d => xScale(0))
+        .attr("y1", (d, i) => yScale(i))
+        .attr("x2", d => xScale(d.porcentaje) - xScale(0))
+        .attr("y2", (d, i) => yScale(i));
 
-      gBar.selectAll("line")
-        .data(temas)
-        .join("line")
-          .attr("class", "line")
-          .attr("x1", d => xScale(0))
-          .attr("y1", (d, i) => yScale(i))
-          .attr("x2", d => xScale(d.porcentaje) - xScale(0))
-          .attr("y2", (d, i) => yScale(i));
+    gBar.selectAll("circle")
+      .data(temasBar)
+      .join("circle")
+        .attr("class", "circle")
+        .attr("cx", d => xScale(d.porcentaje) - xScale(0))
+        .attr("cy", (d, i) => yScale(i))
+        .attr("stroke", d => cabildos.comisiones[d.comision].color)
+        .attr("fill", "#F8F9FA")
+        .attr("r", 6);
 
-      gBar.selectAll("circle")
-        .data(temas)
-        .join("circle")
-          .attr("class", "circle")
-          .attr("cx", d => xScale(d.porcentaje) - xScale(0))
-          .attr("cy", (d, i) => yScale(i))
-          .attr("stroke", d => cabildos.comisiones[d.comision].color)
-          .attr("fill", "#F8F9FA")
-          .attr("r", 6);
-
-      gBar.selectAll("text")
-        .data(temas)
-        .join("text")
-          .attr("class", "text")
-          .attr("x", d => xScale(d.porcentaje) - xScale(0) + 10)
-          .attr("y", (d, i) => yScale(i) + 4)
-          .text(d => d.porcentaje + "%")
-    }
+    gBar.selectAll("text")
+      .data(temasBar)
+      .join("text")
+        .attr("class", "text")
+        .attr("x", d => xScale(d.porcentaje) - xScale(0) + 10)
+        .attr("y", (d, i) => yScale(i) + 4)
+        .text(d => d.porcentaje + "%")
 
     if (cabildo[0].hasOwnProperty("rankings")) {
       details.selectAll(".ranking-title")
@@ -375,41 +372,23 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
           .html(d => `<img src=${d} />`)
     }
 
-    if (cabildo[0].hasOwnProperty("wordClouds")) {
-
-      let generalCloudDiv = details.selectAll(".general-cloud-div")
-        .data(d => cabildo[0].wordClouds)
-        .join("div")
-          .attr("class", "general-cloud-div")
-          .each(d => {
-            console.log(d)
-            let sizeScale = d3.scaleLinear()
-              .domain(d3.extent(d, w => w.frecuencia))
-              .range([12, 81])
-            d.forEach(w => {
-              w.fontSize = sizeScale(w.frecuencia)
-            })
-          })
-
-      generalCloudDiv.selectAll(".general-word-div")
-        .data(d => d)
-        .join("div")
-          .attr("class", "general-word-div")
-          .style("font-size", d => d.fontSize + "px")
-          .style("line-height", d => 1.1 * d.fontSize + "px")
-          .html(d => `${d.ngram}<sup>${d.frecuencia}</sup>`)
-
-    }
-
     let comisionesDiv = details.selectAll(".comision")
       .data(comisiones)
       .join("div")
         .attr("class", "comision")
         .attr("id", d => d.id)
 
-    comisionesDiv.append("div")
-      .attr("class", "comision-title")
-      .html(d => cabildos.comisiones[d.id].longName)
+    comisionesDiv.selectAll(".comision-title")
+      .data(d => [d])
+      .join("div")
+        .attr("class", "comision-title")
+        .html(d => cabildos.comisiones[d.id].longName)
+
+    comisionesDiv.selectAll(".comision-description")
+      .data(d => d.description !== "" ? [d] : [])
+      .join("div")
+        .attr("class", "comision-description")
+        .html(d => d.description)
 
     let temaDiv = comisionesDiv.selectAll(".tema")
       .data(d => d.children.filter(c => c.hasOwnProperty("wordCloud") || c.hasOwnProperty("wordTree")))
