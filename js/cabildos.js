@@ -22,6 +22,9 @@ window.onclick = function(event) {
 }
 
 Promise.all([d3.json("data/cabildos.json")]).then(function(data){
+
+  const isMobile = window.innerWidth < 760;
+
   let cabildos = data[0];
   console.log(cabildos);
 
@@ -226,7 +229,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   }
 
   const svgHeight = window.innerHeight * 0.95 - d3.select("#sticky").node().getBoundingClientRect().height,
-        svgWidth = 1.5 * svgHeight;
+        svgWidth = isMobile ? 2/3 * svgHeight : 1.5 * svgHeight;
 
   const svg = d3.select("#cabildos").append("svg")
       .attr("viewBox", [0, 0, svgWidth, svgHeight])
@@ -235,7 +238,9 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("style", "max-width: 100%; height: auto; height: intrinsic; position: relative;")
       .attr("text-anchor", "middle");
 
-  const offset = (height - svgWidth) / 2;
+  const offset = isMobile ? 0 : (height - svgWidth) / 2;
+  const nodeYOffset = isMobile ? 0 : -40;
+  const rMin = isMobile ? 20 : 15;
 
   function updateDiv(id) {
 
@@ -620,24 +625,24 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   }
 
   const depth1 = root.descendants().filter(d => d.depth === 1);
-  const delaunay = d3.Delaunay.from(depth1, d => d.y, d => d.x);
+  const delaunay = d3.Delaunay.from(depth1, d => isMobile ? d.x : d.y, d => isMobile ? d.y : d.x);
   const voronoi = delaunay.voronoi([- 1,- 1, width + 1, height + 1])
   const cells = depth1.map((d, i) => [d, voronoi.cellPolygon(i)]);
 
-  const expandFactor = 1.3;
-  const verticalOffset = 120;
-  const horizontalOffset = (d3.select("#cabildos").node().getBoundingClientRect().width - svgWidth)/2;
+  const expandFactor = isMobile ? 1.0 : 1.3;
+  const verticalOffset = isMobile ? 0 : 120;
+  const horizontalOffset = isMobile ? 0 : (d3.select("#cabildos").node().getBoundingClientRect().width - svgWidth)/2;
 
   const node = svg.append("g")
-    .style("transform", `translate(-40px, -${offset}px)`)
+    .style("transform", `translate(${nodeYOffset}px, -${offset}px)`)
     .selectAll("circle")
     .data(root.descendants().slice(1).filter(d => d.depth === 1 || d.depth === 3))
     .join("circle")
       .attr('stroke', d => d.depth === 3 ? cabildos.comisiones[d.data.comision].color : null)
       .attr('stroke-width', 1.0)
       .attr("fill", d => "#EAEAEA")
-      .attr("cx", d => expandFactor * d.y + horizontalOffset)
-      .attr("cy", d => expandFactor * d.x - verticalOffset)
+      .attr("cx", d => isMobile ? d.x : expandFactor * d.y + horizontalOffset)
+      .attr("cy", d => isMobile ? d.y : expandFactor * d.x - verticalOffset)
       .attr("r", d => expandFactor * d.r)
       .on("click", (event, d) => {
         state.showing = 'details';
@@ -700,8 +705,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .style("opacity", 0.8)
         .text(([d]) => d.data.name)
         .each(function([d, cell]) {
-          const x = d.y;
-          const y = d.x;
+          const x = isMobile ? d.x : d.y;
+          const y = isMobile ? d.y : d.x;
           const [cx, cy] = d3.polygonCentroid(cell);
           d.angle = (Math.round(Math.atan2(cy - y, cx - x) / Math.PI * 2) + 4) % 4;
           d3.select(this).call(d.angle === 0 ? orient.right
@@ -748,12 +753,12 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     .data(root.descendants().slice(1).filter(function(d) { return !d.children; }))
     .join("text")
       .attr("class", "node-label")
-      .attr("x", d => expandFactor * d.y + horizontalOffset)
-      .attr("y", d => expandFactor * d.x - verticalOffset)
+      .attr("x", d => isMobile ? d.x : expandFactor * d.y + horizontalOffset)
+      .attr("y", d => isMobile ? d.y : expandFactor * d.x - verticalOffset)
       .style('fill', d => cabildos.comisiones[d.data.comision].color)
       .style("fill-opacity", 1)
       .style("display", "inline")
-      .text(d => d.r > 15 ? cabildos.temas[d.data.id].shortName : null)
+      .text(d => d.r > rMin ? cabildos.temas[d.data.id].shortName : null)
       .call(wrap, 30);
 
 })
