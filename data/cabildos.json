@@ -1226,7 +1226,7 @@
               "id": "1a",
               "comision": "c1",
               "porcentaje": 15.3,
-              "description": "En cuanto a las “Instituciones, organización del Estado y régimen político”, se identifican distintos puntos de discusión. Destacan la probidad, la paridad, el contrapeso de poderes y la prevención y/o sanción de abusos como características relevantes para regular el ejercicio del poder político. Se busca descentralizar el poder en instancias de decisión territoriales, devolver el poder al pueblo o bien balancear el poder entre parlamento y presidencia. Para esto, el Estado debe ser descentralizado, transparente, plurinacional, intercultural y protector de los derechos humanos, las diversidades sexuales, el medio ambiente y las localidades, con una propuesta transparente y horizontal, que fortalezca la participación directa y ciudadana.",
+              "description": "En el caso de instituciones del estado, se identifican distintos puntos de discusión. Destacan la probidad, la paridad, el contrapeso de poderes y la prevención y/o sanción de abusos como características relevantes para regular el ejercicio del poder político, descentralizando el poder en instancias de decisión territoriales. Para esto, el Estado debe contar con una propuesta transparente y horizontal, que fortalezca la participación directa y ciudadana y vele por la protección de los Derechos Humanos.",
               "nCabildos": "",
               "wordCloud" : [
                 {
@@ -1455,7 +1455,7 @@
               "name": "Estado Plurinacional y libre determinación de los pueblos",
               "id": "1c",
               "comision": "c1",
-              "description": "",
+              "description": "En estos cabildos se evidencia que el deseo de los participantes es que el estado sea plurinacional, tomando en cuenta la pluralidad de lengua, la defensa de los derechos humanos, la diversidad de naciones, culturas y cosmovisiones que existen en Chile. Se menciona la necesidad de velar por el desarrollo e integración de las naciones que conforman Chile e instituciones gubernamentales",
               "nCabildos": "",
               "porcentaje": 9.5,
               "wordCloud":
@@ -1921,7 +1921,7 @@
               "name": "Principios",
               "id": "2b",
               "comision": "c2",
-              "description": "Para el tema “Principios”, se hace alusión a un Estado social, garante, plurinacional, feminista, inclusivo, descentralizado y de bienestar. Por otro lado, se hace referencias a condiciones actuales que se busca eliminar, como la corrupción, el estado subsidiario o la inseguridad para mujeres y niñas. Se enfatiza la necesidad de expandir la participación ciudadana o la idea de garantizar participación en igualdad de oportunidades. Se menciona la probidad, autonomía de las finanzas y la transparencia como características de los servicios públicos.",
+              "description": "Para el tema “Principios”, se hace alusión a un Estado en donde la participación ciudadana funcione como un eje central para la democracia, siendo este transparente, participativo, garante, plurinacional, feminista, inclusivo, descentralizado y de bienestar.",
               "nCabildos": "",
               "porcentaje": 13.0,
               "wordCloud": [
@@ -2143,7 +2143,7 @@
               "name": "Desarrollo Sostenible, Buen vivir",
               "id": "5f",
               "comision": "c5",
-              "description": "En cuanto al “Desarrollo Sostenible y el Buen vivir”, se identifica como rol del Estado el proteger el medio ambiente, la desprivatización de los recursos naturales y la aplicación del principio de sustentabilidad y equilibrio, según las necesidades del territorio, procurando el equilibrio entre la actividad económica y la sustentabilidad ambiental. Destaca el fomento de la participación ciudadana directa en asuntos ecológicos desde edades tempranas a través de la educación ambiental y la participación vinculante en decisiones relacionadas. Se menciona la transición desde un modelo económico centrado en la extracción de recursos hacia uno que asegure y garantice condiciones dignas de vida, teniendo como ejemplo los modelos de economía circular y economía feminista. También considera el cambio de un sistema económico extractivista por uno sustentable con un rol mixto entre el Estado y privado, asegurando el desarrollo de la seguridad social y garantizando la soberanía alimentaria.",
+              "description": "Se identifica como rol del Estado el proteger el medio ambiente, la desprivatización de los recursos naturales y la aplicación del principio de sustentabilidad y equilibrio, según las necesidades del territorio, procurando el equilibrio entre la actividad económica y la sustentabilidad ambiental. Se menciona la transición desde un modelo económico centrado en la extracción de recursos hacia uno que asegure y garantice condiciones dignas de vida, teniendo como ejemplo los modelos de economía circular y economía feminista. También considera el cambio de un sistema económico extractivista por uno sustentable con un rol mixto entre el Estado y privado.",
               "porcentaje": 12.5,
               "wordCloud": [
                 {
@@ -2555,7 +2555,7 @@
               "name": "Estructura organizacional y descentralizada del Estado",
               "id": "3a",
               "comision": "c3",
-              "description": "En cuanto a la “Estructura organizacional y descentralizada del Estado” se identifican características asociadas a su ordenamiento fundamental como un Estado plurinacional, descentralizado, con autonomía territorial, equitativo y orientado al bien común. Se mencionan las autoridades locales y regionales, con énfasis específico en la descentralización y la autonomía territorial.",
+              "description": "Se identifica un Estado plurinacional orientado al bien común, con autoridades locales y regionales, y con énfasis específico en la descentralización y la autonomía territorial.",
               "nCabildos": "",
               "porcentaje": 9.0,
               "wordCloud": [
@@ -3208,6 +3208,7 @@
     {
       "name": "TQH Chile a Escala",
       "id": "tqhe",
+      "description": "A continuación se presentan los 22 temas más discutidos en los cabildos disponibles en la Plataforma digital de Participación Popular de la Convención. Estos cabildos se realizaron desde octubre de 2019 hasta enero de 2022. De estos, 84 se realizaron durante 2022 y 116 en 2019 - 2021, con un estimado de 2344 participantes. De los 200 cabildos, 109 son encuentros autoconvocados, 70 cabildos comunales y 21 de grupos específicos. 117 se hicieron en forma presencial, 67 en modalidad virtual y 16 en formato híbrido. Los temas que abordan corresponden a las diferentes comisiones temáticas y temas indicados en el Reglamento General de la Convención Constitucional. En el gráfico se aprecia que los temas que congregan más menciones son “Educación” e “Instituciones, organización del Estado y régimen político”. Las menciones a asuntos relativos a la organización del sistema político son consistentes con la idea de un momento de discusiones políticas fundamentales que se esperan para un cambio constitucional. La prevalencia de la temática de Educación, puede dar cuenta de la visión ciudadana respecto a su centralidad en la discusión, su transversalidad o dar cuenta del tipo de grupos participantes de la plataforma. A continuación, se puede observar la distribución de temas priorizados por los participantes en cada cabildo, según la categorización que rige actualmente las comisiones y temas de la Convención. Las cuatro principales temáticas relevadas fueron “Educación”, “Instituciones”, “organización del Estado” y “régimen político”, “Salud en todas las políticas con enfoque en las determinantes sociales” y “Seguridad social y sistema de pensiones”.",
       "children": [
         {
           "name": "Comision 1",
@@ -3219,7 +3220,7 @@
               "name": "Instituciones",
               "id": "1a",
               "comision": "c1",
-              "description": "",
+              "description": "En este tema se perciben apreciaciones negativas del ordenamiento político actual, vinculadas a la impresión de mala priorización de recursos, inefectividad de representantes y percepciones de corrupción, de poca representatividad o del sistema político como origen de los principales problemas nacionales. Se replica la percepción de que el cambio de los actuales representantes podría conducir los demás cambios sociales, con la necesidad de que el Estado se centre en las personas y su bienestar.",
               "nCabildos": "",
               "porcentaje": 15.3,
               "wordCloud": [
@@ -3565,7 +3566,7 @@
               "name": "Educación",
               "id": "4p",
               "comision": "c4",
-              "description": "",
+              "description": "Para el tema de Educación se desprende la necesidad de asegurar el acceso, teniendo en cuenta una población diversa en cuanto a trayectorias, características identitarias e incluso capacidades, con interés por profundizar temas dentro del currículum como la educación cívica, sexual o filósofica. Por otro lado, se atribuye que la educación debe entregar herramientas para la participación y la toma de decisiones públicas y políticas.",
               "nCabildos": "",
               "porcentaje": 42.3,
               "wordCloud": [
@@ -3894,7 +3895,7 @@
               "name": "Salud",
               "id": "4o",
               "comision": "c4",
-              "description": "",
+              "description": "La discusión sobre el tema salud confirma la noción que esta es vista como condición necesaria para la vida y por ende para cualquier actividad política, cultural, social y económica. Se identifican dos puntos centrales: por un lado, la idea de que el sistema de salud debiese tener un enfoque social más pronunciado, ser más justo y accesible para acortar la brecha de la salud pública con la privada, y por otro, la necesidad de un sistema de salud que se centre en el bienestar y ponga en el centro a las personas.",
               "nCabildos": "",
               "porcentaje": 12.2,
               "wordCloud": [
@@ -4112,7 +4113,7 @@
               "name": "Pensiones",
               "id": "4n",
               "comision": "c4",
-              "description": "",
+              "description": "Aquí se identifica la percepción de que las pensiones son bajas y no se condicen con los gastos reales de las personas, por lo tanto, son vistas como desiguales e indignas. Resalta la urgencia de cambiar el sistema de pensiones, pues es un problema transversal a la ciudadanía y afecta directamente su vejez. En este sentido, se identifican percepciones negativas para el objeto AFP y la opinión apunta a eliminarlas.",
               "nCabildos": "",
               "porcentaje": 7.6,
               "wordCloud": [
@@ -4429,6 +4430,7 @@
     {
       "name": "Mesa de Unidad Social (MUS)",
       "id": "mus",
+      "description": "La base de cabildos que provee la MUS incluye aproximadamente 1600 cabildos, con un total de 47.164 participantes. Estos encuentros se realizaron en el contexto del estallido social, y aborda tanto la percepción ciudadana sobre las manifestaciones y el momento político como la recopilación de las demandas sociales prioritarias para la ciudadanía. A continuación se presentan los 22 temas discutidos en los cabildos provenientes de la Mesa de Unidad Social. Estos datos son recolectados en marco del llamado “Estallido Social”, por lo que responden a las demandas o exigencias de la ciudadanía. En el gráfico se aprecia que los temas que congregan más menciones en cabildos son: educación, salud, pensiones, empleo y trabajo, medio ambiente, nueva constitución, justicia y derechos y cambios al modelo. La categoría “Nueva Constitución” se excluye de este análisis por ser una demanda anterior a este proceso constituyente.",
       "children": [
         {
           "name": "Comision 1",
@@ -4440,7 +4442,7 @@
               "name": "Poder legislativo",
               "id": "1beg",
               "comision": "c1",
-              "description": "",
+              "description": "En la categoría Poder Legislativo y Parlamento, se identifica una demanda de reducción de dieta parlamentaria, voto obligatorio y reestructuración del sistema electoral y reelección actual.",
               "nCabildos": "",
               "porcentaje": 4.6,
               "wordCloud": [{"ngram": "dieta parlamentaria", "frecuencia": 75}, {"ngram": "sueldo", "frecuencia": 41}, {"ngram": "voto obligatorio", "frecuencia": 41}, {"ngram": "parlamentarios", "frecuencia": 29}, {"ngram": "politico", "frecuencia": 28}, {"ngram": "ley", "frecuencia": 25}, {"ngram": "leyes", "frecuencia": 22}, {"ngram": "mas", "frecuencia": 21}, {"ngram": "sueldos parlamentarios", "frecuencia": 21}, {"ngram": "parlamento", "frecuencia": 19}, {"ngram": "cargos publico", "frecuencia": 19}, {"ngram": "bajar dieta", "frecuencia": 18}, {"ngram": "reducir", "frecuencia": 16}, {"ngram": "eliminar", "frecuencia": 16}, {"ngram": "sistema", "frecuencia": 15}, {"ngram": "cambio", "frecuencia": 15}, {"ngram": "representantes", "frecuencia": 15}, {"ngram": "reeleccion", "frecuencia": 14}, {"ngram": "disminuir", "frecuencia": 14}, {"ngram": "publico", "frecuencia": 14}],
@@ -4450,7 +4452,7 @@
               "name": "Pueblos Originarios",
               "id": "1c",
               "comision": "c1",
-              "description": "",
+              "description": "Para la categoría de pueblos originarios es posible evidenciar que existe una demanda por el reconocimiento de los pueblos originarios, y se demanda además la desmilitarización del Wallmapu.",
               "nCabildos": "",
               "porcentaje": 2.3,
               "wordCloud": [{"ngram": "pueblos originario", "frecuencia": 91}, {"ngram": "mapuche", "frecuencia": 35}, {"ngram": "plurinacional", "frecuencia": 31}, {"ngram": "reconocimiento pueblo", "frecuencia": 24}, {"ngram": "derecho", "frecuencia": 23}, {"ngram": "pueblos indigenas", "frecuencia": 18}, {"ngram": "territorio", "frecuencia": 17}, {"ngram": "indigena", "frecuencia": 17}, {"ngram": "reconocimiento", "frecuencia": 15}, {"ngram": "autonomia", "frecuencia": 14}, {"ngram": "reconocimiento constitucional", "frecuencia": 13}, {"ngram": "cultura", "frecuencia": 12}, {"ngram": "reivindicacion", "frecuencia": 12}, {"ngram": "tierra", "frecuencia": 11}, {"ngram": "desmilitarizacion", "frecuencia": 10}, {"ngram": "mas", "frecuencia": 10}, {"ngram": "chile", "frecuencia": 10}, {"ngram": "constitucional pueblos", "frecuencia": 10}, {"ngram": "debe", "frecuencia": 9}, {"ngram": "desmilitarizacion wallmapu", "frecuencia": 9}],
@@ -4460,7 +4462,7 @@
               "name": "Seguridad publica",
               "id": "1f",
               "comision": "c1",
-              "description": "",
+              "description": "La discusión de conceptos discutidos en esta categoría develan la demanda de reformar o cambiar las fuerzas de orden. La interpretación de esta categoría debe precisarse al contexto de los cabildos realizados durante el “Estallido Social”, por lo que las vulneraciones, violencia y violaciones a los derechos humanos se vinculan a las fuerzas armadas y el abuso de poder.",
               "nCabildos": "",
               "porcentaje": 1.9,
               "wordCloud": [{"ngram": "fuerzas armadas", "frecuencia": 29}, {"ngram": "carabineros", "frecuencia": 28}, {"ngram": "ffaa", "frecuencia": 23}, {"ngram": "seguridad", "frecuencia": 22}, {"ngram": "orden", "frecuencia": 17}, {"ngram": "mas", "frecuencia": 13}, {"ngram": "gasto", "frecuencia": 11}, {"ngram": "militares", "frecuencia": 10}, {"ngram": "sistema", "frecuencia": 10}, {"ngram": "ciudadano", "frecuencia": 9}, {"ngram": "fin", "frecuencia": 8}, {"ngram": "instituciones", "frecuencia": 8}, {"ngram": "fuerza", "frecuencia": 8}, {"ngram": "privilegios", "frecuencia": 8}, {"ngram": "violencia", "frecuencia": 7}, {"ngram": "recursos", "frecuencia": 7}, {"ngram": "cambiar", "frecuencia": 7}, {"ngram": "publico", "frecuencia": 7}, {"ngram": "poder", "frecuencia": 7}, {"ngram": "derechos humanos", "frecuencia": 7}],
@@ -4478,17 +4480,17 @@
               "name": "Participacion",
               "id": "2d",
               "comision": "c2",
-              "description": "",
+              "description": "En este tema se identifica la necesidad de generar y propiciar instancias de participación ciudadana que sean vinculantes en procesos de representación, fortaleciendo así la democracia y la organización territorial de las comunidades.",
               "nCabildos": "",
               "porcentaje": 3.3,
               "wordCloud": [{"ngram": "participacion", "frecuencia": 48}, {"ngram": "participacion ciudadana", "frecuencia": 41}, {"ngram": "espacio", "frecuencia": 32}, {"ngram": "vinculante", "frecuencia": 31}, {"ngram": "ciudadania", "frecuencia": 24}, {"ngram": "ciudadana", "frecuencia": 19}, {"ngram": "mayor participacion", "frecuencia": 19}, {"ngram": "democracia", "frecuencia": 18}, {"ngram": "comunidad", "frecuencia": 17}, {"ngram": "instancias", "frecuencia": 17}, {"ngram": "mas", "frecuencia": 15}, {"ngram": "organizacion", "frecuencia": 15}, {"ngram": "pueblo", "frecuencia": 15}, {"ngram": "ciudadano", "frecuencia": 15}, {"ngram": "asamblea", "frecuencia": 14}, {"ngram": "plebiscito", "frecuencia": 13}, {"ngram": "crear", "frecuencia": 13}, {"ngram": "dialogo", "frecuencia": 13}, {"ngram": "generar", "frecuencia": 12}, {"ngram": "politica", "frecuencia": 12}],
               "wordNetwork": "assets/mus/participacion.png"
             },
             {
-              "name": "Migracion",
+              "name": "Migración",
               "id": "2c",
               "comision": "c2",
-              "description": "",
+              "description": "Se evidencia la necesidad de garantizar los derechos humanos de las personas migrantes mediante leyes adecuadas que velen por su bienestar en el territorio.",
               "nCabildos": "",
               "porcentaje": 0.3,
               "wordCloud": [{"ngram": "migrante", "frecuencia": 9}, {"ngram": "derecho", "frecuencia": 9}, {"ngram": "ley", "frecuencia": 6}, {"ngram": "migracion", "frecuencia": 6}, {"ngram": "servicios", "frecuencia": 3}, {"ngram": "revisar", "frecuencia": 3}, {"ngram": "ciudadanos", "frecuencia": 3}, {"ngram": "pais", "frecuencia": 3}, {"ngram": "tener", "frecuencia": 3}, {"ngram": "garantizar", "frecuencia": 3}, {"ngram": "contar", "frecuencia": 2}, {"ngram": "cada", "frecuencia": 2}, {"ngram": "dia", "frecuencia": 2}, {"ngram": "mayor", "frecuencia": 2}, {"ngram": "personas", "frecuencia": 2}, {"ngram": "mejorar", "frecuencia": 2}, {"ngram": "condiciones", "frecuencia": 2}, {"ngram": "migratoria", "frecuencia": 2}, {"ngram": "migraciones", "frecuencia": 2}, {"ngram": "constitucion", "frecuencia": 2}],
@@ -4503,10 +4505,10 @@
           "description": "",
           "children": [
             {
-              "name": "Tributacion",
+              "name": "Tributación",
               "id": "3f",
               "comision": "c3",
-              "description": "",
+              "description": "En esta categoría se evidencia que existe una necesidad por cambios en la reforma tributaria, el establecimiento de impuestos a los más ricos y superricos y la eliminación del impuesto específico (de combustibles).",
               "nCabildos": "",
               "porcentaje": 4.0,
               "wordCloud": [{"ngram": "impuesto", "frecuencia": 145}, {"ngram": "reforma tributaria", "frecuencia": 57}, {"ngram": "mas", "frecuencia": 43}, {"ngram": "impuesto especifico", "frecuencia": 24}, {"ngram": "empresa", "frecuencia": 23}, {"ngram": "persona", "frecuencia": 20}, {"ngram": "combustible", "frecuencia": 17}, {"ngram": "ingreso", "frecuencia": 17}, {"ngram": "tributaria", "frecuencia": 16}, {"ngram": "mas rico", "frecuencia": 16}, {"ngram": "eliminacion", "frecuencia": 15}, {"ngram": "sistema", "frecuencia": 15}, {"ngram": "eliminar impuesto", "frecuencia": 14}, {"ngram": "grandes empresas", "frecuencia": 13}, {"ngram": "mayor", "frecuencia": 11}, {"ngram": "iva", "frecuencia": 11}, {"ngram": "aumento", "frecuencia": 11}, {"ngram": "especifico combustible", "frecuencia": 11}, {"ngram": "cambio", "frecuencia": 10}, {"ngram": "tributacion", "frecuencia": 9}],
@@ -4516,7 +4518,7 @@
               "name": "Poder ejecuivo",
               "id": "3abg",
               "comision": "c3",
-              "description": "",
+              "description": "En esta categoría, a través de la vinculación de conceptos como altos cargos, públicos y funcionarios; los conceptos de transparencia, fiscalización; precios y regulación; sueldos y vitalicios; políticas y pública; servicios y básicos, evidencian una demanda sobre el rol del Estado como ente regulador y fiscalizador, propiciando la transparencia y la regulación de la administración pública.",
               "nCabildos": "",
               "porcentaje": 3.6,
               "wordCloud": [{"ngram": "fiscalizacion", "frecuencia": 31}, {"ngram": "publico", "frecuencia": 28}, {"ngram": "politico", "frecuencia": 24}, {"ngram": "mas", "frecuencia": 21}, {"ngram": "regular", "frecuencia": 20}, {"ngram": "servicio", "frecuencia": 19}, {"ngram": "regulacion", "frecuencia": 18}, {"ngram": "mayor", "frecuencia": 18}, {"ngram": "cargo", "frecuencia": 18}, {"ngram": "cargos publicos", "frecuencia": 18}, {"ngram": "sistema", "frecuencia": 17}, {"ngram": "sueldo", "frecuencia": 16}, {"ngram": "publica", "frecuencia": 15}, {"ngram": "transparencia", "frecuencia": 15}, {"ngram": "politica", "frecuencia": 15}, {"ngram": "recursos", "frecuencia": 14}, {"ngram": "control", "frecuencia": 14}, {"ngram": "fin", "frecuencia": 13}, {"ngram": "empresa", "frecuencia": 12}, {"ngram": "sueldos vitalicios", "frecuencia": 12}],
@@ -4526,7 +4528,7 @@
               "name": "Poder local",
               "id": "3acd",
               "comision": "c3",
-              "description": "",
+              "description": "En la categoría Poder Legislativo y Parlamento, se identifica una demanda de reducción de dieta parlamentaria, voto obligatorio y reestructuración del sistema electoral y reelección actual.",
               "nCabildos": "",
               "porcentaje": 2.2,
               "wordCloud": [{"ngram": "descentralizacion", "frecuencia": 45}, {"ngram": "recurso", "frecuencia": 31}, {"ngram": "mas", "frecuencia": 19}, {"ngram": "comuna", "frecuencia": 18}, {"ngram": "regiones", "frecuencia": 17}, {"ngram": "mayor", "frecuencia": 16}, {"ngram": "politica", "frecuencia": 14}, {"ngram": "poder", "frecuencia": 13}, {"ngram": "pais", "frecuencia": 13}, {"ngram": "region", "frecuencia": 12}, {"ngram": "locales", "frecuencia": 12}, {"ngram": "territorio", "frecuencia": 12}, {"ngram": "local", "frecuencia": 10}, {"ngram": "regionales", "frecuencia": 10}, {"ngram": "territoriales", "frecuencia": 10}, {"ngram": "municipal", "frecuencia": 9}, {"ngram": "gobierno", "frecuencia": 9}, {"ngram": "autonomia", "frecuencia": 9}, {"ngram": "cada", "frecuencia": 9}, {"ngram": "decisiones", "frecuencia": 9}],
@@ -4544,7 +4546,7 @@
               "name": "Educación",
               "id": "4p",
               "comision": "c4",
-              "description": "",
+              "description": "Se evidencia la necesidad de una educación pública, gratuita y de calidad, con la urgencia de una mejora sustantiva en la educación, con un enfoque en educación cívica y en la educación superior.",
               "nCabildos": "",
               "porcentaje": 11.6,
               "wordCloud": [{"ngram": "educacion", "frecuencia": 500}, {"ngram": "educacion publica", "frecuencia": 95}, {"ngram": "educacion civica", "frecuencia": 94}, {"ngram": "educacion calidad", "frecuencia": 83}, {"ngram": "educacion gratuita", "frecuencia": 81}, {"ngram": "mas", "frecuencia": 76}, {"ngram": "calidad educacion", "frecuencia": 75}, {"ngram": "gratuita calidad", "frecuencia": 73}, {"ngram": "mejorar", "frecuencia": 62}, {"ngram": "derecho", "frecuencia": 54}, {"ngram": "sistema", "frecuencia": 45}, {"ngram": "cae educacion", "frecuencia": 42}, {"ngram": "formacion", "frecuencia": 39}, {"ngram": "acceso", "frecuencia": 37}, {"ngram": "debe", "frecuencia": 35}, {"ngram": "estudiante", "frecuencia": 32}, {"ngram": "publica gratuita", "frecuencia": 32}, {"ngram": "publica calidad", "frecuencia": 32}, {"ngram": "recursos", "frecuencia": 31}, {"ngram": "eliminar", "frecuencia": 30}],
@@ -4554,7 +4556,7 @@
               "name": "Salud",
               "id": "4o",
               "comision": "c4",
-              "description": "",
+              "description": "En este tema se observa la necesidad de una mejora en el acceso, recursos, servicio y atención de salud, y de igual forma en los hospitales, especialistas y profesionales para alcanzar una salud pública de calidad y digna para la sociedad.",
               "nCabildos": "",
               "porcentaje": 11.6,
               "wordCloud": [{"ngram": "salud", "frecuencia": 634}, {"ngram": "salud publica", "frecuencia": 116}, {"ngram": "calidad", "frecuencia": 115}, {"ngram": "sistema salud", "frecuencia": 91}, {"ngram": "acceso", "frecuencia": 86}, {"ngram": "atencion", "frecuencia": 75}, {"ngram": "salud mental", "frecuencia": 71}, {"ngram": "mejorar", "frecuencia": 68}, {"ngram": "medicamento", "frecuencia": 65}, {"ngram": "mas", "frecuencia": 54}, {"ngram": "recurso", "frecuencia": 53}, {"ngram": "servicio", "frecuencia": 47}, {"ngram": "especialista", "frecuencia": 44}, {"ngram": "mayor", "frecuencia": 43}, {"ngram": "profesionales", "frecuencia": 41}, {"ngram": "mejora", "frecuencia": 39}, {"ngram": "publico", "frecuencia": 32}, {"ngram": "salud digna", "frecuencia": 32}, {"ngram": "hospitales", "frecuencia": 30}, {"ngram": "mejor", "frecuencia": 30}],
@@ -4564,17 +4566,17 @@
               "name": "Pensiones",
               "id": "4n",
               "comision": "c4",
-              "description": "",
+              "description": "Los conceptos más relevantes de este tema apuntan a un cambio o reforma al sistema de pensiones, con la creación de uno nuevo que asegure pensiones dignas. Se discute la idea de sueldos mínimos asociados a este tema y se expresa, a su vez, el fin de las AFP.",
               "nCabildos": "",
               "porcentaje": 11.5,
               "wordCloud": [{"ngram": "pensiones", "frecuencia": 260}, {"ngram": "afp", "frecuencia": 243}, {"ngram": "sistema pensiones", "frecuencia": 154}, {"ngram": "pensiones digna", "frecuencia": 92}, {"ngram": "mas afp", "frecuencia": 75}, {"ngram": "sistema", "frecuencia": 59}, {"ngram": "pension", "frecuencia": 43}, {"ngram": "jubilaciones", "frecuencia": 42}, {"ngram": "mejorar pensiones", "frecuencia": 41}, {"ngram": "fin afp", "frecuencia": 39}, {"ngram": "nuevo sistema", "frecuencia": 39}, {"ngram": "fondo", "frecuencia": 36}, {"ngram": "mejorar", "frecuencia": 34}, {"ngram": "jubilacion", "frecuencia": 33}, {"ngram": "sueldo minimo", "frecuencia": 32}, {"ngram": "cambio", "frecuencia": 29}, {"ngram": "reforma", "frecuencia": 29}, {"ngram": "sistema previsional", "frecuencia": 29}, {"ngram": "persona", "frecuencia": 28}, {"ngram": "cambio sistema", "frecuencia": 28}],
               "wordNetwork": "assets/mus/pensiones.png"
             },
             {
-              "name": "Empleo-Trabajo",
+              "name": "Empleo y trabajo",
               "id": "4k",
               "comision": "c4",
-              "description": "",
+              "description": "En la categoría empleo y trabajo,  se evidencia una demanda de mejora de las condiciones laborales contractuales y el aumento del sueldo mínimo que garantice la subsistencia de las personas.",
               "nCabildos": "",
               "porcentaje": 8.2,
               "wordCloud": [{"ngram": "sueldo minimo", "frecuencia": 157}, {"ngram": "trabajo", "frecuencia": 75}, {"ngram": "sueldo", "frecuencia": 71}, {"ngram": "aumento sueldo", "frecuencia": 44}, {"ngram": "laboral", "frecuencia": 43}, {"ngram": "sueldos dignos", "frecuencia": 38}, {"ngram": "mas", "frecuencia": 32}, {"ngram": "digno", "frecuencia": 30}, {"ngram": "salario", "frecuencia": 28}, {"ngram": "salario minimo", "frecuencia": 27}, {"ngram": "trabajadores", "frecuencia": 26}, {"ngram": "minimo", "frecuencia": 25}, {"ngram": "ingreso", "frecuencia": 23}, {"ngram": "familia", "frecuencia": 22}, {"ngram": "mejorar sueldo", "frecuencia": 22}, {"ngram": "costo vida", "frecuencia": 19}, {"ngram": "honorarios", "frecuencia": 18}, {"ngram": "publico", "frecuencia": 18}, {"ngram": "persona", "frecuencia": 18}, {"ngram": "hora", "frecuencia": 18}],
@@ -4584,7 +4586,7 @@
               "name": "Justicia y derechos",
               "id": "4a",
               "comision": "c4",
-              "description": "",
+              "description": "En esta categoría, se encuentran múltiples demandas sobre vulneraciones y violaciones a los derechos humanos en el contexto del “Estallido Social”, buscando el principio de no repetición de cualquier forma de vulneración de derechos humanos, ambientales y de la naturaleza.",
               "nCabildos": "",
               "porcentaje": 6.2,
               "wordCloud": [{"ngram": "derecho", "frecuencia": 59}, {"ngram": "derechos humanos", "frecuencia": 50}, {"ngram": "servicios basico", "frecuencia": 49}, {"ngram": "mas", "frecuencia": 41}, {"ngram": "agua", "frecuencia": 34}, {"ngram": "justicia", "frecuencia": 33}, {"ngram": "persona", "frecuencia": 32}, {"ngram": "acceso", "frecuencia": 30}, {"ngram": "recurso", "frecuencia": 26}, {"ngram": "igualdad", "frecuencia": 24}, {"ngram": "salud educacion", "frecuencia": 24}, {"ngram": "basico", "frecuencia": 23}, {"ngram": "derechos sociales", "frecuencia": 23}, {"ngram": "publico", "frecuencia": 20}, {"ngram": "calidad", "frecuencia": 20}, {"ngram": "social", "frecuencia": 20}, {"ngram": "ddhh", "frecuencia": 19}, {"ngram": "equidad", "frecuencia": 19}, {"ngram": "politica", "frecuencia": 18}, {"ngram": "mejorar", "frecuencia": 17}],
@@ -4594,17 +4596,17 @@
               "name": "Vivienda",
               "id": "4j",
               "comision": "c4",
-              "description": "",
+              "description": "La discusión de este tema se enfoca principalmente en la necesidad del acceso a una vivienda propia y digna.",
               "nCabildos": "",
               "porcentaje": 3.8,
               "wordCloud": [{"ngram": "vivienda", "frecuencia": 126}, {"ngram": "acceso vivienda", "frecuencia": 32}, {"ngram": "vivienda digna", "frecuencia": 27}, {"ngram": "derecho", "frecuencia": 24}, {"ngram": "calidad", "frecuencia": 18}, {"ngram": "digna", "frecuencia": 13}, {"ngram": "acceso", "frecuencia": 13}, {"ngram": "subsidio", "frecuencia": 11}, {"ngram": "mejorar", "frecuencia": 10}, {"ngram": "sociales", "frecuencia": 9}, {"ngram": "social", "frecuencia": 7}, {"ngram": "sistema", "frecuencia": 7}, {"ngram": "inmobiliaria", "frecuencia": 7}, {"ngram": "garantizar", "frecuencia": 7}, {"ngram": "casa", "frecuencia": 6}, {"ngram": "debe", "frecuencia": 6}, {"ngram": "propia", "frecuencia": 6}, {"ngram": "mayor", "frecuencia": 5}, {"ngram": "constitucion", "frecuencia": 5}, {"ngram": "mas", "frecuencia": 5}],
               "wordNetwork": "assets/mus/vivienda.png"
             },
             {
-              "name": "Proteccion social",
+              "name": "Protección social",
               "id": "4gh",
               "comision": "c4",
-              "description": "",
+              "description": "Dentro de esta categoría, los conceptos tales como infancia, sename, adultos mayores, protección infancia evidencian la demanda por parte de la ciudadanía por la protección de derechos sociales en niños y adultos mayores, además de personas más vulnerables de nuestro país.",
               "nCabildos": "",
               "porcentaje": 3.0,
               "wordCloud": [{"ngram": "sename", "frecuencia": 45}, {"ngram": "nino", "frecuencia": 35}, {"ngram": "adultos mayores", "frecuencia": 32}, {"ngram": "sistema", "frecuencia": 24}, {"ngram": "derecho", "frecuencia": 24}, {"ngram": "infancia", "frecuencia": 21}, {"ngram": "mas", "frecuencia": 17}, {"ngram": "proteccion", "frecuencia": 16}, {"ngram": "politica", "frecuencia": 16}, {"ngram": "prevision", "frecuencia": 14}, {"ngram": "proteccion infancia", "frecuencia": 14}, {"ngram": "social", "frecuencia": 12}, {"ngram": "mejorar", "frecuencia": 12}, {"ngram": "vulnerable", "frecuencia": 11}, {"ngram": "sala cuna", "frecuencia": 11}, {"ngram": "cuidado", "frecuencia": 10}, {"ngram": "proteccion social", "frecuencia": 10}, {"ngram": "fin", "frecuencia": 9}, {"ngram": "familia", "frecuencia": 9}, {"ngram": "nina", "frecuencia": 9}],
@@ -4624,17 +4626,17 @@
               "name": "Igualdad de genero",
               "id": "4eqt",
               "comision": "c4",
-              "description": "",
+              "description": "En esta categoría se identifica la demanda general de transversalizar el enfoque de género en las instituciones y en diferentes dinámicas sociales, mediante el reconocimiento y protección de los derechos humanos fundamentales de todas y todos los individuos.",
               "nCabildos": "",
               "porcentaje": 1.4,
               "wordCloud": [{"ngram": "genero", "frecuencia": 38}, {"ngram": "mujeres", "frecuencia": 16}, {"ngram": "violencia", "frecuencia": 15}, {"ngram": "igualdad genero", "frecuencia": 15}, {"ngram": "equidad", "frecuencia": 11}, {"ngram": "derecho", "frecuencia": 11}, {"ngram": "mujer", "frecuencia": 9}, {"ngram": "aborto libre", "frecuencia": 9}, {"ngram": "igualdad", "frecuencia": 8}, {"ngram": "ley", "frecuencia": 8}, {"ngram": "hombre", "frecuencia": 8}, {"ngram": "enfoque", "frecuencia": 7}, {"ngram": "sexuales", "frecuencia": 7}, {"ngram": "aborto", "frecuencia": 7}, {"ngram": "mayor", "frecuencia": 6}, {"ngram": "seguro", "frecuencia": 6}, {"ngram": "salud", "frecuencia": 5}, {"ngram": "reconocimiento", "frecuencia": 5}, {"ngram": "sexual", "frecuencia": 5}, {"ngram": "identidad", "frecuencia": 5}],
               "wordNetwork": "assets/mus/igualdad-de-genero.png"
             },
             {
-              "name": "Medios comunicacion",
+              "name": "Medios de comunicación",
               "id": "4",
               "comision": "c4",
-              "description": "",
+              "description": "Se identifica la necesidad de generar leyes que garanticen derechos en torno a los medios, a la difusión y libertad de expresión, con el fin de democratizar el acceso a la información y generar medios independientes y autónomos y evitando la monopolización de estos. A su vez, se discute de abolir el rating, promover distintos medios y formar medios deportivos.",
               "nCabildos": "",
               "porcentaje": 0.7,
               "wordCloud": [{"ngram": "medios comunicacion", "frecuencia": 19}, {"ngram": "medios", "frecuencia": 9}, {"ngram": "informacion", "frecuencia": 7}, {"ngram": "independiente", "frecuencia": 6}, {"ngram": "ley", "frecuencia": 5}, {"ngram": "comunicacion", "frecuencia": 4}, {"ngram": "gobierno", "frecuencia": 4}, {"ngram": "prensa", "frecuencia": 4}, {"ngram": "derecho", "frecuencia": 4}, {"ngram": "mas", "frecuencia": 4}, {"ngram": "intereses", "frecuencia": 4}, {"ngram": "publico", "frecuencia": 4}, {"ngram": "informativos", "frecuencia": 3}, {"ngram": "democratizar", "frecuencia": 3}, {"ngram": "evitando", "frecuencia": 3}, {"ngram": "ciudadania", "frecuencia": 2}, {"ngram": "critica", "frecuencia": 2}, {"ngram": "social", "frecuencia": 2}, {"ngram": "sociales", "frecuencia": 2}, {"ngram": "participacion", "frecuencia": 2}],
@@ -4652,7 +4654,7 @@
               "name": "Medioambiente",
               "id": "5bcdfijm",
               "comision": "c5",
-              "description": "",
+              "description": "En este tema se evidencia la necesidad de cuidar los recursos naturales, la protección del medio ambiente, asegurar el derecho al agua y disminuir las zonas de sacrificio, lo que da cuenta de una demanda de cambio de sistema económico actual.",
               "nCabildos": "",
               "porcentaje": 7.7,
               "wordCloud": [{"ngram": "recursos naturales", "frecuencia": 279}, {"ngram": "agua", "frecuencia": 215}, {"ngram": "medio ambiente", "frecuencia": 83}, {"ngram": "nacionalizacion recurso", "frecuencia": 56}, {"ngram": "proteccion", "frecuencia": 52}, {"ngram": "zonas sacrificio", "frecuencia": 38}, {"ngram": "derecho", "frecuencia": 36}, {"ngram": "mas", "frecuencia": 35}, {"ngram": "codigo agua", "frecuencia": 32}, {"ngram": "uso", "frecuencia": 30}, {"ngram": "medioambiente", "frecuencia": 25}, {"ngram": "nacionalizacion", "frecuencia": 25}, {"ngram": "ley", "frecuencia": 23}, {"ngram": "ambiental", "frecuencia": 22}, {"ngram": "contaminacion", "frecuencia": 21}, {"ngram": "fin", "frecuencia": 21}, {"ngram": "medioambiental", "frecuencia": 20}, {"ngram": "empresa", "frecuencia": 20}, {"ngram": "explotacion", "frecuencia": 19}, {"ngram": "cobre litio", "frecuencia": 19}],
@@ -4662,7 +4664,7 @@
               "name": "Cambios al modelo",
               "id": "5dfm",
               "comision": "c5",
-              "description": "",
+              "description": "Distintos conceptos tales como desarrollo, economía, TPP, servicios básicos, recursos naturales y nacionalización discutidos en este tema, dan cuenta de una demanda sobre un cambio en el sistema económico donde se resguarde y nacionalicen los recursos naturales a la vez que se garantizan los derechos sociales y servicios básicos.",
               "nCabildos": "",
               "porcentaje": 5.2,
               "wordCloud": [{"ngram": "tpp", "frecuencia": 54}, {"ngram": "economia", "frecuencia": 29}, {"ngram": "desarrollo", "frecuencia": 25}, {"ngram": "empresa", "frecuencia": 24}, {"ngram": "servicios basicos", "frecuencia": 24}, {"ngram": "fin", "frecuencia": 23}, {"ngram": "recurso", "frecuencia": 21}, {"ngram": "recursos naturales", "frecuencia": 21}, {"ngram": "mas", "frecuencia": 20}, {"ngram": "economico", "frecuencia": 20}, {"ngram": "social", "frecuencia": 19}, {"ngram": "sistema", "frecuencia": 19}, {"ngram": "subsidiario", "frecuencia": 18}, {"ngram": "derecho", "frecuencia": 17}, {"ngram": "modelo economico", "frecuencia": 17}, {"ngram": "cambio", "frecuencia": 16}, {"ngram": "pais", "frecuencia": 16}, {"ngram": "extractivista", "frecuencia": 14}, {"ngram": "nacionalizacion", "frecuencia": 14}, {"ngram": "bienes", "frecuencia": 14}],
@@ -4680,7 +4682,7 @@
               "name": "Justicia",
               "id": "6abf",
               "comision": "c6",
-              "description": "",
+              "description": "En esta categoría, se encuentran múltiples demandas sobre vulneraciones y violaciones a los derechos humanos en el contexto del “Estallido Social”, buscando el principio de no repetición de cualquier forma de vulneración de derechos humanos, ambientales y de la naturaleza.",
               "nCabildos": "",
               "porcentaje": 3.1,
               "wordCloud": [{"ngram": "justicia", "frecuencia": 63}, {"ngram": "corrupcion", "frecuencia": 51}, {"ngram": "pena", "frecuencia": 21}, {"ngram": "politico", "frecuencia": 17}, {"ngram": "igualdad", "frecuencia": 16}, {"ngram": "mas", "frecuencia": 16}, {"ngram": "social", "frecuencia": 14}, {"ngram": "colusion", "frecuencia": 13}, {"ngram": "sistema", "frecuencia": 13}, {"ngram": "impunidad", "frecuencia": 13}, {"ngram": "ley", "frecuencia": 12}, {"ngram": "igualitaria", "frecuencia": 12}, {"ngram": "politica", "frecuencia": 12}, {"ngram": "fin", "frecuencia": 11}, {"ngram": "publico", "frecuencia": 11}, {"ngram": "carcel efectiva", "frecuencia": 11}, {"ngram": "persona", "frecuencia": 10}, {"ngram": "empresa", "frecuencia": 10}, {"ngram": "toda", "frecuencia": 10}, {"ngram": "leyes", "frecuencia": 9}],
@@ -4698,7 +4700,7 @@
               "name": "Arte cultura",
               "id": "7abc",
               "comision": "c7",
-              "description": "",
+              "description": "Se discute sobre los recursos, espacios y acceso al arte y la cultura, así como también el acceso a la cultura asociada a pueblos originarios. Se discute que debiese haber manifestaciones artísticas y culturales en espacios públicos y que esto impactaría en la calidad de vida de las personas.",
               "nCabildos": "",
               "porcentaje": 0.9,
               "wordCloud": [{"ngram": "cultura", "frecuencia": 52}, {"ngram": "arte", "frecuencia": 15}, {"ngram": "espacio", "frecuencia": 14}, {"ngram": "mas", "frecuencia": 9}, {"ngram": "publico", "frecuencia": 9}, {"ngram": "recurso", "frecuencia": 9}, {"ngram": "acceso", "frecuencia": 8}, {"ngram": "cultural", "frecuencia": 8}, {"ngram": "culturales", "frecuencia": 6}, {"ngram": "generar", "frecuencia": 6}, {"ngram": "desarrollo", "frecuencia": 6}, {"ngram": "derecho", "frecuencia": 6}, {"ngram": "personas", "frecuencia": 5}, {"ngram": "fomentar", "frecuencia": 5}, {"ngram": "publicas", "frecuencia": 5}, {"ngram": "identidad", "frecuencia": 5}, {"ngram": "recreacion", "frecuencia": 5}, {"ngram": "artesano", "frecuencia": 5}, {"ngram": "nacional", "frecuencia": 5}, {"ngram": "escritores", "frecuencia": 5}],
@@ -4711,6 +4713,7 @@
     {
       "name": "El Chile que Queremos (CQQ)",
       "id": "cqq",
+      "description": "El Chile que queremos, iniciativa de diálogo y escucha social organizada por el gobierno, se enmarca en el Acuerdo por la Justicia Social y un Acuerdo por una Nueva Constitución. En ella, se realizaron dos instancias de participación social: los diálogos ciudadanos, donde participaron 81.986 personas adultas, y los diálogos de niños, niñas y adolescentes, donde participaron 12.874 personas. En total se hicieron 12.076 diálogos con 94.860 participantes, en modalidad presencial, desde octubre de 2019 hasta marzo de 2020. A continuación se muestran las principales necesidades y sus categorías declaradas por los participantes de los diálogos ciudadanos. Se observa que las principales necesidades en orden de prioridad son pensiones, salud, educación, condiciones laborales, vivienda y subsidio y cambios políticos.",
       "children": [
         {
           "name": "Comision 1",
@@ -4778,6 +4781,7 @@
     },
     {
       "name": "Ahora Nos Toca Participar (ANTP)",
+      "description": "La iniciativa Ahora Nos Toca Participar, organización que busca facilitar la participación de grupos históricamente excluidos (GHE) en el proceso constituyente, reportó 15 cabildos, con un estimado mínimo de 187 participantes.En su mayoría son encuentros de grupos específicos, en temas variados, como Adultos Mayores, Feminismo, Diversidad Sexual, Niños Niñas y Adolescentes (NNA), entre otros. A continuación, se puede observar la distribución de temas discutidos por los participantes en cada cabildo, según la categorización que rige actualmente las comisiones y temas de la Convención. En la abscisa se muestra el total de conclusiones grupales asociadas a cada tema, mientras que el número que aparece al lado de la barra es el porcentaje respecto al total (que fueron 137 conclusiones, luego del proceso de recategorización).",
       "id": "antp",
       "children": [
         {
