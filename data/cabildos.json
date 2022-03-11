@@ -361,7 +361,7 @@
     {
       "name": "Plataforma CC",
       "id": "cc",
-      "description": "",
+      "description": "A continuación se presentan los 22 temas más discutidos en los cabildos disponibles en la Plataforma digital de Participación Popular de la Convención. Estos cabildos se realizaron desde octubre de 2019 hasta enero de 2022. De estos, 84 se realizaron durante 2022 y 116 en 2019 - 2021, con un estimado de 2344 participantes. De los 200 cabildos, 109 son encuentros autoconvocados, 70 cabildos comunales y 21 de grupos específicos. 117 se hicieron en forma presencial, 67 en modalidad virtual y 16 en formato híbrido. Los temas que abordan corresponden a las diferentes comisiones temáticas y temas indicados en el Reglamento General de la Convención Constitucional. En el gráfico se aprecia que los temas que congregan más menciones son “Educación” e “Instituciones, organización del Estado y régimen político”. Las menciones a asuntos relativos a la organización del sistema político son consistentes con la idea de un momento de discusiones políticas fundamentales que se esperan para un cambio constitucional. La prevalencia de la temática de Educación, puede dar cuenta de la visión ciudadana respecto a su centralidad en la discusión, su transversalidad o dar cuenta del tipo de grupos participantes de la plataforma.",
       "nTotalCabildos": "",
       "rankings": {
         "title": "1. Comparación entre períodos de cabildos",
@@ -3208,6 +3208,7 @@
     {
       "name": "TQH Chile a Escala",
       "id": "tqhe",
+      "description": "A continuación se presentan los 22 temas más discutidos en los cabildos disponibles en la Plataforma digital de Participación Popular de la Convención. Estos cabildos se realizaron desde octubre de 2019 hasta enero de 2022. De estos, 84 se realizaron durante 2022 y 116 en 2019 - 2021, con un estimado de 2344 participantes. De los 200 cabildos, 109 son encuentros autoconvocados, 70 cabildos comunales y 21 de grupos específicos. 117 se hicieron en forma presencial, 67 en modalidad virtual y 16 en formato híbrido. Los temas que abordan corresponden a las diferentes comisiones temáticas y temas indicados en el Reglamento General de la Convención Constitucional. En el gráfico se aprecia que los temas que congregan más menciones son “Educación” e “Instituciones, organización del Estado y régimen político”. Las menciones a asuntos relativos a la organización del sistema político son consistentes con la idea de un momento de discusiones políticas fundamentales que se esperan para un cambio constitucional. La prevalencia de la temática de Educación, puede dar cuenta de la visión ciudadana respecto a su centralidad en la discusión, su transversalidad o dar cuenta del tipo de grupos participantes de la plataforma. A continuación, se puede observar la distribución de temas priorizados por los participantes en cada cabildo, según la categorización que rige actualmente las comisiones y temas de la Convención. Las cuatro principales temáticas relevadas fueron “Educación”, “Instituciones”, “organización del Estado” y “régimen político”, “Salud en todas las políticas con enfoque en las determinantes sociales” y “Seguridad social y sistema de pensiones”.",
       "children": [
         {
           "name": "Comision 1",
@@ -4429,6 +4430,7 @@
     {
       "name": "Mesa de Unidad Social (MUS)",
       "id": "mus",
+      "description": "La base de cabildos que provee la MUS incluye aproximadamente 1600 cabildos, con un total de 47.164 participantes. Estos encuentros se realizaron en el contexto del estallido social, y aborda tanto la percepción ciudadana sobre las manifestaciones y el momento político como la recopilación de las demandas sociales prioritarias para la ciudadanía. A continuación se presentan los 22 temas discutidos en los cabildos provenientes de la Mesa de Unidad Social. Estos datos son recolectados en marco del llamado “Estallido Social”, por lo que responden a las demandas o exigencias de la ciudadanía. En el gráfico se aprecia que los temas que congregan más menciones en cabildos son: educación, salud, pensiones, empleo y trabajo, medio ambiente, nueva constitución, justicia y derechos y cambios al modelo. La categoría “Nueva Constitución” se excluye de este análisis por ser una demanda anterior a este proceso constituyente.",
       "children": [
         {
           "name": "Comision 1",
@@ -4711,6 +4713,7 @@
     {
       "name": "El Chile que Queremos (CQQ)",
       "id": "cqq",
+      "description": "El Chile que queremos, iniciativa de diálogo y escucha social organizada por el gobierno, se enmarca en el Acuerdo por la Justicia Social y un Acuerdo por una Nueva Constitución. En ella, se realizaron dos instancias de participación social: los diálogos ciudadanos, donde participaron 81.986 personas adultas, y los diálogos de niños, niñas y adolescentes, donde participaron 12.874 personas. En total se hicieron 12.076 diálogos con 94.860 participantes, en modalidad presencial, desde octubre de 2019 hasta marzo de 2020. A continuación se muestran las principales necesidades y sus categorías declaradas por los participantes de los diálogos ciudadanos. Se observa que las principales necesidades en orden de prioridad son pensiones, salud, educación, condiciones laborales, vivienda y subsidio y cambios políticos.",
       "children": [
         {
           "name": "Comision 1",
@@ -4778,6 +4781,7 @@
     },
     {
       "name": "Ahora Nos Toca Participar (ANTP)",
+      "description": "La iniciativa Ahora Nos Toca Participar, organización que busca facilitar la participación de grupos históricamente excluidos (GHE) en el proceso constituyente, reportó 15 cabildos, con un estimado mínimo de 187 participantes.En su mayoría son encuentros de grupos específicos, en temas variados, como Adultos Mayores, Feminismo, Diversidad Sexual, Niños Niñas y Adolescentes (NNA), entre otros. A continuación, se puede observar la distribución de temas discutidos por los participantes en cada cabildo, según la categorización que rige actualmente las comisiones y temas de la Convención. En la abscisa se muestra el total de conclusiones grupales asociadas a cada tema, mientras que el número que aparece al lado de la barra es el porcentaje respecto al total (que fueron 137 conclusiones, luego del proceso de recategorización).",
       "id": "antp",
       "children": [
         {
