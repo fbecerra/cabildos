@@ -141,6 +141,9 @@ body {
     font-size: 18px;
     margin-bottom: 10px;
     margin-left: 20px;
+    background-color: var(--cc-primary);
+    color: var(--bs-gray-100);
+    padding: 8px;
 }
 
 .tema-description {
@@ -149,7 +152,10 @@ body {
 }
 
 .cloud-div, .general-cloud-div {
-  margin-top: 30px;
+  margin-top: 60px;
+  max-width: 80%;
+  margin-left: 18%;
+  margin-bottom: 80px;
 }
 
 .word-div, .general-word-div {
@@ -241,4 +247,27 @@ a:hover {
   border-color: var(--cc-primary);
   outline: 0;
   box-shadow: none;
+}
+
+.ranking-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.ranking-images {
+  width: 60%;
+  margin-bottom: 40px;
+  margin-left: 18%;
+}
+
+.word-network {
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 18%;
+}
+
+.word-network img {
+  width: 100%;
+  height: auto;
 }
