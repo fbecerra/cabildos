@@ -369,7 +369,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       details.selectAll(".ranking-image")
         .data(cabildo[0].rankings.images)
         .join("div")
-          .html(d => `<img src=${d} />`)
+        .attr("class", "ranking-images")  
+        .html(d => `<img src=${d} />`)
     }
 
     let comisionesDiv = details.selectAll(".comision")
