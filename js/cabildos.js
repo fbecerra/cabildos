@@ -127,7 +127,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     let theseTemas = getUniqueElements(filteredTemas, 'id');
 
     let allCabildosNames = theseCabildos.map(d => cabildos.cabildos[d].longName);
-    let allComisionesNames = theseComisiones.map(d => cabildos.comisiones[d].shortName);
+    let allComisionesNames = theseComisiones.map(d => cabildos.comisiones[d].longName);
     let allTemasNames = theseTemas.map(d => cabildos.temas[d].shortName);
 
     let selectCabildo = addOptions("select-cabildo", ['Todos', ...allCabildosNames], ['Todos', ...theseCabildos]);
