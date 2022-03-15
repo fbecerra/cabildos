@@ -28,7 +28,30 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   let cabildos = data[0];
   console.log(cabildos);
 
-  const height = 550,
+  let factor = 0.9;
+
+  const screenFactor = window.innerHeight / window.innerWidth;
+
+  const maxHeight = window.innerHeight * factor - d3.select("#sticky").node().getBoundingClientRect().height,
+        maxWidth = factor * d3.select("#cabildos").node().getBoundingClientRect().width;
+
+  let svgHeight, svgWidth;
+
+  if (maxHeight * 1.5 < maxWidth) {
+    svgHeight = maxHeight;
+    svgWidth = maxHeight * 1.5
+  } else {
+    svgHeight = 2/3 * maxWidth;
+    svgWidth = maxWidth;
+  }
+
+  let svgXOffset = (d3.select("#cabildos").node().getBoundingClientRect().width - svgWidth) / 2,
+      svgYOffset = (window.innerHeight - d3.select("#sticky").node().getBoundingClientRect().height - svgHeight) / 2;
+
+  // svgHeight = 641.8046875;
+  // svgWidth = 962.70703125;
+
+  const height = 0.9 * svgHeight,
         width = height;
   const charSize = 2;
 
@@ -228,18 +251,24 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .style("opacity", d => isSelected(d) ? 1 : 0);
   }
 
-  const svgHeight = window.innerHeight * 0.95 - d3.select("#sticky").node().getBoundingClientRect().height,
-        svgWidth = isMobile ? 2/3 * svgHeight : 1.5 * svgHeight;
+  // const svgHeight = window.innerHeight * 0.95 - d3.select("#sticky").node().getBoundingClientRect().height,
+  //       svgWidth = isMobile ? 2/3 * svgHeight : 1.5 * svgHeight;
 
   const svg = d3.select("#cabildos").append("svg")
       .attr("viewBox", [0, 0, svgWidth, svgHeight])
       .attr("width", svgWidth)
       .attr("height", svgHeight)
       .attr("style", "max-width: 100%; height: auto; height: intrinsic; position: relative;")
+      .style("transform", `translate(${svgXOffset}px, ${svgYOffset}px)`)
       .attr("text-anchor", "middle");
 
-  const offset = isMobile ? 0 : (height - svgWidth) / 2;
-  const nodeYOffset = isMobile ? 0 : -40;
+  const offset = 0,
+        nodeYOffset = 0;
+
+  console.log(svgWidth, svgHeight, maxWidth, maxHeight, svgXOffset, svgYOffset)
+
+  // const offset = isMobile ? 0 : (height - svgWidth) / 2;
+  // const nodeYOffset = isMobile ? 0 : -40;
   const rMin = isMobile ? 20 : 15;
 
   function updateDiv(id) {
@@ -369,7 +398,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       details.selectAll(".ranking-image")
         .data(cabildo[0].rankings.images)
         .join("div")
-        .attr("class", "ranking-images")  
+        .attr("class", "ranking-images")
         .html(d => `<img src=${d} />`)
     }
 
@@ -630,20 +659,30 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   const voronoi = delaunay.voronoi([- 1,- 1, width + 1, height + 1])
   const cells = depth1.map((d, i) => [d, voronoi.cellPolygon(i)]);
 
-  const expandFactor = isMobile ? 1.0 : 1.3;
-  const verticalOffset = isMobile ? 0 : 120;
-  const horizontalOffset = isMobile ? 0 : (d3.select("#cabildos").node().getBoundingClientRect().width - svgWidth)/2;
+  let bigCirles = root.descendants().slice(1).filter(d => d.depth === 1);
+
+  let xmin = d3.min(bigCirles, d => d.y - d.r),
+      xmax = d3.max(bigCirles, d => d.y + d.r),
+      ymin = d3.min(bigCirles, d => d.x - d.r),
+      ymax = d3.max(bigCirles, d => d.x + d.r);
+
+  const expandFactor = Math.min(svgHeight / (xmax - xmin), svgWidth / (ymax - ymin));
+
+  const xMid = expandFactor * (xmin + xmax) / 2,
+        yMid = expandFactor * (ymin + ymax) / 2;
+  const verticalOffset = svgHeight/2 - yMid,
+        horizontalOffset = svgWidth/2 - xMid;
 
   const node = svg.append("g")
-    .style("transform", `translate(${nodeYOffset}px, -${offset}px)`)
+    .style("transform", `translate(${horizontalOffset}px, ${verticalOffset}px)`)
     .selectAll("circle")
     .data(root.descendants().slice(1).filter(d => d.depth === 1 || d.depth === 3))
     .join("circle")
       .attr('stroke', d => d.depth === 3 ? cabildos.comisiones[d.data.comision].color : null)
       .attr('stroke-width', 1.0)
       .attr("fill", d => "#EAEAEA")
-      .attr("cx", d => isMobile ? d.x : expandFactor * d.y + horizontalOffset)
-      .attr("cy", d => isMobile ? d.y : expandFactor * d.x - verticalOffset)
+      .attr("cx", d => isMobile ? d.x : expandFactor * d.y)
+      .attr("cy", d => isMobile ? d.y : expandFactor * d.x)
       .attr("r", d => expandFactor * d.r)
       .on("click", (event, d) => {
         state.showing = 'details';
@@ -698,6 +737,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   })
 
   const label = svg.append("g")
+      .style("transform", `translate(${horizontalOffset}px, ${verticalOffset}px)`)
       .selectAll(".label")
       .data(cells)
       .join("text")
@@ -715,7 +755,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
               : d.angle === 1 ? orient.bottom
               : orient.left, expandFactor * d.r);
         })
-        .attr("transform", ([d]) => `translate(${expandFactor * d.y + horizontalOffset}, ${expandFactor * d.x - verticalOffset})`);
+        .attr("transform", ([d]) => `translate(${expandFactor * d.y}, ${expandFactor * d.x})`);
 
   const lineHeight = 14;
 
@@ -749,13 +789,13 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   const nodeLabel = svg.append("g")
       .attr("pointer-events", "none")
       .attr("text-anchor", "middle")
-      .style("transform", `translate(0, -${offset}px)`)
+      .style("transform", `translate(${horizontalOffset}px, ${verticalOffset}px)`)
     .selectAll(".node-label")
     .data(root.descendants().slice(1).filter(function(d) { return !d.children; }))
     .join("text")
       .attr("class", "node-label")
-      .attr("x", d => isMobile ? d.x : expandFactor * d.y + horizontalOffset)
-      .attr("y", d => isMobile ? d.y : expandFactor * d.x - verticalOffset)
+      .attr("x", d => isMobile ? d.x : expandFactor * d.y)
+      .attr("y", d => isMobile ? d.y : expandFactor * d.x)
       .style('fill', d => cabildos.comisiones[d.data.comision].color)
       .style("fill-opacity", 1)
       .style("display", "inline")
