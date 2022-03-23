@@ -323,4 +323,8 @@ h5 {
   #dropdowns {
     border: none;
   }
+
+  .node-label {
+    font-size: 10px;
+  }
 }

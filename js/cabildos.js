@@ -289,7 +289,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   // const offset = isMobile ? 0 : (height - svgWidth) / 2;
   // const nodeYOffset = isMobile ? 0 : -40;
-  const rMin = isMobile ? 20 : 15;
+  const rMin = isMobile ? 15 : 15;
 
   function updateDiv(id) {
 
