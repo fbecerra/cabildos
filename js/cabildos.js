@@ -8,6 +8,19 @@ const transitionTime = 500;
 
 const container = d3.select("#cabildos");
 
+const stickyHeight = d3.select("#sticky").node().getBoundingClientRect().height,
+      stickyPadding = 20;
+
+d3.select("#bubbles").style("margin-top", (stickyHeight + stickyPadding) + 'px');
+d3.select("#cabildo-details").style("margin-top", (stickyHeight + stickyPadding) + 'px');
+
+const titleHeight = d3.select("#title").node().getBoundingClientRect().height +
+                    d3.select("#subtitle").node().getBoundingClientRect().height;
+const aboutHeight = d3.select(".menu-links h6").node().getBoundingClientRect().height;
+
+d3.select(".menu-links h6").style("padding-top", (titleHeight-aboutHeight-4)/2 + 'px')
+  .style("padding-bottom", (titleHeight-aboutHeight-4)/2 + 'px')
+
 d3.select("#how-to")
   .on("click", () => d3.select("#legend").classed("show", !d3.select("#legend").classed("show")))
 
@@ -259,7 +272,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("width", svgWidth)
       .attr("height", svgHeight)
       .attr("style", "max-width: 100%; height: auto; height: intrinsic; position: relative;")
-      .style("transform", `translate(${svgXOffset}px, ${svgYOffset}px)`)
+      .style("transform", `translate(${svgXOffset}px, 0)`)
       .attr("text-anchor", "middle");
 
   const offset = 0,

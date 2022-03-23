@@ -45,6 +45,10 @@ body {
   margin-top: 2px;
 }
 
+#dropdowns {
+  border-right: 0.5px dashed var(--cc-primary);
+}
+
 .form-control {
   background-color: var(--bs-gray-100);
 }
@@ -208,17 +212,13 @@ body {
 
 .btn-method {
   position: fixed;
-  top: 98px !important; 
+  top: 98px !important;
 }
 
 #up-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-}
-
-#bubbles, #cabildo-details {
-  padding-top: 14%;
 }
 
 #cabildo-details {
@@ -311,4 +311,12 @@ h5 {
   font-size: 0.8rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .menu-links {
+    text-align: center;
+  }
 
+  #dropdowns {
+    border: none;
+  }
+}
