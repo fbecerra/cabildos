@@ -39,9 +39,13 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   const isMobile = window.innerWidth < 760;
 
   let cabildos = data[0];
-  console.log(cabildos);
 
-  let factor = 0.9;
+  let factor;
+  if (isMobile) {
+    factor = 1.0;
+  } else {
+    factor = 0.9;
+  }
 
   const screenFactor = window.innerHeight / window.innerWidth;
 
@@ -50,19 +54,22 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   let svgHeight, svgWidth;
 
-  if (maxHeight * 1.5 < maxWidth) {
+  if (isMobile) {
     svgHeight = maxHeight;
-    svgWidth = maxHeight * 1.5
-  } else {
-    svgHeight = 2/3 * maxWidth;
     svgWidth = maxWidth;
+  } else {
+    if (maxHeight * 1.5 < maxWidth) {
+      svgHeight = maxHeight;
+      svgWidth = maxHeight * 1.5
+    } else {
+      svgHeight = 2/3 * maxWidth;
+      svgWidth = maxWidth;
+    }
   }
+
 
   let svgXOffset = (d3.select("#cabildos").node().getBoundingClientRect().width - svgWidth) / 2,
       svgYOffset = (window.innerHeight - d3.select("#sticky").node().getBoundingClientRect().height - svgHeight) / 2;
-
-  // svgHeight = 641.8046875;
-  // svgWidth = 962.70703125;
 
   const height = 0.9 * svgHeight,
         width = height;
@@ -674,12 +681,24 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   let bigCirles = root.descendants().slice(1).filter(d => d.depth === 1);
 
-  let xmin = d3.min(bigCirles, d => d.y - d.r),
-      xmax = d3.max(bigCirles, d => d.y + d.r),
-      ymin = d3.min(bigCirles, d => d.x - d.r),
-      ymax = d3.max(bigCirles, d => d.x + d.r);
+  let xmin, xmax, ymin, ymax;
 
-  const expandFactor = Math.min(svgHeight / (xmax - xmin), svgWidth / (ymax - ymin));
+  if (isMobile) {
+    xmin = d3.min(bigCirles, d => d.x - d.r);
+    xmax = d3.max(bigCirles, d => d.x + d.r);
+    ymin = d3.min(bigCirles, d => d.y - d.r);
+    ymax = d3.max(bigCirles, d => d.y + d.r);
+  } else {
+    xmin = d3.min(bigCirles, d => d.y - d.r);
+    xmax = d3.max(bigCirles, d => d.y + d.r);
+    ymin = d3.min(bigCirles, d => d.x - d.r);
+    ymax = d3.max(bigCirles, d => d.x + d.r);
+  }
+
+  let expandFactor = Math.min(svgHeight / (xmax - xmin), svgWidth / (ymax - ymin));
+  if (isMobile) {
+    expandFactor = 1.1;
+  }
 
   const xMid = expandFactor * (xmin + xmax) / 2,
         yMid = expandFactor * (ymin + ymax) / 2;
@@ -694,8 +713,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr('stroke', d => d.depth === 3 ? cabildos.comisiones[d.data.comision].color : null)
       .attr('stroke-width', 1.0)
       .attr("fill", d => "#EAEAEA")
-      .attr("cx", d => isMobile ? d.x : expandFactor * d.y)
-      .attr("cy", d => isMobile ? d.y : expandFactor * d.x)
+      .attr("cx", d => isMobile ? expandFactor * d.x : expandFactor * d.y)
+      .attr("cy", d => isMobile ? expandFactor * d.y : expandFactor * d.x)
       .attr("r", d => expandFactor * d.r)
       .on("click", (event, d) => {
         state.showing = 'details';
@@ -768,7 +787,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
               : d.angle === 1 ? orient.bottom
               : orient.left, expandFactor * d.r);
         })
-        .attr("transform", ([d]) => `translate(${expandFactor * d.y}, ${expandFactor * d.x})`);
+        .attr("transform", ([d]) => isMobile ? `translate(${expandFactor * d.x}, ${expandFactor * d.y})` : `translate(${expandFactor * d.y}, ${expandFactor * d.x})`);
 
   const lineHeight = 14;
 
@@ -807,8 +826,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     .data(root.descendants().slice(1).filter(function(d) { return !d.children; }))
     .join("text")
       .attr("class", "node-label")
-      .attr("x", d => isMobile ? d.x : expandFactor * d.y)
-      .attr("y", d => isMobile ? d.y : expandFactor * d.x)
+      .attr("x", d => isMobile ? expandFactor * d.x : expandFactor * d.y)
+      .attr("y", d => isMobile ? expandFactor * d.y : expandFactor * d.x)
       .style('fill', d => cabildos.comisiones[d.data.comision].color)
       .style("fill-opacity", 1)
       .style("display", "inline")
