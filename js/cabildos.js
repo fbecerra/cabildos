@@ -38,6 +38,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   const isMobile = window.innerWidth < 760;
 
+  const maxFontSize = isMobile ? 42 : 81;
+
   let cabildos = data[0];
 
   let factor;
@@ -83,7 +85,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     .sort((a, b) => b.porcentaje - a.porcentaje));
 
   const root = pack(cabildos);
-  console.log(root)
   let focus = root;
   let view;
 
@@ -271,8 +272,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .style("opacity", d => isSelected(d) ? 1 : 0);
   }
 
-  // const svgHeight = window.innerHeight * 0.95 - d3.select("#sticky").node().getBoundingClientRect().height,
-  //       svgWidth = isMobile ? 2/3 * svgHeight : 1.5 * svgHeight;
 
   const svg = d3.select("#cabildos").append("svg")
       .attr("viewBox", [0, 0, svgWidth, svgHeight])
@@ -285,10 +284,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   const offset = 0,
         nodeYOffset = 0;
 
-  console.log(svgWidth, svgHeight, maxWidth, maxHeight, svgXOffset, svgYOffset)
-
-  // const offset = isMobile ? 0 : (height - svgWidth) / 2;
-  // const nodeYOffset = isMobile ? 0 : -40;
   const rMin = isMobile ? 15 : 15;
 
   function updateDiv(id) {
@@ -301,9 +296,16 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .flat()
       .sort((a,b) => b.porcentaje - a.porcentaje);
 
-    let svgBarMargin = {top: 40, left: 350, bottom: 20, right: 50},
-        svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
-        svgBarHeight = temasBar.length * 20 + svgBarMargin.top + svgBarMargin.bottom;
+    let svgBarMargin, svgBarWidth, svgBarHeight;
+    if (isMobile) {
+      svgBarMargin = {top: 40, left: 50, bottom: 20, right: 50};
+      svgBarWidth = 200 + svgBarMargin.left + svgBarMargin.right;
+      svgBarHeight = temasBar.length * 20 + svgBarMargin.top + svgBarMargin.bottom;
+    } else {
+      svgBarMargin = {top: 40, left: 350, bottom: 20, right: 50};
+      svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right;
+      svgBarHeight = temasBar.length * 20 + svgBarMargin.top + svgBarMargin.bottom;
+    }
 
     let xScale = d3.scaleLinear()
       .domain([0, temasBar[0].porcentaje])
@@ -447,7 +449,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .each(d => {
           let sizeScale = d3.scaleLinear()
             .domain(d3.extent(d.wordCloud, w => w.frecuencia))
-            .range([12, 81])
+            .range([12, maxFontSize])
           d.wordCloud.forEach(w => {
             w.fontSize = sizeScale(w.frecuencia)
           })
@@ -484,7 +486,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .each(d => {
           let sizeScale = d3.scaleLinear()
             .domain(d3.extent(d.wordCloud, w => w.frecuencia))
-            .range([12, 81])
+            .range([12, maxFontSize])
           d.wordCloud.forEach(w => {
             w.fontSize = sizeScale(w.frecuencia)
           })

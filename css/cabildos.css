@@ -327,4 +327,21 @@ h5 {
   .node-label {
     font-size: 10px;
   }
+
+  .offset-2 {
+    margin-left: 10px;
+  }
+
+  .tema-title, .tema-description, .cloud-div {
+    margin-left: 12px;
+  }
+
+  .ranking-images {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .ranking-images img {
+    width: 100%;
+  }
 }
