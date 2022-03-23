@@ -38,6 +38,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   const isMobile = window.innerWidth < 760;
 
+  const maxFontSize = isMobile ? 42 : 81;
+
   let cabildos = data[0];
 
   let factor;
@@ -301,9 +303,16 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .flat()
       .sort((a,b) => b.porcentaje - a.porcentaje);
 
-    let svgBarMargin = {top: 40, left: 350, bottom: 20, right: 50},
-        svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right,
-        svgBarHeight = temasBar.length * 20 + svgBarMargin.top + svgBarMargin.bottom;
+    let svgBarMargin, svgBarWidth, svgBarHeight;
+    if (isMobile) {
+      svgBarMargin = {top: 40, left: 50, bottom: 20, right: 50};
+      svgBarWidth = 200 + svgBarMargin.left + svgBarMargin.right;
+      svgBarHeight = temasBar.length * 20 + svgBarMargin.top + svgBarMargin.bottom;
+    } else {
+      svgBarMargin = {top: 40, left: 350, bottom: 20, right: 50};
+      svgBarWidth = 500 + svgBarMargin.left + svgBarMargin.right;
+      svgBarHeight = temasBar.length * 20 + svgBarMargin.top + svgBarMargin.bottom;
+    }
 
     let xScale = d3.scaleLinear()
       .domain([0, temasBar[0].porcentaje])
@@ -447,7 +456,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .each(d => {
           let sizeScale = d3.scaleLinear()
             .domain(d3.extent(d.wordCloud, w => w.frecuencia))
-            .range([12, 81])
+            .range([12, maxFontSize])
           d.wordCloud.forEach(w => {
             w.fontSize = sizeScale(w.frecuencia)
           })
@@ -484,7 +493,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .each(d => {
           let sizeScale = d3.scaleLinear()
             .domain(d3.extent(d.wordCloud, w => w.frecuencia))
-            .range([12, 81])
+            .range([12, maxFontSize])
           d.wordCloud.forEach(w => {
             w.fontSize = sizeScale(w.frecuencia)
           })
