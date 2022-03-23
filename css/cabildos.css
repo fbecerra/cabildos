@@ -316,6 +316,10 @@ h5 {
     text-align: center;
   }
 
+  #filters-title {
+    display: none;
+  }
+
   #dropdowns {
     border: none;
   }
