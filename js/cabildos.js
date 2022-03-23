@@ -85,7 +85,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     .sort((a, b) => b.porcentaje - a.porcentaje));
 
   const root = pack(cabildos);
-  console.log(root)
   let focus = root;
   let view;
 
@@ -273,8 +272,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .style("opacity", d => isSelected(d) ? 1 : 0);
   }
 
-  // const svgHeight = window.innerHeight * 0.95 - d3.select("#sticky").node().getBoundingClientRect().height,
-  //       svgWidth = isMobile ? 2/3 * svgHeight : 1.5 * svgHeight;
 
   const svg = d3.select("#cabildos").append("svg")
       .attr("viewBox", [0, 0, svgWidth, svgHeight])
@@ -287,10 +284,6 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   const offset = 0,
         nodeYOffset = 0;
 
-  console.log(svgWidth, svgHeight, maxWidth, maxHeight, svgXOffset, svgYOffset)
-
-  // const offset = isMobile ? 0 : (height - svgWidth) / 2;
-  // const nodeYOffset = isMobile ? 0 : -40;
   const rMin = isMobile ? 15 : 15;
 
   function updateDiv(id) {
