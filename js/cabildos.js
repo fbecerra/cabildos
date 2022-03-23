@@ -8,6 +8,19 @@ const transitionTime = 500;
 
 const container = d3.select("#cabildos");
 
+const stickyHeight = d3.select("#sticky").node().getBoundingClientRect().height,
+      stickyPadding = 20;
+
+d3.select("#bubbles").style("margin-top", (stickyHeight + stickyPadding) + 'px');
+d3.select("#cabildo-details").style("margin-top", (stickyHeight + stickyPadding) + 'px');
+
+const titleHeight = d3.select("#title").node().getBoundingClientRect().height +
+                    d3.select("#subtitle").node().getBoundingClientRect().height;
+const aboutHeight = d3.select(".menu-links h6").node().getBoundingClientRect().height;
+
+d3.select(".menu-links h6").style("padding-top", (titleHeight-aboutHeight-4)/2 + 'px')
+  .style("padding-bottom", (titleHeight-aboutHeight-4)/2 + 'px')
+
 d3.select("#how-to")
   .on("click", () => d3.select("#legend").classed("show", !d3.select("#legend").classed("show")))
 
@@ -26,9 +39,13 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
   const isMobile = window.innerWidth < 760;
 
   let cabildos = data[0];
-  console.log(cabildos);
 
-  let factor = 0.9;
+  let factor;
+  if (isMobile) {
+    factor = 1.0;
+  } else {
+    factor = 0.9;
+  }
 
   const screenFactor = window.innerHeight / window.innerWidth;
 
@@ -37,19 +54,22 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   let svgHeight, svgWidth;
 
-  if (maxHeight * 1.5 < maxWidth) {
+  if (isMobile) {
     svgHeight = maxHeight;
-    svgWidth = maxHeight * 1.5
-  } else {
-    svgHeight = 2/3 * maxWidth;
     svgWidth = maxWidth;
+  } else {
+    if (maxHeight * 1.5 < maxWidth) {
+      svgHeight = maxHeight;
+      svgWidth = maxHeight * 1.5
+    } else {
+      svgHeight = 2/3 * maxWidth;
+      svgWidth = maxWidth;
+    }
   }
+
 
   let svgXOffset = (d3.select("#cabildos").node().getBoundingClientRect().width - svgWidth) / 2,
       svgYOffset = (window.innerHeight - d3.select("#sticky").node().getBoundingClientRect().height - svgHeight) / 2;
-
-  // svgHeight = 641.8046875;
-  // svgWidth = 962.70703125;
 
   const height = 0.9 * svgHeight,
         width = height;
@@ -259,7 +279,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr("width", svgWidth)
       .attr("height", svgHeight)
       .attr("style", "max-width: 100%; height: auto; height: intrinsic; position: relative;")
-      .style("transform", `translate(${svgXOffset}px, ${svgYOffset}px)`)
+      .style("transform", `translate(${svgXOffset}px, 0)`)
       .attr("text-anchor", "middle");
 
   const offset = 0,
@@ -269,7 +289,7 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   // const offset = isMobile ? 0 : (height - svgWidth) / 2;
   // const nodeYOffset = isMobile ? 0 : -40;
-  const rMin = isMobile ? 20 : 15;
+  const rMin = isMobile ? 15 : 15;
 
   function updateDiv(id) {
 
@@ -661,12 +681,24 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
 
   let bigCirles = root.descendants().slice(1).filter(d => d.depth === 1);
 
-  let xmin = d3.min(bigCirles, d => d.y - d.r),
-      xmax = d3.max(bigCirles, d => d.y + d.r),
-      ymin = d3.min(bigCirles, d => d.x - d.r),
-      ymax = d3.max(bigCirles, d => d.x + d.r);
+  let xmin, xmax, ymin, ymax;
 
-  const expandFactor = Math.min(svgHeight / (xmax - xmin), svgWidth / (ymax - ymin));
+  if (isMobile) {
+    xmin = d3.min(bigCirles, d => d.x - d.r);
+    xmax = d3.max(bigCirles, d => d.x + d.r);
+    ymin = d3.min(bigCirles, d => d.y - d.r);
+    ymax = d3.max(bigCirles, d => d.y + d.r);
+  } else {
+    xmin = d3.min(bigCirles, d => d.y - d.r);
+    xmax = d3.max(bigCirles, d => d.y + d.r);
+    ymin = d3.min(bigCirles, d => d.x - d.r);
+    ymax = d3.max(bigCirles, d => d.x + d.r);
+  }
+
+  let expandFactor = Math.min(svgHeight / (xmax - xmin), svgWidth / (ymax - ymin));
+  if (isMobile) {
+    expandFactor = 1.1;
+  }
 
   const xMid = expandFactor * (xmin + xmax) / 2,
         yMid = expandFactor * (ymin + ymax) / 2;
@@ -681,8 +713,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
       .attr('stroke', d => d.depth === 3 ? cabildos.comisiones[d.data.comision].color : null)
       .attr('stroke-width', 1.0)
       .attr("fill", d => "#EAEAEA")
-      .attr("cx", d => isMobile ? d.x : expandFactor * d.y)
-      .attr("cy", d => isMobile ? d.y : expandFactor * d.x)
+      .attr("cx", d => isMobile ? expandFactor * d.x : expandFactor * d.y)
+      .attr("cy", d => isMobile ? expandFactor * d.y : expandFactor * d.x)
       .attr("r", d => expandFactor * d.r)
       .on("click", (event, d) => {
         state.showing = 'details';
@@ -744,18 +776,37 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("class", "label")
         .style("stroke-width", 0)
         .style("opacity", 0.8)
-        .text(([d]) => d.data.name)
-        .each(function([d, cell]) {
-          const x = isMobile ? d.x : d.y;
-          const y = isMobile ? d.y : d.x;
-          const [cx, cy] = d3.polygonCentroid(cell);
-          d.angle = (Math.round(Math.atan2(cy - y, cx - x) / Math.PI * 2) + 4) % 4;
-          d3.select(this).call(d.angle === 0 ? orient.right
-              : d.angle === 3 ? orient.top
-              : d.angle === 1 ? orient.bottom
-              : orient.left, expandFactor * d.r);
-        })
-        .attr("transform", ([d]) => `translate(${expandFactor * d.y}, ${expandFactor * d.x})`);
+        .text(([d]) => isMobile ? cabildos.cabildos[d.data.id].shortName : cabildos.cabildos[d.data.id].longName)
+        .attr("transform", ([d]) => isMobile ? `translate(${expandFactor * d.x}, ${expandFactor * d.y})` : `translate(${expandFactor * d.y}, ${expandFactor * d.x})`);
+
+  if (isMobile) {
+    label.each(function([d, cell]){
+      let thisText = d3.select(this);
+      let textHeight = thisText.node().getBoundingClientRect().height;
+
+      const x = isMobile ? d.x : d.y;
+      let onLeft = x < xMid;
+      let adjustmentFactor = 0.8;
+
+      if (onLeft) {
+        d3.select(this).attr("x", -adjustmentFactor * expandFactor * d.r).attr("y", adjustmentFactor * expandFactor * d.r + textHeight/2)
+      } else {
+        d3.select(this).attr("x", adjustmentFactor * expandFactor * d.r).attr("y", adjustmentFactor * expandFactor * d.r + textHeight/2)
+      }
+
+    })
+  } else {
+    label.each(function([d, cell]) {
+      const x = isMobile ? d.x : d.y;
+      const y = isMobile ? d.y : d.x;
+      const [cx, cy] = d3.polygonCentroid(cell);
+      d.angle = (Math.round(Math.atan2(cy - y, cx - x) / Math.PI * 2) + 4) % 4;
+      d3.select(this).call(d.angle === 0 ? orient.right
+          : d.angle === 3 ? orient.top
+          : d.angle === 1 ? orient.bottom
+          : orient.left, expandFactor * d.r);
+    })
+  }
 
   const lineHeight = 14;
 
@@ -794,8 +845,8 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
     .data(root.descendants().slice(1).filter(function(d) { return !d.children; }))
     .join("text")
       .attr("class", "node-label")
-      .attr("x", d => isMobile ? d.x : expandFactor * d.y)
-      .attr("y", d => isMobile ? d.y : expandFactor * d.x)
+      .attr("x", d => isMobile ? expandFactor * d.x : expandFactor * d.y)
+      .attr("y", d => isMobile ? expandFactor * d.y : expandFactor * d.x)
       .style('fill', d => cabildos.comisiones[d.data.comision].color)
       .style("fill-opacity", 1)
       .style("display", "inline")
