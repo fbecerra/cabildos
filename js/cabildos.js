@@ -776,18 +776,37 @@ Promise.all([d3.json("data/cabildos.json")]).then(function(data){
         .attr("class", "label")
         .style("stroke-width", 0)
         .style("opacity", 0.8)
-        .text(([d]) => d.data.name)
-        .each(function([d, cell]) {
-          const x = isMobile ? d.x : d.y;
-          const y = isMobile ? d.y : d.x;
-          const [cx, cy] = d3.polygonCentroid(cell);
-          d.angle = (Math.round(Math.atan2(cy - y, cx - x) / Math.PI * 2) + 4) % 4;
-          d3.select(this).call(d.angle === 0 ? orient.right
-              : d.angle === 3 ? orient.top
-              : d.angle === 1 ? orient.bottom
-              : orient.left, expandFactor * d.r);
-        })
+        .text(([d]) => isMobile ? cabildos.cabildos[d.data.id].shortName : cabildos.cabildos[d.data.id].longName)
         .attr("transform", ([d]) => isMobile ? `translate(${expandFactor * d.x}, ${expandFactor * d.y})` : `translate(${expandFactor * d.y}, ${expandFactor * d.x})`);
+
+  if (isMobile) {
+    label.each(function([d, cell]){
+      let thisText = d3.select(this);
+      let textHeight = thisText.node().getBoundingClientRect().height;
+
+      const x = isMobile ? d.x : d.y;
+      let onLeft = x < xMid;
+      let adjustmentFactor = 0.8;
+
+      if (onLeft) {
+        d3.select(this).attr("x", -adjustmentFactor * expandFactor * d.r).attr("y", adjustmentFactor * expandFactor * d.r + textHeight/2)
+      } else {
+        d3.select(this).attr("x", adjustmentFactor * expandFactor * d.r).attr("y", adjustmentFactor * expandFactor * d.r + textHeight/2)
+      }
+
+    })
+  } else {
+    label.each(function([d, cell]) {
+      const x = isMobile ? d.x : d.y;
+      const y = isMobile ? d.y : d.x;
+      const [cx, cy] = d3.polygonCentroid(cell);
+      d.angle = (Math.round(Math.atan2(cy - y, cx - x) / Math.PI * 2) + 4) % 4;
+      d3.select(this).call(d.angle === 0 ? orient.right
+          : d.angle === 3 ? orient.top
+          : d.angle === 1 ? orient.bottom
+          : orient.left, expandFactor * d.r);
+    })
+  }
 
   const lineHeight = 14;
 
